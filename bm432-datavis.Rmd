@@ -172,9 +172,9 @@ p + geom_point(size=8) + xlim(0, max(figcounts$count)) + theme_economist()
 <center>
 ```{r overall_effectiveness}
 p = ggplot(dfm, aes(x=effectiveness))
-p = p + geom_histogram(bins=5) +
+p = p + geom_histogram(binwidth=1) +
   stat_bin(binwidth=1, geom="text", color="white", aes(label=..count..), vjust=2)
-p + theme_economist() + xlim(1, 5)
+p + theme_economist() + xlim(0.5, 5.5)
 ```
 </center>
 
@@ -185,9 +185,9 @@ p + theme_economist() + xlim(1, 5)
 <center>
 ```{r overall_understanding}
 p = ggplot(dfm, aes(x=understandable))
-p = p + geom_histogram(bins=5) +
+p = p + geom_histogram(binwidth=1) +
   stat_bin(binwidth=1, geom="text", color="white", aes(label=..count..), vjust=2)
-p + theme_economist() + xlim(1, 5)
+p + theme_economist() + xlim(0.5, 5.5)
 ```
 </center>
 
@@ -198,9 +198,9 @@ p + theme_economist() + xlim(1, 5)
 <center>
 ```{r overall_appeal}
 p = ggplot(dfm, aes(x=appealing))
-p = p + geom_histogram(bins=5) +
+p = p + geom_histogram(binwidth=1) +
   stat_bin(binwidth=1, geom="text", color="white", aes(label=..count..), vjust=2)
-p + theme_economist()  + xlim(1, 5)
+p + theme_economist()  + xlim(0.5, 5.5)
 ```
 </center>
 
