@@ -296,7 +296,6 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
   - We can't see whether there is a difference between the effects of the two concentrations of A16 in (D), or between A16 and A18 in (B); use A table of contrasts.
   - Place things to be compared by the reader next to each other where possible (E).
 
-
 ## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" /> {.smaller}
 
 ```{r fig1_improvements}
@@ -310,6 +309,7 @@ kable(dfm %>% filter(fignum==1) %>% select(improvements))
 <img src="images/2024_fig_2.jpg" height="500px" />
 </center>
 
+
 ## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="100px" />
 
 <center>
@@ -317,6 +317,7 @@ kable(dfm %>% filter(fignum==1) %>% select(improvements))
 draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 2)
 ```
 </center>
+
 
 ## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="100px" /> {.columns-2 .smaller}
 
