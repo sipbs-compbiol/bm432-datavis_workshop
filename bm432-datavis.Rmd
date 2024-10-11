@@ -285,15 +285,15 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" /> {.columns-2 .smaller}
 
 <center>
-<img src="images/2024_fig_1.jpg" width="100%" />
+<img src="images/2024_fig_1.jpg" width="450px" />
 </center>
 
 <p class="forceBreak"></p>
 
 - Suggested improvements:
   - The lower extent of error bars is not visible in (B), (D), (G), or (E). Avoid "dynamite plots."
-  - Bar charts should be avoided; a 1D scatterplot of each dataset in (D), (G), and (E) would be clearer. In (B) a line plot with concentration on the $x$-axis would allow direct comparison of A16 and A18 and show trends.
-  - We can't see whether there is a difference between the effects of the two concentrations of A16 in (D), or between A16 and A18 in (B); use A table of contrasts.
+  - Bar charts should be avoided; 1D scatterplot for (D), (G), and (E) would be clearer. Line plot with concentration on $x$-axis would improve (B).
+  - We can't see difference between effects of two concentrations of A16 in (D), or A16 vs A18 in (B); use a table of contrasts.
   - Place things to be compared by the reader next to each other where possible (E).
 
 ## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" /> {.smaller}
