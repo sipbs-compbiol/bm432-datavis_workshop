@@ -142,13 +142,13 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
   - ["Data Visualisation: A Practical Introduction" _by Kieran Healy_](https://socviz.co/index.html#preface)
   - ["Points of View: graphic design for data visualisation](git@github.com:sipbs-compbiol/bm432-datavis_workshop.git)
   
-## Exercise: Ten figures (three per student)
+## Exercise: Four figures (assess all figures)
 
-- **For your assigned figure, consider the following:**
+- **For each figure, consider the following:**
   - What type of data is being presented?
   - Are the data presented effectively? (why/why not?)
   - How can the data presentation be improved?
-  - Use the DOI provided to find the paper the figure is from, if you need more information than the figure legend
+  - Use the DOI provided to find the paper the figure is from, if you need more information than is in the figure legend
 - Fill in the _pro forma_ with your answers to the questions above (one sentence each)
   - [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScECon-B5N-JkK2PIB4YiEyy8k8iR9srls9UBFYq2NWqEB3Rw/viewform)
   
