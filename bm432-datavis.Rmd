@@ -290,7 +290,6 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 
 <p class="forceBreak"></p>
 
-
 - Suggested improvements:
   - The lower extent of error bars is not visible in (B), (D), (G), or (E). Avoid "dynamite plots."
   - Bar charts should be avoided; a 1D scatterplot of each dataset in (D), (G), and (E) would be clearer. In (B) a line plot with concentration on the $x$-axis would allow direct comparison of A16 and A18 and show trends.
