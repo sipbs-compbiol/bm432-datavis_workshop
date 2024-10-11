@@ -147,7 +147,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 - Additional information:
   - ["Fundamentals of Data Visualisation" _by Claus O. Wilke_](https://clauswilke.com/dataviz/)
   - ["Data Visualisation: A Practical Introduction" _by Kieran Healy_](https://socviz.co/index.html#preface)
-  - ["Points of View: graphic design for data visualisation](git@github.com:sipbs-compbiol/bm432-datavis_workshop.git)
+  - ["Points of View: graphic design for data visualisation"](git@github.com:sipbs-compbiol/bm432-datavis_workshop.git)
   
 ## Exercise: Four figures (assess all figures)
 
@@ -169,7 +169,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 ```{r overall_response}
 figcounts = dfm %>% group_by(fignum) %>% summarize(count = n())
 p = ggplot(figcounts, aes(y=fignum, x=count))
-p + geom_point(size=8) + xlim(0, max(figcounts$count)) + theme_economist()
+p + geom_point(size=8) + xlim(0, max(figcounts$count)) + theme_fivethirtyeight()
 ```
 </center>
 
@@ -182,7 +182,7 @@ p + geom_point(size=8) + xlim(0, max(figcounts$count)) + theme_economist()
 p = ggplot(dfm, aes(x=effectiveness))
 p = p + geom_histogram(binwidth=1) +
   stat_bin(binwidth=1, geom="text", color="white", aes(label=..count..), vjust=2)
-p + theme_economist() + xlim(0.5, 5.5)
+p + theme_fivethirtyeight() + xlim(0.5, 5.5)
 ```
 </center>
 
@@ -195,7 +195,7 @@ p + theme_economist() + xlim(0.5, 5.5)
 p = ggplot(dfm, aes(x=understandable))
 p = p + geom_histogram(binwidth=1) +
   stat_bin(binwidth=1, geom="text", color="white", aes(label=..count..), vjust=2)
-p + theme_economist() + xlim(0.5, 5.5)
+p + theme_fivethirtyeight() + xlim(0.5, 5.5)
 ```
 </center>
 
@@ -208,7 +208,7 @@ p + theme_economist() + xlim(0.5, 5.5)
 p = ggplot(dfm, aes(x=appealing))
 p = p + geom_histogram(binwidth=1) +
   stat_bin(binwidth=1, geom="text", color="white", aes(label=..count..), vjust=2)
-p + theme_economist()  + xlim(0.5, 5.5)
+p + theme_fivethirtyeight()  + xlim(0.5, 5.5)
 ```
 </center>
 
@@ -220,7 +220,7 @@ p + theme_economist()  + xlim(0.5, 5.5)
 ```{r overall_time_taken}
 p = ggplot(dfm %>% drop_na(time_taken), aes(x=time_taken))
 p = p + geom_bar() + stat_count(geom="text", aes(label=..count..), vjust=1.5, colour="white")
-p + theme_economist() + theme(axis.text.x = element_text(angle = 90)) + scale_x_discrete(drop=FALSE)
+p + theme_fivethirtyeight() + theme(axis.text.x = element_text(angle = 90)) + scale_x_discrete(drop=FALSE)
 ```
 </center>
 
@@ -290,12 +290,12 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 
 <p class="forceBreak"></p>
 
-- Suggested improvements:
-  - The lower extent of error bars is not visible in (B), (D), (G), or (E). This is a "dynamite plot," which should be avoided.
-  - Bar charts should be avoided in general; a 1D scatterplot of each dataset in (D), (G), and (E) would be clearer. In (B) a line plot with concentration on the $x$-axis would have allowed direct comparison of A16 and A18 at each concentration and shown trends more clearly.
-  - Pairwise statistical comparisons are fine, but we can't see whether, e.g. there is a difference between the effects of the two concentrations of A16 in (D), or between A16 and A18 in (B). A table of contrasts could be more informative.
-  - in (E) the important comparisons are not next to each other, which makes comparison more difficult; place things to be compared by the reader next to each other where possible.
 
+- Suggested improvements:
+  - The lower extent of error bars is not visible in (B), (D), (G), or (E). Avoid "dynamite plots."
+  - Bar charts should be avoided; a 1D scatterplot of each dataset in (D), (G), and (E) would be clearer. In (B) a line plot with concentration on the $x$-axis would allow direct comparison of A16 and A18 and show trends.
+  - We can't see whether there is a difference between the effects of the two concentrations of A16 in (D), or between A16 and A18 in (B); use A table of contrasts.
+  - Place things to be compared by the reader next to each other where possible (E).
 
 ## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" /> {.smaller}
 
