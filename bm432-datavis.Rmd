@@ -1,7 +1,7 @@
 ---
 title: "BM432 Data Visualisation"
 author: "Morgan Feeney and Leighton Pritchard"
-date: "2023-10-18"
+date: "2024-10-23"
 output:
   ioslides_presentation:
     css: ./includes/custom.css
@@ -126,7 +126,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 
 - You should be able to critically analyse how data is visualised 
 - You should be able to judge a figure's clarity and potential for misunderstanding
-- You should be able to identify potential sources of bias
+- You should be able to identify potential sources of bias resulting from the visualisation
 - You should understand how to create effective figures for your own work
 
 ## Background Reading
@@ -140,6 +140,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 - Additional information:
   - ["Fundamentals of Data Visualisation" _by Claus O. Wilke_](https://clauswilke.com/dataviz/)
   - ["Data Visualisation: A Practical Introduction" _by Kieran Healy_](https://socviz.co/index.html#preface)
+  - ["Points of View: graphic design for data visualisation](git@github.com:sipbs-compbiol/bm432-datavis_workshop.git)
   
 ## Exercise: Ten figures (three per student)
 
