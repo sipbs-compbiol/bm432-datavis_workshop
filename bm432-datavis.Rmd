@@ -56,7 +56,7 @@ factor_headers = c("figure", "fignum", "bestpractice", "time_taken")
 for (colname in factor_headers) {
   dfm[[colname]] = as.factor(dfm[[colname]])
 }
-dfm$fignum = factor(dfm$fignum, levels=c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"))
+dfm$fignum = factor(dfm$fignum, levels=c("1", "2", "3", "4"))
 dfm$time_taken = factor(dfm$time_taken, levels=c("Less than 5 minutes","About 5 or 10 minutes","About 15 minutes","About 30 minutes","More than 30 minutes"))
 
 # Function to generate Economist-style figures from categories
@@ -347,10 +347,10 @@ kable(dfm %>% filter(fignum==2) %>% select(improvements))
 ## Figure 3 (doi:`r doi_fig3`)
 
 <center>
-<img src="images/2024_fig_3.jpg" height="500px" />
+<img src="images/2024_fig_3.jpg" width="100%" />
 </center>
 
-## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="100px" />
+## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" />
 
 <center>
 ```{r fig3_main_summary}
@@ -358,7 +358,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ```
 </center>
 
-## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="100px" /> {.columns-2 .smaller}
+## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" /> {.columns-2 .smaller}
 
 <center>
 <img src="images/2024_fig_3.jpg" width="100%" />
@@ -375,7 +375,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
   - Reasonably good use of whitespace
 
 
-## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="100px" /> {.smaller}
+## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" /> {.smaller}
 
 ```{r fig3_improvements}
 kable(dfm %>% filter(fignum==3) %>% select(improvements))
