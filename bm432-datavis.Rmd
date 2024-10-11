@@ -116,6 +116,13 @@ process_words = function(dfrm, column) {
   dfm_words
 }
 
+# Globals
+
+doi_fig1 = "10.1073/pnas.2320257121"
+doi_fig2 = "10.1073/pnas.2405474121"
+doi_fig3 = "10.1073/pnas.2408540121"
+doi_fig4 = "10.1073/pnas.240342112"
+
 # Code block options
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 ```
@@ -261,13 +268,13 @@ draw_hc_categories(dfm, c("describe", "reproduce_paper", "reproduce_raw"))
 
 # 4. Specific Figures
 
-## Figure 1 (doi:10.1016/j.cell.2021.08.029)
+## Figure 1 (doi:`r doi_fig1`)
 
 <center>
-<img src="images/figure_1.jpg" height="500px" />
+<img src="images/2024_fig_1.jpg" height="500px" />
 </center>
 
-## Figure 1 (doi:10.1016/j.cell.2021.08.029) <img src="images/figure_1.jpg" height="100px" />
+## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" />
 
 <center>
 ```{r fig1_main_summary}
@@ -275,10 +282,10 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ```
 </center>
 
-## Figure 1 (doi:10.1016/j.cell.2021.08.029) <img src="images/figure_1.jpg" height="100px" /> {.columns-2 .smaller}
+## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" /> {.columns-2 .smaller}
 
 <center>
-<img src="images/figure_1.jpg" height="450px" />
+<img src="images/2024_fig_1.jpg" height="450px" />
 </center>
 
 <p class="forceBreak"></p>
@@ -292,20 +299,20 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
   - Use of whitespace could be better: this feels quite cluttered and the flow from A $\rightarrow$ B $\rightarrow$ C $\rightarrow$ D is not very clear
 
 
-## Figure 1 (doi:10.1016/j.cell.2021.08.029) <img src="images/figure_1.jpg" height="100px" /> {.smaller}
+## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" /> {.smaller}
 
 ```{r fig1_improvements}
 kable(dfm %>% filter(fignum==1) %>% select(improvements))
 ```
 
 
-## Figure 2 (doi:10.1016/j.cell.2021.08.028)
+## Figure 2 (doi:`r doi_fig2`)
 
 <center>
-<img src="images/figure_2.jpg" height="500px" />
+<img src="images/2024_fig_2.jpg" height="500px" />
 </center>
 
-## Figure 2 (doi:10.1016/j.cell.2021.08.028) <img src="images/figure_2.jpg" height="100px" />
+## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="100px" />
 
 <center>
 ```{r fig2_main_summary}
@@ -313,10 +320,10 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ```
 </center>
 
-## Figure 2 (doi:10.1016/j.cell.2021.08.028) <img src="images/figure_2.jpg" height="100px" /> {.columns-2 .smaller}
+## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="100px" /> {.columns-2 .smaller}
 
 <center>
-<img src="images/figure_2.jpg" height="450px" />
+<img src="images/2024_fig_2.jpg" height="450px" />
 </center>
 
 <p class="forceBreak"></p>
@@ -330,20 +337,20 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
   - Use of whitespace could be better
 
 
-## Figure 2 (doi:10.1016/j.cell.2021.08.028) <img src="images/figure_2.jpg" height="100px" /> {.smaller}
+## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="100px" /> {.smaller}
 
 ```{r fig2_improvements}
 kable(dfm %>% filter(fignum==2) %>% select(improvements))
 ```
 
 
-## Figure 3 (doi:10.1016/j.cell.2021.07.030)
+## Figure 3 (doi:`r doi_fig3`)
 
 <center>
-<img src="images/figure_3.jpg" height="500px" />
+<img src="images/2024_fig_3.jpg" height="500px" />
 </center>
 
-## Figure 3 (doi:10.1016/j.cell.2021.07.030) <img src="images/figure_3.jpg" height="100px" />
+## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="100px" />
 
 <center>
 ```{r fig3_main_summary}
@@ -351,10 +358,10 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ```
 </center>
 
-## Figure 3 (doi:10.1016/j.cell.2021.07.030) <img src="images/figure_3.jpg" height="100px" /> {.columns-2 .smaller}
+## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="100px" /> {.columns-2 .smaller}
 
 <center>
-<img src="images/figure_3.jpg" width="100%" />
+<img src="images/2024_fig_3.jpg" width="100%" />
 </center>
 
 <p class="forceBreak"></p>
@@ -368,20 +375,20 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
   - Reasonably good use of whitespace
 
 
-## Figure 3 (doi:10.1016/j.cell.2021.07.030) <img src="images/figure_3.jpg" height="100px" /> {.smaller}
+## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="100px" /> {.smaller}
 
 ```{r fig3_improvements}
 kable(dfm %>% filter(fignum==3) %>% select(improvements))
 ```
 
 
-## Figure 4 (doi:10.1016/j.cell.2021.08.016)
+## Figure 4 (doi:`r doi_fig4`)
 
 <center>
-<img src="images/figure_4.jpg" height="500px" />
+<img src="images/2024_fig_4.jpg" height="500px" />
 </center>
 
-## Figure 4 (doi:10.1016/j.cell.2021.08.016) <img src="images/figure_4.jpg" height="100px" />
+## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="100px" />
 
 <center>
 ```{r fig4_main_summary}
@@ -389,10 +396,10 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ```
 </center>
 
-## Figure 4 (doi:10.1016/j.cell.2021.08.016) <img src="images/figure_4.jpg" height="100px" /> {.columns-2 .smaller}
+## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="100px" /> {.columns-2 .smaller}
 
 <center>
-<img src="images/figure_4.jpg" width="100%" />
+<img src="images/2024_fig_4.jpg" width="100%" />
 </center>
 
 <p class="forceBreak"></p>
@@ -405,241 +412,11 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
   - Layout could have been improved – should be 3 rows with 1 column for each IFN, to make it easier for the reader to compare e.g. A, G, and M
 
 
-## Figure 4 (doi:10.1016/j.cell.2021.08.016) <img src="images/figure_4.jpg" height="100px" /> {.smaller}
+## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="100px" /> {.smaller}
 
 ```{r fig4_improvements}
 kable(dfm %>% filter(fignum==4) %>% select(improvements))
 ```
-
-
-## Figure 5 (doi:10.1016/j.cell.2021.07.029)
-
-<center>
-<img src="images/figure_5.jpg" height="500px" />
-</center>
-
-## Figure 5 (doi:10.1016/j.cell.2021.07.029) <img src="images/figure_5.jpg" height="100px" />
-
-<center>
-```{r fig5_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 5)
-```
-</center>
-
-## Figure 5 (doi:10.1016/j.cell.2021.07.029) <img src="images/figure_5.jpg" height="100px" /> {.columns-2 .smaller}
-
-<center>
-<img src="images/figure_5.jpg" height="450px" />
-</center>
-
-<p class="forceBreak"></p>
-
-- Suggested improvements:
-  - A flow chart illustrating the FACS technique chosen here would be helpful for the reader
-  - Different scales on the x and y axes may be confusing and potentially misleading to readers
-  - B-D, F – show the datapoints as 1D scatterplot?
-  - G – fluorescence micrograph not colourblind friendly
-  - Use of the same colour for tumor, adenoma, IBD lesion may potentially be misleading
-
-
-## Figure 5 (doi:10.1016/j.cell.2021.07.029) <img src="images/figure_5.jpg" height="100px" /> {.smaller}
-
-```{r fig5_improvements}
-kable(dfm %>% filter(fignum==5) %>% select(improvements))
-```
-
-
-## Figure 6 (doi:10.1016/j.cell.2021.07.022)
-
-<center>
-<img src="images/figure_6.jpg" height="500px" />
-</center>
-
-## Figure 6 (doi:10.1016/j.cell.2021.07.022) <img src="images/figure_6.jpg" height="100px" />
-
-<center>
-```{r fig6_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 6)
-```
-</center>
-
-## Figure 6 (doi:10.1016/j.cell.2021.07.022) <img src="images/figure_6.jpg" height="100px" /> {.columns-2 .smaller}
-
-<center>
-<img src="images/figure_6.jpg" width="100%" />
-</center>
-
-<p class="forceBreak"></p>
-
-- Suggested improvements:
-  - Good example of flow chart to illustrate experimental design
-  - D-G could perhaps be combined into one graph – reduce cognitive burden on the reader
-  - Some confusion in the colour scheme (P11 lysate/F2 lysate both indicated in green, inconsistent use of red, orange)
-  - Nice to see box plots overlaid with datapoints
-
-
-## Figure 6 (doi:10.1016/j.cell.2021.07.022) <img src="images/figure_6.jpg" height="100px" /> {.smaller}
-
-```{r fig6_improvements}
-kable(dfm %>% filter(fignum==6) %>% select(improvements))
-```
-
-
-## Figure 7 (doi:10.1016/j.cell.2021.07.023)
-
-<center>
-<img src="images/figure_7.jpg" height="500px" />
-</center>
-
-## Figure 7 (doi:10.1016/j.cell.2021.07.023) <img src="images/figure_7.jpg" height="100px" />
-
-<center>
-```{r fig7_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 7)
-```
-</center>
-
-## Figure 7 (doi:10.1016/j.cell.2021.07.023) <img src="images/figure_7.jpg" height="100px" /> {.columns-2 .smaller}
-
-<center>
-<img src="images/figure_7.jpg" height="450px" />
-</center>
-
-<p class="forceBreak"></p>
-
-- Suggested improvements:
-  - Good use of flow diagram to illustrate experimental procedure
-  - Text too small to read easily
-  - Colours rather bewildering and hard to interpret, especially in G
-  - heatmap in I difficult to accurately interpret
-  - use of whitespace could be better
-  - axis labels in B and F could be clearer
-
-
-## Figure 7 (doi:10.1016/j.cell.2021.07.023) <img src="images/figure_7.jpg" height="100px" /> {.smaller}
-
-```{r fig7_improvements}
-kable(dfm %>% filter(fignum==7) %>% select(improvements))
-```
-
-
-## Figure 8 (doi:10.1016/j.cell.2021.08.003)
-
-<center>
-<img src="images/figure_8.jpg" height="500px" />
-</center>
-
-## Figure 8 (doi:10.1016/j.cell.2021.08.003) <img src="images/figure_8.jpg" height="100px" />
-
-<center>
-```{r fig8_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 8)
-```
-</center>
-
-## Figure 8 (doi:10.1016/j.cell.2021.08.003) <img src="images/figure_8.jpg" height="100px" /> {.columns-2 .smaller}
-
-<center>
-<img src="images/figure_8.jpg" height="450px" />
-</center>
-
-<p class="forceBreak"></p>
-
-- Suggested improvements:
-  - A colour scale may be difficult to interpret – some shades seem very close, size of dots hard to classify
-  - good to show datapoints
-  - y axes in C should be same scale
-  - t-SNEs difficult to read as presented
-  - red/green colour palette not colourblind friendly
-  - inconsistent use of colours between panels
-  - scale bars missing for RNA ISH (H, right panels)
-
-
-## Figure 8 (doi:10.1016/j.cell.2021.08.003) <img src="images/figure_8.jpg" height="100px" /> {.smaller}
-
-```{r fig8_improvements}
-kable(dfm %>% filter(fignum==8) %>% select(improvements))
-```
-
-
-## Figure 9 (doi:10.1016/j.cell.2021.07.024)
-
-<center>
-<img src="images/figure_9.jpg" height="500px" />
-</center>
-
-## Figure 9 (doi:10.1016/j.cell.2021.07.024) <img src="images/figure_9.jpg" height="100px" />
-
-<center>
-```{r fig9_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 9)
-```
-</center>
-
-## Figure 9 (doi:10.1016/j.cell.2021.07.024) <img src="images/figure_9.jpg" height="100px" /> {.columns-2 .smaller}
-
-<center>
-<img src="images/figure_9.jpg" height="450px" />
-</center>
-
-<p class="forceBreak"></p>
-
-- Suggested improvements:
-  - colours in B are dark/hard to distinguish
-  - different axes in D and E make it difficult to compare data
-  - circular presentation of chromosomes is confusing/misleading
-  - reddish/green colour choices might be OK but there are better options
-  - A doesn’t add much value to the figure
-  - may be better ways to present B – lines through datapoints?
-
-
-## Figure 9 (doi:10.1016/j.cell.2021.07.024) <img src="images/figure_9.jpg" height="100px" /> {.smaller}
-
-```{r fig9_improvements}
-kable(dfm %>% filter(fignum==9) %>% select(improvements))
-```
-
-
-## Figure 10 (doi:10.1016/j.cell.2021.07.006)
-
-<center>
-<img src="images/figure_10.jpg" height="500px" />
-</center>
-
-## Figure 10 (doi:10.1016/j.cell.2021.07.006) <img src="images/figure_10.jpg" height="100px" />
-
-<center>
-```{r fig10_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 10)
-```
-</center>
-
-## Figure 10 (doi:10.1016/j.cell.2021.07.006) <img src="images/figure_10.jpg" height="100px" /> {.columns-2 .smaller}
-
-<center>
-<img src="images/figure_10.jpg" height="450px" />
-</center>
-
-<p class="forceBreak"></p>
-
-- Suggested improvements:
-  - kinetic data better presented in a table
-  - concentration of what?
-  - include keys with figures, don’t make the reader look back and forth with the legend
-  - Coloured line in B not explained in key or figure legend
-  - match y-axes scales in B
-  - confusing/unnecessary to split H into two graphs
-  - include full colour key in G (missing purple), H (orange)
-  - Text could be a little larger to make it easier to read
-  - Good flow from A-H, good use of whitespace
-
-
-## Figure 10 (doi:10.1016/j.cell.2021.07.006) <img src="images/figure_10.jpg" height="100px" /> {.smaller}
-
-```{r fig10_improvements}
-kable(dfm %>% filter(fignum==10) %>% select(improvements))
-```
-
 
 # 5. Summing Up
 
