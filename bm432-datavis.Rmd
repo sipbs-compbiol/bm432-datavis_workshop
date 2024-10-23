@@ -178,7 +178,31 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
   - Use the DOI provided to find the paper the figure is from, if you need more information than is in the figure legend
 - Fill in the _pro forma_ with your answers to the questions above (one sentence each)
   - [Google Form](https://forms.gle/cyJPnnuvVRazcTkk7)
-  
+
+## Figure 1 (doi:`r doi_fig1`)
+
+<center>
+<img src="images/2024_fig_1.jpg" height="500px" />
+</center>
+
+## Figure 2 (doi:`r doi_fig2`)
+
+<center>
+<img src="images/2024_fig_2.jpg" height="500px" />
+</center>
+
+## Figure 3 (doi:`r doi_fig3`)
+
+<center>
+<img src="images/2024_fig_3.jpg" width="100%" />
+</center>
+
+## Figure 4 (doi:`r doi_fig4`)
+
+<center>
+<img src="images/2024_fig_4.jpg" height="500px" />
+</center>
+
 # 2. Summary Results
   
 ## Responses by figure
@@ -189,7 +213,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 ```{r overall_response}
 figcounts = dfm %>% group_by(fignum) %>% summarize(count = n())
 p = ggplot(figcounts, aes(y=fignum, x=count))
-p + geom_point(size=8) + xlim(0, max(figcounts$count)) + theme_fivethirtyeight()
+p = p + geom_point(size=8) + xlim(0, max(figcounts$count)) + theme_minimal()
+p = p + xlab("Responses") + ylab("Figure")
+p
 ```
 </center>
 
@@ -203,7 +229,7 @@ p = ggplot(dfm, aes(x=effectiveness))
 p = p + geom_histogram(binwidth=1) +
   stat_bin(binwidth=1, geom="text", color="white", mapping=aes(label=..count..), vjust=2, size=5)
 p = p + theme(legend.position = "none")
-p + theme_fivethirtyeight() + xlim(0.5, 5.5)
+p + theme_minimal() + xlim(0.5, 5.5)
 ```
 </center>
 
@@ -217,7 +243,7 @@ p = ggplot(dfm, aes(x=understandable))
 p = p + geom_histogram(binwidth=1) +
   stat_bin(binwidth=1, geom="text", color="white", mapping=aes(label=..count..), vjust=2, size=5)
 p = p + theme(legend.position = "none")
-p + theme_fivethirtyeight() + xlim(0.5, 5.5)
+p + theme_minimal() + xlim(0.5, 5.5)
 ```
 </center>
 
@@ -231,7 +257,7 @@ p = ggplot(dfm, aes(x=appealing))
 p = p + geom_histogram(binwidth=1) +
   stat_bin(binwidth=1, geom="text", color="white", mapping=aes(label=..count..), vjust=2, size=5)
 p = p + theme(legend.position = "none")
-p + theme_fivethirtyeight()  + xlim(0.5, 5.5)
+p + theme_minimal()  + xlim(0.5, 5.5)
 ```
 </center>
 
@@ -243,7 +269,7 @@ p + theme_fivethirtyeight()  + xlim(0.5, 5.5)
 ```{r overall_time_taken}
 p = ggplot(dfm %>% drop_na(time_taken), aes(x=time_taken))
 p = p + geom_bar() + stat_count(geom="text", aes(label=..count..), vjust=1.5, colour="white")
-p + theme_fivethirtyeight() + theme(axis.text.x = element_text(angle = 90)) + scale_x_discrete(drop=FALSE)
+p + theme_minimal() + theme(axis.text.x = element_text(angle = 90)) + scale_x_discrete(drop=FALSE)
 ```
 </center>
 
