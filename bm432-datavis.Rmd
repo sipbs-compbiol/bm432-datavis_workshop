@@ -70,7 +70,7 @@ draw_economist_categories = function(dfm, categories, fig_num) {
   ratings$rating = factor(ratings$rating, levels=c("1", "2", "3", "4", "5"))
   p = ggplot(ratings, aes(x=rating))
   p = p + geom_bar() +
-    stat_count(geom="text", color="white", aes(label=..count..), vjust=2)
+    stat_count(geom="text", color="white", mapping=aes(label=..count..), vjust=2)
   p = p + facet_wrap(~category)
   p = p + theme_economist() + scale_x_discrete(drop=FALSE)
   p
@@ -84,8 +84,12 @@ draw_tufte_categories = function(dfm, categories, fig_num) {
                  names_to = "category",
                  values_to = "rating")
   p = ggplot(ratings, aes(x=category, y=rating))
-  p = p + geom_violin(outlier.colour="red") + geom_point(position=position_jitter(height=0.1, width=0.1), alpha=0.35)
+  p = p + geom_violin(mapping=aes(fill=category), alpha=0.3, linewidth=0) 
+  p = p + geom_point(position=position_jitter(height=0.1, width=0.1), alpha=0.4)
+  # p = p + geom_violin(outlier.colour="red") + geom_point(position=position_jitter(height=0.1, width=0.1), alpha=0.35)
   p = p + theme_tufte() + ylim(1, 5) + coord_flip()
+  p = p + scale_color_brewer(palette="Dark2")
+  p = p + theme(legend.position = "none")
   p
 }
 
@@ -95,10 +99,14 @@ draw_hc_categories = function(dfm, categories) {
     pivot_longer(cols=all_of(categories),
                  names_to = "category",
                  values_to = "rating")
-  p = ggplot(ratings, aes(x=fignum, y=rating))
-  p = p + geom_boxplot(outlier.colour="red") + geom_point(position=position_jitter(height=0.01, width=0.1), alpha=0.35)
+  p = ggplot(ratings, aes(x=fignum, y=rating, color=fignum))
+  p = p + geom_violin(mapping=aes(fill=fignum), alpha=0.15, linewidth=0) 
+  p = p + geom_point(position=position_jitter(height=0.1, width=0.1), alpha=0.4)
   p = p + facet_wrap(~category, nrow=1)
-  p = p + theme_hc() + scale_x_discrete(drop=FALSE)
+  p = p + theme_hc() + scale_x_discrete(drop=FALSE) 
+  p = p + theme(legend.position = "none")
+  p = p + scale_color_brewer(palette="Dark2")
+  p = p + scale_fill_brewer(palette="Dark2")
   p
 }
 
@@ -193,7 +201,8 @@ p + geom_point(size=8) + xlim(0, max(figcounts$count)) + theme_fivethirtyeight()
 ```{r overall_effectiveness}
 p = ggplot(dfm, aes(x=effectiveness))
 p = p + geom_histogram(binwidth=1) +
-  stat_bin(binwidth=1, geom="text", color="white", aes(label=..count..), vjust=2)
+  stat_bin(binwidth=1, geom="text", color="white", mapping=aes(label=..count..), vjust=2, size=5)
+p = p + theme(legend.position = "none")
 p + theme_fivethirtyeight() + xlim(0.5, 5.5)
 ```
 </center>
@@ -206,7 +215,8 @@ p + theme_fivethirtyeight() + xlim(0.5, 5.5)
 ```{r overall_understanding}
 p = ggplot(dfm, aes(x=understandable))
 p = p + geom_histogram(binwidth=1) +
-  stat_bin(binwidth=1, geom="text", color="white", aes(label=..count..), vjust=2)
+  stat_bin(binwidth=1, geom="text", color="white", mapping=aes(label=..count..), vjust=2, size=5)
+p = p + theme(legend.position = "none")
 p + theme_fivethirtyeight() + xlim(0.5, 5.5)
 ```
 </center>
@@ -219,7 +229,8 @@ p + theme_fivethirtyeight() + xlim(0.5, 5.5)
 ```{r overall_appeal}
 p = ggplot(dfm, aes(x=appealing))
 p = p + geom_histogram(binwidth=1) +
-  stat_bin(binwidth=1, geom="text", color="white", aes(label=..count..), vjust=2)
+  stat_bin(binwidth=1, geom="text", color="white", mapping=aes(label=..count..), vjust=2, size=5)
+p = p + theme(legend.position = "none")
 p + theme_fivethirtyeight()  + xlim(0.5, 5.5)
 ```
 </center>
@@ -278,7 +289,7 @@ draw_hc_categories(dfm, c("describe", "reproduce_paper", "reproduce_raw"))
 ```
 </center>
 
-# 4. Specific Figures
+# 4. Individual Figures
 
 ## Figure 1 (doi:`r doi_fig1`)
 
@@ -479,7 +490,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="100px" /> {.smaller}
 
 ```{r fig4_improvements}
-kable(dfm %>% filter(fignum==4) %>% mutate(esc_improvements = htmlEscape(improvements)) %>% select(esc_improvements))
+kable(dfm %>% filter(fignum==4) %>% select(improvements))
 ```
 
 # 5. Summing Up
