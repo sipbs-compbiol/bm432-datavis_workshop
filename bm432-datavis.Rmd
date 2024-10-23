@@ -121,7 +121,7 @@ process_words = function(dfrm, column) {
                           "slightly", "making", "around", "actually",
                           "way", "going", "like", "maybe", "etc", "dmso",
                           "doesnt", "might", "par", "should", "shouldve",
-                          "didnt", "will", "data"))
+                          "didnt", "will", "data", "easy"))
   wordmat <- as.matrix(TermDocumentMatrix(comments))
   words <- sort(rowSums(wordmat), decreasing=TRUE)
   dfm_words <- data.frame(word = names(words), freq=words)
@@ -506,7 +506,7 @@ wordcloud2(data=effwords, size=1.6, color='random-dark')
 
 ## Visualising Data About Data Visualisation
 
-- What words did you use to describe figure improvements?
+- What words did you use to describe potential figure improvements?
 
 <center>
 ```{r imp_wordcloud}
