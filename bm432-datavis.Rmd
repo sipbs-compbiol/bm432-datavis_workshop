@@ -24,6 +24,7 @@ library(dplyr)
 library(ggplot2)
 library(ggthemes)
 library(googlesheets4)
+library(htmltools)
 library(knitr)
 library(stringr)
 library(tidyr)
@@ -45,8 +46,8 @@ colnames(dfm) = c("timestamp", "figure", "effectiveness", "understandable",
                   "describe", "figure_comments", "time_taken", "numfigures",
                   "prereading", "other_comments")
 
-# Ignore responses prior to 11/10/2023
-dfm = dfm %>% filter(timestamp > "2024-10-10")
+# Ignore responses prior to 12/11/2024
+dfm = dfm %>% filter(timestamp > "2024-10-12")
 
 # Convert figure choice to integer
 dfm = dfm %>% separate(figure, c("fignum"), remove=FALSE)
@@ -83,7 +84,7 @@ draw_tufte_categories = function(dfm, categories, fig_num) {
                  names_to = "category",
                  values_to = "rating")
   p = ggplot(ratings, aes(x=category, y=rating))
-  p = p + geom_boxplot(outlier.colour="red") + geom_point(position=position_jitter(height=0.01, width=0.1), alpha=0.35)
+  p = p + geom_violin(outlier.colour="red") + geom_point(position=position_jitter(height=0.1, width=0.1), alpha=0.35)
   p = p + theme_tufte() + ylim(1, 5) + coord_flip()
   p
 }
@@ -109,7 +110,18 @@ process_words = function(dfrm, column) {
     tm_map(removePunctuation) %>%
     tm_map(stripWhitespace) %>%
     tm_map(content_transformer(tolower)) %>%
-    tm_map(removeWords, stopwords("english"))
+    tm_map(removeWords, stopwords("english")) %>%
+    tm_map(removeWords, c("figure", "make", "figures", "graph", "graphs",
+                          "perhaps", "including", "sure", "instead",
+                          "first", "middle", "could", "couldve", "may",
+                          "makes", "use", "also", "can", "much", "made",
+                          "many", "shows", "mutant", "dont", "still", "isnt",
+                          "whats", "via", "allow", "bit", "just", "drug",
+                          "cell", "gcase", "try", "although", "cclear",
+                          "slightly", "making", "around", "actually",
+                          "way", "going", "like", "maybe", "etc", "dmso",
+                          "doesnt", "might", "par", "should", "shouldve",
+                          "didnt", "will", "data"))
   wordmat <- as.matrix(TermDocumentMatrix(comments))
   words <- sort(rowSums(wordmat), decreasing=TRUE)
   dfm_words <- data.frame(word = names(words), freq=words)
@@ -163,7 +175,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
   
 ## Responses by figure
 
-- We received `r nrow(dfm)` ratings in total (at three figures per student, this is `r round(nrow(dfm)/3, 1)` students responding)
+- We received `r nrow(dfm)` ratings in total (at four figures per student, this is `r round(nrow(dfm)/4, 1)` students responding)
 
 <center>
 ```{r overall_response}
@@ -467,7 +479,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="100px" /> {.smaller}
 
 ```{r fig4_improvements}
-kable(dfm %>% filter(fignum==4) %>% select(improvements))
+kable(dfm %>% filter(fignum==4) %>% mutate(esc_improvements = htmlEscape(improvements)) %>% select(esc_improvements))
 ```
 
 # 5. Summing Up
