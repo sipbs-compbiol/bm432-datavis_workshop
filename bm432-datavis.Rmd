@@ -266,10 +266,10 @@ draw_hc_categories(dfm, c("describe", "reproduce_paper", "reproduce_raw"))
 
 # 4. Specific Figures
 
-## Figure 1 (doi:`r doi_fig1`)
+## Figure 1 (doi:`r doi_fig1`)  {.scrollable}
 
 <center>
-<img src="images/2024_fig_1.jpg" height="500px" />
+<img src="images/2024_fig_1.jpg" />
 </center>
 
 ## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="40px" />
@@ -308,10 +308,10 @@ kable(dfm %>% filter(fignum==1) %>% select(improvements))
 ```
 
 
-## Figure 2 (doi:`r doi_fig2`)
+## Figure 2 (doi:`r doi_fig2`) {.scrollable}
 
 <center>
-<img src="images/2024_fig_2.jpg" height="500px" />
+<img src="images/2024_fig_2.jpg" />
 </center>
 
 
@@ -351,10 +351,10 @@ kable(dfm %>% filter(fignum==2) %>% select(improvements))
 ```
 
 
-## Figure 3 (doi:`r doi_fig3`)
+## Figure 3 (doi:`r doi_fig3`)  {.scrollable}
 
 <center>
-<img src="images/2024_fig_3.jpg" width="100%" />
+<img src="images/2024_fig_3.jpg" />
 </center>
 
 ## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" />
@@ -390,10 +390,10 @@ kable(dfm %>% filter(fignum==3) %>% select(improvements))
 ```
 
 
-## Figure 4 (doi:`r doi_fig4`)
+## Figure 4 (doi:`r doi_fig4`)  {.scrollable}
 
 <center>
-<img src="images/2024_fig_4.jpg" height="500px" />
+<img src="images/2024_fig_4.jpg" />
 </center>
 
 ## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="40px" />
