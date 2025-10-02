@@ -1,22 +1,20 @@
 ---
 title: "BM432 Data Visualisation"
-author: "Morgan Feeney and Leighton Pritchard"
+author: 
+  - name: "Morgan Feeney"
+    affiliation: "University of Strathclyde"
+  - name: "Leighton Pritchard"
+    affiliation: "University of Strathclyde"
 date: "2024-10-23"
-output:
-  ioslides_presentation:
-    css: ./includes/custom.css
-    font-family: 'Helvetica'
-    widescreen: True
-    self_contained: True
+format: 
+  revealjs:
+    footer: "BM432 Data Visualisation Workshop"
     logo: images/science_logo_400x400.jpg
-    df_print: paged
-editor_options: 
-  chunk_output_type: console
+    theme: [default, ./includes/custom.scss]
+    width: 1280
+    height: 720
+    self-contained: true
 ---
-
-<style>
-.forceBreak { -webkit-column-break-after: always; break-after: column; }
-</style>
 
 ```{r setup, include=FALSE}
 # Package imports
@@ -128,6 +126,21 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 ```
 
 # 1. Introduction
+
+## Old headers
+
+```
+output:
+  ioslides_presentation:
+    css: ./includes/custom.css
+    font-family: 'Helvetica'
+    widescreen: True
+    self_contained: True
+    logo: images/science_logo_400x400.jpg
+    df_print: paged
+editor_options: 
+  chunk_output_type: console
+```
 
 ## Learning Objectives
 
@@ -274,7 +287,7 @@ draw_hc_categories(dfm, c("describe", "reproduce_paper", "reproduce_raw"))
 <img src="images/2024_fig_1.jpg" height="500px" />
 </center>
 
-## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" />
+## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="40px" />
 
 <center>
 ```{r fig1_main_summary}
@@ -282,7 +295,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ```
 </center>
 
-## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" /> {.columns-2 .smaller}
+## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="40px" /> {.columns-2 .smaller}
 
 <center>
 <img src="images/2024_fig_1.jpg" width="450px" />
@@ -296,7 +309,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
   - We can't see difference between effects of two concentrations of A16 in (D), or A16 vs A18 in (B); use a table of contrasts.
   - Place things to be compared by the reader next to each other where possible (E).
 
-## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="100px" /> {.smaller}
+## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="40px" /> {.smaller}
 
 ```{r fig1_improvements}
 kable(dfm %>% filter(fignum==1) %>% select(improvements))
@@ -310,7 +323,7 @@ kable(dfm %>% filter(fignum==1) %>% select(improvements))
 </center>
 
 
-## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="100px" />
+## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="40px" />
 
 <center>
 ```{r fig2_main_summary}
@@ -319,7 +332,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 </center>
 
 
-## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="100px" /> {.columns-2 .smaller}
+## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="40px" /> {.columns-2 .smaller}
 
 <center>
 <img src="images/2024_fig_2.jpg" height="450px" />
@@ -334,7 +347,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
   - Heatmap text is too small to read comfortably; is there too much data here?
 
 
-## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="100px" /> {.smaller}
+## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="40px" /> {.smaller}
 
 ```{r fig2_improvements}
 kable(dfm %>% filter(fignum==2) %>% select(improvements))
@@ -381,7 +394,7 @@ kable(dfm %>% filter(fignum==3) %>% select(improvements))
 <img src="images/2024_fig_4.jpg" height="500px" />
 </center>
 
-## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="100px" />
+## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="40px" />
 
 <center>
 ```{r fig4_main_summary}
@@ -389,7 +402,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 ```
 </center>
 
-## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="100px" /> {.columns-2 .smaller}
+## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="40px" /> {.columns-2 .smaller}
 
 <center>
 <img src="images/2024_fig_4.jpg" height="450px" />
@@ -404,7 +417,7 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
   - The implied membrane in (C) and (D) could be stated as such in the figure.
 
 
-## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="100px" /> {.smaller}
+## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="40px" /> {.smaller}
 
 ```{r fig4_improvements}
 kable(dfm %>% filter(fignum==4) %>% select(improvements))
