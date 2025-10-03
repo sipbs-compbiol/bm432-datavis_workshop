@@ -1,0 +1,72 @@
+---
+title: "Proportional Area Plots"
+description: |
+ Visual representation of relationships between categorical datasets
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+execute:
+  warning: false
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(dplyr)
+library(GGally)
+library(ggplot2)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+
+# Set up Titanic data as dataframe
+titanic = data.frame(Titanic)
+```
+
+Graphical relationships representing comparisons of categorical variables aren't very common. They are conceptually not very difficult, but few tools have provided a ready way to generate suitable figures (scatter plots, bar charts, and pie charts are more readily found). However, tools like `GGally` in `R` make complex graphs accessible, and that package provides a figure style that is a grid of rectangles with proportional areas.
+
+In @fig-titanic-proparea, the proporition of Titanic survivors by sex is shown, where larger rectangles indicate a larger absolute count (here, area is proportional to count). 
+
+```{r}
+#| label: fig-titanic-proparea
+#| echo: FALSE
+#| fig-cap: "Proportional area comparison of Titanic survivors by sex."
+
+p = ggally_count(titanic, mapping=ggplot2::aes(x=Survived, y=Sex, weight=Freq))+
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  theme(legend.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+p
+```
+
+::: { .callout-note }
+This representation is an intuitive graphical version of the comparisons in a chi-square test. 
+:::
+
+One advantage of this representation is that we can use the stacked bar representation (see above) to subdivide each of the rectangular areas by a further categorical variable, as in @fig-titanic-propstack where we divide the blocks representing passengers conditioned on sex and survival, according to class.
+
+```{r}
+#| label: fig-titanic-propstack
+#| echo: FALSE
+#| fig-cap: "Proportional area comparison of Titanic survivors by sex, with stacked bar representation of class."
+
+p = ggally_count(titanic, mapping=ggplot2::aes(x=Survived, y=Sex, weight=Freq, fill=Class)) +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  theme(legend.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+p
+```
+

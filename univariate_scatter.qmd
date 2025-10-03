@@ -1,0 +1,48 @@
+---
+title: "Univariate (1D) Scatterplots"
+description: |
+ Representing continuous data with univariate scatterplots
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(ggplot2)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+```
+
+In a univariate scatterplot, datapoints are plotted against a single numerical axis, with the other axis showing the identity of the dataset. This allows all values in a dataset to be shown, which is the most transparent way of presenting the data to the reader. 
+
+Where there is potential for overlap of datapoints, their locations can be "jittered" - moved slightly in a horizontal and/or vertical direction - in order to make the number of datapoints at each value clearer. It is however not always possible to interpret the *density* of datapoints very well, so this representation is best combined with a summary of the distribution that conveys this information also.
+
+```{r}
+#| label: fig-1d-scatterplot
+#| echo: FALSE
+#| fig-cap: "Univariate (1D) scatterplot of sepal length for each species from the `iris` dataset, with jitter."
+
+p = ggplot(iris, aes(x=Species, y=Sepal.Length, color=Species)) +
+  geom_jitter(width=0.1, height=0) +
+  scale_color_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+A univariate scatterplot for the `iris` sepal length data in Figure \@ref(fig:1d-scatterplot) shows the distributions of this variable overlap for each species, and that there is a possible *outlier* in the *I. virginica* data. The nature of the data is also evident: the datapoints are regularly-spaced, and we can see where there are relatively few or many datapoints.

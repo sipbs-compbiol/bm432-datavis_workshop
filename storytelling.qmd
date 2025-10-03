@@ -1,0 +1,243 @@
+---
+title: "Storytelling"
+description: |
+ The relationship between data visualisation and storytelling
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(ggplot2)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+
+# Colour scheme for misleading data
+colors <- c("#779977", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#CCCCCC")
+
+# Misleading data
+mean = c(9.5, 9.75)
+sd = c(.25, .25)
+key = c("AvrX", "AvrY")
+
+misleading_data_bar = data.frame(mean, sd, key)
+misleading_data_bar$sd_min = mean - sd
+misleading_data_bar$sd_max = mean + sd
+```
+
+## Introduction
+
+Data visualisation is not often just a simple rendering of the data. Fundamentally, data visualisation is a method of communication, and it is worth thinking of it as a form of storytelling, similar to writing. We may as scientists have specific goals for data exploration, such as to maximise patterns that may indicate correlation between variables - to tell *ourselves* a story from the data. When writing reports and papers, we want to share what *we* see in the data with our reader. We want to tell *them* a story in pictures, to share our mental model with them.
+
+There are strong similarities to storytelling with words. For instance, there is a grammar to visual information (called [*gestalt principles*](https://www.toptal.com/designers/ui/gestalt-principles-of-design)), just as there is a grammar to written language. As humans we have evolved to use this grammar to recognise patterns in what we see, including visual images on the page, and interpret them as having meaning. We can use those natural, innate tendencies to recognise and interpret patterns to make understanding and interpretation of data almost effortless for the reader.
+
+![Pareidolia: the human brain incorrectly interprets images to have meaning even when there is no meaning present. This Martian mesa appears to have a face but, regardless of what any YouTube documentaries or bros in tinfoil hats might tell you, there is in fact no face there. Image by NASA (Public Domain)](assets/images/martian_face_viking_cropped.jpg){#fig-pareidolia}
+
+::: { .callout-warning }
+It is also possible to use these natural ways that we interpret data to mislead people - accidentally or otherwise. We will see some examples of this.
+
+If you know that it is possible to be misled by visual representation, you will be better able to spot bad graphics in papers. By the end of this page, you'll also be better able to mislead people.
+
+> With great power comes great responsibility...
+:::
+
+## A scientific story
+
+Here's a story as it might appear in a presentation or a paper, told with a single figure:
+
+### A story: "AvrY induces chlorosis more strongly than AvrX"
+
+Suppose you're reading a manuscript, and the text makes this claim:
+
+> We measured chlorosis in 30 plants after the application of either AvrX or AvrY. @fig-misleading-01 demonstrates that induction of chlorosis was stronger for AvrY than for AvrX.
+
+```{r}
+#| label: fig-misleading-01
+#| echo: FALSE
+#| fig-width: 3
+#| fig-height: 3
+#| fig-cap: "Bar chart showing amount of chlorosis in leaves after application of AvrX and AvrY"
+
+data.barplot1 = ggplot(misleading_data_bar, aes(x = key, y = mean)) +
+  geom_bar(stat = "identity", aes(fill = key, alpha = .5)) +
+  #geom_errorbar(aes(ymin = sd_min, ymax = sd_max), width = 0.25, lwd=1) +
+  coord_cartesian(ylim=c(9.25, 10), expand = FALSE) +
+  scale_fill_manual(values = c(colors[[1]], colors[[6]])) +
+  xlab("") +
+  ylab("Chlorosis") +
+  theme_classic() +
+  theme(axis.line.y = element_line(), legend.position = "none", legend.key = element_blank(),
+        text=element_text(size=12), panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        legend.title = element_blank(), axis.text.y = element_blank(),
+        panel.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+data.barplot1
+```
+
+
+::: { .callout-questions }
+1. How does @fig-misleading-01 support the statement that AvrY induces chlorosis more strongly than AvrX?
+2. What information is present in @fig-misleading-01?
+3. What information do you think you need that is not present in @fig-misleading-01?
+:::
+
+::: { .callout-hints collapse="true" }
+1. Which bar is larger? By how much?
+2. What is the extent of induction of chlorosis in each case? How variable is the extent of chlorosis in individual leaves?
+3. Is the difference in chlorosis biologically meaningful?
+:::
+
+As it stands we dont know what the chlorosis measurements are, which means we can't interpret them as "strong" or "weak", and we can't tell how different the values are for AvrX and AvrY. We can improve this plot by indicating what quantities are meant by the bars in the chart, adding values on the y-axis:
+
+```{r}
+#| label: fig-misleading-02
+#| echo: FALSE
+#| fig-width: 3
+#| fig-height: 3
+#| fig-cap: "Bar chart showing effect of chlorosis due to application of AvrX and AvrY, with observed chlorosis values indicated on the y-axis"
+
+data.barplot2 = ggplot(misleading_data_bar, aes(x = key, y = mean)) +
+  geom_bar(stat = "identity", aes(fill = key, alpha = .5)) +
+  #geom_errorbar(aes(ymin = sd_min, ymax = sd_max), width = 0.25, lwd=1) +
+  coord_cartesian(ylim=c(9.25, 10), expand = FALSE) +
+  scale_fill_manual(values = c(colors[[1]], colors[[6]])) +
+  xlab("") +
+  ylab("Chlorosis") +
+  theme_classic() +
+  theme(axis.line.y = element_line(), legend.position = "none", legend.key = element_blank(),
+        text=element_text(size=12), panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        legend.title = element_blank(),
+        panel.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+data.barplot2
+```
+
+::: { .callout-questions }
+1. What conclusions can you draw from @fig-misleading-02 that couldn't be drawn from @fig-misleading-01?
+2. Is @fig-misleading-02 a fair representation of the data?
+3. Does the figure still support the statement that AvrY induces chlorosis more strongly than AvrX?
+:::
+
+::: { .callout-hints collapse="true" }
+1. Which bar is larger? By how much?
+2. Is the difference in bar sizes proportionate to the difference in extent of chlorosis? How variable are the measurements?
+3. Is the difference in chlorosis biologically meaningful?
+:::
+
+Now we can read off the chart that AvrX has a value of 9.5 and AvrY has a value of about 9.75. If we knew more about chlorosis, we could now tell if this was a strong or a weak effect.
+
+But there is something not right about this graphic. The blue bar looks to be twice the size of the green block, yet the difference between values is only $\frac{0.25}{0.95} = 2.5\%$! It would be fairer to start the y-axis at zero, so that the areas of each bar are related to the absolute difference between observed values.
+
+::: { .callout-note collapse="true"}
+## How humans interpret graphs (click to expand)
+
+Research shows that people do, in fact, interpret bar charts by bar *area*, not bar *height*. Humans have a limited repertoire of elementary perceptual tasks that we use to extract data and information from graphical representation. Graphs may use these well for communication, or [misuse them to fool the reader](https://www.theguardian.com/news/datablog/2014/may/12/lies-election-leaflets-five-tricks-european-elections). A number of studies empirically test people's ability to correctly "read" graph types, and a couple of these are indicated below..
+
+> Cleveland, W.S. & McGill, R. (1984) "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods" *J. Am. Stat. Ass.* **79** 531-554 [https://doi.org/10.2307/2288400](https://doi.org/10.2307/2288400)
+>
+> Heer, J. & Bostock, M. (2010) "Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design" *CHI '10* pp.203-212 [https://doi.org/10.1145/1753326.1753357](https://doi.org/10.1145/1753326.1753357)
+:::
+
+```{r}
+#| label: fig-misleading-03
+#| echo: FALSE
+#| fig-width: 3
+#| fig-height: 3
+#| fig-cap: "Bar chart showing effect of chlorosis due to application of AvrX and AvrY, with the y-axis starting at zero, and values marked"
+
+data.barplot3 = ggplot(misleading_data_bar, aes(x = key, y = mean)) +
+  geom_bar(stat = "identity", aes(fill = key, alpha = .5)) +
+  #geom_errorbar(aes(ymin = sd_min, ymax = sd_max), width = 0.25, lwd=1) +
+  coord_cartesian(ylim=c(0, 10), expand = FALSE) +
+  scale_fill_manual(values = c(colors[[1]], colors[[6]])) +
+  xlab("") +
+  ylab("Chlorosis") +
+  theme_classic() +
+  theme(axis.line.y = element_line(), legend.position = "none", legend.key = element_blank(),
+        text=element_text(size=12), panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        legend.title = element_blank(),
+        panel.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+data.barplot3
+```
+
+::: { .callout-questions }
+1. What conclusions can you draw from @fig-misleading-03 that couldn't be drawn from @fig-misleading-02?
+2. Does @fig-misleading-03 tell the same story as @fig-misleading-02?
+3. Is there anything else we still need to know?
+:::
+
+::: { .callout-hints collapse="true" }
+1. Is the difference in bar sizes proportionate to the difference in extent of chlorosis?
+2. Is the difference in chlorosis biologically meaningful?
+3. How variable are the measurements for AvrX and AvrY?
+:::
+
+::: { .callout-warning }
+When we read the literature, it is tempting to skim over papers and "read the figures," trusting that they tell an unbiased and fair story about the data. **That is not always true.** Figures should be read at least as carefully as the text.
+:::
+
+There is one more thing we need to make proper sense of the figure. At the moment, the values for AvrX and AvrY are presented as single values: one *location* for each gene. But we saw at the start of the story that 30 plants were measured:
+
+> We measured chlorosis in 30 plants after the application of either AvrX or AvrY. The figure demonstrates that the induction of chlorosis was stronger for AvrY than for AvrX.
+
+It's unlikely that all of the measurements for each gene were identical. We would assume that there has been some *spread* of data around that location. This spread is commonly represented with error bars, as in @fig-misleading-04.
+
+```{r}
+#| label: fig-misleading-04
+#| echo: FALSE
+#| fig-width: 3
+#| fig-height: 3
+#| fig-cap: "Bar chart showing effect of chlorosis due to application of AvrX and AvrY, with the y-axis starting at zero, values marked on that axis, and error bars indicating standard deviation"
+
+data.barplot4 = ggplot(misleading_data_bar, aes(x = key, y = mean)) +
+  geom_bar(stat = "identity", aes(fill = key, alpha = .5)) +
+  geom_errorbar(aes(ymin = sd_min, ymax = sd_max), width = 0.25, lwd=1) +
+  coord_cartesian(ylim=c(0, 10.5), expand = FALSE) +
+  scale_fill_manual(values = c(colors[[1]], colors[[6]])) +
+  xlab("") +
+  ylab("Chlorosis") +
+  theme_classic() +
+  theme(axis.line.y = element_line(), legend.position = "none", legend.key = element_blank(),
+        text=element_text(size=12), panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        legend.title = element_blank(),
+        panel.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+data.barplot4
+```
+
+::: { .callout-questions }
+1. What conclusions can you draw from @fig-misleading-04 that couldn't be drawn from @fig-misleading-04?
+2. Does @fig-misleading-04 tell the same story as @fig-misleading-03?
+3. Is there anything else we might still want to know?
+:::
+
+::: { .callout-hints collapse="true" }
+1. How variable are the measurements for AvrX and AvrY?
+2. Is the difference in bar sizes proportionate to the difference in extent of chlorosis?
+3. What do the error bars mean? Do they fairly represent the spread of measurements that were made?
+:::
+
+::: { .callout-tip }
+As it happens, there *is* more that we might want to know, and you can explore this in the interactive session at the link below:
+
+- [3a. Better tools than bar charts **INTERACTIVE SESSION**]()
+:::

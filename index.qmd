@@ -1,0 +1,24 @@
+---
+title: "BM432 Data Visualisation Workshop"
+image: ./assets/images/sipbs_compbio.png
+about:
+  template: trestles
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+---
+
+Welcome to the BM432 Data Visualisation Workshop.
+
+The amount of data being generated and processed in biological sciences is always increasing, seemingly at an ever-faster pace. As a scientist you will have to learn to work with this data, telling a clear story about your science, and interpreting other people's work accurately, without being overwhelmed by its sheer volume and complexity. 
+
+Data visualisation is a tool that allows us to summarise, understand, and explore our - sometimes incredibly large - datasets intuitively. In this workshop, we will focus on common approaches by which statistical data can and should be summarised visually, with an emphasis on best practice.
+
+Data visualisation is a broad topic that touches on elements of colour theory, psychology, graphic design, and several other fields that we sadly don’t have time to explore, here. But we will provide links to help you learn more about this area, in your own time.

@@ -1,0 +1,116 @@
+---
+title: "Histograms"
+description: |
+ Summarising continuous data distributions with histograms
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+execute:
+  warning: false
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(ggplot2)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+```
+
+The values in a dataset span a _range_ from the smallest to the largest value. Histograms divide such datasets into *bins* - smaller ranges of a set size. The count of datapoints in each _bin_ is shown as a bar. (This can be thought of as a bar chart, where the *bin* is a categorical variable representing a range from the dataset).
+
+::: { .callout-caution }
+## A histogram is not the same thing as a bar chart.
+
+- [Histogram](https://en.wikipedia.org/wiki/Histogram): a representation of the distribution of numerical data
+- [Bar Chart](https://en.wikipedia.org/wiki/Bar_chart): heights or lengths associated with categorical variables
+:::
+
+Histograms can be very useful, but there is more than one way to visually present histogram data.
+
+## Histogram
+
+```{r}
+#| label: fig-hist
+#| echo: FALSE
+#| fig-cap: "Histograms of sepal length for each species from the `iris` dataset."
+
+p = ggplot(iris, aes(x=Sepal.Length, fill=Species)) +
+  geom_histogram(alpha=0.7, color="black", position="identity", binwidth=0.1) +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+In Figure @fig-hist histograms for each of the three species are presented, and overlaid. This has the advantage that the histogram values (datapoints in each bin) can be read easily from the y-axis, and the shape of the histogram of the distribution is not distorted for each species. However there is a disadvantage that each bar may obscure others behind it. An attempt has been made in this figure to reduce this problem with the use of *transparancy* (also known as *alpha channel*), but the image is still not very clear.
+
+The "neatness" of a histogram is essentially controlled by a single parameter: the *bin width*. This defines the width of the bars in the histogram. Too small, and each bar has a count of one or zero (also known as a *rug plot*). Too large, and the shape of the data is masked.
+
+## Stacked Histogram
+
+```{r}
+#| label: fig-hist-stacked
+#| echo: FALSE
+#| fig-cap: "Stacked histograms of sepal length for each species from the `iris` dataset."
+
+p = ggplot(iris, aes(x=Sepal.Length, fill=Species)) +
+  geom_histogram(alpha=0.7, color="black", binwidth=0.1) +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+Stacked histograms such as the one in @fig-hist-stacked are frequently used, and resolve an issue in @fig-hist where bars may be obscured. However, the "shape" of the distribution for each of the species is now distorted when bars are offset, and it can be difficult to compare how distributions differ, or see the relationships between them.
+
+## Dodged Histogram
+
+```{r}
+#| label: fig-hist-dodged
+#| echo: FALSE
+#| fig-cap: "Dodged histogram of sepal length for each species from the `iris` dataset."
+
+p = ggplot(iris, aes(x=Sepal.Length, fill=Species)) +
+  geom_histogram(alpha=0.7, color="black", position="dodge") +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+@fig-hist-dodged shows a *dodged* histogram. This attempts to avoid the problem of obscuring data in @fig-hist by shifting distributions to the side. This doesn't distort the shape of the distribution, but it can make it difficult to register comparisons between datasets (here, for species), due to the spacing. That is particularly pronounced when there are multiple distributions to compare.
+
+## Small Multiples
+
+```{r}
+#| label: fig-hist-facet
+#| echo: FALSE
+#| fig-cap: "Small multiple histograms of sepal length for each species from the `iris` dataset."
+
+p = ggplot(iris, aes(x=Sepal.Length, fill=Species)) +
+  geom_histogram(alpha=0.7, color="black", position="identity") +
+  scale_fill_brewer(palette="Set1") +
+  facet_wrap(~Species) +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+The best solution for representing histograms of multiple distributions is often a [*small multiple* plot](https://en.wikipedia.org/wiki/Small_multiple) as in @fig-hist-facet. These do not distort the data, and avoid problems with overlaying or jogging data by representing each dataset separately. To be successful, small multiple plots should share the same axes (to facilitate comparisons) and each subplot should be clearly labelled.

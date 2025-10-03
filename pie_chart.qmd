@@ -1,0 +1,58 @@
+---
+title: "Pie Charts"
+description: |
+ Representing proportions in a pie chart
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+execute:
+  warning: false
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(dplyr)
+library(ggplot2)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+
+# Set up Titanic data as dataframe
+titanic = data.frame(Titanic)
+```
+
+Pie charts are frequently criticised. In my view this is with good reason. Humans find it easier to judge differences between lengths than between areas, and differences between areas than differences between angles. Pie charts use angle and area to represent data; bar charts use area and length; and dot charts use length alone. It is difficult - unless the data is specifically ordered - to rank categories in bar charts and pie charts; it is much easier to do so with dot charts.
+
+Also, pie charts can only represent proportional data well, and are less suited to showing absolute counts. They are more limited than bar charts or dot charts (which can each represent exactly the same data as the pie chart, and much more), and less easy to understand than the equivalent stacked bar chart. But, for completeness, the class data for the Titanic passenger list is presented in @fig-titanic-pie.
+
+```{r}
+#| label: fig-titanic-pie
+#| echo: FALSE
+#| fig-cap: "Pie chart of proportion of passengers on the Titanic, by class"
+
+p = ggplot(titanic %>% group_by(Class) %>% summarise(n = sum(Freq)),
+           aes(x="", y=n, fill=Class)) +
+  geom_bar(position="fill", stat="identity") +
+  xlab("") + ylab("") +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  coord_polar("y", start=0) +
+  theme(legend.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+A benefit to pie charts is that people recognise "anchor points" on the circle. We can recognise 25% (90 degrees), 50% (180 degrees) and 75% marks quite well, but it is unusual to be able to distinguish well between other angles. This is particularly problematic for small angles, and large numbers of categories.
