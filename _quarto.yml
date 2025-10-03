@@ -18,6 +18,8 @@ website:
           href: numerical.qmd
         - text: "Categorical Data"
           href: categorical.qmd
+        - text: "Combining Data"
+          href: combining.qmd
       - text: "Continuous Variables"
         menu:
         - text: "1D Scatterplot"
@@ -32,8 +34,12 @@ website:
           href: scatterplot.qmd
       - text: "Categorical Variables"
         menu:
-        - text: "Bar Chart"
+        - text: "Bar Chart/Dot Chart"
           href: bar_chart.qmd
+        - text: "Pie Chart"
+          href: pie_chart.qmd
+        - text: "Proportional Areas"
+          href: proportional_area.qmd
 
   page-footer: 
     left: This site © University of Strathclyde 2025

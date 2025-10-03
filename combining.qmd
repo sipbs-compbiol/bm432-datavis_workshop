@@ -1,0 +1,153 @@
+---
+title: "Combining Data Type Visualisations"
+description: |
+ Best practices for visualising multiple data types
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+execute:
+  warning: false
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(dplyr)
+library(GGally)
+library(ggplot2)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+
+# Set up Titanic data as dataframe
+titanic = data.frame(Titanic)
+```
+
+## Combining Plots
+
+No single visual representation is perfect, and it is often useful to combine representations to combine their advantages, or offset disadvantages, as with @fig-boxscatter, @fig-violinscatter, and @fig-violinboxscatter), below.
+
+::: { .callout-tip }
+Tools like `R` and `ggplot` make these complex figures straightforward to generate. Tools like `Excel` do not.
+:::
+
+```{r}
+#| label: fig-boxscatter
+#| echo: FALSE
+#| fig-cap: "Boxplot/box-and-whisker plot of sepal length for each species from the `iris` dataset, with jittered scatterplot."
+
+p = ggplot(iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
+  geom_boxplot(outlier.shape=NA) +
+  geom_jitter(width=0.1, height=0) + 
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+```{r}
+#| label: fig-violinscatter
+#| echo: FALSE
+#| fig-cap: "Violin plot of sepal length for each species from the `iris` dataset, with jittered scatterplot."
+
+p = ggplot(iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
+  geom_violin() +
+  geom_jitter(width=0.1, height=0) + 
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+```{r}
+#| label: fig-violinboxscatter
+#| echo: FALSE
+#| fig-cap: "Vioin and boxplots of sepal length for each species from the `iris` dataset, with jittered scatterplot."
+
+p = ggplot(iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
+  geom_violin() +
+  geom_boxplot(width=0.1, fill=figbg, outlier.shape=NA) + 
+  geom_jitter(width=0.025, height=0, color="black") + 
+  scale_color_brewer(palette="Set1") +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+### Bar Chart
+
+For comparison, we present a common (and less informative) literature representation of this kind of data: a bar chart with error bars showing standard deviation of each dataset.
+
+```{r}
+#| label: barchart
+#| echo: FALSE
+#| fig-cap: "Bar chart of sepal length for each species from the `iris` dataset, with error bars representing standard deviation"
+
+p = ggplot(iris %>% group_by(Species) %>% summarise(val=mean(Sepal.Length),
+                                                    sd_min=mean(Sepal.Length) - sd(Sepal.Length),
+                                                    sd_max=mean(Sepal.Length) + sd(Sepal.Length)),
+           aes(x=Species, y=val, fill=Species)) +
+  geom_bar(stat="identity") +
+  geom_errorbar(aes(ymin = sd_min, ymax = sd_max), width = 0.25, lwd=1) +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+::: { .callout-question }
+1. Which visualisations do you think made it easiest for you to interpret the data?
+:::
+
+## Pairs Plots
+
+Tools like `GGally` and `ggplot2` in `R` provide a *pairs plot* graphics that combine the best-practice versions of the above representations to get a quick overview of a dataset. The `iris` and `titanic` datasets are summarised below in @fig-iris-pairs and @fig-titanic-pairs.
+
+```{r}
+#| label: fig-iris-pairs
+#| echo: FALSE
+#| fig-cap: "Pairs plot of `iris` data, providing an overview of relationships between variables."
+#| fig-width: 10
+#| fig-height: 10
+
+p = ggpairs(iris)                                             # create pairs plot for all iris data
+p = p + theme(plot.background = element_rect(fill = figbg,    # colour background
+                                             color = figbg))
+p                                                             # show plot
+```
+
+```{r}
+#| label: fig-titanic-pairs
+#| echo: FALSE
+#| fig-cap: "Pairs plot of `titanic` data, providing an overview of relationships between variables."
+#| fig-width: 10
+#| fig-height: 10
+
+p = ggpairs(titanic, columns=c("Class", "Sex", "Age", "Survived"), mapping=ggplot2::aes(weight=Freq))                                             # create pairs plot for all iris data
+p = p + theme(plot.background = element_rect(fill = figbg,    # colour background
+                                             color = figbg))
+p                                                             # show plot
+```
+
+::: { .callout-questions }
+1. Which data representations does the pairs plot use?
+2. Which visualisation is used for comparing each type of data?
+3. Do you agree that the right choice was made for each data type?
+4. How would you refine these pairs plots?
+:::
