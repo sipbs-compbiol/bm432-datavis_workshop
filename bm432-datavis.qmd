@@ -169,12 +169,14 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
   
 ## Exercise: Four figures (assess all figures)
 
+- Use the DOIs provided to find the papers the figures are from, if you need more information than is in the figure legend
+
 - **For each figure, consider the following:**
   - What type of data is being presented?
   - Are the data presented effectively? (why/why not?)
-  - How can the data presentation be improved?
-  - Use the DOI provided to find the paper the figure is from, if you need more information than is in the figure legend
-- Fill in the _pro forma_ with your answers to the questions above (one sentence each)
+  - How might the data presentation be improved?
+  - How would you grade this figure according to University Marking Guide B?
+- Fill in the _pro forma_ with your scoring and free-text answers to the questions above (one sentence each)
   - [Google Form](https://forms.gle/cyJPnnuvVRazcTkk7)
 
 ## Figure 1 (doi:`r doi_fig1`)
@@ -201,117 +203,6 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 <img src="images/2024_fig_4.jpg" height="500px" />
 </center>
 
-# 2. Summary Results
-  
-## Responses by figure
-
-- We received `r nrow(dfm)` ratings in total (at four figures per student, this is `r round(nrow(dfm)/4, 1)` students responding)
-
-<center>
-```{r overall_response}
-figcounts = dfm %>% group_by(fignum) %>% summarize(count = n())
-p = ggplot(figcounts, aes(y=fignum, x=count))
-p = p + geom_point(size=8) + xlim(0, max(figcounts$count)) + theme_minimal()
-p = p + xlab("Responses") + ylab("Figure")
-p
-```
-</center>
-
-## Overall effectiveness
-
-- How was effectiveness scored, distributed across all figures?
-
-<center>
-```{r overall_effectiveness}
-p = ggplot(dfm, aes(x=effectiveness))
-p = p + geom_histogram(binwidth=1) +
-  stat_bin(binwidth=1, geom="text", color="white", mapping=aes(label=..count..), vjust=2, size=5)
-p = p + theme(legend.position = "none")
-p + theme_minimal() + xlim(0.5, 5.5)
-```
-</center>
-
-## Overall understandability
-
-- How was understandability scored, distributed across all figures?
-
-<center>
-```{r overall_understanding}
-p = ggplot(dfm, aes(x=understandable))
-p = p + geom_histogram(binwidth=1) +
-  stat_bin(binwidth=1, geom="text", color="white", mapping=aes(label=..count..), vjust=2, size=5)
-p = p + theme(legend.position = "none")
-p + theme_minimal() + xlim(0.5, 5.5)
-```
-</center>
-
-## Overall appeal
-
-- How was appeal scored, distributed across all figures?
-
-<center>
-```{r overall_appeal}
-p = ggplot(dfm, aes(x=appealing))
-p = p + geom_histogram(binwidth=1) +
-  stat_bin(binwidth=1, geom="text", color="white", mapping=aes(label=..count..), vjust=2, size=5)
-p = p + theme(legend.position = "none")
-p + theme_minimal()  + xlim(0.5, 5.5)
-```
-</center>
-
-## Time taken per figure
-
-- How long did you take, per figure?
-
-<center>
-```{r overall_time_taken}
-p = ggplot(dfm %>% drop_na(time_taken), aes(x=time_taken))
-p = p + geom_bar() + stat_count(geom="text", aes(label=..count..), vjust=1.5, colour="white")
-p + theme_minimal() + theme(axis.text.x = element_text(angle = 90)) + scale_x_discrete(drop=FALSE)
-```
-</center>
-
-# 3. Results By Figure
-
-## Effectiveness/Understandability/Appeal
-
-- How effective/understandable/appealing did you think each figure was?
-
-<center>
-```{r understandable_by_fig}
-draw_hc_categories(dfm, c("effectiveness", "understandable", "appealing"))
-```
-</center>
-
-## Colours/Fonts/Labels
-
-- How well did each figure use colours, fonts, and labels?
-
-<center>
-```{r presentation_by_fig}
-draw_hc_categories(dfm, c("colours", "fonts", "labels"))
-```
-</center>
-
-## Statistics/Whitespace/Data
-
-- How well did each figure use statistics, whitespace, and data?
-
-<center>
-```{r statistics_by_fig}
-draw_hc_categories(dfm, c("statistics", "whitespace", "data"))
-```
-</center>
-
-## Reproduction
-
-- How well did you think you could reproduce each figure?
-
-<center>
-```{r reproduction_by_fig}
-draw_hc_categories(dfm, c("describe", "reproduce_paper", "reproduce_raw"))
-```
-</center>
 
 # 4. Individual Figures
 
@@ -319,14 +210,6 @@ draw_hc_categories(dfm, c("describe", "reproduce_paper", "reproduce_raw"))
 
 <center>
 <img src="images/2024_fig_1.jpg" />
-</center>
-
-## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="40px" />
-
-<center>
-```{r fig1_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 1)
-```
 </center>
 
 ## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="40px" /> 
@@ -364,15 +247,6 @@ kable(dfm %>% filter(fignum==1) %>% select(improvements))
 </center>
 
 
-## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="40px" />
-
-<center>
-```{r fig2_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 2)
-```
-</center>
-
-
 ## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="40px" /> 
 
 :::: { .columns }
@@ -406,14 +280,6 @@ kable(dfm %>% filter(fignum==2) %>% select(improvements))
 <img src="images/2024_fig_3.jpg" />
 </center>
 
-## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" />
-
-<center>
-```{r fig3_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 3)
-```
-</center>
-
 ## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" /> 
 
 :::: { .columns }
@@ -432,26 +298,30 @@ draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "co
 
 ::::
 
-## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" /> {.columns-2 .smaller}
+## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" />
 
-<center>
+:::: { .columns }
+
+::: {.column width="40%"}
 <img src="images/2024_fig_3.jpg" width="100%" />
-</center>
+:::
 
-<p class="forceBreak"></p>
-
+::: {.column width="60%" .r-fit-width}
 - Suggested improvements (MF):
   - Failure to complement the triple mutant strain???
   - Fluorescence wavelength not specified (C)
   - Colour scheme in (A) is inconsistent
   - Axis label in (B) could be improved
   - Figure legend for (A) could be more succinct/some of this info should be in the paper text instead
+:::
 
+::::
 
-## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" /> {.smaller}
+## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" />
 
-```{r fig3_improvements}
-kable(dfm %>% filter(fignum==3) %>% select(improvements))
+```{r fig3_improvements .r-fit-width}
+dfm %>% filter(fignum==3) %>% select(improvements) %>%
+  kable()
 ```
 
 
@@ -461,13 +331,6 @@ kable(dfm %>% filter(fignum==3) %>% select(improvements))
 <img src="images/2024_fig_4.jpg" />
 </center>
 
-## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="40px" />
-
-<center>
-```{r fig4_main_summary}
-draw_tufte_categories(dfm, c("effectiveness", "understandable", "appealing", "colours", "fonts", "labels", "statistics", "whitespace", "data", "legend", "title", "reproduce_paper", "reproduce_raw", "describe"), 4)
-```
-</center>
 
 ## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="40px" /> 
 
