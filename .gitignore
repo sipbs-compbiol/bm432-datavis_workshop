@@ -1,8 +1,18 @@
-# R project files
+# RStudio project files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+.Rbuildignore
 
 # macOS files
 .DS_Store
+
+# Quarto support files
+/.quarto/
+README.html
+README_files/
+
+# Local Quarto output
+_book/
+_freeze/

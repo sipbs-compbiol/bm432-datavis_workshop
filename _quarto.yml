@@ -1,0 +1,70 @@
+project:
+  type: website
+  
+website:
+  title: "BM432 Data Visualisation Workshop"
+  description: "Website for BM432 Data Visualisation Workshop"
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - text: "Introduction"
+        menu:
+        - text: "Storytelling"
+          href: storytelling.qmd
+      
+  page-footer: 
+    left: This site © University of Strathclyde 2025
+
+format: 
+  html:
+    theme: simplex
+    toc: true
+    css: styles.css
+    embed-resources: true
+
+# Freeze output before pushing modifications to the repository when publishing
+# Should not need changing
+execute:
+  freeze: auto
+
+# Add custom callouts
+custom-callout:
+  callout-case-study:
+    title: "Case Study"
+    icon-symbol: "🔍"
+    color: "#FFA500"
+  callout-data:
+    icon-symbol: "📊"
+    title: "Data Analysis"
+    color: "#32CD32"
+  callout-discussion:
+    title: "Discussion Questions:"
+    icon-symbol: "✨"
+    color: "#BA55D3"
+  callout-microbe:
+    title: "Microbe Profile"
+    icon-symbol: "🧫"
+    color: "#1E90FF"
+  callout-thumbs-up:
+    title: "Great job!"
+    icon-symbol: "👍"
+    color: "#008000"
+  callout-todo:
+    icon-symbol: "📝"
+    color: "pink"
+  callout-challenge:
+    title: "Challenge"
+    icon-symbol: "🧑‍🏫"
+    color: "aquamarine"
+  callout-question:
+    title: "Question"
+    icon-symbol: "🙋"
+    color: "yellow"
+  callout-questions:
+    title: "Questions"
+    icon-symbol: "🙋️"
+    color: "yellow"    
+
+filters:
+  - custom-callout
