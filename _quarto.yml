@@ -65,6 +65,10 @@ custom-callout:
     title: "Questions"
     icon-symbol: "🙋️"
     color: "yellow"    
+  callout-hints:
+    title: "Hints"
+    icon-symbol: "🔍️"
+    color: "thistle"
 
 filters:
   - custom-callout
