@@ -1,0 +1,124 @@
+---
+title: "2D Scatterplots"
+description: |
+ Representing relationships between continuous variables
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+execute:
+  warning: false
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(dplyr)
+library(ggplot2)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+```
+
+Relationships between numerical data are often summarised with *scatterplots*. You have already seen a number of scatterplots, and you will be aware that the convention is to plot the *explanatory* (also known as *independent*) variable on the x-axis, and the *response* (or *dependent*) variable on the y-axis. But when exploring datasets we may not always know which parameters or variables control the response, and we may be looking at - or *mining* - the data for correlations. In those cases the convention is often relaxed.
+
+In figure @fig-scatter we plot `Sepal.Length` against `Sepal.Width` for the `iris` dataset, to see if there is any obvious relationship.
+
+
+```{r}
+#| label: fig-scatter
+#| echo: FALSE
+#| fig-cap: "Scatterplot of sepal length against sepal width for the `iris` dataset."
+
+p = ggplot(iris,
+           aes(x=Sepal.Width, y=Sepal.Length)) +
+  geom_point() + 
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+## Regression lines
+
+At first sight there appears to be no obvious relationship between the two variables. We can overlay a linear regression to see if there is a linear relationship between them, as in Figure @fig-scatter-lm.
+
+```{r}
+#| label: fig-scatter-lm
+#| echo: FALSE
+#| fig-cap: "Scatterplot of sepal length against sepal width for the `iris` dataset, showing linear regression between the variables."
+
+p = ggplot(iris,
+           aes(x=Sepal.Width, y=Sepal.Length)) +
+  geom_point() + 
+  geom_smooth(method="lm") +
+  geom_text(x=2.5, y=7,
+            label=paste("r^2 = ", format(cor(iris$Sepal.Length, iris$Sepal.Width), digits=2))) + 
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+The coefficient of correlation is `r round(cor(iris$Sepal.Length, iris$Sepal.Width), 2)`, suggesting at first glance that there is no strong linear relationship. The ribbon representing a confidence interval for the slope of the fit includes a horizontal line, supporting an interpretation that there is no relationship between sepal width and length. But, if there is any kind of relationship, it looks like it would be negative (sepal length falling with increased sepal width) 
+
+## Visualising multiple categories
+
+However, there are several categories in the dataset, and careful use of colour, as in @fig-scatter-color, can aid greatly with interpretation:
+
+```{r}
+#| label: fig-scatter-color
+#| echo: FALSE
+#| fig-cap: Scatterplot of sepal length against sepal width for the `iris` dataset, coloured by species."
+
+p = ggplot(iris,
+           aes(x=Sepal.Width, y=Sepal.Length, color=Species)) +
+  geom_point() + 
+  theme(legend.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+Now in @fig-scatter-color-lm it looks as though, rather than there being no linear relationship or a negative one, that there are at least two different _positive_ linear relationships, with reasonable correlation coefficients: one for _I. setosa_, and one for the other two species.
+
+::: { .callout-caution }
+The category or class structure of a dataset can disguise true relationships, or even mislead the reader as to the magnitude or direction of a relationship. Careful analysis and visualisation is required to present relationships accurately
+:::
+
+```{r}
+#| label: fig-scatter-color-lm
+#| echo: FALSE
+#| fig-cap: "Scatterplot of sepal length against sepal width for the `iris` dataset, coloured by species, with linear regression on two separate groups."
+
+iris1 = iris %>% filter(Species!="setosa") 
+cor1 = cor(iris1$Sepal.Length, iris1$Sepal.Width)
+iris2 = iris %>% filter(Species=="setosa") 
+cor2 = cor(iris2$Sepal.Length, iris2$Sepal.Width)
+
+p = ggplot(iris %>%
+             mutate(sp_group=Species=="setosa"),
+           aes(x=Sepal.Width, y=Sepal.Length, color=Species, group=sp_group)) +
+  geom_point() +
+  geom_smooth(method="lm") +
+  annotate("text", x=4.0, y=7.4,
+            label=paste("r^2 = ", format(cor1, digits=2))) + 
+  annotate("text", x=4.0, y=4.75,
+            label=paste("r^2 = ", format(cor2, digits=2))) + 
+  theme(legend.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+By exploring the scatterplot using colour, we can propose that *I. versicolor* and *I. virginica* could be considered separately from *I. setosa*, in terms of the relationship between sepal width and length.

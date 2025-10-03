@@ -26,7 +26,9 @@ website:
           href: histogram.qmd
         - text: "Density Plots"
           href: density.qmd
-          
+        - text: "2D Scatterplot"
+          href: scatterplot.qmd
+
   page-footer: 
     left: This site © University of Strathclyde 2025
 
