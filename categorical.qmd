@@ -1,0 +1,34 @@
+---
+title: "Categorical Data"
+description: |
+ Good practice for presenting categorical data
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+---
+
+When we visualise categorical data, we often mean - implicitly - visualising counts of categories in the data, such as the numbers in categories like: 
+
+- `Control` and `Treatment`
+- `None`, `Weak`, `Moderate`, and `Strong`
+- `Europe`, `North America`, `South America`, `Asia`, `Africa`, and `Australasia`. 
+
+Tables may often be clearer than visualisations for smaller datasets. Graphical options include *bar charts*, *stacked bar charts* and *pie charts*, though pie charts are rarely a good option to choose.
+
+## Visualisations for categorical variable types
+
+The message we want to get across for a categorical variable is often *declarative* ("There were this many examples of each category") or *comparative* ("There were this many examples of category A relative to category B"). This kind of data is well-represented by a *dot chart* (essentially, a univariate scatterplot with a single value) or *bar chart*. 
+
+But, if the data is *proportion* or *percentage* data, and we want to emphasise the proportion of the total, a more natural representation might seem to be the *stacked/divided bar chart* or pie chart. However, there is no data that can be represented by a bar chart or pie chart that cannot be represented by a dot chart, and **a dot chart is often the clearest representation**.

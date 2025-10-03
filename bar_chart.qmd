@@ -1,0 +1,119 @@
+---
+title: "Bar Charts and Dot Charts"
+description: |
+ Representing category counts as bars and dots
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+execute:
+  warning: false
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(dplyr)
+library(ggplot2)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+
+# Set up Titanic data as dataframe
+titanic = data.frame(Titanic)
+```
+
+Bar charts are a reasonable way to represent the total counts in a category, as in @fig-titanic-class which shows the number of passengers on the Titanic, by class.
+
+```{r}
+#| label: fig-titanic-class
+#| echo: FALSE
+#| fig-cap: "Bar chart of number of passengers on the Titanic, by class"
+
+p = ggplot(titanic %>% group_by(Class) %>% summarise(n = sum(Freq)),
+           aes(x=Class, y=n, fill=Class)) +
+  geom_bar(stat="identity") + 
+  ylab("Passengers") +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+## Dot Chart
+
+Dot charts represent all the same information as Bar Charts, with less ink. (Here, the axes have been reversed, which can improve readability of the category labels.)
+
+```{r}
+#| label: fig-titanic-dotclass
+#| echo: FALSE
+#| fig-cap: "Dot chart of number of passengers on the Titanic, by class"
+
+p = ggplot(titanic %>% group_by(Class) %>% summarise(n = sum(Freq)),
+           aes(y=Class, x=n, color=Class, fill=Class)) +
+  geom_point(size=10) + 
+  xlim(0, 900) + ylab("Class") + xlab("Passengers") + 
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+## Stacked Bar Chart
+
+To see the counts of passengers who were in each class, conditioned on sex, we can use a stacked bar chart. This places each category on the same bar. 
+
+```{r}
+#| label: fig-titanic-stackclass
+#| echo: FALSE
+#| fig-cap: "Stacked bar chart of number of passengers on the Titanic, by class"
+
+p = ggplot(titanic,
+           aes(x=Sex, y=Freq, color=Class, fill=Class)) +
+  geom_bar(position="stack", stat="identity") +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  ylab("Passengers") +
+  theme(legend.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+Such a representation is quite concise. We can see the difference between the main comparison (by sex), but also the different distribution of classes in each sex.
+
+## Proportional Stacked Bar Chart
+
+In @fig-titanic-stackclass the y-axis is the total count of passengers. Sometimes it is easier to make appropriate comparisons if we instead plot *proportions* in each category.
+
+```{r}
+#| label: fig-titanic-stackprop
+#| echo: FALSE
+#| fig-cap: "Stacked bar chart of number of passengers on the Titanic, by class"
+
+p = ggplot(titanic,
+           aes(x=Sex, y=Freq, color=Class, fill=Class)) +
+  geom_bar(position="fill", stat="identity") +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  ylab("Proportion of passengers") +
+  theme(legend.background = element_rect(fill = figbg, color = figbg),
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+

@@ -16,6 +16,8 @@ website:
           href: storytelling.qmd
         - text: "Numerical Data"
           href: numerical.qmd
+        - text: "Categorical Data"
+          href: categorical.qmd
       - text: "Continuous Variables"
         menu:
         - text: "1D Scatterplot"
@@ -28,6 +30,10 @@ website:
           href: density.qmd
         - text: "2D Scatterplot"
           href: scatterplot.qmd
+      - text: "Categorical Variables"
+        menu:
+        - text: "Bar Chart"
+          href: bar_chart.qmd
 
   page-footer: 
     left: This site © University of Strathclyde 2025
