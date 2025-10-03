@@ -4,7 +4,9 @@ project:
 website:
   title: "BM432 Data Visualisation Workshop"
   description: "Website for BM432 Data Visualisation Workshop"
+  favicon: "assets/images/icon_32.png"
   navbar:
+    logo: ./assets/images/masthead_88wide.png
     right:
       - href: index.qmd
         text: Home
@@ -20,7 +22,11 @@ website:
           href: univariate_scatter.qmd
         - text: "Box-and-Whisker"
           href: box_and_whisker.qmd
-      
+        - text: "Histogram"
+          href: histogram.qmd
+        - text: "Density Plots"
+          href: density.qmd
+          
   page-footer: 
     left: This site © University of Strathclyde 2025
 

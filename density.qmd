@@ -1,0 +1,107 @@
+---
+title: "Density Plots"
+description: |
+ Summarising continuous data distributions
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+execute:
+  warning: false
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(ggplot2)
+library(ggridges)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+```
+
+[Kernel Density Estimate](https://en.wikipedia.org/wiki/Kernel_density_estimation) plots, like that in @fig-kdeplot, effectively *smooth* histograms so that they can be represented as areas with continuous smooth boundaries. They look neat, and are not as immediately sensitive to choice of *bin* size as histograms. However, the extent of smoothing is under the control of both the choice of *kernel* (the mathematical smoothing function) and any parameters for the *kernel*.
+
+
+```{r}
+#| label: fig-kdeplot
+#| echo: FALSE
+#| fig-cap: "Kernel Density Estimate (KDE) plot of sepal length for each species from the `iris` dataset."
+
+p = ggplot(iris, aes(x=Sepal.Length, fill=Species)) +
+  geom_density(alpha=0.7) +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+KDE plots may imply more or less "shape" (i.e. undulations up and down, implying minor peaks) to a dataset than the data actually contains. However, they are widely used, and form the basis for several other visualisations. 
+
+## Small Multiples
+
+As with histograms, when plotting multiple distributions on the same axes it may be necessary to use transparency to avoid obscuring data. Graphs with many datasets rapidly become confusing and hard to follow. Small multiple plots (@fig-kdeplot-facet) can also be useful here.
+
+```{r}
+#| label: fig-kdeplot-facet
+#| echo: FALSE
+#| fig-cap: "Small multiple plot for Kernel Density Estimates (KDEs) of sepal length for each species from the `iris` dataset."
+
+p = ggplot(iris, aes(x=Sepal.Length, fill=Species)) +
+  geom_density(alpha=0.7) +
+  facet_wrap(~Species) + 
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+## Stacked Density Plot/Joyplot/Ridgeplot
+
+The *ridgeplot* (also known as a [*joyplot*](https://en.wikipedia.org/wiki/Unknown_Pleasures), or *stacked density plot*) tries to resolve problems due to the presentation of overlapping areas by offsetting the distributions on the y-axis (@fig-kdeplot-joyplot). This improves visualisation for multiple distributions, but data can still be obscured, and there may be a false implication of perspective in the image.
+
+```{r}
+#| label: fig-kdeplot-joyplot
+#| echo: FALSE
+#| fig-cap: "Ridgeplot/joyplot/stacked density plot of sepal length for each species from the `iris` dataset."
+
+p = ggplot(iris, aes(y=Species, x=Sepal.Length, fill=Species)) +
+  geom_density_ridges(alpha=0.7) +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+## Violin plot
+
+Violin plots (@fig-violinplot) are a variation of KDE plots. Variable values are presented on the y-axis, and datasets are separated along the x-axis (like a rotated ridgeplot), but the KDE is mirrored right-to-left, producing shapes apparently reminiscent of violin bodies (though people claim that lamps, faces, and [other things](https://xkcd.com/1967/) are more easily seen).
+
+```{r}
+#| label: fig-violinplot
+#| echo: FALSE
+#| fig-cap: "Violin plot of sepal length for each species from the `iris` dataset."
+
+p = ggplot(iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
+  geom_violin() +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+Violin plots avoid the problem of overlapping datasets, and look especially attractive side-by-side or as small multiple plots, but retain the other problems of KDEs (dependence on kernel and parameter choice)
