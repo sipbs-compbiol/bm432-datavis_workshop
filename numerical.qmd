@@ -1,0 +1,46 @@
+---
+title: "Numerical Data"
+description: |
+ Good practice for presenting numerical data
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+---
+
+It is usually best to show original numerical data as completely as possible. This may mean showing each datapoint or observation individually. If that is not possible or desirable, then there are several options for showing the distribution of the data as a *summary* of the data:
+
+- [histogram](https://en.wikipedia.org/wiki/Histogram)
+- [cumulative distribution function (CDF)](https://en.wikipedia.org/wiki/Cumulative_distribution_function)
+- [kernel density estimate (KDE)](https://en.wikipedia.org/wiki/Kernel_density_estimation)
+- [box plot/box-and-whisker plot](https://en.wikipedia.org/wiki/Box_plot))
+
+In general, your preference should be:
+
+1. Show all datapoints
+2. Show a summary or model of the data (e.g. a CDF, KDE, or [violin plot](https://en.wikipedia.org/wiki/Violin_plot))
+3. Show a representation of summary statistics data (e.g. a box plot) 
+
+::: { .callout-caution title="Avoid bar charts" }
+I strongly discourage the use of bar charts to represent numerical data distributions. The reasons for this are reported in the relevant literature:
+
+1. People interpret bar graphs as comparisons of discrete datapoints (Zacks & Tverskey)
+2. Identical bar graphs can be generated from multiple very different data sets (Weissgerber *et al.*), potentially disguising significant differences in the data
+3. Bar graphs are intended to represent categorical variables, not numerical, paired or nonindependent data (by definition)
+4. Presentations of error bars imply that data are Normally distributed, which may not be true (Weissgerber *et al.*), causing wrong statstical inferences to be drawn
+
+> Zacks, J. & Tversky, B. (1999) "Bars and Lines: A Study of Graphic Communication" *Mem. Cognit.* [https://doi.org/10.3758/bf03201236](https://doi.org/10.3758/bf03201236)
+>
+> Weissgerber, T. *et al.* (2015) "Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm" *PLoS Biol.* [https://doi.org/10.1371/journal.pbio.1002128](https://doi.org/10.1371/journal.pbio.1002128)
+:::

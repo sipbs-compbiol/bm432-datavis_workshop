@@ -1,0 +1,63 @@
+---
+title: "Box-and-Whisker Plots"
+description: |
+ Summarising continuous data with box-and-whisker plots
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+---
+
+```{r setup, include=FALSE}
+# Package imports
+library(ggplot2)
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+```
+
+Boxplots represent distributions of continous variables. The box represents the first, second and third [*quartiles*](https://en.wikipedia.org/wiki/Quartile) of the dataset, and the *whiskers* extend to $1.5 \times \textrm{IQR}$, where $\textrm{IQR}$ is the [*interquartile range*](https://en.wikipedia.org/wiki/Interquartile_range) of the data. The red dot indicates an *outlier*. Here, that means any value in the dataset that lies outwith $1.5 \times \textrm{IQR}$.
+
+::: { .callout-tip collapse="true" }
+## Quartiles (click to expand)
+  
+Quartiles are obtained by taking each value in the data and sorting them from smallest to largest value, in an ordered list. The quartiles are then the values at one quarter (25%, first quartile), halfway (50%, second quartile) and three-quarters (75%, third quartile) along the list. The *second quartile* is the same thing as the *median*.
+
+The *interquartile range* (IQR) is the difference between the first and third quartiles, i.e. $\textrm{third quartile} - \textrm{first quartile}$. In Normally-distributed data, the median should be about halfway between the first and third quartiles. If the median is *skewed* towards one or other quartile, then the data is unlikely to be Normally-distributed, and this should affect your choice of statistical test.
+:::
+
+```{r}
+#| label: fig-boxplot
+#| echo: FALSE
+#| fig-cap: "Boxplot/box-and-whisker plot of sepal length for each species from the `iris` dataset."
+
+p = ggplot(iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
+  geom_boxplot(outlier.color="red") +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = figbg, color = figbg))
+
+p
+```
+
+::: { .callout-warning }
+**Outliers** are datapoints that appear to be quite different from the rest of the observations for that variable. This is often taken to be a warning sign, but outliers need to be handled with care as they can arise for a number of different reasons, not all of which pose a problem:
+
+- Measurement error (e.g. the number was written down incorrectly, or a device was uncalibrated)
+- Experimental error (e.g. some solution was prepared at the wrong concentration, or a measurement was made badly)
+- The distribution of the data does not meet assumptions about interquartile range (i.e. extreme values are more commmon than assumed)
+- Other problems with the experimental design, or the theory behind the experiment
+
+**Outliers should not be deleted from the dataset unless they are caused by experimental or recording error.** If outliers result from deficiencies in experimental design or faulty assumptions, then those should be addressed instead.
+:::

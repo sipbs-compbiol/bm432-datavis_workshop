@@ -12,6 +12,14 @@ website:
         menu:
         - text: "Storytelling"
           href: storytelling.qmd
+        - text: "Numerical Data"
+          href: numerical.qmd
+      - text: "Continuous Variables"
+        menu:
+        - text: "1D Scatterplot"
+          href: univariate_scatter.qmd
+        - text: "Box-and-Whisker"
+          href: box_and_whisker.qmd
       
   page-footer: 
     left: This site © University of Strathclyde 2025
