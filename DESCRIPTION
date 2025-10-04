@@ -13,6 +13,7 @@ Imports:
     GGally,
     ggplot2,
     ggthemes,
+    ggridges,
     flextable,
     kableExtra,
     DT,
