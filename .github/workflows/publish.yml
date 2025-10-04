@@ -1,21 +1,48 @@
 on:
-  workflow_dispatch:
   push:
     branches: main
+  # to be able to trigger a manual build
+  workflow_dispatch:
 
-name: Quarto Publish
+name: Render and deploy Book
+
+env:
+  isExtPR: ${{ github.event.pull_request.head.repo.fork == true }}
+  RUST_BACKTRACE: 1
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Set up Quarto
+      - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+# Potential fix for "Unable to determine latest release for rstudio/tinytex-releases"        
+#        env:
+#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+# Install tinytex to build PDF book
+#        with:
+#          tinytex: true
+          # uncomment below and fill to pin a version
+          # version: 0.9.105
+
+      # Uncomment to install R
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      # Uncomment to install R dependencies
+      - uses: r-lib/actions/setup-r-dependencies@v2
+
+#      - name: Render book to all format
+#        # Add any command line argument needed
+#        run: |
+#          quarto render
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
