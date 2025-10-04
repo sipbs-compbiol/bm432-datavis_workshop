@@ -1,0 +1,22 @@
+Package: bm432-datavis-workshop
+Title: BM432-Datavis-Workshop
+Version: 0.1
+Authors@R: c(
+    person("Leighton", "Pritchard", , "leighton.pritchard@strath.ac.uk", role = c("aut", "cre")),
+    person("Morgan", "Feeney", , "morgan.feeney@strath.ac.uk", role = c("aut", "cre"))
+  )
+URL: https://github.com/sipbs-compbiol/bm432-datavis-workshop
+Depends: 
+    R (>= 3.1.0)
+Imports:
+    tidyverse (>= 2.0.0),
+    ggplot2,
+    flextable,
+    kableExtra,
+    DT,
+Suggests:
+    knitr,
+    sessioninfo
+Remotes: tidyverse/dplyr
+Encoding: UTF-8
+License: CC NC ND 4.0
