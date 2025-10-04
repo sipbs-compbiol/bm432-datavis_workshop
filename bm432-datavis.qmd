@@ -142,7 +142,7 @@ doi_fig3 = "10.1073/pnas.2408540121"
 doi_fig4 = "10.1073/pnas.240342112"
 
 # Code block options
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+# knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 ```
 
 # 1. Introduction
