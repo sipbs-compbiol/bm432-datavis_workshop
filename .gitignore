@@ -16,3 +16,4 @@ README_files/
 # Local Quarto output
 _book/
 _freeze/
+_site/
