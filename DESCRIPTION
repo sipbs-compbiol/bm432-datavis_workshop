@@ -16,6 +16,11 @@ Imports:
     flextable,
     kableExtra,
     DT,
+    tm,
+    wordcloud,
+    wordcloud2,
+    googlesheets4,
+    htmltools,
 Suggests:
     knitr,
     sessioninfo
