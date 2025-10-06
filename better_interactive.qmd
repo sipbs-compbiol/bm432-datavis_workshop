@@ -417,3 +417,151 @@ shinyApp(ui = ui, server = server)
 2. Does the visualisation let you easily tell the difference between two datasets with similar summaries, but different data?
 3. Does the visualisation introduce elements that imply the presence of data which is not in the dataset?
 :::
+
+## Visualising correlations
+
+::: { .callout-data }
+In the interactive window below, you can select alternative visualisations of the case study dataset, and decide for yourself which presents the most appropriate story about the data.
+:::
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 600
+
+library("shiny")
+library("bslib")
+library("dplyr")
+library("tidyr")
+library("ggplot2")
+
+# ggplot2 will not work in shinylive without this - see callout
+if (FALSE) {
+  library(munsell)
+}
+
+figbg = "whitesmoke"
+
+# Case study data
+data = anscombe %>% pivot_longer(
+    everything(),
+    cols_vary = "slowest",
+    names_to = c(".value", "set"),
+    names_pattern = "(.)(.)"
+  ) %>% rename(all_of(c(cohort="set", dosage="x", effect="y")))
+
+# Fit linear regressions
+lm_results = list(lm(effect ~ dosage, data=data %>% filter(cohort==1)),
+               lm(effect ~ dosage, data=data %>% filter(cohort==2)),
+               lm(effect ~ dosage, data=data %>% filter(cohort==3)),
+               lm(effect ~ dosage, data=data %>% filter(cohort==4)))
+df_text = data.frame(cohort = c(1, 2, 3, 4),
+                     label = c(paste("effect = ", format(round(lm_results[[1]]$coefficients[1], 4), nsmall=4), " * dosage + ", format(round(lm_results[[1]]$coefficients[2], 4), nsmall=4)),
+                               paste("effect = ", format(round(lm_results[[2]]$coefficients[1], 4), nsmall=4), " * dosage + ", format(round(lm_results[[2]]$coefficients[2], 4), nsmall=4)),
+                               paste("effect = ", format(round(lm_results[[3]]$coefficients[1], 4), nsmall=4), " * dosage + ", format(round(lm_results[[3]]$coefficients[2], 4), nsmall=4)),
+                               paste("effect = ", format(round(lm_results[[4]]$coefficients[1], 4), nsmall=4), " * dosage + ", format(round(lm_results[[4]]$coefficients[2], 4), nsmall=4))
+                               )
+)
+df_text$cohort = as.factor(df_text$cohort)
+
+# Visualisation functions
+plot_regression = function(){
+  ggplot(data, aes(x=dosage, y=effect, color=cohort)) +
+    geom_smooth(method="lm", level=0) +
+    geom_text(data=df_text,
+              mapping=aes(label=label, x=-Inf, y=11),
+              hjust=-0.1, vjust=-1) +
+    facet_wrap(~cohort, ncol=2)
+}
+
+plot_ribbon = function(){
+  ggplot(data, aes(x=dosage, y=effect, color=cohort)) +
+    geom_smooth(method="lm") +
+    geom_text(data=df_text,
+              mapping=aes(label=label, x=-Inf, y=11),
+              hjust=-0.1, vjust=-1) +
+    facet_wrap(~cohort, ncol=2)
+}
+
+plot_scatter = function(){
+  ggplot(data, aes(x=dosage, y=effect, color=cohort)) +
+    geom_point(size=5, alpha=0.7) +
+    facet_wrap(~cohort, ncol=2)
+}
+
+plot_regscat = function(){
+  ggplot(data, aes(x=dosage, y=effect, color=cohort)) +
+    geom_smooth(method="lm", level=0) +
+    geom_point(size=5, alpha=0.7) +
+    geom_text(data=df_text,
+              mapping=aes(label=label, x=-Inf, y=11),
+              hjust=-0.1, vjust=-1) +
+    facet_wrap(~cohort, ncol=2)
+}
+
+plot_regribscat = function(){
+  ggplot(data, aes(x=dosage, y=effect, color=cohort)) +
+    geom_smooth(method="lm") +
+    geom_point(size=5, alpha=0.7) +
+    geom_text(data=df_text,
+              mapping=aes(label=label, x=-Inf, y=11),
+              hjust=-0.1, vjust=-1) +
+    facet_wrap(~cohort, ncol=2)
+}
+
+plot_relation = function(vistype){
+  switch(vistype,
+         regression = plot_regression(),
+         ribbon = plot_ribbon(),
+         scatter = plot_scatter(),
+         regscat = plot_regscat(),
+         regribscat = plot_regribscat(),
+         plot_regression()
+         )
+}
+
+plot_relation = function(vistype){
+  switch(vistype,
+         regression = plot_regression(),
+         ribbon = plot_ribbon(),
+         scatter = plot_scatter(),
+         regscat = plot_regscat(),
+         regribscat = plot_regribscat(),
+         plot_regression()
+         )
+}
+
+# Define the user interface
+ui <- page_sidebar(sidebar = sidebar(radioButtons(
+  "rvistype",
+  "Visualisation Type:",
+  c(
+    "Regression" = "regression",
+    "Regression and ribbon" = "ribbon",
+    "Scatterplots" = "scatter",
+    "Regression and scatter" = "regscat",
+    "Regression, ribbon, and scatter" = "regribscat"
+  )
+)), plotOutput("relation"))
+
+# Define the server code
+server <- function(input, output, session) {
+  output$relation <- renderPlot(plot_relation(input$rvistype))
+}
+
+# Create Shiny app
+shinyApp(ui = ui, server = server)
+```
+
+::: { .callout-questions }
+1. Do the parameters or correlation coefficients of the fitted linear regressions differ by cohort?
+2. Do the linear regressions give a good account of the relationship between dosage and effect, in each case?
+3. Does the plotted uncertainty in the linear regression capture the variation between the real data, and linear regression?
+4. Are there any signs of systematic problems in the data?
+5. What kind of visualisation is most helpful to understand these datasets?
+:::
+
+::: { .callout-hints collapse="true" }
+1. Does the regression fully describe the data, or is it only a summary of the data?
+2. Does the uncertainty in the regression adequately describe the variation of the data with respect to the fitted line?
+3. Which visualisations best allow you to see differences between the datasets?
+:::
