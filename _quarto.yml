@@ -23,6 +23,12 @@ website:
           href: categorical.qmd
         - text: "Combining Data"
           href: combining.qmd
+      - text: "Better Tools"
+        menu:
+        - text: "Case Study"
+          href: better_tools.qmd
+        - text: "Interactive Example"
+          href: better_interactive.qmd
       - text: "Continuous Variables"
         menu:
         - text: "1D Scatterplot"
