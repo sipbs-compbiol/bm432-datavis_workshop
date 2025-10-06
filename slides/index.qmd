@@ -8,6 +8,9 @@ author:
 date: "2024-10-23"
 format: 
   revealjs:
+    slide-number: true
+    controls: true
+    preview-links: auto    
     footer: "BM432 Data Visualisation Workshop"
     logo: images/science_logo_400x400.jpg
     theme: [default, ./includes/custom.scss]

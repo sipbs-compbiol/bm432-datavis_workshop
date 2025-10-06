@@ -1,6 +1,9 @@
 project:
   type: website
-  
+  render: 
+    - "slides/"
+    - "*.qmd"
+
 website:
   title: "BM432 Data Visualisation Workshop"
   description: "Website for BM432 Data Visualisation Workshop"
