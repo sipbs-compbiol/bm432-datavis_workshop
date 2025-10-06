@@ -20,3 +20,70 @@ html:
 execute:
   warning: false
 ---
+
+```{r setup, include=FALSE}
+library("DT")
+library("datasets")
+library("dplyr")
+library("readr")
+library("stringr")
+library("tidyr")
+library("kableExtra")
+
+# BG color for plots - should match .figure and .caption classes in rmd_style.css
+figbg = "whitesmoke"
+
+data = anscombe %>% pivot_longer(
+    everything(),
+    cols_vary = "slowest",
+    names_to = c(".value", "set"),
+    names_pattern = "(.)(.)"
+  ) %>% rename(all_of(c(cohort="set", dosage="x", effect="y")))
+```
+
+Figures are key components of scientific publications and presentations. They relate the data supporting conclusions to the reader in an immediate manner, conveying information about the work before the reader can inspect the paper in detail. They are central elements in the *storytelling* aspect of a paper and, just as poor visualisation choices can mask the important messages in the paper, cynical choices can exaggerate the quality of the story.
+
+::: { .callout-data }
+In this interactive session, you will have the opportunity to generate multiple visualisations of the same dataset, and decide for yourself which tell the most appropriate story about the data.
+:::
+
+::: { .callout-case-study }
+Over the course of a small study, you have attempted to evaluate the effect of a drug on four different matched cohorts of 11 individuals. You varied the dosages such that the *average* (mean) dosage per individual was the identical for each cohort. It also turned out that the observed *average* (mean) effect of the drug was identical for each cohort - and the same was true for their standard deviations!
+
+```{r}
+#| label: tbl-datatable-summary-mean
+#| echo: FALSE
+#| tbl-cap: Means and standard deviations of the dosage and effect values for each of the four cohorts
+
+data %>% group_by(cohort) %>% summarize(
+  meanDosage = mean(dosage),
+  sdDosage = sd(dosage),
+  meanEffect = mean(effect),
+  sdEffect = sd(effect)
+) %>% kable(digits=2)
+```
+
+
+When you check to see if the data might be correlated, you also find that all the dosages and effects have essentially *identical coefficients of correlation*!
+
+```{r}
+#| label: tbl-datatable-summary-correlation
+#| echo: FALSE
+#| tbl-cap: Correlation ($r^2$) coefficients for linear regression of effect against dosage, by group.
+
+data %>% 
+  group_by(cohort) %>% 
+  summarize(r2 = cor(dosage, effect)) %>%
+  kable(digits=2)
+```
+
+But, when you look at the dataset, there appears to be more variation between cohort and individuals than these numbers suggest:
+
+```{r datatable, echo=FALSE}
+datatable(data)
+```
+:::
+
+::: { .callout-challenge }
+In the [next section](better_interactive.qmd), you will have opportunity to change visualisation types to see which, if any, are appropriate to understand and present the data.
+:::
