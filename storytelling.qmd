@@ -147,11 +147,9 @@ But there is something not right about this graphic. The blue bar looks to be tw
 ::: { .callout-note collapse="true"}
 ## How humans interpret graphs (click to expand)
 
-Research shows that people do, in fact, interpret bar charts by bar *area*, not bar *height*. Humans have a limited repertoire of elementary perceptual tasks that we use to extract data and information from graphical representation. Graphs may use these well for communication, or [misuse them to fool the reader](https://www.theguardian.com/news/datablog/2014/may/12/lies-election-leaflets-five-tricks-european-elections). A number of studies empirically test people's ability to correctly "read" graph types, and a couple of these are indicated below..
+Research shows that people do, in fact, interpret bar charts by bar *area*, not bar *height*. Humans have a limited repertoire of elementary perceptual tasks that we use to extract data and information from graphical representation (@Cleveland1984-mk). Graphs may use these well for communication, or [misuse them to fool the reader](https://www.theguardian.com/news/datablog/2014/may/12/lies-election-leaflets-five-tricks-european-elections). 
 
-> Cleveland, W.S. & McGill, R. (1984) "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods" *J. Am. Stat. Ass.* **79** 531-554 [https://doi.org/10.2307/2288400](https://doi.org/10.2307/2288400)
->
-> Heer, J. & Bostock, M. (2010) "Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design" *CHI '10* pp.203-212 [https://doi.org/10.1145/1753326.1753357](https://doi.org/10.1145/1753326.1753357)
+A number of studies empirically test people's ability to correctly "read" graph types, and the results indicate that bar charts do not perform very well (@Heer2010-hk).
 :::
 
 ```{r}

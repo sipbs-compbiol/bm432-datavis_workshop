@@ -35,12 +35,8 @@ In general, your preference should be:
 ::: { .callout-caution title="Avoid bar charts" }
 I strongly discourage the use of bar charts to represent numerical data distributions. The reasons for this are reported in the relevant literature:
 
-1. People interpret bar graphs as comparisons of discrete datapoints (Zacks & Tverskey)
-2. Identical bar graphs can be generated from multiple very different data sets (Weissgerber *et al.*), potentially disguising significant differences in the data
+1. People interpret bar graphs as comparisons of discrete datapoints (@Zacks1999-ph)
+2. Identical bar graphs can be generated from multiple very different data sets (@Weissgerber2015-nh), potentially disguising significant differences in the data
 3. Bar graphs are intended to represent categorical variables, not numerical, paired or nonindependent data (by definition)
-4. Presentations of error bars imply that data are Normally distributed, which may not be true (Weissgerber *et al.*), causing wrong statstical inferences to be drawn
-
-> Zacks, J. & Tversky, B. (1999) "Bars and Lines: A Study of Graphic Communication" *Mem. Cognit.* [https://doi.org/10.3758/bf03201236](https://doi.org/10.3758/bf03201236)
->
-> Weissgerber, T. *et al.* (2015) "Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm" *PLoS Biol.* [https://doi.org/10.1371/journal.pbio.1002128](https://doi.org/10.1371/journal.pbio.1002128)
+4. Presentations of error bars imply that data are Normally distributed, which may not be true (@Weissgerber2015-nh), causing wrong statstical inferences to be drawn
 :::
