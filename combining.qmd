@@ -94,7 +94,7 @@ p
 For comparison, we present a common (and less informative) literature representation of this kind of data: a bar chart with error bars showing standard deviation of each dataset.
 
 ```{r}
-#| label: barchart
+#| label: fig-barchart
 #| echo: FALSE
 #| fig-cap: "Bar chart of sepal length for each species from the `iris` dataset, with error bars representing standard deviation"
 
