@@ -22,6 +22,7 @@ Imports:
     wordcloud2,
     googlesheets4,
     htmltools,
+    shinylive,
 Suggests:
     knitr,
     sessioninfo
