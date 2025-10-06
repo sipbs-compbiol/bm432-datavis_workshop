@@ -1,7 +1,7 @@
 ---
 title: "Better Tools Than Bar Charts"
 description: |
- Improved visualisations for when you might reach for bar charts
+ Improved visualisations for when you might otherwise reach for bar charts
 number-sections: true
 about:
   template: marquee
