@@ -1,5 +1,334 @@
 [
   {
+    "objectID": "univariate_scatter.html",
+    "href": "univariate_scatter.html",
+    "title": "Univariate (1D) Scatterplots",
+    "section": "",
+    "text": "In a univariate scatterplot, datapoints are plotted against a single numerical axis, with the other axis showing the identity of the dataset. This allows all values in a dataset to be shown, which is the most transparent way of presenting the data to the reader.\nWhere there is potential for overlap of datapoints, their locations can be “jittered” - moved slightly in a horizontal and/or vertical direction - in order to make the number of datapoints at each value clearer. It is however not always possible to interpret the density of datapoints very well, so this representation is best combined with a summary of the distribution that conveys this information also.\n\n\n\n\n\n\n\n\nFigure 1: Univariate (1D) scatterplot of sepal length for each species from the iris dataset, with jitter.\n\n\n\n\n\nA univariate scatterplot for the iris sepal length data in Figure @ref(fig:1d-scatterplot) shows the distributions of this variable overlap for each species, and that there is a possible outlier in the I. virginica data. The nature of the data is also evident: the datapoints are regularly-spaced, and we can see where there are relatively few or many datapoints."
+  },
+  {
+    "objectID": "scatterplot.html",
+    "href": "scatterplot.html",
+    "title": "2D Scatterplots",
+    "section": "",
+    "text": "Relationships between numerical data are often summarised with scatterplots. You have already seen a number of scatterplots, and you will be aware that the convention is to plot the explanatory (also known as independent) variable on the x-axis, and the response (or dependent) variable on the y-axis. But when exploring datasets we may not always know which parameters or variables control the response, and we may be looking at - or mining - the data for correlations. In those cases the convention is often relaxed.\nIn figure Figure 1 we plot Sepal.Length against Sepal.Width for the iris dataset, to see if there is any obvious relationship.\nFigure 1: Scatterplot of sepal length against sepal width for the iris dataset."
+  },
+  {
+    "objectID": "scatterplot.html#regression-lines",
+    "href": "scatterplot.html#regression-lines",
+    "title": "2D Scatterplots",
+    "section": "1 Regression lines",
+    "text": "1 Regression lines\nAt first sight there appears to be no obvious relationship between the two variables. We can overlay a linear regression to see if there is a linear relationship between them, as in Figure Figure 2.\n\n\n\n\n\n\n\n\nFigure 2: Scatterplot of sepal length against sepal width for the iris dataset, showing linear regression between the variables.\n\n\n\n\n\nThe coefficient of correlation is -0.12, suggesting at first glance that there is no strong linear relationship. The ribbon representing a confidence interval for the slope of the fit includes a horizontal line, supporting an interpretation that there is no relationship between sepal width and length. But, if there is any kind of relationship, it looks like it would be negative (sepal length falling with increased sepal width)"
+  },
+  {
+    "objectID": "scatterplot.html#visualising-multiple-categories",
+    "href": "scatterplot.html#visualising-multiple-categories",
+    "title": "2D Scatterplots",
+    "section": "2 Visualising multiple categories",
+    "text": "2 Visualising multiple categories\nHowever, there are several categories in the dataset, and careful use of colour, as in Figure 3, can aid greatly with interpretation:\n\n\n\n\n\n\n\n\nFigure 3: Scatterplot of sepal length against sepal width for the iris dataset, coloured by species.”\n\n\n\n\n\nNow in Figure 4 it looks as though, rather than there being no linear relationship or a negative one, that there are at least two different positive linear relationships, with reasonable correlation coefficients: one for I. setosa, and one for the other two species.\n\n\n\n\n\n\nCaution\n\n\n\nThe category or class structure of a dataset can disguise true relationships, or even mislead the reader as to the magnitude or direction of a relationship. Careful analysis and visualisation is required to present relationships accurately\n\n\n\n\n\n\n\n\n\n\nFigure 4: Scatterplot of sepal length against sepal width for the iris dataset, coloured by species, with linear regression on two separate groups.\n\n\n\n\n\nBy exploring the scatterplot using colour, we can propose that I. versicolor and I. virginica could be considered separately from I. setosa, in terms of the relationship between sepal width and length."
+  },
+  {
+    "objectID": "pie_chart.html",
+    "href": "pie_chart.html",
+    "title": "Pie Charts",
+    "section": "",
+    "text": "Pie charts are frequently criticised. In my view this is with good reason. Humans find it easier to judge differences between lengths than between areas, and differences between areas than differences between angles. Pie charts use angle and area to represent data; bar charts use area and length; and dot charts use length alone. It is difficult - unless the data is specifically ordered - to rank categories in bar charts and pie charts; it is much easier to do so with dot charts.\nAlso, pie charts can only represent proportional data well, and are less suited to showing absolute counts. They are more limited than bar charts or dot charts (which can each represent exactly the same data as the pie chart, and much more), and less easy to understand than the equivalent stacked bar chart. But, for completeness, the class data for the Titanic passenger list is presented in Figure 1.\n\n\n\n\n\n\n\n\nFigure 1: Pie chart of proportion of passengers on the Titanic, by class\n\n\n\n\n\nA benefit to pie charts is that people recognise “anchor points” on the circle. We can recognise 25% (90 degrees), 50% (180 degrees) and 75% marks quite well, but it is unusual to be able to distinguish well between other angles. This is particularly problematic for small angles, and large numbers of categories."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "",
+    "text": "Welcome to the BM432 Data Visualisation Workshop."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Introduction",
+    "text": "Introduction\nThe amount of data being generated and processed in biological sciences is always increasing, seemingly at an ever-faster pace. As a scientist you will have to learn to work with this data, telling a clear story about your science, and interpreting other people’s work accurately, without being overwhelmed by its sheer volume and complexity.\nData visualisation is a tool that allows us to summarise, understand, and explore our - sometimes incredibly large - datasets intuitively. In this workshop, we will focus on common approaches by which statistical data can and should be summarised visually, with an emphasis on best practice.\nData visualisation is a broad topic that touches on elements of colour theory, psychology, graphic design, and several other fields that we sadly don’t have time to explore, here. But we will provide links to help you learn more about this area, in your own time."
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives"
+  },
+  {
+    "objectID": "index.html#workshop-slides",
+    "href": "index.html#workshop-slides",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Workshop Slides",
+    "text": "Workshop Slides\nYou can view the slides used in the workshop below, or fullscreen in your browser."
+  },
+  {
+    "objectID": "density.html",
+    "href": "density.html",
+    "title": "Density Plots",
+    "section": "",
+    "text": "Kernel Density Estimate plots, like that in Figure 1, effectively smooth histograms so that they can be represented as areas with continuous smooth boundaries. They look neat, and are not as immediately sensitive to choice of bin size as histograms. However, the extent of smoothing is under the control of both the choice of kernel (the mathematical smoothing function) and any parameters for the kernel.\nFigure 1: Kernel Density Estimate (KDE) plot of sepal length for each species from the iris dataset.\nKDE plots may imply more or less “shape” (i.e. undulations up and down, implying minor peaks) to a dataset than the data actually contains. However, they are widely used, and form the basis for several other visualisations."
+  },
+  {
+    "objectID": "density.html#small-multiples",
+    "href": "density.html#small-multiples",
+    "title": "Density Plots",
+    "section": "1 Small Multiples",
+    "text": "1 Small Multiples\nAs with histograms, when plotting multiple distributions on the same axes it may be necessary to use transparency to avoid obscuring data. Graphs with many datasets rapidly become confusing and hard to follow. Small multiple plots (Figure 2) can also be useful here.\n\n\n\n\n\n\n\n\nFigure 2: Small multiple plot for Kernel Density Estimates (KDEs) of sepal length for each species from the iris dataset."
+  },
+  {
+    "objectID": "density.html#stacked-density-plotjoyplotridgeplot",
+    "href": "density.html#stacked-density-plotjoyplotridgeplot",
+    "title": "Density Plots",
+    "section": "2 Stacked Density Plot/Joyplot/Ridgeplot",
+    "text": "2 Stacked Density Plot/Joyplot/Ridgeplot\nThe ridgeplot (also known as a joyplot, or stacked density plot) tries to resolve problems due to the presentation of overlapping areas by offsetting the distributions on the y-axis (Figure 3). This improves visualisation for multiple distributions, but data can still be obscured, and there may be a false implication of perspective in the image.\n\n\n\n\n\n\n\n\nFigure 3: Ridgeplot/joyplot/stacked density plot of sepal length for each species from the iris dataset."
+  },
+  {
+    "objectID": "density.html#violin-plot",
+    "href": "density.html#violin-plot",
+    "title": "Density Plots",
+    "section": "3 Violin plot",
+    "text": "3 Violin plot\nViolin plots (Figure 4) are a variation of KDE plots. Variable values are presented on the y-axis, and datasets are separated along the x-axis (like a rotated ridgeplot), but the KDE is mirrored right-to-left, producing shapes apparently reminiscent of violin bodies (though people claim that lamps, faces, and other things are more easily seen).\n\n\n\n\n\n\n\n\nFigure 4: Violin plot of sepal length for each species from the iris dataset.\n\n\n\n\n\nViolin plots avoid the problem of overlapping datasets, and look especially attractive side-by-side or as small multiple plots, but retain the other problems of KDEs (dependence on kernel and parameter choice)"
+  },
+  {
+    "objectID": "categorical.html",
+    "href": "categorical.html",
+    "title": "Categorical Data",
+    "section": "",
+    "text": "When we visualise categorical data, we often mean - implicitly - visualising counts of categories in the data, such as the numbers in categories like:\nTables may often be clearer than visualisations for smaller datasets. Graphical options include bar charts, stacked bar charts and pie charts, though pie charts are rarely a good option to choose."
+  },
+  {
+    "objectID": "categorical.html#visualisations-for-categorical-variable-types",
+    "href": "categorical.html#visualisations-for-categorical-variable-types",
+    "title": "Categorical Data",
+    "section": "1 Visualisations for categorical variable types",
+    "text": "1 Visualisations for categorical variable types\nThe message we want to get across for a categorical variable is often declarative (“There were this many examples of each category”) or comparative (“There were this many examples of category A relative to category B”). This kind of data is well-represented by a dot chart (essentially, a univariate scatterplot with a single value) or bar chart.\nBut, if the data is proportion or percentage data, and we want to emphasise the proportion of the total, a more natural representation might seem to be the stacked/divided bar chart or pie chart. However, there is no data that can be represented by a bar chart or pie chart that cannot be represented by a dot chart, and a dot chart is often the clearest representation."
+  },
+  {
+    "objectID": "bar_chart.html",
+    "href": "bar_chart.html",
+    "title": "Bar Charts and Dot Charts",
+    "section": "",
+    "text": "Bar charts are a reasonable way to represent the total counts in a category, as in Figure 1 which shows the number of passengers on the Titanic, by class.\nFigure 1: Bar chart of number of passengers on the Titanic, by class"
+  },
+  {
+    "objectID": "bar_chart.html#dot-chart",
+    "href": "bar_chart.html#dot-chart",
+    "title": "Bar Charts and Dot Charts",
+    "section": "1 Dot Chart",
+    "text": "1 Dot Chart\nDot charts represent all the same information as Bar Charts, with less ink. (Here, the axes have been reversed, which can improve readability of the category labels.)\n\n\n\n\n\n\n\n\nFigure 2: Dot chart of number of passengers on the Titanic, by class"
+  },
+  {
+    "objectID": "bar_chart.html#stacked-bar-chart",
+    "href": "bar_chart.html#stacked-bar-chart",
+    "title": "Bar Charts and Dot Charts",
+    "section": "2 Stacked Bar Chart",
+    "text": "2 Stacked Bar Chart\nTo see the counts of passengers who were in each class, conditioned on sex, we can use a stacked bar chart. This places each category on the same bar.\n\n\n\n\n\n\n\n\nFigure 3: Stacked bar chart of number of passengers on the Titanic, by class\n\n\n\n\n\nSuch a representation is quite concise. We can see the difference between the main comparison (by sex), but also the different distribution of classes in each sex."
+  },
+  {
+    "objectID": "bar_chart.html#proportional-stacked-bar-chart",
+    "href": "bar_chart.html#proportional-stacked-bar-chart",
+    "title": "Bar Charts and Dot Charts",
+    "section": "3 Proportional Stacked Bar Chart",
+    "text": "3 Proportional Stacked Bar Chart\nIn Figure 3 the y-axis is the total count of passengers. Sometimes it is easier to make appropriate comparisons if we instead plot proportions in each category.\n\n\n\n\n\n\n\n\nFigure 4: Stacked bar chart of number of passengers on the Titanic, by class"
+  },
+  {
+    "objectID": "slides/index.html#learning-objectives",
+    "href": "slides/index.html#learning-objectives",
+    "title": "BM432 Data Visualisation",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nYou should be able to critically analyse how data is visualised\nYou should be able to judge a figure’s clarity and potential for misunderstanding\nYou should be able to identify potential sources of bias resulting from the visualisation\nYou should understand how to create effective figures for your own work"
+  },
+  {
+    "objectID": "slides/index.html#background-reading",
+    "href": "slides/index.html#background-reading",
+    "title": "BM432 Data Visualisation",
+    "section": "Background Reading",
+    "text": "Background Reading\n\nIntroduction to Data Visualisation\n\nhttps://sipbs-compbiol.github.io/BM432/notebooks/04-data_presentation_workshop.html\n\nInteractive Data Visualisation examples\n\nhttps://sipbs-bm432.shinyapps.io/03-04a-barchart/\n\nAdditional information:\n\n“Fundamentals of Data Visualisation” by Claus O. Wilke\n“Data Visualisation: A Practical Introduction” by Kieran Healy\n“Points of View: graphic design for data visualisation”"
+  },
+  {
+    "objectID": "slides/index.html#exercise-four-figures-assess-all-figures",
+    "href": "slides/index.html#exercise-four-figures-assess-all-figures",
+    "title": "BM432 Data Visualisation",
+    "section": "Exercise: Four figures (assess all figures)",
+    "text": "Exercise: Four figures (assess all figures)\n\nUse the DOIs provided to find the papers the figures are from, if you need more information than is in the figure legend\nFor each figure, consider the following:\n\nWhat type of data is being presented?\nAre the data presented effectively? (why/why not?)\nHow might the data presentation be improved?\nHow would you grade this figure according to University Marking Guide B?\n\nFill in the pro forma with your scoring and free-text answers to the questions above (one sentence each)\n\nGoogle Form"
+  },
+  {
+    "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121",
+    "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 1 (doi:10.1073/pnas.2320257121)",
+    "text": "Figure 1 (doi:10.1073/pnas.2320257121)"
+  },
+  {
+    "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121",
+    "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 2 (doi:10.1073/pnas.2405474121)",
+    "text": "Figure 2 (doi:10.1073/pnas.2405474121)"
+  },
+  {
+    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121",
+    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 3 (doi:10.1073/pnas.2408540121)",
+    "text": "Figure 3 (doi:10.1073/pnas.2408540121)"
+  },
+  {
+    "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112",
+    "href": "slides/index.html#figure-4-doi10.1073pnas.240342112",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 4 (doi:10.1073/pnas.240342112)",
+    "text": "Figure 4 (doi:10.1073/pnas.240342112)"
+  },
+  {
+    "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121-1",
+    "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121-1",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 1 (doi:10.1073/pnas.2320257121)",
+    "text": "Figure 1 (doi:10.1073/pnas.2320257121)"
+  },
+  {
+    "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121-2",
+    "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121-2",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 1 (doi:10.1073/pnas.2320257121) ",
+    "text": "Figure 1 (doi:10.1073/pnas.2320257121) \n\n\n\n\n\n\n\nSuggested improvements:\n\nThe lower extent of error bars is not visible in (B), (D), (G), or (E). Avoid “dynamite plots.”\nBar charts should be avoided; 1D scatterplot for (D), (G), and (E) would be clearer. Line plot with concentration on \\(x\\)-axis would improve (B).\nWe can’t see difference between effects of two concentrations of A16 in (D), or A16 vs A18 in (B); use a table of contrasts.\nPlace things to be compared by the reader next to each other where possible (E)."
+  },
+  {
+    "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121-3",
+    "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121-3",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 1 (doi:10.1073/pnas.2320257121) ",
+    "text": "Figure 1 (doi:10.1073/pnas.2320257121) \n\n\n\n\n\n\n\n\nimprovements\n\n\n\n\nreorganising in a way that flows slightly better to the eye\n\n\nWorth noting that whilst the bar charts they have used are easy to read, they might not be representative of any distribution in results. Alternatives might be histograms or violin plots.\n\n\nShow data points in scatterplot or box plot\n\n\nI think the figure legend could be more detailed\n\n\nThe scales on the bar charts are all different so at a glance makes the results seem more similar\n\n\nbetter spacing more accurate number\n\n\nCould box off panels to make more distinct from one another;\n\n\nPerhaps the error bars on panel B were too large i.e. took up half the space on the graph and could’ve been presented differently\n\n\nRe-organized\n\n\nremove the numbers on the bars, have all backgrounds the same colour eg white or black in Figure C, have a chart at the side displaying what colour of bar is what group instead of putting each group name on each bar, remove the lines showing what the ** are referring to in Figure B and the ns sign in Figure E.\n\n\nColour shading could be improved, difficult to distinguish between subset of bars\n\n\nColour scheme could be easier to see - could be difficult to tell the difference in shades\n\n\nI think the colours in the bar charts could be clearer.\n\n\nI believe if dot plots were also plotted so you could see first hand the variation of the data sets.\n\n\nroviding clear visual representations, detailed legends, and contextual information will aid in communicating the significance of the research.\n\n\nmake bar section for A18 on part E as well\n\n\nsimplify each colour section\n\n\nThe layout of the different components of the figure could be improved. It is not appealing and does not flow very well, making it a bit harder to interpret. To improve the components should all be of equal size which may make it easier to follow.\n\n\nno idea\n\n\nit can be improved by making the text size consistent throughout\n\n\nunsure\n\n\nNot sure how to fix because they are comparing so many bars in B\n\n\nn/a\n\n\nMore text on the diagrams, the layout of the various diagrams can be adjusted so that they can be better compared with each other to convey meaning\n\n\nkeep all the different kinds of figures together e.g. bar graphs along side bar graphs, images along side images\n\n\nmaking the figures easier to read\n\n\nmaybe less is more\n\n\nmolecular weight\n\n\nI think it is presented well.\n\n\nPresenting all the graphs in the same size, making use of more white space as well as using a box plot combined with scatter plot or at least use scatter and the bar.\n\n\nbetter use of colours\n\n\nNot sure\n\n\nnot sure\n\n\nMention the N numbers either on the graphs or in the legend instead of just saying at least 3. Maybe try and use other symbols to represent significance lines and clarify what’s being compared in the legend, for example in figure B, it’s mostly just significance lines which clutters the whole graph and makes it look more complicated than it is.\n\n\nSame colour/shade for same concentration of a particular constituant\n\n\nbigger labels maybe\n\n\nUse box and whisker plots with data points overlayed?\n\n\nMaybe grouping together certain parts of the data to allow better comparison\n\n\nthere isnt much difference in the colour gradient of the green, changing the middle column to a slightly darker colour would make the difference more clear\n\n\nNo requirement to state no significance.\n\n\nFigure E need a bit of correction as it might be better labelled\n\n\nn/a\n\n\nnot sure :/\n\n\nCould be spaced out more, quite cramped\n\n\nI wouldve liked to see the actual scale bar with the values on the visualisations of the fibroblasts and not just on the figure legend, but this could make the figure look a bit too busy.\n\n\nThe layout can be improved. Put the same kind of charts together.\n\n\nSplit into smaller grouped info\n\n\nmake all parts the same size\n\n\nexplaining any abbreviations e.g. DMSO\n\n\nIndividual data points could be shown. Perhaps a boxplot with jittered scatter plot.\n\n\nN/A\n\n\nsplit up into separate figures to make info more digestable\n\n\nThe data presentation in this figure could be improved by increasing the font size of labels and numbers in the bar graphs for better readability, and explicitly stating the exact sample sizes for each condition in the legend.\n\n\nmore what to look at instructions of the immunofluorescence confocol image\n\n\na few things i would do differently would be the stats. the way they are layed out makes it harder to read for me personally but i can see how this might be useful for other people\n\n\nthe treatment length was different for each group, should been the same, because then they are not really comparable.\n\n\nn/a"
+  },
+  {
+    "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121-1",
+    "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121-1",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 2 (doi:10.1073/pnas.2405474121)",
+    "text": "Figure 2 (doi:10.1073/pnas.2405474121)"
+  },
+  {
+    "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121-2",
+    "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121-2",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 2 (doi:10.1073/pnas.2405474121) ",
+    "text": "Figure 2 (doi:10.1073/pnas.2405474121) \n\n\n\n\n\n\n\nSuggested improvements:\n\nUMAP plots (B, E) are highly manipulable and clustering/placement does not necessarily reflect objective measures.\nUnpleasant colour choices in (C); there is room for aesthetic improvement.\nThe proportion plot in (C) does not give information on absolute number, only proportion; a proportional areas plot spanning all clusters would more honestly represent the data.\nHeatmap text is too small to read comfortably; is there too much data here?"
+  },
+  {
+    "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121-3",
+    "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121-3",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 2 (doi:10.1073/pnas.2405474121) ",
+    "text": "Figure 2 (doi:10.1073/pnas.2405474121) \n\n\n\n\n\n\n\n\nimprovements\n\n\n\n\nsnapshot of D and reoutput of C\n\n\nIncluding more white space, improving figure legend, alternative methods of data visualisation.\n\n\nSimplied figures, less unessessary colour and text\n\n\nmake the figure legend more straightforward\n\n\nmake some text bigger\n\n\nless colours and images made bigger\n\n\nless colours and less content heavy data, split into more figures\n\n\nthe presentation could be improved by adding more detailed descriptions of the statistical methods for each figure, particularly for the transcription heatmaps, and including more explicit explanations for non-significant results in the bar charts. additionally, color schemes could be optimized for accessibility\n\n\nThe presentation could be improved by adding more detailed descriptions of the statistical methods for each figure, particularly for the transcription heatmaps, and including more explicit explanations for non - significant results in the bar charts, additionally, colour schemes could be optimized for accessibility\n\n\nshouldve been split into seperate figures to allow the reader to understand all of them\n\n\npresent the data in an easier, more readable format - some forms i.e. particularly panel C do not actually explain what is going on in the figure, just stating the type of graph used\n\n\nmaybe explain what each figure actually shows\n\n\nSpace out the rows in C as hard to follow across\n\n\nSpecifically part D of the figure is harder to decipher due to the small text.\n\n\nlabel more stuff explain why the genes are relevant\n\n\nTidy up\n\n\nSelection of key data and highlighting of relevant information in different characters\n\n\nLess info\n\n\nchange to colour scheme and layout of all graphs. Statistical data (e.g. sample size) needs to be included in legend.\n\n\nI’m not sure what the best option for this data would be\n\n\nless bright colours and more monochromatic colours\n\n\nCould be formatted differently or separated into different figures.\n\n\nPerhaps by seperating the figure into two parts it would make it easier to focus on the information rather than having it all in one, or else if possible reducing the amount of names in the Y axis in section D to be more readable.\n\n\nI think that they can reduce the number of figures\n\n\nClearly define the borders/limits of each figure\n\n\n.\n\n\nincrease space in between sections so they are clearer to distinguish e.g. between a and b\n\n\nadd full borders around each part might help reading flow\n\n\nno\n\n\nGenuinely? Haven’t a clue\n\n\nPerhaps breakdown the heatmap into parts or focus on key results only.\n\n\nI think less colour could have been used as the data would not be interpretable to a colour blind audience. I also think a collection of smaller bar charts for C instead would be better\n\n\nsplit it up, explain what each par is\n\n\nCould be improved by adding in some qauntifiable data with better figure legends i.e explaining what UMAP actually means.\n\n\nbetter organisation for one\n\n\nLess colours"
+  },
+  {
+    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121-1",
+    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121-1",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 3 (doi:10.1073/pnas.2408540121)",
+    "text": "Figure 3 (doi:10.1073/pnas.2408540121)"
+  },
+  {
+    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121-2",
+    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121-2",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
+    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\n\n\nSuggested improvements:\n\nThe lower extent of error bars is not visible in (D) or (E). These are “dynamite plots,” which should be avoided.\nBar charts should be avoided in general; a 1D scatterplot of each dataset in (D) and (E) would be clearer."
+  },
+  {
+    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121-3",
+    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121-3",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
+    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\nSuggested improvements (MF):\n\nFailure to complement the triple mutant strain???\nFluorescence wavelength not specified (C)\nColour scheme in (A) is inconsistent\nAxis label in (B) could be improved\nFigure legend for (A) could be more succinct/some of this info should be in the paper text instead"
+  },
+  {
+    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121-4",
+    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121-4",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
+    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\n\n\n\nimprovements\n\n\n\n\nPerhaps the flow of the figure could be improved. The way the individual panels are labelled (A-E) doesn’t appear to have as logical a flow as it could.\n\n\nState what the appreviations mean\n\n\nBy using a larger number scale for figure D and also a larger figure in general\n\n\nreordering of panels - this didn’t make sense to me as it read in a very confusing way\n\n\nI think using a bar graph for parts D and E was not so easy to understand as it is just an average of all four so does not give much information\n\n\nchanging the colour/ shading of parts D and E to make the genotype bars more different\n\n\nperhaps label in different order; diagram A, growth curve B, 2 bar graphs C and D, and photographs as E\n\n\n-\n\n\nit couldve been improved by using slightly more contrasted colours in the d and e diagrams which maybe couldve matched with figure b like the orange\n\n\nhad to look up every 2nd word\n\n\nFigures 1D & 1E could be presented as box plots to convey statistical information about the data.\n\n\nSignalling pathway maps can be further annotated with key information such as NAG etc.\n\n\nuse scatter plots instead of bar charts\n\n\nusing the same colours for the mutation and control groups in all figures\n\n\nPart B in the legend mentions “Growth curve in TY.”, unless I am missing something, I don’t see what this means anywhere. Maybe it is a microbiology term I am not familiar with since I do biomedical science but maybe it should specify?\n\n\nN/A\n\n\nN/A\n\n\nnot sure\n\n\nHave more line spacing to make the figure legend easier to read\n\n\nBy adding colour to some of the diagrams.\n\n\nUnsure\n\n\nmaybe colour coding the bar charts\n\n\nthe bar graphs ideally need to be shades further apart and the label on C i would put at the top as opposed to in the figure"
+  },
+  {
+    "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112-1",
+    "href": "slides/index.html#figure-4-doi10.1073pnas.240342112-1",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 4 (doi:10.1073/pnas.240342112)",
+    "text": "Figure 4 (doi:10.1073/pnas.240342112)"
+  },
+  {
+    "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112-2",
+    "href": "slides/index.html#figure-4-doi10.1073pnas.240342112-2",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 4 (doi:10.1073/pnas.240342112) ",
+    "text": "Figure 4 (doi:10.1073/pnas.240342112) \n\n\n\n\n\n\n\nSuggested improvements:\n\nThe rifampicin structure is purely dewxcorative and could be removed.\nThe lower extent of error bars is not visible in (B). This is a “dynamite plot,” which should be avoided.\nBar charts should be avoided in general; a 1D scatterplot of each dataset in (B) would be clearer.\nThe implied membrane in (C) and (D) could be stated as such in the figure."
+  },
+  {
+    "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112-3",
+    "href": "slides/index.html#figure-4-doi10.1073pnas.240342112-3",
+    "title": "BM432 Data Visualisation",
+    "section": "Figure 4 (doi:10.1073/pnas.240342112) ",
+    "text": "Figure 4 (doi:10.1073/pnas.240342112) \n\n\n\n\n\n\n\n\nimprovements\n\n\n\n\nim not sure\n\n\nChange figure A\n\n\nDifferent colours, as green salmon and gold don’t look too appealing tt=ogether\n\n\nChange A to a bar graph, showing significance values and actual analysis, move western blotting to perhaps B where mutant type is more relevant and add significance to B. Simplify C and D to become more clear at the characterisation, showing labeled image first and perhaps adding the topology as visual aid, highlighting same area’s to colour\n\n\nits confusingly laid out, with B under A rather than across from it the author also doesn’t make it clear what the red boxes are around the western blot results the author also should’ve plotted the results of the western blot to better visualise changes in the data A should also be labelled to make it clearer to the reader and B should have statistics on it about the significance level\n\n\nexplain why the structures are relevant\n\n\nless boring\n\n\nAddition of two-factor data analyses and representation on graphs\n\n\nchanging colour schemes and including statistical data\n\n\nArrange the figure legend just slightly to flow more smoothly with the movement of the figure. Instead of (A) in the legend going top, bottom then middle, follow the direction of the figure - top, middle then bottom.\n\n\nThere was no statistical analysis on the bar graph.\n\n\nuse more colour-blind friendly colours\n\n\nNA\n\n\nExplaining the significance of the structural figures in the context of the study\n\n\nThe inclusion of showing the wild type and E161Q western blot doesn’t feel like it should be in the same section of the figure as the rifampicin and ethambutol plates\n\n\nsplit the protein structures into a different figure\n\n\nfor one increase the size of the structure of rifampicin and have it as a part A or remove it completely"
+  },
+  {
+    "objectID": "slides/index.html#general-comments",
+    "href": "slides/index.html#general-comments",
+    "title": "BM432 Data Visualisation",
+    "section": "General Comments",
+    "text": "General Comments\n\nColour choices\nLarger figures/graphs, more space between figures/graphs\nToo much data per figure\nSplit into multiple figures\nRemove unnecessary data (how do we define this?)\n“The data is presented in a manner that would likely be inaccessible for people without prior experience. A move toward a more palatable/digestible format will facilitate better science communication in the future.”"
+  },
+  {
+    "objectID": "slides/index.html#visualising-data-about-data-visualisation",
+    "href": "slides/index.html#visualising-data-about-data-visualisation",
+    "title": "BM432 Data Visualisation",
+    "section": "Visualising Data About Data Visualisation",
+    "text": "Visualising Data About Data Visualisation\n\nWhat did you say about figure effectiveness?"
+  },
+  {
+    "objectID": "slides/index.html#visualising-data-about-data-visualisation-1",
+    "href": "slides/index.html#visualising-data-about-data-visualisation-1",
+    "title": "BM432 Data Visualisation",
+    "section": "Visualising Data About Data Visualisation",
+    "text": "Visualising Data About Data Visualisation\n\nWhat words did you use to describe potential figure improvements?"
+  },
+  {
+    "objectID": "slides/index.html#data-visualisation-is-not-neutral",
+    "href": "slides/index.html#data-visualisation-is-not-neutral",
+    "title": "BM432 Data Visualisation",
+    "section": "Data Visualisation is Not Neutral",
+    "text": "Data Visualisation is Not Neutral"
+  },
+  {
+    "objectID": "box_and_whisker.html",
+    "href": "box_and_whisker.html",
+    "title": "Box-and-Whisker Plots",
+    "section": "",
+    "text": "Boxplots represent distributions of continous variables. The box represents the first, second and third quartiles of the dataset, and the whiskers extend to \\(1.5 \\times \\textrm{IQR}\\), where \\(\\textrm{IQR}\\) is the interquartile range of the data. The red dot indicates an outlier. Here, that means any value in the dataset that lies outwith \\(1.5 \\times \\textrm{IQR}\\).\n\n\n\n\n\n\nTipQuartiles (click to expand)\n\n\n\n\n\nQuartiles are obtained by taking each value in the data and sorting them from smallest to largest value, in an ordered list. The quartiles are then the values at one quarter (25%, first quartile), halfway (50%, second quartile) and three-quarters (75%, third quartile) along the list. The second quartile is the same thing as the median.\nThe interquartile range (IQR) is the difference between the first and third quartiles, i.e. \\(\\textrm{third quartile} - \\textrm{first quartile}\\). In Normally-distributed data, the median should be about halfway between the first and third quartiles. If the median is skewed towards one or other quartile, then the data is unlikely to be Normally-distributed, and this should affect your choice of statistical test.\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: Boxplot/box-and-whisker plot of sepal length for each species from the iris dataset.\n\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nOutliers are datapoints that appear to be quite different from the rest of the observations for that variable. This is often taken to be a warning sign, but outliers need to be handled with care as they can arise for a number of different reasons, not all of which pose a problem:\n\nMeasurement error (e.g. the number was written down incorrectly, or a device was uncalibrated)\nExperimental error (e.g. some solution was prepared at the wrong concentration, or a measurement was made badly)\nThe distribution of the data does not meet assumptions about interquartile range (i.e. extreme values are more commmon than assumed)\nOther problems with the experimental design, or the theory behind the experiment\n\nOutliers should not be deleted from the dataset unless they are caused by experimental or recording error. If outliers result from deficiencies in experimental design or faulty assumptions, then those should be addressed instead."
+  },
+  {
+    "objectID": "combining.html",
+    "href": "combining.html",
+    "title": "Combining Data Type Visualisations",
+    "section": "",
+    "text": "No single visual representation is perfect, and it is often useful to combine representations to combine their advantages, or offset disadvantages, as with Figure 1, Figure 2, and Figure 3), below.\n\n\n\n\n\n\nTip\n\n\n\nTools like R and ggplot make these complex figures straightforward to generate. Tools like Excel do not.\n\n\n\n\n\n\n\n\n\n\nFigure 1: Boxplot/box-and-whisker plot of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Violin plot of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Vioin and boxplots of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\nFor comparison, we present a common (and less informative) literature representation of this kind of data: a bar chart with error bars showing standard deviation of each dataset.\n\n\n\n\n\n\n\n\nFigure 4: Bar chart of sepal length for each species from the iris dataset, with error bars representing standard deviation\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\n\nWhich visualisations do you think made it easiest for you to interpret the data?"
+  },
+  {
+    "objectID": "combining.html#combining-plots",
+    "href": "combining.html#combining-plots",
+    "title": "Combining Data Type Visualisations",
+    "section": "",
+    "text": "No single visual representation is perfect, and it is often useful to combine representations to combine their advantages, or offset disadvantages, as with Figure 1, Figure 2, and Figure 3), below.\n\n\n\n\n\n\nTip\n\n\n\nTools like R and ggplot make these complex figures straightforward to generate. Tools like Excel do not.\n\n\n\n\n\n\n\n\n\n\nFigure 1: Boxplot/box-and-whisker plot of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Violin plot of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Vioin and boxplots of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\nFor comparison, we present a common (and less informative) literature representation of this kind of data: a bar chart with error bars showing standard deviation of each dataset.\n\n\n\n\n\n\n\n\nFigure 4: Bar chart of sepal length for each species from the iris dataset, with error bars representing standard deviation\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\n\nWhich visualisations do you think made it easiest for you to interpret the data?"
+  },
+  {
+    "objectID": "combining.html#pairs-plots",
+    "href": "combining.html#pairs-plots",
+    "title": "Combining Data Type Visualisations",
+    "section": "2 Pairs Plots",
+    "text": "2 Pairs Plots\nTools like GGally and ggplot2 in R provide a pairs plot graphics that combine the best-practice versions of the above representations to get a quick overview of a dataset. The iris and titanic datasets are summarised below in Figure 5 and Figure 6.\n\n\n\n\n\n\n\n\nFigure 5: Pairs plot of iris data, providing an overview of relationships between variables.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: Pairs plot of titanic data, providing an overview of relationships between variables.\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionsQuestions\n\n\n\n\nWhich data representations does the pairs plot use?\nWhich visualisation is used for comparing each type of data?\nDo you agree that the right choice was made for each data type?\nHow would you refine these pairs plots?"
+  },
+  {
     "objectID": "histogram.html",
     "href": "histogram.html",
     "title": "Histograms",
@@ -42,263 +371,11 @@
     "text": "It is usually best to show original numerical data as completely as possible. This may mean showing each datapoint or observation individually. If that is not possible or desirable, then there are several options for showing the distribution of the data as a summary of the data:\n\nhistogram\ncumulative distribution function (CDF)\nkernel density estimate (KDE)\nbox plot/box-and-whisker plot)\n\nIn general, your preference should be:\n\nShow all datapoints\nShow a summary or model of the data (e.g. a CDF, KDE, or violin plot)\nShow a representation of summary statistics data (e.g. a box plot)\n\n\n\n\n\n\n\nCautionAvoid bar charts\n\n\n\nI strongly discourage the use of bar charts to represent numerical data distributions. The reasons for this are reported in the relevant literature:\n\nPeople interpret bar graphs as comparisons of discrete datapoints (Zacks and Tversky (1999))\nIdentical bar graphs can be generated from multiple very different data sets (Weissgerber et al. (2015)), potentially disguising significant differences in the data\nBar graphs are intended to represent categorical variables, not numerical, paired or nonindependent data (by definition)\nPresentations of error bars imply that data are Normally distributed, which may not be true (Weissgerber et al. (2015)), causing wrong statstical inferences to be drawn\n\n\n\n\n\n\nReferences\n\nWeissgerber, Tracey L, Natasa M Milic, Stacey J Winham, and Vesna D Garovic. 2015. “Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm.” PLoS Biol. 13 (4): e1002128. https://doi.org/10.1371/journal.pbio.1002128.\n\n\nZacks, J, and B Tversky. 1999. “Bars and Lines: A Study of Graphic Communication.” Mem. Cognit. 27 (6): 1073–79. https://doi.org/10.3758/bf03201236."
   },
   {
-    "objectID": "bar_chart.html",
-    "href": "bar_chart.html",
-    "title": "Bar Charts and Dot Charts",
-    "section": "",
-    "text": "Bar charts are a reasonable way to represent the total counts in a category, as in Figure 1 which shows the number of passengers on the Titanic, by class.\nFigure 1: Bar chart of number of passengers on the Titanic, by class"
-  },
-  {
-    "objectID": "bar_chart.html#dot-chart",
-    "href": "bar_chart.html#dot-chart",
-    "title": "Bar Charts and Dot Charts",
-    "section": "1 Dot Chart",
-    "text": "1 Dot Chart\nDot charts represent all the same information as Bar Charts, with less ink. (Here, the axes have been reversed, which can improve readability of the category labels.)\n\n\n\n\n\n\n\n\nFigure 2: Dot chart of number of passengers on the Titanic, by class"
-  },
-  {
-    "objectID": "bar_chart.html#stacked-bar-chart",
-    "href": "bar_chart.html#stacked-bar-chart",
-    "title": "Bar Charts and Dot Charts",
-    "section": "2 Stacked Bar Chart",
-    "text": "2 Stacked Bar Chart\nTo see the counts of passengers who were in each class, conditioned on sex, we can use a stacked bar chart. This places each category on the same bar.\n\n\n\n\n\n\n\n\nFigure 3: Stacked bar chart of number of passengers on the Titanic, by class\n\n\n\n\n\nSuch a representation is quite concise. We can see the difference between the main comparison (by sex), but also the different distribution of classes in each sex."
-  },
-  {
-    "objectID": "bar_chart.html#proportional-stacked-bar-chart",
-    "href": "bar_chart.html#proportional-stacked-bar-chart",
-    "title": "Bar Charts and Dot Charts",
-    "section": "3 Proportional Stacked Bar Chart",
-    "text": "3 Proportional Stacked Bar Chart\nIn Figure 3 the y-axis is the total count of passengers. Sometimes it is easier to make appropriate comparisons if we instead plot proportions in each category.\n\n\n\n\n\n\n\n\nFigure 4: Stacked bar chart of number of passengers on the Titanic, by class"
-  },
-  {
-    "objectID": "combining.html",
-    "href": "combining.html",
-    "title": "Combining Data Type Visualisations",
-    "section": "",
-    "text": "No single visual representation is perfect, and it is often useful to combine representations to combine their advantages, or offset disadvantages, as with Figure 1, Figure 2, and Figure 3), below.\n\n\n\n\n\n\nTip\n\n\n\nTools like R and ggplot make these complex figures straightforward to generate. Tools like Excel do not.\n\n\n\n\n\n\n\n\n\n\nFigure 1: Boxplot/box-and-whisker plot of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Violin plot of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Vioin and boxplots of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\nFor comparison, we present a common (and less informative) literature representation of this kind of data: a bar chart with error bars showing standard deviation of each dataset.\n\n\n\n\n\n\n\n\nFigure 4: Bar chart of sepal length for each species from the iris dataset, with error bars representing standard deviation\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\n\nWhich visualisations do you think made it easiest for you to interpret the data?"
-  },
-  {
-    "objectID": "combining.html#combining-plots",
-    "href": "combining.html#combining-plots",
-    "title": "Combining Data Type Visualisations",
-    "section": "",
-    "text": "No single visual representation is perfect, and it is often useful to combine representations to combine their advantages, or offset disadvantages, as with Figure 1, Figure 2, and Figure 3), below.\n\n\n\n\n\n\nTip\n\n\n\nTools like R and ggplot make these complex figures straightforward to generate. Tools like Excel do not.\n\n\n\n\n\n\n\n\n\n\nFigure 1: Boxplot/box-and-whisker plot of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Violin plot of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Vioin and boxplots of sepal length for each species from the iris dataset, with jittered scatterplot.\n\n\n\n\n\n\n\nFor comparison, we present a common (and less informative) literature representation of this kind of data: a bar chart with error bars showing standard deviation of each dataset.\n\n\n\n\n\n\n\n\nFigure 4: Bar chart of sepal length for each species from the iris dataset, with error bars representing standard deviation\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\n\nWhich visualisations do you think made it easiest for you to interpret the data?"
-  },
-  {
-    "objectID": "combining.html#pairs-plots",
-    "href": "combining.html#pairs-plots",
-    "title": "Combining Data Type Visualisations",
-    "section": "2 Pairs Plots",
-    "text": "2 Pairs Plots\nTools like GGally and ggplot2 in R provide a pairs plot graphics that combine the best-practice versions of the above representations to get a quick overview of a dataset. The iris and titanic datasets are summarised below in Figure 5 and Figure 6.\n\n\n\n\n\n\n\n\nFigure 5: Pairs plot of iris data, providing an overview of relationships between variables.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: Pairs plot of titanic data, providing an overview of relationships between variables.\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionsQuestions\n\n\n\n\nWhich data representations does the pairs plot use?\nWhich visualisation is used for comparing each type of data?\nDo you agree that the right choice was made for each data type?\nHow would you refine these pairs plots?"
-  },
-  {
-    "objectID": "box_and_whisker.html",
-    "href": "box_and_whisker.html",
-    "title": "Box-and-Whisker Plots",
-    "section": "",
-    "text": "Boxplots represent distributions of continous variables. The box represents the first, second and third quartiles of the dataset, and the whiskers extend to \\(1.5 \\times \\textrm{IQR}\\), where \\(\\textrm{IQR}\\) is the interquartile range of the data. The red dot indicates an outlier. Here, that means any value in the dataset that lies outwith \\(1.5 \\times \\textrm{IQR}\\).\n\n\n\n\n\n\nTipQuartiles (click to expand)\n\n\n\n\n\nQuartiles are obtained by taking each value in the data and sorting them from smallest to largest value, in an ordered list. The quartiles are then the values at one quarter (25%, first quartile), halfway (50%, second quartile) and three-quarters (75%, third quartile) along the list. The second quartile is the same thing as the median.\nThe interquartile range (IQR) is the difference between the first and third quartiles, i.e. \\(\\textrm{third quartile} - \\textrm{first quartile}\\). In Normally-distributed data, the median should be about halfway between the first and third quartiles. If the median is skewed towards one or other quartile, then the data is unlikely to be Normally-distributed, and this should affect your choice of statistical test.\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: Boxplot/box-and-whisker plot of sepal length for each species from the iris dataset.\n\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nOutliers are datapoints that appear to be quite different from the rest of the observations for that variable. This is often taken to be a warning sign, but outliers need to be handled with care as they can arise for a number of different reasons, not all of which pose a problem:\n\nMeasurement error (e.g. the number was written down incorrectly, or a device was uncalibrated)\nExperimental error (e.g. some solution was prepared at the wrong concentration, or a measurement was made badly)\nThe distribution of the data does not meet assumptions about interquartile range (i.e. extreme values are more commmon than assumed)\nOther problems with the experimental design, or the theory behind the experiment\n\nOutliers should not be deleted from the dataset unless they are caused by experimental or recording error. If outliers result from deficiencies in experimental design or faulty assumptions, then those should be addressed instead."
-  },
-  {
-    "objectID": "bm432-datavis.html#learning-objectives",
-    "href": "bm432-datavis.html#learning-objectives",
-    "title": "BM432 Data Visualisation",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nYou should be able to critically analyse how data is visualised\nYou should be able to judge a figure’s clarity and potential for misunderstanding\nYou should be able to identify potential sources of bias resulting from the visualisation\nYou should understand how to create effective figures for your own work"
-  },
-  {
-    "objectID": "bm432-datavis.html#background-reading",
-    "href": "bm432-datavis.html#background-reading",
-    "title": "BM432 Data Visualisation",
-    "section": "Background Reading",
-    "text": "Background Reading\n\nIntroduction to Data Visualisation\n\nhttps://sipbs-compbiol.github.io/BM432/notebooks/04-data_presentation_workshop.html\n\nInteractive Data Visualisation examples\n\nhttps://sipbs-bm432.shinyapps.io/03-04a-barchart/\n\nAdditional information:\n\n“Fundamentals of Data Visualisation” by Claus O. Wilke\n“Data Visualisation: A Practical Introduction” by Kieran Healy\n“Points of View: graphic design for data visualisation”"
-  },
-  {
-    "objectID": "bm432-datavis.html#exercise-four-figures-assess-all-figures",
-    "href": "bm432-datavis.html#exercise-four-figures-assess-all-figures",
-    "title": "BM432 Data Visualisation",
-    "section": "Exercise: Four figures (assess all figures)",
-    "text": "Exercise: Four figures (assess all figures)\n\nUse the DOIs provided to find the papers the figures are from, if you need more information than is in the figure legend\nFor each figure, consider the following:\n\nWhat type of data is being presented?\nAre the data presented effectively? (why/why not?)\nHow might the data presentation be improved?\nHow would you grade this figure according to University Marking Guide B?\n\nFill in the pro forma with your scoring and free-text answers to the questions above (one sentence each)\n\nGoogle Form"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-1-doi10.1073pnas.2320257121",
-    "href": "bm432-datavis.html#figure-1-doi10.1073pnas.2320257121",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 1 (doi:10.1073/pnas.2320257121)",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121)"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-2-doi10.1073pnas.2405474121",
-    "href": "bm432-datavis.html#figure-2-doi10.1073pnas.2405474121",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 2 (doi:10.1073/pnas.2405474121)",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121)"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121",
-    "href": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121)",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121)"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-4-doi10.1073pnas.240342112",
-    "href": "bm432-datavis.html#figure-4-doi10.1073pnas.240342112",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 4 (doi:10.1073/pnas.240342112)",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112)"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-1-doi10.1073pnas.2320257121-1",
-    "href": "bm432-datavis.html#figure-1-doi10.1073pnas.2320257121-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 1 (doi:10.1073/pnas.2320257121)",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121)"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-1-doi10.1073pnas.2320257121-2",
-    "href": "bm432-datavis.html#figure-1-doi10.1073pnas.2320257121-2",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 1 (doi:10.1073/pnas.2320257121) ",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121) \n\n\n\n\n\n\n\nSuggested improvements:\n\nThe lower extent of error bars is not visible in (B), (D), (G), or (E). Avoid “dynamite plots.”\nBar charts should be avoided; 1D scatterplot for (D), (G), and (E) would be clearer. Line plot with concentration on \\(x\\)-axis would improve (B).\nWe can’t see difference between effects of two concentrations of A16 in (D), or A16 vs A18 in (B); use a table of contrasts.\nPlace things to be compared by the reader next to each other where possible (E)."
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-1-doi10.1073pnas.2320257121-3",
-    "href": "bm432-datavis.html#figure-1-doi10.1073pnas.2320257121-3",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 1 (doi:10.1073/pnas.2320257121) ",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121) \n\n\n\n\n\n\n\n\nimprovements\n\n\n\n\nreorganising in a way that flows slightly better to the eye\n\n\nWorth noting that whilst the bar charts they have used are easy to read, they might not be representative of any distribution in results. Alternatives might be histograms or violin plots.\n\n\nShow data points in scatterplot or box plot\n\n\nI think the figure legend could be more detailed\n\n\nThe scales on the bar charts are all different so at a glance makes the results seem more similar\n\n\nbetter spacing more accurate number\n\n\nCould box off panels to make more distinct from one another;\n\n\nPerhaps the error bars on panel B were too large i.e. took up half the space on the graph and could’ve been presented differently\n\n\nRe-organized\n\n\nremove the numbers on the bars, have all backgrounds the same colour eg white or black in Figure C, have a chart at the side displaying what colour of bar is what group instead of putting each group name on each bar, remove the lines showing what the ** are referring to in Figure B and the ns sign in Figure E.\n\n\nColour shading could be improved, difficult to distinguish between subset of bars\n\n\nColour scheme could be easier to see - could be difficult to tell the difference in shades\n\n\nI think the colours in the bar charts could be clearer.\n\n\nI believe if dot plots were also plotted so you could see first hand the variation of the data sets.\n\n\nroviding clear visual representations, detailed legends, and contextual information will aid in communicating the significance of the research.\n\n\nmake bar section for A18 on part E as well\n\n\nsimplify each colour section\n\n\nThe layout of the different components of the figure could be improved. It is not appealing and does not flow very well, making it a bit harder to interpret. To improve the components should all be of equal size which may make it easier to follow.\n\n\nno idea\n\n\nit can be improved by making the text size consistent throughout\n\n\nunsure\n\n\nNot sure how to fix because they are comparing so many bars in B\n\n\nn/a\n\n\nMore text on the diagrams, the layout of the various diagrams can be adjusted so that they can be better compared with each other to convey meaning\n\n\nkeep all the different kinds of figures together e.g. bar graphs along side bar graphs, images along side images\n\n\nmaking the figures easier to read\n\n\nmaybe less is more\n\n\nmolecular weight\n\n\nI think it is presented well.\n\n\nPresenting all the graphs in the same size, making use of more white space as well as using a box plot combined with scatter plot or at least use scatter and the bar.\n\n\nbetter use of colours\n\n\nNot sure\n\n\nnot sure\n\n\nMention the N numbers either on the graphs or in the legend instead of just saying at least 3. Maybe try and use other symbols to represent significance lines and clarify what’s being compared in the legend, for example in figure B, it’s mostly just significance lines which clutters the whole graph and makes it look more complicated than it is.\n\n\nSame colour/shade for same concentration of a particular constituant\n\n\nbigger labels maybe\n\n\nUse box and whisker plots with data points overlayed?\n\n\nMaybe grouping together certain parts of the data to allow better comparison\n\n\nthere isnt much difference in the colour gradient of the green, changing the middle column to a slightly darker colour would make the difference more clear\n\n\nNo requirement to state no significance.\n\n\nFigure E need a bit of correction as it might be better labelled\n\n\nn/a\n\n\nnot sure :/\n\n\nCould be spaced out more, quite cramped\n\n\nI wouldve liked to see the actual scale bar with the values on the visualisations of the fibroblasts and not just on the figure legend, but this could make the figure look a bit too busy.\n\n\nThe layout can be improved. Put the same kind of charts together.\n\n\nSplit into smaller grouped info\n\n\nmake all parts the same size\n\n\nexplaining any abbreviations e.g. DMSO\n\n\nIndividual data points could be shown. Perhaps a boxplot with jittered scatter plot.\n\n\nN/A\n\n\nsplit up into separate figures to make info more digestable\n\n\nThe data presentation in this figure could be improved by increasing the font size of labels and numbers in the bar graphs for better readability, and explicitly stating the exact sample sizes for each condition in the legend.\n\n\nmore what to look at instructions of the immunofluorescence confocol image\n\n\na few things i would do differently would be the stats. the way they are layed out makes it harder to read for me personally but i can see how this might be useful for other people\n\n\nthe treatment length was different for each group, should been the same, because then they are not really comparable.\n\n\nn/a"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-2-doi10.1073pnas.2405474121-1",
-    "href": "bm432-datavis.html#figure-2-doi10.1073pnas.2405474121-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 2 (doi:10.1073/pnas.2405474121)",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121)"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-2-doi10.1073pnas.2405474121-2",
-    "href": "bm432-datavis.html#figure-2-doi10.1073pnas.2405474121-2",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 2 (doi:10.1073/pnas.2405474121) ",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121) \n\n\n\n\n\n\n\nSuggested improvements:\n\nUMAP plots (B, E) are highly manipulable and clustering/placement does not necessarily reflect objective measures.\nUnpleasant colour choices in (C); there is room for aesthetic improvement.\nThe proportion plot in (C) does not give information on absolute number, only proportion; a proportional areas plot spanning all clusters would more honestly represent the data.\nHeatmap text is too small to read comfortably; is there too much data here?"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-2-doi10.1073pnas.2405474121-3",
-    "href": "bm432-datavis.html#figure-2-doi10.1073pnas.2405474121-3",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 2 (doi:10.1073/pnas.2405474121) ",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121) \n\n\n\n\n\n\n\n\nimprovements\n\n\n\n\nsnapshot of D and reoutput of C\n\n\nIncluding more white space, improving figure legend, alternative methods of data visualisation.\n\n\nSimplied figures, less unessessary colour and text\n\n\nmake the figure legend more straightforward\n\n\nmake some text bigger\n\n\nless colours and images made bigger\n\n\nless colours and less content heavy data, split into more figures\n\n\nthe presentation could be improved by adding more detailed descriptions of the statistical methods for each figure, particularly for the transcription heatmaps, and including more explicit explanations for non-significant results in the bar charts. additionally, color schemes could be optimized for accessibility\n\n\nThe presentation could be improved by adding more detailed descriptions of the statistical methods for each figure, particularly for the transcription heatmaps, and including more explicit explanations for non - significant results in the bar charts, additionally, colour schemes could be optimized for accessibility\n\n\nshouldve been split into seperate figures to allow the reader to understand all of them\n\n\npresent the data in an easier, more readable format - some forms i.e. particularly panel C do not actually explain what is going on in the figure, just stating the type of graph used\n\n\nmaybe explain what each figure actually shows\n\n\nSpace out the rows in C as hard to follow across\n\n\nSpecifically part D of the figure is harder to decipher due to the small text.\n\n\nlabel more stuff explain why the genes are relevant\n\n\nTidy up\n\n\nSelection of key data and highlighting of relevant information in different characters\n\n\nLess info\n\n\nchange to colour scheme and layout of all graphs. Statistical data (e.g. sample size) needs to be included in legend.\n\n\nI’m not sure what the best option for this data would be\n\n\nless bright colours and more monochromatic colours\n\n\nCould be formatted differently or separated into different figures.\n\n\nPerhaps by seperating the figure into two parts it would make it easier to focus on the information rather than having it all in one, or else if possible reducing the amount of names in the Y axis in section D to be more readable.\n\n\nI think that they can reduce the number of figures\n\n\nClearly define the borders/limits of each figure\n\n\n.\n\n\nincrease space in between sections so they are clearer to distinguish e.g. between a and b\n\n\nadd full borders around each part might help reading flow\n\n\nno\n\n\nGenuinely? Haven’t a clue\n\n\nPerhaps breakdown the heatmap into parts or focus on key results only.\n\n\nI think less colour could have been used as the data would not be interpretable to a colour blind audience. I also think a collection of smaller bar charts for C instead would be better\n\n\nsplit it up, explain what each par is\n\n\nCould be improved by adding in some qauntifiable data with better figure legends i.e explaining what UMAP actually means.\n\n\nbetter organisation for one\n\n\nLess colours"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121-1",
-    "href": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121)",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121)"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121-2",
-    "href": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121-2",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\n\n\nSuggested improvements:\n\nThe lower extent of error bars is not visible in (D) or (E). These are “dynamite plots,” which should be avoided.\nBar charts should be avoided in general; a 1D scatterplot of each dataset in (D) and (E) would be clearer."
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121-3",
-    "href": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121-3",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\nSuggested improvements (MF):\n\nFailure to complement the triple mutant strain???\nFluorescence wavelength not specified (C)\nColour scheme in (A) is inconsistent\nAxis label in (B) could be improved\nFigure legend for (A) could be more succinct/some of this info should be in the paper text instead"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121-4",
-    "href": "bm432-datavis.html#figure-3-doi10.1073pnas.2408540121-4",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\n\n\n\nimprovements\n\n\n\n\nPerhaps the flow of the figure could be improved. The way the individual panels are labelled (A-E) doesn’t appear to have as logical a flow as it could.\n\n\nState what the appreviations mean\n\n\nBy using a larger number scale for figure D and also a larger figure in general\n\n\nreordering of panels - this didn’t make sense to me as it read in a very confusing way\n\n\nI think using a bar graph for parts D and E was not so easy to understand as it is just an average of all four so does not give much information\n\n\nchanging the colour/ shading of parts D and E to make the genotype bars more different\n\n\nperhaps label in different order; diagram A, growth curve B, 2 bar graphs C and D, and photographs as E\n\n\n-\n\n\nit couldve been improved by using slightly more contrasted colours in the d and e diagrams which maybe couldve matched with figure b like the orange\n\n\nhad to look up every 2nd word\n\n\nFigures 1D & 1E could be presented as box plots to convey statistical information about the data.\n\n\nSignalling pathway maps can be further annotated with key information such as NAG etc.\n\n\nuse scatter plots instead of bar charts\n\n\nusing the same colours for the mutation and control groups in all figures\n\n\nPart B in the legend mentions “Growth curve in TY.”, unless I am missing something, I don’t see what this means anywhere. Maybe it is a microbiology term I am not familiar with since I do biomedical science but maybe it should specify?\n\n\nN/A\n\n\nN/A\n\n\nnot sure\n\n\nHave more line spacing to make the figure legend easier to read\n\n\nBy adding colour to some of the diagrams.\n\n\nUnsure\n\n\nmaybe colour coding the bar charts\n\n\nthe bar graphs ideally need to be shades further apart and the label on C i would put at the top as opposed to in the figure"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-4-doi10.1073pnas.240342112-1",
-    "href": "bm432-datavis.html#figure-4-doi10.1073pnas.240342112-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 4 (doi:10.1073/pnas.240342112)",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112)"
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-4-doi10.1073pnas.240342112-2",
-    "href": "bm432-datavis.html#figure-4-doi10.1073pnas.240342112-2",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 4 (doi:10.1073/pnas.240342112) ",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112) \n\n\n\n\n\n\n\nSuggested improvements:\n\nThe rifampicin structure is purely dewxcorative and could be removed.\nThe lower extent of error bars is not visible in (B). This is a “dynamite plot,” which should be avoided.\nBar charts should be avoided in general; a 1D scatterplot of each dataset in (B) would be clearer.\nThe implied membrane in (C) and (D) could be stated as such in the figure."
-  },
-  {
-    "objectID": "bm432-datavis.html#figure-4-doi10.1073pnas.240342112-3",
-    "href": "bm432-datavis.html#figure-4-doi10.1073pnas.240342112-3",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 4 (doi:10.1073/pnas.240342112) ",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112) \n\n\n\n\n\n\n\n\nimprovements\n\n\n\n\nim not sure\n\n\nChange figure A\n\n\nDifferent colours, as green salmon and gold don’t look too appealing tt=ogether\n\n\nChange A to a bar graph, showing significance values and actual analysis, move western blotting to perhaps B where mutant type is more relevant and add significance to B. Simplify C and D to become more clear at the characterisation, showing labeled image first and perhaps adding the topology as visual aid, highlighting same area’s to colour\n\n\nits confusingly laid out, with B under A rather than across from it the author also doesn’t make it clear what the red boxes are around the western blot results the author also should’ve plotted the results of the western blot to better visualise changes in the data A should also be labelled to make it clearer to the reader and B should have statistics on it about the significance level\n\n\nexplain why the structures are relevant\n\n\nless boring\n\n\nAddition of two-factor data analyses and representation on graphs\n\n\nchanging colour schemes and including statistical data\n\n\nArrange the figure legend just slightly to flow more smoothly with the movement of the figure. Instead of (A) in the legend going top, bottom then middle, follow the direction of the figure - top, middle then bottom.\n\n\nThere was no statistical analysis on the bar graph.\n\n\nuse more colour-blind friendly colours\n\n\nNA\n\n\nExplaining the significance of the structural figures in the context of the study\n\n\nThe inclusion of showing the wild type and E161Q western blot doesn’t feel like it should be in the same section of the figure as the rifampicin and ethambutol plates\n\n\nsplit the protein structures into a different figure\n\n\nfor one increase the size of the structure of rifampicin and have it as a part A or remove it completely"
-  },
-  {
-    "objectID": "bm432-datavis.html#general-comments",
-    "href": "bm432-datavis.html#general-comments",
-    "title": "BM432 Data Visualisation",
-    "section": "General Comments",
-    "text": "General Comments\n\nColour choices\nLarger figures/graphs, more space between figures/graphs\nToo much data per figure\nSplit into multiple figures\nRemove unnecessary data (how do we define this?)\n“The data is presented in a manner that would likely be inaccessible for people without prior experience. A move toward a more palatable/digestible format will facilitate better science communication in the future.”"
-  },
-  {
-    "objectID": "bm432-datavis.html#visualising-data-about-data-visualisation",
-    "href": "bm432-datavis.html#visualising-data-about-data-visualisation",
-    "title": "BM432 Data Visualisation",
-    "section": "Visualising Data About Data Visualisation",
-    "text": "Visualising Data About Data Visualisation\n\nWhat did you say about figure effectiveness?"
-  },
-  {
-    "objectID": "bm432-datavis.html#visualising-data-about-data-visualisation-1",
-    "href": "bm432-datavis.html#visualising-data-about-data-visualisation-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Visualising Data About Data Visualisation",
-    "text": "Visualising Data About Data Visualisation\n\nWhat words did you use to describe potential figure improvements?"
-  },
-  {
-    "objectID": "bm432-datavis.html#data-visualisation-is-not-neutral",
-    "href": "bm432-datavis.html#data-visualisation-is-not-neutral",
-    "title": "BM432 Data Visualisation",
-    "section": "Data Visualisation is Not Neutral",
-    "text": "Data Visualisation is Not Neutral"
-  },
-  {
     "objectID": "proportional_area.html",
     "href": "proportional_area.html",
     "title": "Proportional Area Plots",
     "section": "",
     "text": "Graphical relationships representing comparisons of categorical variables aren’t very common. They are conceptually not very difficult, but few tools have provided a ready way to generate suitable figures (scatter plots, bar charts, and pie charts are more readily found). However, tools like GGally in R make complex graphs accessible, and that package provides a figure style that is a grid of rectangles with proportional areas.\nIn Figure 1, the proporition of Titanic survivors by sex is shown, where larger rectangles indicate a larger absolute count (here, area is proportional to count).\n\n\n\n\n\n\n\n\nFigure 1: Proportional area comparison of Titanic survivors by sex.\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis representation is an intuitive graphical version of the comparisons in a chi-square test.\n\n\nOne advantage of this representation is that we can use the stacked bar representation (see above) to subdivide each of the rectangular areas by a further categorical variable, as in Figure 2 where we divide the blocks representing passengers conditioned on sex and survival, according to class.\n\n\n\n\n\n\n\n\nFigure 2: Proportional area comparison of Titanic survivors by sex, with stacked bar representation of class."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "",
-    "text": "Welcome to the BM432 Data Visualisation Workshop.\nThe amount of data being generated and processed in biological sciences is always increasing, seemingly at an ever-faster pace. As a scientist you will have to learn to work with this data, telling a clear story about your science, and interpreting other people’s work accurately, without being overwhelmed by its sheer volume and complexity.\nData visualisation is a tool that allows us to summarise, understand, and explore our - sometimes incredibly large - datasets intuitively. In this workshop, we will focus on common approaches by which statistical data can and should be summarised visually, with an emphasis on best practice.\nData visualisation is a broad topic that touches on elements of colour theory, psychology, graphic design, and several other fields that we sadly don’t have time to explore, here. But we will provide links to help you learn more about this area, in your own time."
-  },
-  {
-    "objectID": "categorical.html",
-    "href": "categorical.html",
-    "title": "Categorical Data",
-    "section": "",
-    "text": "When we visualise categorical data, we often mean - implicitly - visualising counts of categories in the data, such as the numbers in categories like:\nTables may often be clearer than visualisations for smaller datasets. Graphical options include bar charts, stacked bar charts and pie charts, though pie charts are rarely a good option to choose."
-  },
-  {
-    "objectID": "categorical.html#visualisations-for-categorical-variable-types",
-    "href": "categorical.html#visualisations-for-categorical-variable-types",
-    "title": "Categorical Data",
-    "section": "1 Visualisations for categorical variable types",
-    "text": "1 Visualisations for categorical variable types\nThe message we want to get across for a categorical variable is often declarative (“There were this many examples of each category”) or comparative (“There were this many examples of category A relative to category B”). This kind of data is well-represented by a dot chart (essentially, a univariate scatterplot with a single value) or bar chart.\nBut, if the data is proportion or percentage data, and we want to emphasise the proportion of the total, a more natural representation might seem to be the stacked/divided bar chart or pie chart. However, there is no data that can be represented by a bar chart or pie chart that cannot be represented by a dot chart, and a dot chart is often the clearest representation."
-  },
-  {
-    "objectID": "univariate_scatter.html",
-    "href": "univariate_scatter.html",
-    "title": "Univariate (1D) Scatterplots",
-    "section": "",
-    "text": "In a univariate scatterplot, datapoints are plotted against a single numerical axis, with the other axis showing the identity of the dataset. This allows all values in a dataset to be shown, which is the most transparent way of presenting the data to the reader.\nWhere there is potential for overlap of datapoints, their locations can be “jittered” - moved slightly in a horizontal and/or vertical direction - in order to make the number of datapoints at each value clearer. It is however not always possible to interpret the density of datapoints very well, so this representation is best combined with a summary of the distribution that conveys this information also.\n\n\n\n\n\n\n\n\nFigure 1: Univariate (1D) scatterplot of sepal length for each species from the iris dataset, with jitter.\n\n\n\n\n\nA univariate scatterplot for the iris sepal length data in Figure @ref(fig:1d-scatterplot) shows the distributions of this variable overlap for each species, and that there is a possible outlier in the I. virginica data. The nature of the data is also evident: the datapoints are regularly-spaced, and we can see where there are relatively few or many datapoints."
   },
   {
     "objectID": "storytelling.html",
@@ -320,61 +397,5 @@
     "title": "Storytelling",
     "section": "2 A scientific story",
     "text": "2 A scientific story\nHere’s a story as it might appear in a presentation or a paper, told with a single figure:\n\n2.1 A story: “AvrY induces chlorosis more strongly than AvrX”\nSuppose you’re reading a manuscript, and the text makes this claim:\n\nWe measured chlorosis in 30 plants after the application of either AvrX or AvrY. Figure 2 demonstrates that induction of chlorosis was stronger for AvrY than for AvrX.\n\n\n\n\n\n\n\n\n\nFigure 2: Bar chart showing amount of chlorosis in leaves after application of AvrX and AvrY\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionsQuestions\n\n\n\n\nHow does Figure 2 support the statement that AvrY induces chlorosis more strongly than AvrX?\nWhat information is present in Figure 2?\nWhat information do you think you need that is not present in Figure 2?\n\n\n\n\n\n\n\n\n\nCallout-hintsHints\n\n\n\n\n\n\nWhich bar is larger? By how much?\nWhat is the extent of induction of chlorosis in each case? How variable is the extent of chlorosis in individual leaves?\nIs the difference in chlorosis biologically meaningful?\n\n\n\n\nAs it stands we dont know what the chlorosis measurements are, which means we can’t interpret them as “strong” or “weak”, and we can’t tell how different the values are for AvrX and AvrY. We can improve this plot by indicating what quantities are meant by the bars in the chart, adding values on the y-axis:\n\n\n\n\n\n\n\n\nFigure 3: Bar chart showing effect of chlorosis due to application of AvrX and AvrY, with observed chlorosis values indicated on the y-axis\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionsQuestions\n\n\n\n\nWhat conclusions can you draw from Figure 3 that couldn’t be drawn from Figure 2?\nIs Figure 3 a fair representation of the data?\nDoes the figure still support the statement that AvrY induces chlorosis more strongly than AvrX?\n\n\n\n\n\n\n\n\n\nCallout-hintsHints\n\n\n\n\n\n\nWhich bar is larger? By how much?\nIs the difference in bar sizes proportionate to the difference in extent of chlorosis? How variable are the measurements?\nIs the difference in chlorosis biologically meaningful?\n\n\n\n\nNow we can read off the chart that AvrX has a value of 9.5 and AvrY has a value of about 9.75. If we knew more about chlorosis, we could now tell if this was a strong or a weak effect.\nBut there is something not right about this graphic. The blue bar looks to be twice the size of the green block, yet the difference between values is only \\(\\frac{0.25}{0.95} = 2.5\\%\\)! It would be fairer to start the y-axis at zero, so that the areas of each bar are related to the absolute difference between observed values.\n\n\n\n\n\n\nNoteHow humans interpret graphs (click to expand)\n\n\n\n\n\nResearch shows that people do, in fact, interpret bar charts by bar area, not bar height. Humans have a limited repertoire of elementary perceptual tasks that we use to extract data and information from graphical representation (Cleveland and McGill (1984)). Graphs may use these well for communication, or misuse them to fool the reader.\nA number of studies empirically test people’s ability to correctly “read” graph types, and the results indicate that bar charts do not perform very well (Heer and Bostock (2010)).\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Bar chart showing effect of chlorosis due to application of AvrX and AvrY, with the y-axis starting at zero, and values marked\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionsQuestions\n\n\n\n\nWhat conclusions can you draw from Figure 4 that couldn’t be drawn from Figure 3?\nDoes Figure 4 tell the same story as Figure 3?\nIs there anything else we still need to know?\n\n\n\n\n\n\n\n\n\nCallout-hintsHints\n\n\n\n\n\n\nIs the difference in bar sizes proportionate to the difference in extent of chlorosis?\nIs the difference in chlorosis biologically meaningful?\nHow variable are the measurements for AvrX and AvrY?\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWhen we read the literature, it is tempting to skim over papers and “read the figures,” trusting that they tell an unbiased and fair story about the data. That is not always true. Figures should be read at least as carefully as the text.\n\n\nThere is one more thing we need to make proper sense of the figure. At the moment, the values for AvrX and AvrY are presented as single values: one location for each gene. But we saw at the start of the story that 30 plants were measured:\n\nWe measured chlorosis in 30 plants after the application of either AvrX or AvrY. The figure demonstrates that the induction of chlorosis was stronger for AvrY than for AvrX.\n\nIt’s unlikely that all of the measurements for each gene were identical. We would assume that there has been some spread of data around that location. This spread is commonly represented with error bars, as in Figure 5.\n\n\n\n\n\n\n\n\nFigure 5: Bar chart showing effect of chlorosis due to application of AvrX and AvrY, with the y-axis starting at zero, values marked on that axis, and error bars indicating standard deviation\n\n\n\n\n\n\n\n\n\n\n\nCallout-questionsQuestions\n\n\n\n\nWhat conclusions can you draw from Figure 5 that couldn’t be drawn from Figure 5?\nDoes Figure 5 tell the same story as Figure 4?\nIs there anything else we might still want to know?\n\n\n\n\n\n\n\n\n\nCallout-hintsHints\n\n\n\n\n\n\nHow variable are the measurements for AvrX and AvrY?\nIs the difference in bar sizes proportionate to the difference in extent of chlorosis?\nWhat do the error bars mean? Do they fairly represent the spread of measurements that were made?\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nAs it happens, there is more that we might want to know, and you can explore this in the interactive session at the link below:\n\n3a. Better tools than bar charts INTERACTIVE SESSION"
-  },
-  {
-    "objectID": "scatterplot.html",
-    "href": "scatterplot.html",
-    "title": "2D Scatterplots",
-    "section": "",
-    "text": "Relationships between numerical data are often summarised with scatterplots. You have already seen a number of scatterplots, and you will be aware that the convention is to plot the explanatory (also known as independent) variable on the x-axis, and the response (or dependent) variable on the y-axis. But when exploring datasets we may not always know which parameters or variables control the response, and we may be looking at - or mining - the data for correlations. In those cases the convention is often relaxed.\nIn figure Figure 1 we plot Sepal.Length against Sepal.Width for the iris dataset, to see if there is any obvious relationship.\nFigure 1: Scatterplot of sepal length against sepal width for the iris dataset."
-  },
-  {
-    "objectID": "scatterplot.html#regression-lines",
-    "href": "scatterplot.html#regression-lines",
-    "title": "2D Scatterplots",
-    "section": "1 Regression lines",
-    "text": "1 Regression lines\nAt first sight there appears to be no obvious relationship between the two variables. We can overlay a linear regression to see if there is a linear relationship between them, as in Figure Figure 2.\n\n\n\n\n\n\n\n\nFigure 2: Scatterplot of sepal length against sepal width for the iris dataset, showing linear regression between the variables.\n\n\n\n\n\nThe coefficient of correlation is -0.12, suggesting at first glance that there is no strong linear relationship. The ribbon representing a confidence interval for the slope of the fit includes a horizontal line, supporting an interpretation that there is no relationship between sepal width and length. But, if there is any kind of relationship, it looks like it would be negative (sepal length falling with increased sepal width)"
-  },
-  {
-    "objectID": "scatterplot.html#visualising-multiple-categories",
-    "href": "scatterplot.html#visualising-multiple-categories",
-    "title": "2D Scatterplots",
-    "section": "2 Visualising multiple categories",
-    "text": "2 Visualising multiple categories\nHowever, there are several categories in the dataset, and careful use of colour, as in Figure 3, can aid greatly with interpretation:\n\n\n\n\n\n\n\n\nFigure 3: Scatterplot of sepal length against sepal width for the iris dataset, coloured by species.”\n\n\n\n\n\nNow in Figure 4 it looks as though, rather than there being no linear relationship or a negative one, that there are at least two different positive linear relationships, with reasonable correlation coefficients: one for I. setosa, and one for the other two species.\n\n\n\n\n\n\nCaution\n\n\n\nThe category or class structure of a dataset can disguise true relationships, or even mislead the reader as to the magnitude or direction of a relationship. Careful analysis and visualisation is required to present relationships accurately\n\n\n\n\n\n\n\n\n\n\nFigure 4: Scatterplot of sepal length against sepal width for the iris dataset, coloured by species, with linear regression on two separate groups.\n\n\n\n\n\nBy exploring the scatterplot using colour, we can propose that I. versicolor and I. virginica could be considered separately from I. setosa, in terms of the relationship between sepal width and length."
-  },
-  {
-    "objectID": "density.html",
-    "href": "density.html",
-    "title": "Density Plots",
-    "section": "",
-    "text": "Kernel Density Estimate plots, like that in Figure 1, effectively smooth histograms so that they can be represented as areas with continuous smooth boundaries. They look neat, and are not as immediately sensitive to choice of bin size as histograms. However, the extent of smoothing is under the control of both the choice of kernel (the mathematical smoothing function) and any parameters for the kernel.\nFigure 1: Kernel Density Estimate (KDE) plot of sepal length for each species from the iris dataset.\nKDE plots may imply more or less “shape” (i.e. undulations up and down, implying minor peaks) to a dataset than the data actually contains. However, they are widely used, and form the basis for several other visualisations."
-  },
-  {
-    "objectID": "density.html#small-multiples",
-    "href": "density.html#small-multiples",
-    "title": "Density Plots",
-    "section": "1 Small Multiples",
-    "text": "1 Small Multiples\nAs with histograms, when plotting multiple distributions on the same axes it may be necessary to use transparency to avoid obscuring data. Graphs with many datasets rapidly become confusing and hard to follow. Small multiple plots (Figure 2) can also be useful here.\n\n\n\n\n\n\n\n\nFigure 2: Small multiple plot for Kernel Density Estimates (KDEs) of sepal length for each species from the iris dataset."
-  },
-  {
-    "objectID": "density.html#stacked-density-plotjoyplotridgeplot",
-    "href": "density.html#stacked-density-plotjoyplotridgeplot",
-    "title": "Density Plots",
-    "section": "2 Stacked Density Plot/Joyplot/Ridgeplot",
-    "text": "2 Stacked Density Plot/Joyplot/Ridgeplot\nThe ridgeplot (also known as a joyplot, or stacked density plot) tries to resolve problems due to the presentation of overlapping areas by offsetting the distributions on the y-axis (Figure 3). This improves visualisation for multiple distributions, but data can still be obscured, and there may be a false implication of perspective in the image.\n\n\n\n\n\n\n\n\nFigure 3: Ridgeplot/joyplot/stacked density plot of sepal length for each species from the iris dataset."
-  },
-  {
-    "objectID": "density.html#violin-plot",
-    "href": "density.html#violin-plot",
-    "title": "Density Plots",
-    "section": "3 Violin plot",
-    "text": "3 Violin plot\nViolin plots (Figure 4) are a variation of KDE plots. Variable values are presented on the y-axis, and datasets are separated along the x-axis (like a rotated ridgeplot), but the KDE is mirrored right-to-left, producing shapes apparently reminiscent of violin bodies (though people claim that lamps, faces, and other things are more easily seen).\n\n\n\n\n\n\n\n\nFigure 4: Violin plot of sepal length for each species from the iris dataset.\n\n\n\n\n\nViolin plots avoid the problem of overlapping datasets, and look especially attractive side-by-side or as small multiple plots, but retain the other problems of KDEs (dependence on kernel and parameter choice)"
-  },
-  {
-    "objectID": "pie_chart.html",
-    "href": "pie_chart.html",
-    "title": "Pie Charts",
-    "section": "",
-    "text": "Pie charts are frequently criticised. In my view this is with good reason. Humans find it easier to judge differences between lengths than between areas, and differences between areas than differences between angles. Pie charts use angle and area to represent data; bar charts use area and length; and dot charts use length alone. It is difficult - unless the data is specifically ordered - to rank categories in bar charts and pie charts; it is much easier to do so with dot charts.\nAlso, pie charts can only represent proportional data well, and are less suited to showing absolute counts. They are more limited than bar charts or dot charts (which can each represent exactly the same data as the pie chart, and much more), and less easy to understand than the equivalent stacked bar chart. But, for completeness, the class data for the Titanic passenger list is presented in Figure 1.\n\n\n\n\n\n\n\n\nFigure 1: Pie chart of proportion of passengers on the Titanic, by class\n\n\n\n\n\nA benefit to pie charts is that people recognise “anchor points” on the circle. We can recognise 25% (90 degrees), 50% (180 degrees) and 75% marks quite well, but it is unusual to be able to distinguish well between other angles. This is particularly problematic for small angles, and large numbers of categories."
   }
 ]

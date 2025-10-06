@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/histogram.html</loc>
-    <lastmod>2025-10-06T08:06:47.618Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/numerical.html</loc>
-    <lastmod>2025-10-06T08:06:47.644Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/bar_chart.html</loc>
-    <lastmod>2025-10-06T08:06:47.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/combining.html</loc>
-    <lastmod>2025-10-06T08:06:47.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/box_and_whisker.html</loc>
-    <lastmod>2025-10-06T08:06:47.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/bm432-datavis.html</loc>
-    <lastmod>2025-10-06T08:06:47.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/proportional_area.html</loc>
-    <lastmod>2025-10-06T08:06:47.645Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/index.html</loc>
-    <lastmod>2025-10-06T08:06:47.644Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/categorical.html</loc>
-    <lastmod>2025-10-06T08:06:47.617Z</lastmod>
-  </url>
-  <url>
     <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/univariate_scatter.html</loc>
-    <lastmod>2025-10-06T08:06:47.645Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/storytelling.html</loc>
-    <lastmod>2025-10-06T08:06:47.645Z</lastmod>
+    <lastmod>2025-10-06T10:33:26.604Z</lastmod>
   </url>
   <url>
     <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/scatterplot.html</loc>
-    <lastmod>2025-10-06T08:06:47.645Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/density.html</loc>
-    <lastmod>2025-10-06T08:06:47.618Z</lastmod>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
   </url>
   <url>
     <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/pie_chart.html</loc>
-    <lastmod>2025-10-06T08:06:47.645Z</lastmod>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/index.html</loc>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/density.html</loc>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/categorical.html</loc>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/bar_chart.html</loc>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/slides/index.html</loc>
+    <lastmod>2025-10-06T10:33:26.604Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/box_and_whisker.html</loc>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/combining.html</loc>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/histogram.html</loc>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/numerical.html</loc>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/proportional_area.html</loc>
+    <lastmod>2025-10-06T10:33:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/bm432-datavis_workshop/storytelling.html</loc>
+    <lastmod>2025-10-06T10:33:26.604Z</lastmod>
   </url>
 </urlset>
