@@ -1,0 +1,36 @@
+---
+title: "Marking Guide B"
+description: |
+ Marking guide B for qualitative assessments
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+---
+
+::: { .callout-important }
+The marking scheme below, based on the university's Marking Guide B, provides criteria that you should use when assessing the BM327 workshop figures.
+:::
+
+| Class | Type B Mark | Descriptor |
+| :---- | :---------: | :--------- |
+| UG: First | 92, 100 | **Exceptional**: Exceptional in most respects or every respect. Could not be bettered. |
+|           | 84      | **Outstanding**: Outstanding in most respects. Outstanding standard of synthesis and evaluation. Complexity of creativity, insight, and/or originality. Outstanding standard of communication and/or presentation. |
+|           | 72, 75, 78 | **Excellent**: Excellent in most respects. Excellent standard of synthesis and evaluation. Insightful and original. Excellent standard of communication and presentation. |
+| UG: Upper second | 62, 65, 68 | **Comprehensive**: Very good or good in most respects. Only occasional lapses in detail. Very good or good synthesis. Good standard of communication and/or presentation. |
+| UG: Lower second | 52, 55, 58 | **Satisfactory**: Weaknesses in material with occasional lapses in detail. Satisfactory standard of communication and/or presentation. Weaknesses in clarity and/or structure. |
+| UG: Third | 42, 25, 28 | **Limited**: Lacks clarity and/or not logically structured. Poor organisation and/or presentation. |
+| UG: Fail | 32, 35, 38 | **Inadequate**: Poorly structured or incoherent. Awkward or poor expression of concepts. |
+|          | 20         | **Weak**: Irrelevant content and/or extensive omissions. Weak presentation and/or logic. |          | 10         | **Minimal**: Incomplete, muddled, and/or irrelevant. Weaknesses of presentation and/or logic. |
+|          | 0          | **No relevant work** |
