@@ -51,7 +51,7 @@ colnames(dfm) = c("timestamp",
                   "other_comments")
 
 # Ignore responses prior to a given date
-dfm = dfm %>% filter(timestamp > "2025-10-01")
+dfm = dfm %>% filter(timestamp > "2025-10-10")
 
 # Function to generate Economist-style figures from categories
 draw_economist_categories = function(dfm, categories, fig_num) {
