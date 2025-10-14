@@ -1,0 +1,99 @@
+---
+title: "Pre-workshop figure evaluation exercise"
+description: |
+ Practice with examining and evaluating scientific figures
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+---
+
+## Introduction
+
+To give some practical examples of what published scientific figures look like, and to give you an opportunity to begin developing your skills at assessing and critiquing scientific figures, we are asking you to look at four example figures, and fill out a short [Google form](https://forms.gle/NKrAr9vojbHU4nL38) evaluating them. This will inform part of our discussions in the workshop itself. 
+
+## Instructions
+
+You will be analysing four figures taken from published scientific papers. For each, we have provided the figure and its accompanying title and figure legend, below.
+
+::: { .callout-challenge }
+We would like you to evaluate each figure (critically analysing its effectiveness/clarity, the rigor/appropriateness of the data analysis and presentation, and the aesthetics of the figure). 
+
+As part of your evaluation, we would like you to mark the figures using the [University Marking Type B scale](marking_guide.qmd) and submit these marks using our Google form. 
+:::
+
+::: { .callout-tip }
+You can use the DOI provided to find the paper the figure is from, if you need more information than the figure legend)
+:::
+
+These figures are complex (and we are asking you to consider a number of disparate questions). Some figures may have excellent and appropriate statistical analyses, but could be improved in terms of their use of colour, whitespace, or overall layout. Considering all of these factors together, use your best scientific judgement to arrive at a single mark (Exceptional; Outstanding; Excellent; Comprehensive; Satisfactory; Limited; Inadequate; Weak; Minimal). 
+
+::: { .callout-note }
+Using the University Marking Scale will hopefully help give you a better idea of how we evaluate and mark your work.
+:::
+
+For each figure, please justify the mark you awarded, and also provide any criticisms, suggestions for improvement, or questions that you have about the figure and the data visualisation in it.
+
+## Marking guidance
+
+To arrive at a mark for each figure, please consider the following:
+
+### Effectiveness/clarity
+
+- How easy is it to understand and interpret the figure?
+- Does the figure legend provide sufficient information about the figure for you to understand it without reading the paper?
+- Does the figure title accurately and precisely describe the results presented in the figure?
+- Can the data analysis and visualisation be improved?
+Does the figure “tell a story”?
+
+### Rigor/appropriateness of data analysis and visualisation
+
+- What type of data is being presented?
+- Do you believe the data in the figure were analysed and presented using best practices for this type of data?
+- Do the statistical analyses appear to have been appropriate for this type of data/analysis?
+- Are all of the elements in the figure that need labels, appropriately and correctly labelled?
+
+### Aesthetics
+
+- Does the colour scheme enhance the data presentation, making it easier to understand?
+- Is the font chosen appropriate and easy to read?
+- Is the use of whitespace in this figure effective/does it make the figure easier to read?
+- Is the figure well-organised/does it “flow” well between panels?
+
+## Figures for assessment
+
+### @fig-figure1
+
+![Small molecules identified in previous HTS increase GCase activity. (A) Chemical structures of A16 and A18. (B) 72 h treatment of A16 or A18 increased GCase activity in non-Gaucher patient–derived fibroblasts, as measured by 4-MUG substrate hydrolysis in cell lysate. (C) Immunofluorescence confocal microscopy of HeLa cells after 20 h treatment of A16 and A18 showed TFEB nuclear localization; (D) quantification. (Scale bar, 40 µm.) (E) Non-Gaucher patient fibroblasts that were transduced with shRNA targeting TFEB, TFE3, or nontargeting shRNA were treated with A16 and A18 for 48 h. (F) Immunofluorescence confocal microscopy of fibroblasts after 24 h treatment of A16 showed TFE3 nuclear localization; (G) quantification. (Scale bar, 60 µm.) Bar graphs show mean ± 95% CI, and statistics were performed using the Kruskal–Wallis test with multiple comparisons (D and E) or Mann–Whitney T test (G). \*P ≤ 0.05; \*\*P ≤ 0.01; \*\*\*P ≤ 0.001. Experiments were done with at least three replicates (N ≥ 3).
+](assets/images/figure1.jpg){#fig-figure1}
+
+> Figure and legend reproduced from Hou, William C _et al._ “A PIKfyve modulator combined with an integrated stress response inhibitor to treat lysosomal storage diseases.” _Proceedings of the National Academy of Sciences of the United States of America_ vol. **121**,34 (2024): e2320257121. [doi:10.1073/pnas.2320257121](https://doi.org/10.1073/pnas.2320257121))
+
+### @fig-figure2
+
+![Endometriosis-associated macrophages exhibit significant transcriptomic heterogeneity. (A) Schematic of workflow and tissues, fluid evaluated. (B) UMAP projection of CD45+ cells isolated from menses-like endometrium (donor mice; n = 5), peritoneal lavage (PF) from sham mice (n = 5), PF (n = 5), and lesions (n = 10 mice) isolated from mice with endometriosis. The Inset is UMAP projection based on library ID. AP; antigen-presenting cells, EM; endometrial macrophages; LpM; large peritoneal macrophages, LRM; lesion resident macrophages, SpM; small peritoneal macrophages, LMonos; lesion resident monocytes, NK; natural killer cells. (C) Bar chart depicting cluster membership of each sample type. (D) Heatmap of top five differentially expressed genes (DEGs) for each cluster. (E) Feature plot of marker genes exhibiting restricted expression in SAM-like and TAM-like lesion-resident macrophages.](assets/images/figure2.jpg){#fig-figure2}
+
+> Figure and legend reproduced from Henlon, Yasmin _et al._ “Single-cell analysis identifies distinct macrophage phenotypes associated with prodisease and proresolving functions in the endometriotic niche.” _Proceedings of the National Academy of Sciences of the United States of America_ vol. **121**,38 (2024): e2405474121. [doi:10.1073/pnas.2405474121](https://doi.org/10.1073/pnas.2405474121))
+
+### @fig-figure3
+
+![A *C. difficile* mutant lacking all three YkuD-type Ldts (Δ*ldt*1-3) exhibits wild-type growth, morphology, and 3-3 cross-linking. (A) Diagram of the cell envelope of *C. difficile*. The PG matrix contains a repeating disaccharide of NAG (G) and NAM (M). The glycans are cross-linked by short peptides (filled circles) attached to the NAM residues. About 25% of the cross-links are 4-3 cross-links created by PBPs, and 75% are 3-3 cross-links created by LDTs. Polysaccharides (green) analogous to teichoic acids are attached to PG or to a lipid in the cell membrane. (B) Growth curve in TY. Filled symbols and error bars indicate the mean ± SD from four biological replicates. (C) Phase-contrast and fluorescence micrographs of cells sampled at OD600 = 0.5 and stained with the membrane dye FM4-64. Size bars, 10 μm. Images representative of 3 experiments. (D) Average cell length based on four biological replicates in which >160 cells were measured per sample. Dots depict the mean value from each sample; bars and error bars the mean ± SD across all four trials. ns, not significant in an unpaired two-tailed t test. (E) Percentage of 3-3 PG cross-links as a fraction of the total cross-linked dimers graphed as mean ± SD from three biological replicates. ns, not significant in an unpaired one-tailed t test. Strains used: WT = R20291, Δ*ldt*1-3 = KB124.](assets/images/figure3.jpg){#fig-figure3}
+
+> Figure and legend reproduced from Bollinger, Kevin W _et al._ “Identification of a family of peptidoglycan transpeptidases reveals that Clostridioides difficile requires noncanonical cross-links for viability.” _Proceedings of the National Academy of Sciences of the United States of America_ vol. **121**,34 (2024): e2408540121. [doi:10.1073/pnas.2408540121](https://doi.org/10.1073/pnas.2408540121))
+
+### @fig-figure4
+
+![Functional characterization and overall structure of Rv1217c–1218c. (A) Top: Overexpression of recombinant WT Rv1217c–1218c in *M. smeg* mc2155 shows rifampicin resistance with MIC of 8 μg/mL, while the E161Q mutant restored the MIC value back to that for the vector control (1.25 μg/mL). Bottom: Ethambutol was used as an additional control drug. Pink color indicates active bacteria and blue killed bacteria. Middle: Expression of (Left) WT and (Right) EQ mutant Rv1217c–1218c were confirmed by western-blot using 6\*His-Tag monoclonal antibody. (B) Normalized ATPase activity of WT Rv1217c–1218c and the E161Q mutant purified in GDN. ATPase activity was further stimulated in the presence of rifampicin (RIF). All data points represent the mean and SDs of two separate experiments with each performed in triplicate. (C) (Top) EM density for Rv1217–1218c and (Bottom) overall structure in ribbon presentation. One Rv1217c molecule is composed of the two TMDs in green, and the two Rv1218c molecules that contain the NBDs which are colored in gold and salmon. (D) Topology diagram for the secondary structure of Rv1217c.](assets/images/figure4.jpg){#fig-figure4}
+
+> Figure and legend reproduced from Wang, Yinan _et al._ “Cryo-EM structures of a mycobacterial ABC transporter that mediates rifampicin resistance.” _Proceedings of the National Academy of Sciences of the United States of America_ vol. **121**,37 (2024): e2403421121. [doi:10.1073/pnas.2403421121](https://doi.org/10.1073/pnas.2403421121))

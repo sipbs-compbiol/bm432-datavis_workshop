@@ -49,6 +49,10 @@ website:
           href: pie_chart.qmd
         - text: "Proportional Areas"
           href: proportional_area.qmd
+      - text: "Exercise"
+        menu: 
+          - text: "Pre-Workshop Exercise"
+          - href: exercise.qmd
 
   page-footer: 
     left: This site © University of Strathclyde 2025
