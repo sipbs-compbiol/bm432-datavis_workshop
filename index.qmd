@@ -28,8 +28,26 @@ Data visualisation is a broad topic that touches on elements of colour theory, p
 
 ## Learning Objectives
 
+- You should be able to critically analyse how data is visualised 
+- You should be able to judge a figure's clarity and potential for misunderstanding
+- You should be able to identify potential sources of bias resulting from the visualisation
+- You should understand how to create effective figures for your own work
+
+## Instructions (pre-workshop exercise)
+
+To prepare for this workshop, we ask you to:
+
+1. Read through the material in these pages (using the navigation bar at the top, and beginning with the Introduction)
+
+2. Complete the pre-workshop [figure evaluation exercise](exercise.qmd)
+
 ## Workshop Slides
+
+- Will be posted here
+
+<!---
 
 You can view the slides used in the workshop below, or [fullscreen in your browser](slides/){target="_blank"}.
 
 {{< revealjs "slides/" full-screen-link="false" >}}
+--->
