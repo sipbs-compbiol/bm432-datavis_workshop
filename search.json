@@ -445,14 +445,21 @@
     "href": "index.html#learning-objectives",
     "title": "BM432 Data Visualisation Workshop",
     "section": "Learning Objectives",
-    "text": "Learning Objectives"
+    "text": "Learning Objectives\n\nYou should be able to critically analyse how data is visualised\nYou should be able to judge a figure’s clarity and potential for misunderstanding\nYou should be able to identify potential sources of bias resulting from the visualisation\nYou should understand how to create effective figures for your own work"
+  },
+  {
+    "objectID": "index.html#instructions-pre-workshop-exercise",
+    "href": "index.html#instructions-pre-workshop-exercise",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Instructions (pre-workshop exercise)",
+    "text": "Instructions (pre-workshop exercise)\nTo prepare for this workshop, we ask you to:\n\nRead through the material in these pages (using the navigation bar at the top, and beginning with the Introduction)\nComplete the pre-workshop figure evaluation exercise"
   },
   {
     "objectID": "index.html#workshop-slides",
     "href": "index.html#workshop-slides",
     "title": "BM432 Data Visualisation Workshop",
     "section": "Workshop Slides",
-    "text": "Workshop Slides\nYou can view the slides used in the workshop below, or fullscreen in your browser."
+    "text": "Workshop Slides\n\nWill be posted here"
   },
   {
     "objectID": "numerical.html",
