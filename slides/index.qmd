@@ -232,7 +232,8 @@ doi_fig4 = "10.1073/pnas.240342112"
 
 ```{r fig1_improvements}
 dfm %>% select(improvements_fig1) %>%
-  kable()
+  filter(!is.na(improvements_fig1)) %>%
+  kable(col.names=c("Suggestions for improvement"))
 ```
 
 
@@ -267,7 +268,8 @@ dfm %>% select(improvements_fig1) %>%
 
 ```{r fig2_improvements}
 dfm %>% select(improvements_fig2) %>%
-  kable()
+  filter(!is.na(improvements_fig2)) %>%  
+  kable(col.names=c("Suggestions for improvement"))
 
 ```
 
@@ -319,7 +321,8 @@ dfm %>% select(improvements_fig2) %>%
 
 ```{r fig3_improvements .r-fit-width}
 dfm %>% select(improvements_fig3) %>%
-  kable()
+  filter(!is.na(improvements_fig3)) %>%  
+  kable(col.names=c("Suggestions for improvement"))
 ```
 
 
@@ -342,7 +345,7 @@ dfm %>% select(improvements_fig3) %>%
 
 ::: {.column width="60%" .r-fit-text}
 - Suggested improvements:
-  - The rifampicin structure is purely dewxcorative and could be removed.
+  - The rifampicin structure is purely decorative and could be removed.
   - The lower extent of error bars is not visible in (B). This is a "dynamite plot," which should be avoided.
   - Bar charts should be avoided in general; a 1D scatterplot of each dataset in (B) would be clearer.
   - The implied membrane in (C) and (D) could be stated as such in the figure.
@@ -354,7 +357,8 @@ dfm %>% select(improvements_fig3) %>%
 
 ```{r fig4_improvements}
 dfm %>% select(improvements_fig4) %>%
-  kable()
+  filter(!is.na(improvements_fig4)) %>%  
+  kable(col.names=c("Suggestions for improvement"))
 ```
 
 # 5. Summing Up
