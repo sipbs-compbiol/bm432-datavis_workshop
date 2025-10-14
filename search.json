@@ -137,14 +137,14 @@
     "href": "slides/index.html#background-reading",
     "title": "BM432 Data Visualisation",
     "section": "Background Reading",
-    "text": "Background Reading\n\nIntroduction to Data Visualisation\n\nhttps://sipbs-compbiol.github.io/BM432/notebooks/04-data_presentation_workshop.html\n\nInteractive Data Visualisation examples\n\nhttps://sipbs-bm432.shinyapps.io/03-04a-barchart/\n\nAdditional information:\n\n“Fundamentals of Data Visualisation” by Claus O. Wilke\n“Data Visualisation: A Practical Introduction” by Kieran Healy\n“Points of View: graphic design for data visualisation”"
+    "text": "Background Reading\n\nIntroduction to Data Visualisation\n\nhttps://sipbs-compbiol.github.io/bm432-datavis_workshop\n\nAdditional information:\n\n“Fundamentals of Data Visualisation” by Claus O. Wilke\n“Data Visualisation: A Practical Introduction” by Kieran Healy\n“Points of View: graphic design for data visualisation”"
   },
   {
-    "objectID": "slides/index.html#exercise-four-figures-assess-all-figures",
-    "href": "slides/index.html#exercise-four-figures-assess-all-figures",
+    "objectID": "slides/index.html#assessing-four-figures",
+    "href": "slides/index.html#assessing-four-figures",
     "title": "BM432 Data Visualisation",
-    "section": "Exercise: Four figures (assess all figures)",
-    "text": "Exercise: Four figures (assess all figures)\n\nUse the DOIs provided to find the papers the figures are from, if you need more information than is in the figure legend\nFor each figure, consider the following:\n\nWhat type of data is being presented?\nAre the data presented effectively? (why/why not?)\nHow might the data presentation be improved?\nHow would you grade this figure according to University Marking Guide B?\n\nFill in the pro forma with your scoring and free-text answers to the questions above (one sentence each)\n\nGoogle Form"
+    "section": "Assessing four figures",
+    "text": "Assessing four figures\n\nUse the DOIs provided to find the papers the figures are from, if you need more information than is in the figure legend\nFor each figure, consider the following:\n\nWhat type of data is being presented?\nAre the data presented effectively? (why/why not?)\nHow might the data presentation be improved?\nHow would you grade this figure according to University Marking Guide B?\n\nFill in the pro forma with your scoring and free-text answers to the questions above (one sentence each)\n\nGoogle Form"
   },
   {
     "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121",
