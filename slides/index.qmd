@@ -152,10 +152,7 @@ doi_fig4 = "10.1073/pnas.240342112"
 ## Background Reading
 
 - Introduction to Data Visualisation
-  - [https://sipbs-compbiol.github.io/BM432/notebooks/04-data_presentation_workshop.html](https://sipbs-compbiol.github.io/BM432/notebooks/04-data_presentation_workshop.html)
-  
-- Interactive Data Visualisation examples
-  - [https://sipbs-bm432.shinyapps.io/03-04a-barchart/](https://sipbs-bm432.shinyapps.io/03-04a-barchart/)
+  - [https://sipbs-compbiol.github.io/bm432-datavis_workshop](https://sipbs-compbiol.github.io/bm432-datavis_workshop)
   
 - Additional information:
   - ["Fundamentals of Data Visualisation" _by Claus O. Wilke_](https://clauswilke.com/dataviz/)
