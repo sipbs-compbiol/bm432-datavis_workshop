@@ -169,7 +169,7 @@ doi_fig4 = "10.1073/pnas.240342112"
   - How might the data presentation be improved?
   - How would you grade this figure according to University Marking Guide B?
 - Fill in the _pro forma_ with your scoring and free-text answers to the questions above (one sentence each)
-  - [Google Form](https://forms.gle/cyJPnnuvVRazcTkk7)
+  - [Google Form](https://forms.gle/PxyTHFho3c8Cn6nD9)
 
 ## Figure 1 (doi:`r doi_fig1`)
 
