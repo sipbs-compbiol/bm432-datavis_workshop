@@ -152,17 +152,16 @@ doi_fig4 = "10.1073/pnas.240342112"
 ## Background Reading
 
 - Introduction to Data Visualisation
-  - [https://sipbs-compbiol.github.io/BM432/notebooks/04-data_presentation_workshop.html](https://sipbs-compbiol.github.io/BM432/notebooks/04-data_presentation_workshop.html)
-  
-- Interactive Data Visualisation examples
-  - [https://sipbs-bm432.shinyapps.io/03-04a-barchart/](https://sipbs-bm432.shinyapps.io/03-04a-barchart/)
+  - [https://sipbs-compbiol.github.io/bm432-datavis_workshop](https://sipbs-compbiol.github.io/bm432-datavis_workshop)
   
 - Additional information:
   - ["Fundamentals of Data Visualisation" _by Claus O. Wilke_](https://clauswilke.com/dataviz/)
   - ["Data Visualisation: A Practical Introduction" _by Kieran Healy_](https://socviz.co/index.html#preface)
-  - ["Points of View: graphic design for data visualisation"](git@github.com:sipbs-compbiol/bm432-datavis_workshop.git)
-  
-## Exercise: Four figures (assess all figures)
+  - ["Points of View: graphic design for data visualisation"](https://communities.springernature.com/posts/data-visualization-a-view-of-every-points-of-view-column)
+
+# 3. Exercise
+
+## Assessing four figures
 
 - Use the DOIs provided to find the papers the figures are from, if you need more information than is in the figure legend
 
@@ -170,9 +169,9 @@ doi_fig4 = "10.1073/pnas.240342112"
   - What type of data is being presented?
   - Are the data presented effectively? (why/why not?)
   - How might the data presentation be improved?
-  - How would you grade this figure according to University Marking Guide B?
+  - How would you grade this figure according to [University Marking Guide B](https://sipbs-compbiol.github.io/bm432-datavis_workshop/marking_guide.html)?
 - Fill in the _pro forma_ with your scoring and free-text answers to the questions above (one sentence each)
-  - [Google Form](https://forms.gle/cyJPnnuvVRazcTkk7)
+  - [Google Form](https://forms.gle/PxyTHFho3c8Cn6nD9)
 
 ## Figure 1 (doi:`r doi_fig1`)
 
