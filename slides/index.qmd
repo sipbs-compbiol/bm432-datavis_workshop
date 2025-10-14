@@ -37,29 +37,21 @@ library(wordcloud2)
 gs4_deauth()
 
 # Grab data and clean it
-dfm = read_sheet("https://docs.google.com/spreadsheets/d/1Qs3Hdeycu9Q8KBqpQ6qlv6NaUW62Al_PPWF96x1lACI/edit?resourcekey=&gid=1498908795#gid=1498908795")
-colnames(dfm) = c("timestamp", "figure", "effectiveness", "understandable",
-                  "appealing",
-                  "bestpractice", "bestpractice_errors", "bestpractice_unsure",
-                  "effectiveness_comment", "improvements",
-                  "colours", "fonts", "labels", "statistics", "whitespace",
-                  "data", "legend", "title", "reproduce_paper", "reproduce_raw",
-                  "describe", "figure_comments", "time_taken", "numfigures",
-                  "prereading", "other_comments")
+# dfm = read_sheet("https://docs.google.com/spreadsheets/d/1Qs3Hdeycu9Q8KBqpQ6qlv6NaUW62Al_PPWF96x1lACI/edit?resourcekey=&gid=1498908795#gid=1498908795")
+dfm <- read_sheet("https://docs.google.com/spreadsheets/d/1e4i7g-zfEiDmMFZMXMzm4gqddGc7HVBFEDfGeLTeFnM/edit?resourcekey=&gid=12171434#gid=12171434")
+# 2025-26 Google Form location
+# https://docs.google.com/forms/d/e/1FAIpQLSf2HbFQUkw2Ookp65Q_aLnsEGh3wRS0ZOta6Q7f2s-EFs4V6A/viewform?usp=header
+# 2025-26 Google Form response spreadsheet
+# https://docs.google.com/spreadsheets/d/1e4i7g-zfEiDmMFZMXMzm4gqddGc7HVBFEDfGeLTeFnM/edit?resourcekey=&gid=12171434#gid=12171434
+colnames(dfm) = c("timestamp",
+                  "grade_fig1", "explain_fig1", "improvements_fig1", "questions_fig1",
+                  "grade_fig2", "explain_fig2", "improvements_fig2", "questions_fig2",
+                  "grade_fig3", "explain_fig3", "improvements_fig3", "questions_fig3",
+                  "grade_fig4", "explain_fig4", "improvements_fig4", "questions_fig4",
+                  "other_comments")
 
-# Ignore responses prior to 12/11/2024
-dfm = dfm %>% filter(timestamp > "2024-10-12")
-
-# Convert figure choice to integer
-dfm = dfm %>% separate(figure, c("fignum"), remove=FALSE)
-
-# Make columns the appropriate datatype
-factor_headers = c("figure", "fignum", "bestpractice", "time_taken")
-for (colname in factor_headers) {
-  dfm[[colname]] = as.factor(dfm[[colname]])
-}
-dfm$fignum = factor(dfm$fignum, levels=c("1", "2", "3", "4"))
-dfm$time_taken = factor(dfm$time_taken, levels=c("Less than 5 minutes","About 5 or 10 minutes","About 15 minutes","About 30 minutes","More than 30 minutes"))
+# Ignore responses prior to a given date
+dfm = dfm %>% filter(timestamp > "2025-10-01")
 
 # Function to generate Economist-style figures from categories
 draw_economist_categories = function(dfm, categories, fig_num) {
@@ -112,8 +104,8 @@ draw_hc_categories = function(dfm, categories) {
 }
 
 # Process character column into a wordcloud
-process_words = function(dfrm, column) {
-  corpus = Corpus(VectorSource(dfrm[column]))
+process_words = function(dfrm) {
+  corpus = Corpus(VectorSource(dfrm[,1]))
   comments = corpus %>%
     tm_map(removeNumbers) %>%
     tm_map(removePunctuation) %>%
@@ -239,7 +231,8 @@ doi_fig4 = "10.1073/pnas.240342112"
 ## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="40px" /> {.smaller .scrollable}
 
 ```{r fig1_improvements}
-kable(dfm %>% filter(fignum==1) %>% select(improvements))
+dfm %>% select(improvements_fig1) %>%
+  kable()
 ```
 
 
@@ -273,7 +266,9 @@ kable(dfm %>% filter(fignum==1) %>% select(improvements))
 ## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="40px" /> {.smaller .scrollable}
 
 ```{r fig2_improvements}
-kable(dfm %>% filter(fignum==2) %>% select(improvements))
+dfm %>% select(improvements_fig2) %>%
+  kable()
+
 ```
 
 
@@ -323,7 +318,7 @@ kable(dfm %>% filter(fignum==2) %>% select(improvements))
 ## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" /> {.smaller .scrollable}
 
 ```{r fig3_improvements .r-fit-width}
-dfm %>% filter(fignum==3) %>% select(improvements) %>%
+dfm %>% select(improvements_fig3) %>%
   kable()
 ```
 
@@ -358,7 +353,8 @@ dfm %>% filter(fignum==3) %>% select(improvements) %>%
 ## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="40px" /> {.smaller .scrollable}
 
 ```{r fig4_improvements}
-kable(dfm %>% filter(fignum==4) %>% select(improvements))
+dfm %>% select(improvements_fig4) %>%
+  kable()
 ```
 
 # 5. Summing Up
@@ -374,23 +370,27 @@ kable(dfm %>% filter(fignum==4) %>% select(improvements))
 
 ## Visualising Data About Data Visualisation
 
-- What did you say about figure effectiveness?
+- How did you explain your marks?
 
 <center>
 ```{r eff_wordcloud}
-effwords = process_words(dfm, "effectiveness_comment")
-wordcloud2(data=effwords, size=1.6, color='random-dark')
+explain = data.frame(rbind(dfm$explain_fig1, dfm$explain_fig2, dfm$explain_fig3, dfm$explain_fig4))
+effwords = process_words(explain)
+wordcloud2(data=effwords, size=0.3, color='random-dark')
 ```
 </center>
 
 ## Visualising Data About Data Visualisation
 
-- What words did you use to describe potential figure improvements?
+- What words did you use to describe ways the figure could be improved?
 
 <center>
 ```{r imp_wordcloud}
-impwords = process_words(dfm, "improvements")
-wordcloud(words = impwords$word, freq = impwords$freq, min.freq = 1, max.words=200, random.order=FALSE, rot.per=0.35,            colors=brewer.pal(8, "Dark2"))
+improvements = data.frame(rbind(dfm$improvements_fig1, dfm$improvements_fig2, dfm$improvements_fig3, dfm$improvements_fig4))
+impwords = process_words(improvements)
+wordcloud(words = impwords$word, freq = impwords$freq,
+          min.freq = 1, max.words=200, random.order=FALSE, rot.per=0.35,
+          colors=brewer.pal(8, "Dark2"))
 ```
 </center>
 
