@@ -26,9 +26,6 @@ embed-resources: false
 library("DT")
 library("datasets")
 library("dplyr")
-library("GGally")
-library("ggplot2")
-library("ggridges")
 library("readr")
 library("stringr")
 library("tidyr")
@@ -36,17 +33,35 @@ library("kableExtra")
 
 # BG color for plots - should match .figure and .caption classes in rmd_style.css
 figbg = "whitesmoke"
+
+# Cohort dataset
+data = anscombe %>% pivot_longer(
+    everything(),
+    cols_vary = "slowest",
+    names_to = c(".value", "set"),
+    names_pattern = "(.)(.)"
+  ) %>% rename(all_of(c(cohort="set", dosage="x", effect="y")))
 ```
 
 ::: { .callout-case-study }
-Over the course of a small study, you attempted to evaluate the effect of a drug on four different matched cohorts of 11 individuals, specifying dosage per individual and measuring the drug effect.
+Over the course of a small study, you attempted to evaluate the effect of a drug on four different matched `cohort`s of 11 individuals, specifying `dosage` per individual and measuring the drug `effect`.
 
 The interactive examples below ask you to visualise alternative representations of this data.
 :::
 
+::: { .callout-note }
+In this dataset, `cohort` is a categorical variable, but `dosage` and `effect` are continuous variables.
+:::
+
+::: { .callout-data collapse="true" title="Click to view the complete dataset as a table"}
+```{r datatable, echo=FALSE}
+datatable(data)
+```
+:::
+
 ## Visualising numerical datasets
 
-::: { .callout-data }
+::: { .callout-challenge }
 In the interactive examples below, you can select alternative visualisations of the case study dataset, and decide for yourself which presents the most appropriate story about the data.
 :::
 
@@ -55,23 +70,23 @@ In the interactive examples below, you can select alternative visualisations of 
 ## Bar chart
 
 ::: {layout-ncol=2}
-![Dosage (bar chart)](assets/images/bar_dosage.png){#fig-bar-dose}
+![Dosage for each cohort (bar chart)](assets/images/bar_dosage.png){#fig-bar-dose}
 
-![Effect (bar chart)](assets/images/bar_effect.png){#fig-bar-effect}
+![Effect for each cohort (bar chart)](assets/images/bar_effect.png){#fig-bar-effect}
 :::
 
 ## Bar + Errors
 
 ::: {layout-ncol=2}
-![Dosage (bar chart with error bars)](assets/images/bar_errors_dosage.png){#fig-bar-data-dose}
+![Dosage for each cohort (bar chart with error bars representing standard deviation)](assets/images/bar_errors_dosage.png){#fig-bar-data-dose}
 
-![Effect (bar chart with error bars)](assets/images/bar_errors_effect.png){#fig-bar-data-effect}
+![Effect for each cohort (bar chart with error bars representing standard deviation)](assets/images/bar_errors_effect.png){#fig-bar-data-effect}
 :::
 
 ## 1D Scatter
 
 ::: {layout-ncol=2}
-![Dosage (1D scatterplot)](assets/images/1d_scatter_dosage.png){#fig-1d-dose}
+![Dosage for each cohort (1D scatterplot)](assets/images/1d_scatter_dosage.png){#fig-1d-dose}
 
 ![Effect (1D scatterplot)](assets/images/1d_scatter_effect.png){#fig-1d-effect}
 :::
@@ -79,41 +94,41 @@ In the interactive examples below, you can select alternative visualisations of 
 ## Boxplot
 
 ::: {layout-ncol=2}
-![Dosage (boxplot)](assets/images/box_dosage.png){#fig-box-dose}
+![Dosage for each cohort (boxplot)](assets/images/box_dosage.png){#fig-box-dose}
 
-![Effect (boxplot)](assets/images/box_effect.png){#fig-box-effect}
+![Effect for each cohort (boxplot)](assets/images/box_effect.png){#fig-box-effect}
 :::
 
 ## Violin
 
 ::: {layout-ncol=2}
-![Dosage (violin plot)](assets/images/violin_dosage.png){#fig-violin-dose}
+![Dosage for each cohort (violin plot)](assets/images/violin_dosage.png){#fig-violin-dose}
 
-![Effect (violin plot)](assets/images/violin_effect.png){#fig-violin-effect}
+![Effect for each cohort (violin plot)](assets/images/violin_effect.png){#fig-violin-effect}
 :::
 
 ## Bar + Data
 
 ::: {layout-ncol=2}
-![Dosage (bar chart, error bars, overlaid 1D scatterplot)](assets/images/bar_data_dosage.png){#fig-bar-data-dose}
+![Dosage for each cohort (bar chart, standard deviation error bars, overlaid 1D scatterplot)](assets/images/bar_data_dosage.png){#fig-bar-data-dose}
 
-![Effect (bar chart, error bars, overlaid 1D scatterplot)](assets/images/bar_data_effect.png){#fig-bar-data-effect}
+![Effect for each cohort (bar chart, standard deviation error bars, overlaid 1D scatterplot)](assets/images/bar_data_effect.png){#fig-bar-data-effect}
 :::
 
 ## Box + Data
 
 ::: {layout-ncol=2}
-![Dosage (box plot, overlaid 1D scatterplot)](assets/images/box_data_dosage.png){#fig-box-data-dose}
+![Dosage for each cohort (box plot, overlaid 1D scatterplot)](assets/images/box_data_dosage.png){#fig-box-data-dose}
 
-![Effect (box plot, overlaid 1D scatterplot)](assets/images/box_data_effect.png){#fig-box-data-effect}
+![Effect for each cohort (box plot, overlaid 1D scatterplot)](assets/images/box_data_effect.png){#fig-box-data-effect}
 :::
 
 ## Violin + Data
 
 ::: {layout-ncol=2}
-![Dosage (violin plot, overlaid 1D scatterplot)](assets/images/violin_data_dosage.png){#fig-violin-data-dose}
+![Dosage for each cohort (violin plot, overlaid 1D scatterplot)](assets/images/violin_data_dosage.png){#fig-violin-data-dose}
 
-![Effect (violin plot, overlaid 1D scatterplot)](assets/images/violin_data_effect.png){#fig-violin-data-effect}
+![Effect for each cohort (violin plot, overlaid 1D scatterplot)](assets/images/violin_data_effect.png){#fig-violin-data-effect}
 :::
 
 :::
@@ -141,23 +156,23 @@ In the interactive window below, you can select alternative visualisations of th
 
 ## Regression
 
-![Regression line](assets/images/regression.png){#fig-regression}
+![Linear regression of effect against dosage, for each cohort.](assets/images/regression.png){#fig-regression}
 
 ## Ribbon
 
-![Regression plot with ribbon](assets/images/regression_ribbon.png){#fig-regression-ribbon}
+![Regression plot of effect against dosage, for each cohort, with ribbon indicating 95% confidence interval for the fitted line.](assets/images/regression_ribbon.png){#fig-regression-ribbon}
 
 ## Scatterplot
 
-![Scatterplot](assets/images/scatterplot.png){#fig-scatterplot}
+![Scatterplot of effect against dosage for each cohort.](assets/images/scatterplot.png){#fig-scatterplot}
 
 ## Regression/Scatter
 
-![Regression plot with scatterplot](assets/images/regression_scatter.png){#fig-regression-scatter}
+![Regression plot of effect against dosage for each cohort, with overlaid scatterplot.](assets/images/regression_scatter.png){#fig-regression-scatter}
 
 ## Regression/Ribbon/Scatter
 
-![Regression plot with ribbon and scatterplot](assets/images/regression_ribbon_scatter.png){#fig-regression-scatter-ribbon}
+![Regression plot of effect against dosage for each cohort, with 95% confidence interval ribbon and scatterplot](assets/images/regression_ribbon_scatter.png){#fig-regression-scatter-ribbon}
 
 :::
 
