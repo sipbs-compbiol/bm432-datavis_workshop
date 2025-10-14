@@ -51,7 +51,7 @@ colnames(dfm) = c("timestamp",
                   "other_comments")
 
 # Ignore responses prior to a given date
-dfm = dfm %>% filter(timestamp > "2025-10-01")
+dfm = dfm %>% filter(timestamp > "2025-10-10")
 
 # Function to generate Economist-style figures from categories
 draw_economist_categories = function(dfm, categories, fig_num) {
@@ -378,7 +378,7 @@ dfm %>% select(improvements_fig4) %>%
 
 <center>
 ```{r eff_wordcloud}
-explain = data.frame(rbind(dfm$explain_fig1, dfm$explain_fig2, dfm$explain_fig3, dfm$explain_fig4))
+explain = data.frame(cbind(c(dfm$explain_fig1, dfm$explain_fig2, dfm$explain_fig3, dfm$explain_fig4)))
 effwords = process_words(explain)
 wordcloud2(data=effwords, size=0.3, color='random-dark')
 ```
@@ -390,7 +390,7 @@ wordcloud2(data=effwords, size=0.3, color='random-dark')
 
 <center>
 ```{r imp_wordcloud}
-improvements = data.frame(rbind(dfm$improvements_fig1, dfm$improvements_fig2, dfm$improvements_fig3, dfm$improvements_fig4))
+improvements = data.frame(cbind(c(dfm$improvements_fig1, dfm$improvements_fig2, dfm$improvements_fig3, dfm$improvements_fig4)))
 impwords = process_words(improvements)
 wordcloud(words = impwords$word, freq = impwords$freq,
           min.freq = 1, max.words=200, random.order=FALSE, rot.per=0.35,
