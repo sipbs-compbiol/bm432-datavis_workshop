@@ -236,7 +236,7 @@ doi_fig4 = "10.1073/pnas.240342112"
 ::::
 
 
-## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="40px" /> {.smaller}
+## Figure 1 (doi:`r doi_fig1`) <img src="images/2024_fig_1.jpg" height="40px" /> {.smaller .scrollable}
 
 ```{r fig1_improvements}
 kable(dfm %>% filter(fignum==1) %>% select(improvements))
@@ -270,7 +270,7 @@ kable(dfm %>% filter(fignum==1) %>% select(improvements))
 
 ::::
 
-## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="40px" /> {.smaller}
+## Figure 2 (doi:`r doi_fig2`) <img src="images/2024_fig_2.jpg" height="40px" /> {.smaller .scrollable}
 
 ```{r fig2_improvements}
 kable(dfm %>% filter(fignum==2) %>% select(improvements))
@@ -320,7 +320,7 @@ kable(dfm %>% filter(fignum==2) %>% select(improvements))
 
 ::::
 
-## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" />
+## Figure 3 (doi:`r doi_fig3`) <img src="images/2024_fig_3.jpg" height="40px" /> {.smaller .scrollable}
 
 ```{r fig3_improvements .r-fit-width}
 dfm %>% filter(fignum==3) %>% select(improvements) %>%
@@ -355,7 +355,7 @@ dfm %>% filter(fignum==3) %>% select(improvements) %>%
 
 ::::
 
-## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="40px" /> {.smaller}
+## Figure 4 (doi:`r doi_fig4`) <img src="images/2024_fig_4.jpg" height="40px" /> {.smaller .scrollable}
 
 ```{r fig4_improvements}
 kable(dfm %>% filter(fignum==4) %>% select(improvements))
