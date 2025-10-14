@@ -157,7 +157,7 @@ doi_fig4 = "10.1073/pnas.240342112"
 - Additional information:
   - ["Fundamentals of Data Visualisation" _by Claus O. Wilke_](https://clauswilke.com/dataviz/)
   - ["Data Visualisation: A Practical Introduction" _by Kieran Healy_](https://socviz.co/index.html#preface)
-  - ["Points of View: graphic design for data visualisation"](git@github.com:sipbs-compbiol/bm432-datavis_workshop.git)
+  - ["Points of View: graphic design for data visualisation"](https://communities.springernature.com/posts/data-visualization-a-view-of-every-points-of-view-column)
   
 ## Exercise: Four figures (assess all figures)
 
