@@ -20,7 +20,7 @@ html:
 ---
 
 ::: { .callout-important }
-The marking scheme below, based on the university's Marking Guide B, provides criteria that you should use when assessing the BM327 workshop figures.
+The marking scheme below, based on the university's Marking Guide B, provides criteria that you should use when assessing the BM432 workshop figures.
 :::
 
 | Class | Type B Mark | Descriptor |
