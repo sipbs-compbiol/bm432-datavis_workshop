@@ -158,8 +158,10 @@ doi_fig4 = "10.1073/pnas.240342112"
   - ["Fundamentals of Data Visualisation" _by Claus O. Wilke_](https://clauswilke.com/dataviz/)
   - ["Data Visualisation: A Practical Introduction" _by Kieran Healy_](https://socviz.co/index.html#preface)
   - ["Points of View: graphic design for data visualisation"](https://communities.springernature.com/posts/data-visualization-a-view-of-every-points-of-view-column)
-  
-## Exercise: Four figures (assess all figures)
+
+# 3. Exercise
+
+## Assessing four figures
 
 - Use the DOIs provided to find the papers the figures are from, if you need more information than is in the figure legend
 
