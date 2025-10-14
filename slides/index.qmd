@@ -167,7 +167,7 @@ doi_fig4 = "10.1073/pnas.240342112"
   - What type of data is being presented?
   - Are the data presented effectively? (why/why not?)
   - How might the data presentation be improved?
-  - How would you grade this figure according to University Marking Guide B?
+  - How would you grade this figure according to [University Marking Guide B](https://sipbs-compbiol.github.io/bm432-datavis_workshop/marking_guide.html)?
 - Fill in the _pro forma_ with your scoring and free-text answers to the questions above (one sentence each)
   - [Google Form](https://forms.gle/PxyTHFho3c8Cn6nD9)
 
