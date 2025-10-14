@@ -20,8 +20,6 @@ html:
 execute:
   warning: false
 embed-resources: false
-filters:
-  - shinylive
 ---
 
 ```{r setup, include=FALSE}
