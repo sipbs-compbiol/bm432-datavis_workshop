@@ -39,7 +39,7 @@
     "href": "marking_guide.html",
     "title": "Marking Guide B",
     "section": "",
-    "text": "Important\n\n\n\nThe marking scheme below, based on the university’s Marking Guide B, provides criteria that you should use when assessing the BM327 workshop figures.\n\n\n\n\n\n\n\n\n\n\nClass\nType B Mark\nDescriptor\n\n\n\n\nUG: First\n92, 100\nExceptional: Exceptional in most respects or every respect. Could not be bettered.\n\n\n\n84\nOutstanding: Outstanding in most respects. Outstanding standard of synthesis and evaluation. Complexity of creativity, insight, and/or originality. Outstanding standard of communication and/or presentation.\n\n\n\n72, 75, 78\nExcellent: Excellent in most respects. Excellent standard of synthesis and evaluation. Insightful and original. Excellent standard of communication and presentation.\n\n\nUG: Upper second\n62, 65, 68\nComprehensive: Very good or good in most respects. Only occasional lapses in detail. Very good or good synthesis. Good standard of communication and/or presentation.\n\n\nUG: Lower second\n52, 55, 58\nSatisfactory: Weaknesses in material with occasional lapses in detail. Satisfactory standard of communication and/or presentation. Weaknesses in clarity and/or structure.\n\n\nUG: Third\n42, 45, 48\nLimited: Lacks clarity and/or not logically structured. Poor organisation and/or presentation.\n\n\nUG: Fail\n32, 35, 38\nInadequate: Poorly structured or incoherent. Awkward or poor expression of concepts.\n\n\n\n20\nWeak: Irrelevant content and/or extensive omissions. Weak presentation and/or logic.\n\n\n\n0\nNo relevant work"
+    "text": "Important\n\n\n\nThe marking scheme below, based on the university’s Marking Guide B, provides criteria that you should use when assessing the BM432 workshop figures.\n\n\n\n\n\n\n\n\n\n\nClass\nType B Mark\nDescriptor\n\n\n\n\nUG: First\n92, 100\nExceptional: Exceptional in most respects or every respect. Could not be bettered.\n\n\n\n84\nOutstanding: Outstanding in most respects. Outstanding standard of synthesis and evaluation. Complexity of creativity, insight, and/or originality. Outstanding standard of communication and/or presentation.\n\n\n\n72, 75, 78\nExcellent: Excellent in most respects. Excellent standard of synthesis and evaluation. Insightful and original. Excellent standard of communication and presentation.\n\n\nUG: Upper second\n62, 65, 68\nComprehensive: Very good or good in most respects. Only occasional lapses in detail. Very good or good synthesis. Good standard of communication and/or presentation.\n\n\nUG: Lower second\n52, 55, 58\nSatisfactory: Weaknesses in material with occasional lapses in detail. Satisfactory standard of communication and/or presentation. Weaknesses in clarity and/or structure.\n\n\nUG: Third\n42, 45, 48\nLimited: Lacks clarity and/or not logically structured. Poor organisation and/or presentation.\n\n\nUG: Fail\n32, 35, 38\nInadequate: Poorly structured or incoherent. Awkward or poor expression of concepts.\n\n\n\n20\nWeak: Irrelevant content and/or extensive omissions. Weak presentation and/or logic.\n\n\n\n0\nNo relevant work"
   },
   {
     "objectID": "histogram.html",
@@ -193,7 +193,7 @@
     "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121-3",
     "title": "BM432 Data Visualisation",
     "section": "Figure 1 (doi:10.1073/pnas.2320257121) ",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121) \n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nnuke from orbit"
+    "text": "Figure 1 (doi:10.1073/pnas.2320257121) \n\n\n\n\n\nSuggestions for improvement\n\n\n\n\n1D scatterplots. Line graph for B."
   },
   {
     "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121-1",
@@ -214,7 +214,7 @@
     "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121-3",
     "title": "BM432 Data Visualisation",
     "section": "Figure 2 (doi:10.1073/pnas.2405474121) ",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121) \n\n\n\n\n\nSuggestions for improvement"
+    "text": "Figure 2 (doi:10.1073/pnas.2405474121) \n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nImprove colour scheme in stacked bar chart. Don’t use UMAP."
   },
   {
     "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121-1",
@@ -242,7 +242,7 @@
     "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121-4",
     "title": "BM432 Data Visualisation",
     "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\nSuggestions for improvement"
+    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nUse 1D scatters for D and E"
   },
   {
     "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112-1",
@@ -263,7 +263,7 @@
     "href": "slides/index.html#figure-4-doi10.1073pnas.240342112-3",
     "title": "BM432 Data Visualisation",
     "section": "Figure 4 (doi:10.1073/pnas.240342112) ",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112) \n\n\n\n\n\nSuggestions for improvement"
+    "text": "Figure 4 (doi:10.1073/pnas.240342112) \n\n\n\n\n\nSuggestions for improvement\n\n\n\n\n1D scatterplots for B"
   },
   {
     "objectID": "slides/index.html#general-comments",
