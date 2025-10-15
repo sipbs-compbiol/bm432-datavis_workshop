@@ -716,3 +716,12 @@ Text in (D) is too small to read easily
   - Remove unnecessary data (how do we define this?)
 - “The data is presented in a manner that would likely be inaccessible for people without prior experience. A move toward a more palatable/digestible format will facilitate better science communication in the future.”
 
+## Further Reading
+
+- Introduction to Data Visualisation
+  - [https://sipbs-compbiol.github.io/bm432-datavis_workshop](https://sipbs-compbiol.github.io/bm432-datavis_workshop)
+  
+- Additional information:
+  - ["Fundamentals of Data Visualisation" _by Claus O. Wilke_](https://clauswilke.com/dataviz/)
+  - ["Data Visualisation: A Practical Introduction" _by Kieran Healy_](https://socviz.co/index.html#preface)
+  - ["Points of View: graphic design for data visualisation"](https://communities.springernature.com/posts/data-visualization-a-view-of-every-points-of-view-column)
