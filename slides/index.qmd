@@ -603,19 +603,7 @@ Break out panel A into its own figure.
 
 ## Example 4 
 
-:::: {.columns}
-
-::: {.column width="40%"}
-Functional characterization and overall structure of Rv1217c–1218c.  
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure4-0.png" />
-</center>
-:::
-
-::::
+![Functional characterization and overall structure of Rv1217c–1218c.](images/figure4-0.png){#fig-4}
 
 ## Your Critical Analysis of Example 4
 
@@ -626,13 +614,19 @@ Functional characterization and overall structure of Rv1217c–1218c.
 :::: {.columns}
 
 ::: {.column width="40%"}
-The rifampicin structure is purely decorative and could be removed - avoid needless distractions in figures.
+
+::: { .callout-warning title="Issue" }
+The rifampicin structure is purely decorative.
+:::
+
+::: { .callout-tip title="Solution" }
+Remove unnecessary elements and avoid needless distractions in figures.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-1.png" />
-</center>
+![](images/figure4-1.png)
 :::
 
 ::::
@@ -642,13 +636,19 @@ The rifampicin structure is purely decorative and could be removed - avoid needl
 :::: {.columns}
 
 ::: {.column width="40%"}
-The lower extent of error bars is not visible in (B). This is a "dynamite plot," which should be avoided
+
+::: { .callout-warning title="Issue" }
+Dynamite plot: the lower extent of these error bars is not visible.
+:::
+
+::: { .callout-tip title="Solution" }
+Use boxplots or 1D scatterplots
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-2.png" />
-</center>
+![](images/figure4-2.png)
 :::
 
 ::::
@@ -658,13 +658,19 @@ The lower extent of error bars is not visible in (B). This is a "dynamite plot,"
 :::: {.columns}
 
 ::: {.column width="40%"}
-Bar charts should be avoided in general; a 1D scatterplot of each dataset in (B) would be clearer. 
+
+::: { .callout-warning title="Issue" }
+Colour scheme in (B) doesn't seem purposeful and doesn't add anything to the figure.
+:::
+
+::: { .callout-tip title="Solution" }
+Use colour consistently to link or distinguish elements/groups/data, rather than for decoration.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-3.png" />
-</center>
+![](images/figure4-4.png)
 :::
 
 ::::
@@ -674,13 +680,19 @@ Bar charts should be avoided in general; a 1D scatterplot of each dataset in (B)
 :::: {.columns}
 
 ::: {.column width="40%"}
-Colour scheme in (B) doesn't seem purposeful and doesn't add anything to the figure 
+
+::: { .callout-warning title="Issue" }
+The meaning of the grey regions in (C) and (D) is unclear.
+:::
+
+::: { .callout-tip title="Solution" }
+The implied membrane in (C) and (D) could be labelled as such in the figure. By convention in microbiology, we would assume that the periplasm/extracellular space is "up" and the cytoplasm is "down" in (C) and (D) - but this should really be labelled to avoid any potential confusion.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-4.png" />
-</center>
+![](images/figure4-5.png)
 :::
 
 ::::
@@ -690,13 +702,19 @@ Colour scheme in (B) doesn't seem purposeful and doesn't add anything to the fig
 :::: {.columns}
 
 ::: {.column width="40%"}
-The implied membrane in (C) and (D) could be stated as such in the figure.
+
+::: { .callout-warning title="Issue" }
+Colours in (A) difficult to distinguish, especially with the red boxes which seem to skew blue closer to purple.
+:::
+
+::: { .callout-tip title="Solution" }
+Instead of well images, a heatmap with clearer colour distinction could be presented.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-5.png" />
-</center>
+![](images/figure4-7.png)
 :::
 
 ::::
@@ -706,13 +724,19 @@ The implied membrane in (C) and (D) could be stated as such in the figure.
 :::: {.columns}
 
 ::: {.column width="40%"}
-By convention in microbiology, we would assume that the periplasm/extracellular space is "up" and the cytoplasm is "down" in (C) and (D) - but this should really be labelled to avoid any potential confusion.
+
+::: { .callout-warning title="Issue" }
+Showing two cut-out bands is not an appropriate way to show Western blot data.
+:::
+
+::: { .callout-tip title="Solution" }
+Present the complete blot.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-6.png" />
-</center>
+![](images/figure4-8.png)
 :::
 
 ::::
@@ -722,45 +746,19 @@ By convention in microbiology, we would assume that the periplasm/extracellular 
 :::: {.columns}
 
 ::: {.column width="40%"}
-Colours in (A) difficult to distinguish, especially with the red boxes which seem to skew blue closer to purple - this could be presented more clearly.
+
+::: { .callout-warning title="Issue" }
+Text in (D) is too small to read easily.
+:::
+
+::: { .callout-tip title="Solution" }
+Break out panel into a separate figure or increase font size.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-7.png" />
-</center>
-:::
-
-::::
-
-## Critique 4.8
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Showing two cut-out bands is not an appropriate way to show Western blot data - show the whole blot
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure4-8.png" />
-</center>
-:::
-
-::::
-
-## Critique 4.9
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Text in (D) is too small to read easily
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure4-9.png" />
-</center>
+![](images/figure4-9.png)
 :::
 
 ::::
