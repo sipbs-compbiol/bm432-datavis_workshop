@@ -257,19 +257,7 @@ Use the same $y$-axis scale in all panels to facilitate direct comparison.
 
 ## Example 2 
 
-:::: {.columns}
-
-::: {.column width="40%"}
-Endometriosis-associated macrophages exhibit significant transcriptomic heterogeneity.  
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure2-0.png" />
-</center>
-:::
-
-::::
+![Endometriosis-associated macrophages exhibit significant transcriptomic heterogeneity.](images/figure2-0.png){#fig-2}
 
 ## Your Critical Analysis of Example 2
 
@@ -280,13 +268,19 @@ Endometriosis-associated macrophages exhibit significant transcriptomic heteroge
 :::: {.columns}
 
 ::: {.column width="40%"}
+
+::: { .callout-warning title="Issue" }
 UMAP plots (B, E) are highly manipulable and clustering/placement does not necessarily reflect objective measures.
 :::
 
+::: { .callout-tip title="Solution" }
+Be cautious of over-interpretation of UMAP and other nonlinear dimensionality reduction plots.
+:::
+
+:::
+
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-1.png" />
-</center>
+![](images/figure2-1.png)
 :::
 
 ::::
@@ -296,13 +290,19 @@ UMAP plots (B, E) are highly manipulable and clustering/placement does not neces
 :::: {.columns}
 
 ::: {.column width="40%"}
-Unpleasant colour choices in (C); there is room for aesthetic improvement
+
+::: { .callout-warning title="Issue" }
+Unpleasant clashing (`R` default) colour choices in (C).
+:::
+
+::: { .callout-tip title="Solution" }
+Use an appropriate colour palette.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-2.png" />
-</center>
+![](images/figure2-2.png)
 :::
 
 ::::
@@ -312,13 +312,19 @@ Unpleasant colour choices in (C); there is room for aesthetic improvement
 :::: {.columns}
 
 ::: {.column width="40%"}
-The proportion plot in (C) does not give information on absolute number, only proportion; a proportional areas plot spanning all clusters would more honestly represent the data
+
+::: { .callout-warning title="Issue" }
+The proportion plot in (C) does not give information on absolute number, only proportion/composition.
+:::
+
+::: { .callout-tip title="Solution" }
+A proportional areas plot spanning all clusters would represent both absolute count per group and compositional information.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-3.png" />
-</center>
+![](images/figure2-3.png)
 :::
 
 ::::
@@ -328,13 +334,19 @@ The proportion plot in (C) does not give information on absolute number, only pr
 :::: {.columns}
 
 ::: {.column width="40%"}
-Heatmap text is too small to read comfortably; is there too much data here?
+
+::: { .callout-warning title="Issue" }
+Heatmap text is too small to read comfortably.
+:::
+
+::: { .callout-tip title="Solution" }
+Present heatmap as a separate figure, or reduce the amount of information in the image.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-4.png" />
-</center>
+![](images/figure2-4.png)
 :::
 
 ::::
@@ -344,13 +356,19 @@ Heatmap text is too small to read comfortably; is there too much data here?
 :::: {.columns}
 
 ::: {.column width="40%"}
+
+::: { .callout-warning title="Issue" }
 Heatmap is missing a scale (is purple high and yellow low, or vice versa?)
 :::
 
+::: { .callout-tip title="Solution" }
+Add a scale bar.
+:::
+
+:::
+
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-5.png" />
-</center>
+![](images/figure2-5.png)
 :::
 
 ::::
@@ -360,13 +378,19 @@ Heatmap is missing a scale (is purple high and yellow low, or vice versa?)
 :::: {.columns}
 
 ::: {.column width="40%"}
-The flow diagram (A) could make better use of arrows to illustrate order of steps 
+
+::: { .callout-warning title="Issue" }
+The experimental summary in (A) does not indicate order of operations.
+:::
+
+::: { .callout-tip title="Solution" }
+Use arrows to indicate order of steps and/or dataflow.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-6.png" />
-</center>
+![](images/figure2-6.png)
 :::
 
 ::::
@@ -376,13 +400,19 @@ The flow diagram (A) could make better use of arrows to illustrate order of step
 :::: {.columns}
 
 ::: {.column width="40%"}
-Text overall is too small, and hard to read comfortably 
+
+::: { .callout-warning title="Issue" }
+Text is too small in general to read comfortably.
+:::
+
+::: { .callout-tip title="Solution" }
+Increase font size and/or break up the panels into individual figures.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-7.png" />
-</center>
+![](images/figure2-7.png)
 :::
 
 ::::
@@ -392,14 +422,19 @@ Text overall is too small, and hard to read comfortably
 :::: {.columns}
 
 ::: {.column width="40%"}
-Whitespace usage could be improved, and the overall flow of the figure - in particular, cramming (C) under the inset from (B) makes the figure feel very crowded
+
+::: { .callout-warning title="Issue" }
+The figure is crowded and the separation of panels is unclear.
+:::
+
+::: { .callout-tip title="Solution" }
+Use whitespace to guide reader "flow" through the figure and reduce crowding -in particular, cramming (C) under the inset from (B) makes the figure feel very crowded. Alternatively break the panels into multiple figures.
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-8.png" />
-</center>
+![](images/figure2-8.png)
 :::
 
 ::::
@@ -409,14 +444,19 @@ Whitespace usage could be improved, and the overall flow of the figure - in part
 :::: {.columns}
 
 ::: {.column width="40%"}
-Consider what is needed to convey the figure's intended message: if it's just that these macrophages exhibit transcriptional heterogeneity, then D is probably sufficient for that purpose; if it is some other message, then revise for clarity. 
+
+::: { .callout-warning title="Issue" }
+The overall message of the figure is unclear.
+:::
+
+::: { .callout-tip title="Solution" }
+If the intent is just that the macrophages exhibit transcriptional heterogeneity, then (D) is probably sufficient. If other messages are intended, then revise for clarity. 
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-9.png" />
-</center>
+![](images/figure2-9.png)
 :::
 
 ::::
