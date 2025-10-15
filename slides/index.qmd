@@ -65,7 +65,7 @@ grade_levels <- c(
   "No relevant work"
 )
 dfm = dfm %>%
-  filter(timestamp > "2025-10-15") %>%
+  filter(timestamp > "2025-10-16") %>%
   separate(grade_fig1, c("grade1", "category1"), sep=" - ", convert=TRUE) %>%
   separate(grade_fig2, c("grade2", "category2"), sep=" - ", convert=TRUE) %>%
   separate(grade_fig3, c("grade3", "category3"), sep=" - ", convert=TRUE) %>%
