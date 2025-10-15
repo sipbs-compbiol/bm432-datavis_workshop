@@ -196,7 +196,7 @@ The colour scheme is misleading because saturation represents different data acr
 :::
 
 ::: { .callout-tip title="Solution" }
-Be consistent with the visual messaging of colour (hue, saturation, and luminance). 
+Be consistent with the visual messaging of colour (hue, saturation, and luminance).
 :::
 
 :::
@@ -463,19 +463,7 @@ If the intent is just that the macrophages exhibit transcriptional heterogeneity
 
 ## Example 3 
 
-:::: {.columns}
-
-::: {.column width="40%"}
-A *C. difficile* mutant lacking all three YkuD-type Ldts (Δ*ldt1-3*) exhibits wild-type growth, morphology, and 3-3 cross-linking.  
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure3-0.png" />
-</center>
-:::
-
-::::
+![A *C. difficile* mutant lacking all three YkuD-type Ldts ($\Delta$*ldt1-3*) exhibits wild-type growth, morphology, and 3-3 cross-linking.](images/figure3-0.png){#fig-3}
 
 ## Your Critical Analysis of Example 3
 
@@ -486,13 +474,19 @@ A *C. difficile* mutant lacking all three YkuD-type Ldts (Δ*ldt1-3*) exhibits w
 :::: {.columns}
 
 ::: {.column width="40%"}
-The lower extent of error bars is not visible in (D) or (E). These are "dynamite plots," which should be avoided
+
+::: { .callout-warning title="Issue" }
+Dynamite plot: the lower extent of these error bars is not visible.
+:::
+
+::: { .callout-tip title="Solution" }
+Use boxplots or 1D scatterplots
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-1.png" />
-</center>
+![](images/figure3-1.png)
 :::
 
 ::::
@@ -502,13 +496,19 @@ The lower extent of error bars is not visible in (D) or (E). These are "dynamite
 :::: {.columns}
 
 ::: {.column width="40%"}
-Bar charts should be avoided in general; a 1D scatterplot of each dataset in (D) and (E) would be clearer
+
+::: { .callout-warning title="Issue" }
+No complement of the triple mutant strain - missing data for an essential control?
+:::
+
+::: { .callout-tip title="Solution" }
+Ensure that all controls are presented so that the experimental result can be interpreted properly.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-2.png" />
-</center>
+![](images/figure3-3.png)
 :::
 
 ::::
@@ -518,13 +518,19 @@ Bar charts should be avoided in general; a 1D scatterplot of each dataset in (D)
 :::: {.columns}
 
 ::: {.column width="40%"}
-Failure to complement the triple mutant strain - missing data??? This is a control I would expect to see for these experiments.
+
+::: { .callout-warning title="Issue" }
+Label obscures part of the image.
+:::
+
+::: { .callout-tip title="Solution" }
+Relocate the label so data is not obscured.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-3.png" />
-</center>
+![](images/figure3-4.png)
 :::
 
 ::::
@@ -534,13 +540,19 @@ Failure to complement the triple mutant strain - missing data??? This is a contr
 :::: {.columns}
 
 ::: {.column width="40%"}
-Labels should not be placed where they obscure part of an image.
+
+::: { .callout-warning title="Issue" }
+Fluorescence wavelength not specified.
+:::
+
+::: { .callout-tip title="Solution" }
+Include sufficient information that the reader does not need to refer to the main text. Overall a figure legend should provide enough detail for the figure to stand alone, but should not describe results/significance.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-4.png" />
-</center>
+![](images/figure3-5.png)
 :::
 
 ::::
@@ -550,13 +562,19 @@ Labels should not be placed where they obscure part of an image.
 :::: {.columns}
 
 ::: {.column width="40%"}
-Fluorescence wavelength not specified 
+
+::: { .callout-warning title="Issue" }
+Colour schemes/palettes are inconsistent within panel A, and between panels B, D, and E.
+:::
+
+::: { .callout-tip title="Solution" }
+Be consistent with the visual messaging of colour (hue, saturation, and luminance).
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-5.png" />
-</center>
+![](images/figure3-6.png)
 :::
 
 ::::
@@ -566,47 +584,19 @@ Fluorescence wavelength not specified
 :::: {.columns}
 
 ::: {.column width="40%"}
-Colour scheme in (A), and between B and D/E, is inconsistent - more rational, and helpful, colour choices could be made here.
+
+::: { .callout-warning title="Issue" }
+Excessive length of figure legend for panel A.
 :::
 
-::: {.column width="60%"}
-<center>
-<img src="images/figure3-6.png" />
-</center>
+::: { .callout-tip title="Solution" }
+Break out panel A into its own figure.
 :::
-
-::::
-
-## Critique 3.7
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Axis label in (B) could be improved - OD<sub>600</sub> is not very informative.
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-7.png" />
-</center>
-:::
-
-::::
-
-## Critique 3.8
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Figure legend for (A) could be more succinct/some of this info should be in the paper text instead. Overall a figure legend should provide enough detail for the figure to stand alone, but should not describe results/significance.
-
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure3-0.png" />
-</center>
+![](images/figure3-0.png)
 :::
 
 ::::
