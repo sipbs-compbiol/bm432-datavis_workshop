@@ -328,7 +328,7 @@ Use the same $y$-axis scale in all panels to facilitate direct comparison.
 
 ## Our Critical Analysis
 
-[I think it would be a nice way to wrap each figure up if we also gave each figure a mark? Or, we could put in a Slido poll here to ask them to revise their mark?]
+![](images/slido.png)
 
 ## Example 2 
 
@@ -591,6 +591,11 @@ If the intent is just that the macrophages exhibit transcriptional heterogeneity
 
 ::::
 
+## Our Critical Analysis
+
+![](images/slido.png)
+
+
 ## Example 3 
 
 ![A *C. difficile* mutant lacking all three YkuD-type Ldts ($\Delta$*ldt1-3*) exhibits wild-type growth, morphology, and 3-3 cross-linking.](images/figure3-0.png){#fig-3}
@@ -785,6 +790,10 @@ Break out panel A into its own figure.
 :::
 
 ::::
+
+## Our Critical Analysis
+
+![](images/slido.png)
 
 ## Example 4 
 
@@ -1002,6 +1011,10 @@ Break out panel into a separate figure or increase font size.
 :::
 
 ::::
+
+## Our Critical Analysis
+
+![](images/slido.png)
 
 # 3. Summing Up
 
