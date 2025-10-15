@@ -92,13 +92,19 @@ Small molecules identified in previous HTS increase GCase activity.
 :::: {.columns}
 
 ::: {.column width="40%"}
-The lower extent of these error bars is not visible. Avoid “dynamite plots”
+
+::: { .callout-warning title="Issue" }
+Dynamite plot: the lower extent of these error bars is not visible.
+:::
+
+::: { .callout-tip title="Solution" }
+Use boxplots or 1D scatterplots
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-1.png" />
-</center>
+![](images/figure1-1.png)
 :::
 
 ::::
@@ -108,13 +114,19 @@ The lower extent of these error bars is not visible. Avoid “dynamite plots”
 :::: {.columns}
 
 ::: {.column width="40%"}
-We can't see difference between effects of two concentrations of A16 in (D), or A16 vs A18 in (B); use a table of contrasts. [Leighton to maybe edit this; figure needs editing]
+
+::: { .callout-warning title="Issue" }
+Incomplete presentation of statistical comparisons, e.g is there a difference between A16 and A18 in (B)?
+:::
+
+::: { .callout-tip title="Solution" }
+Present a table of statistical differences instead, or alongside the figure.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-2.png" />
-</center>
+![](images/figure1-2.png)
 :::
 
 ::::
@@ -124,13 +136,19 @@ We can't see difference between effects of two concentrations of A16 in (D), or 
 :::: {.columns}
 
 ::: {.column width="40%"}
-Place things to be compared by the reader next to each other where possible.
+
+::: { .callout-warning title="Issue" }
+Distance between bars makes comparison awkward.
+:::
+
+::: { .callout-tip title="Solution" }
+Place things to be compared by the reader next to each other where possible, to facilitate visual comparison.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-3.png" />
-</center>
+![](images/figure1-3.png)
 :::
 
 ::::
@@ -140,14 +158,19 @@ Place things to be compared by the reader next to each other where possible.
 :::: {.columns}
 
 ::: {.column width="40%"}
+
+::: { .callout-warning title="Issue" }
 The scale on the micrographs (especially in panel C) is too small to read easily.
+:::
+
+::: { .callout-tip title="Solution" }
+Increase the size of the scale relative to the figure so it can be read.
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-4.png" />
-</center>
+![](images/figure1-4.png)
 :::
 
 ::::
@@ -157,14 +180,19 @@ The scale on the micrographs (especially in panel C) is too small to read easily
 :::: {.columns}
 
 ::: {.column width="40%"}
-In addition to showing DAPI and immunofluorescence images of the cells, we should really be seeing a bright-field micrograph of the cells (no fluorescence). 
+
+::: { .callout-warning title="Issue" }
+A visual control (bright-field image) is absent.
+:::
+
+::: { .callout-tip title="Solution" }
+In addition to showing DAPI and immunofluorescence images of the cells, include a bright-field micrograph of the cells (no fluorescence). 
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-5.png" />
-</center>
+![](images/figure1-5.png)
 :::
 
 ::::
@@ -174,15 +202,19 @@ In addition to showing DAPI and immunofluorescence images of the cells, we shoul
 :::: {.columns}
 
 ::: {.column width="40%"}
-The colour scheme is misleading (compare 1 $\mu$M A18 in B vs 5 $\mu$M in D) 
 
+::: { .callout-warning title="Issue" }
+The colour scheme is misleading because saturation represents different data across figure panels (compare 1 $\mu$M A18 in B vs 5 $\mu$M in D, and 1 $\mu$M A18 in E). 
+:::
+
+::: { .callout-tip title="Solution" }
+Be consistent with the visual messaging of colour (hue, saturation, and luminance). 
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-6.png" />
-</center>
+![](images/figure1-6.png)
 :::
 
 ::::
@@ -192,13 +224,19 @@ The colour scheme is misleading (compare 1 $\mu$M A18 in B vs 5 $\mu$M in D)
 :::: {.columns}
 
 ::: {.column width="40%"}
-Too many comparisons in B - avoid cluttering figures with "chartjunk" 
+
+::: { .callout-warning title="Issue" }
+Too many comparisons in B clutter the figure and compress the space available for showing data. 
+:::
+
+::: { .callout-tip title="Solution" }
+Present a table of statistical differences instead, or alongside the figure, to reduce clutter.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-7.png" />
-</center>
+![](images/figure1-7.png)
 :::
 
 ::::
@@ -208,14 +246,19 @@ Too many comparisons in B - avoid cluttering figures with "chartjunk"
 :::: {.columns}
 
 ::: {.column width="40%"}
-y-axes should really have the same scale in all plots, to make intra-panel comparisons easier 
+
+::: { .callout-warning title="Issue" }
+$y$-axis scales vary between panels, so quantitative comparison between panels is difficult.
+:::
+
+::: { .callout-tip title="Solution" }
+Use the same $y$-axis scale in all panels to facilitate direct comparison.
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-8.png" />
-</center>
+![](images/figure1-8.png)
 :::
 
 ::::
