@@ -20,12 +20,48 @@ format:
 ---
 
 ```{r setup, include=FALSE}
-#Leighton to add any necessary fancy codey stuff here
+# Package imports
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+library(googlesheets4)
+library(htmltools)
+library(knitr)
+library(stringr)
+library(tidyr)
+library(tm)
+library(wordcloud)
+library(wordcloud2)
+
+# Authenticate with Google Forms
+gs4_deauth()
+
+# Grab data and clean it
+# dfm = read_sheet("https://docs.google.com/spreadsheets/d/1Qs3Hdeycu9Q8KBqpQ6qlv6NaUW62Al_PPWF96x1lACI/edit?resourcekey=&gid=1498908795#gid=1498908795")
+dfm <- read_sheet("https://docs.google.com/spreadsheets/d/1e4i7g-zfEiDmMFZMXMzm4gqddGc7HVBFEDfGeLTeFnM/edit?resourcekey=&gid=12171434#gid=12171434")
+# 2025-26 Google Form location
+# https://docs.google.com/forms/d/e/1FAIpQLSf2HbFQUkw2Ookp65Q_aLnsEGh3wRS0ZOta6Q7f2s-EFs4V6A/viewform?usp=header
+# 2025-26 Google Form response spreadsheet
+# https://docs.google.com/spreadsheets/d/1e4i7g-zfEiDmMFZMXMzm4gqddGc7HVBFEDfGeLTeFnM/edit?resourcekey=&gid=12171434#gid=12171434
+colnames(dfm) = c("timestamp",
+                  "grade_fig1", "explain_fig1", "improvements_fig1", "questions_fig1",
+                  "grade_fig2", "explain_fig2", "improvements_fig2", "questions_fig2",
+                  "grade_fig3", "explain_fig3", "improvements_fig3", "questions_fig3",
+                  "grade_fig4", "explain_fig4", "improvements_fig4", "questions_fig4",
+                  "other_comments")
+
+# Ignore responses prior to a given date
+dfm = dfm %>% filter(timestamp > "2025-10-10")
 ```
 
 # 1. Introduction
 
 ## Learning Objectives
+
+- You should be able to critically analyse how data is visualised 
+- You should be able to judge a figure's clarity and potential for misunderstanding
+- You should be able to identify potential sources of bias resulting from the visualisation
+- You should understand how to create effective figures for your own work
 
 # 2. Bad and Good Data Visualisations
 
@@ -33,19 +69,7 @@ format:
 
 ## Example 1 
 
-:::: {.columns}
-
-::: {.column width="40%"}
-Small molecules identified in previous HTS increase GCase activity. 
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure1-0.png" />
-</center>
-:::
-
-::::
+![Small molecules identified in previous HTS increase GCase activity. ](images/figure1-0.png){#fig-1}
 
 ## Your Critical Analysis of Example 1
 
@@ -56,13 +80,19 @@ Small molecules identified in previous HTS increase GCase activity.
 :::: {.columns}
 
 ::: {.column width="40%"}
-The lower extent of these error bars is not visible. Avoid “dynamite plots”
+
+::: { .callout-warning title="Issue" }
+Dynamite plot: the lower extent of these error bars is not visible.
+:::
+
+::: { .callout-tip title="Solution" }
+Use boxplots or 1D scatterplots
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-1.png" />
-</center>
+![](images/figure1-1.png)
 :::
 
 ::::
@@ -72,13 +102,19 @@ The lower extent of these error bars is not visible. Avoid “dynamite plots”
 :::: {.columns}
 
 ::: {.column width="40%"}
-We can't see difference between effects of two concentrations of A16 in (D), or A16 vs A18 in (B); use a table of contrasts. [Leighton to maybe edit this; figure needs editing]
+
+::: { .callout-warning title="Issue" }
+Incomplete presentation of statistical comparisons, e.g is there a difference between A16 and A18 in (B)?
+:::
+
+::: { .callout-tip title="Solution" }
+Present a table of statistical differences instead, or alongside the figure.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-2.png" />
-</center>
+![](images/figure1-2.png)
 :::
 
 ::::
@@ -88,13 +124,19 @@ We can't see difference between effects of two concentrations of A16 in (D), or 
 :::: {.columns}
 
 ::: {.column width="40%"}
-Place things to be compared by the reader next to each other where possible.
+
+::: { .callout-warning title="Issue" }
+Distance between bars makes comparison awkward.
+:::
+
+::: { .callout-tip title="Solution" }
+Place things to be compared by the reader next to each other where possible, to facilitate visual comparison.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-3.png" />
-</center>
+![](images/figure1-3.png)
 :::
 
 ::::
@@ -104,14 +146,19 @@ Place things to be compared by the reader next to each other where possible.
 :::: {.columns}
 
 ::: {.column width="40%"}
+
+::: { .callout-warning title="Issue" }
 The scale on the micrographs (especially in panel C) is too small to read easily.
+:::
+
+::: { .callout-tip title="Solution" }
+Increase the size of the scale relative to the figure so it can be read.
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-4.png" />
-</center>
+![](images/figure1-4.png)
 :::
 
 ::::
@@ -121,14 +168,19 @@ The scale on the micrographs (especially in panel C) is too small to read easily
 :::: {.columns}
 
 ::: {.column width="40%"}
-In addition to showing DAPI and immunofluorescence images of the cells, we should really be seeing a bright-field micrograph of the cells (no fluorescence). 
+
+::: { .callout-warning title="Issue" }
+A visual control (bright-field image) is absent.
+:::
+
+::: { .callout-tip title="Solution" }
+In addition to showing DAPI and immunofluorescence images of the cells, include a bright-field micrograph of the cells (no fluorescence). 
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-5.png" />
-</center>
+![](images/figure1-5.png)
 :::
 
 ::::
@@ -138,15 +190,19 @@ In addition to showing DAPI and immunofluorescence images of the cells, we shoul
 :::: {.columns}
 
 ::: {.column width="40%"}
-The colour scheme is misleading (compare 1 $\mu$M A18 in B vs 5 $\mu$M in D) 
 
+::: { .callout-warning title="Issue" }
+The colour scheme is misleading because saturation represents different data across figure panels (compare 1 $\mu$M A18 in B vs 5 $\mu$M in D, and 1 $\mu$M A18 in E). 
+:::
+
+::: { .callout-tip title="Solution" }
+Be consistent with the visual messaging of colour (hue, saturation, and luminance).
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-6.png" />
-</center>
+![](images/figure1-6.png)
 :::
 
 ::::
@@ -156,13 +212,19 @@ The colour scheme is misleading (compare 1 $\mu$M A18 in B vs 5 $\mu$M in D)
 :::: {.columns}
 
 ::: {.column width="40%"}
-Too many comparisons in B - avoid cluttering figures with "chartjunk" 
+
+::: { .callout-warning title="Issue" }
+Too many comparisons in B clutter the figure and compress the space available for showing data. 
+:::
+
+::: { .callout-tip title="Solution" }
+Present a table of statistical differences instead, or alongside the figure, to reduce clutter.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-7.png" />
-</center>
+![](images/figure1-7.png)
 :::
 
 ::::
@@ -172,14 +234,19 @@ Too many comparisons in B - avoid cluttering figures with "chartjunk"
 :::: {.columns}
 
 ::: {.column width="40%"}
-y-axes should really have the same scale in all plots, to make intra-panel comparisons easier 
+
+::: { .callout-warning title="Issue" }
+$y$-axis scales vary between panels, so quantitative comparison between panels is difficult.
+:::
+
+::: { .callout-tip title="Solution" }
+Use the same $y$-axis scale in all panels to facilitate direct comparison.
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure1-8.png" />
-</center>
+![](images/figure1-8.png)
 :::
 
 ::::
@@ -190,19 +257,7 @@ y-axes should really have the same scale in all plots, to make intra-panel compa
 
 ## Example 2 
 
-:::: {.columns}
-
-::: {.column width="40%"}
-Endometriosis-associated macrophages exhibit significant transcriptomic heterogeneity.  
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure2-0.png" />
-</center>
-:::
-
-::::
+![Endometriosis-associated macrophages exhibit significant transcriptomic heterogeneity.](images/figure2-0.png){#fig-2}
 
 ## Your Critical Analysis of Example 2
 
@@ -213,13 +268,19 @@ Endometriosis-associated macrophages exhibit significant transcriptomic heteroge
 :::: {.columns}
 
 ::: {.column width="40%"}
+
+::: { .callout-warning title="Issue" }
 UMAP plots (B, E) are highly manipulable and clustering/placement does not necessarily reflect objective measures.
 :::
 
+::: { .callout-tip title="Solution" }
+Be cautious of over-interpretation of UMAP and other nonlinear dimensionality reduction plots.
+:::
+
+:::
+
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-1.png" />
-</center>
+![](images/figure2-1.png)
 :::
 
 ::::
@@ -229,13 +290,19 @@ UMAP plots (B, E) are highly manipulable and clustering/placement does not neces
 :::: {.columns}
 
 ::: {.column width="40%"}
-Unpleasant colour choices in (C); there is room for aesthetic improvement
+
+::: { .callout-warning title="Issue" }
+Unpleasant clashing (`R` default) colour choices in (C).
+:::
+
+::: { .callout-tip title="Solution" }
+Use an appropriate colour palette.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-2.png" />
-</center>
+![](images/figure2-2.png)
 :::
 
 ::::
@@ -245,13 +312,19 @@ Unpleasant colour choices in (C); there is room for aesthetic improvement
 :::: {.columns}
 
 ::: {.column width="40%"}
-The proportion plot in (C) does not give information on absolute number, only proportion; a proportional areas plot spanning all clusters would more honestly represent the data
+
+::: { .callout-warning title="Issue" }
+The proportion plot in (C) does not give information on absolute number, only proportion/composition.
+:::
+
+::: { .callout-tip title="Solution" }
+A proportional areas plot spanning all clusters would represent both absolute count per group and compositional information.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-3.png" />
-</center>
+![](images/figure2-3.png)
 :::
 
 ::::
@@ -261,13 +334,19 @@ The proportion plot in (C) does not give information on absolute number, only pr
 :::: {.columns}
 
 ::: {.column width="40%"}
-Heatmap text is too small to read comfortably; is there too much data here?
+
+::: { .callout-warning title="Issue" }
+Heatmap text is too small to read comfortably.
+:::
+
+::: { .callout-tip title="Solution" }
+Present heatmap as a separate figure, or reduce the amount of information in the image.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-4.png" />
-</center>
+![](images/figure2-4.png)
 :::
 
 ::::
@@ -277,13 +356,19 @@ Heatmap text is too small to read comfortably; is there too much data here?
 :::: {.columns}
 
 ::: {.column width="40%"}
+
+::: { .callout-warning title="Issue" }
 Heatmap is missing a scale (is purple high and yellow low, or vice versa?)
 :::
 
+::: { .callout-tip title="Solution" }
+Add a scale bar.
+:::
+
+:::
+
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-5.png" />
-</center>
+![](images/figure2-5.png)
 :::
 
 ::::
@@ -293,13 +378,19 @@ Heatmap is missing a scale (is purple high and yellow low, or vice versa?)
 :::: {.columns}
 
 ::: {.column width="40%"}
-The flow diagram (A) could make better use of arrows to illustrate order of steps 
+
+::: { .callout-warning title="Issue" }
+The experimental summary in (A) does not indicate order of operations.
+:::
+
+::: { .callout-tip title="Solution" }
+Use arrows to indicate order of steps and/or dataflow.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-6.png" />
-</center>
+![](images/figure2-6.png)
 :::
 
 ::::
@@ -309,13 +400,19 @@ The flow diagram (A) could make better use of arrows to illustrate order of step
 :::: {.columns}
 
 ::: {.column width="40%"}
-Text overall is too small, and hard to read comfortably 
+
+::: { .callout-warning title="Issue" }
+Text is too small in general to read comfortably.
+:::
+
+::: { .callout-tip title="Solution" }
+Increase font size and/or break up the panels into individual figures.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-7.png" />
-</center>
+![](images/figure2-7.png)
 :::
 
 ::::
@@ -325,14 +422,19 @@ Text overall is too small, and hard to read comfortably
 :::: {.columns}
 
 ::: {.column width="40%"}
-Whitespace usage could be improved, and the overall flow of the figure - in particular, cramming (C) under the inset from (B) makes the figure feel very crowded
+
+::: { .callout-warning title="Issue" }
+The figure is crowded and the separation of panels is unclear.
+:::
+
+::: { .callout-tip title="Solution" }
+Use whitespace to guide reader "flow" through the figure and reduce crowding -in particular, cramming (C) under the inset from (B) makes the figure feel very crowded. Alternatively break the panels into multiple figures.
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-8.png" />
-</center>
+![](images/figure2-8.png)
 :::
 
 ::::
@@ -342,33 +444,26 @@ Whitespace usage could be improved, and the overall flow of the figure - in part
 :::: {.columns}
 
 ::: {.column width="40%"}
-Consider what is needed to convey the figure's intended message: if it's just that these macrophages exhibit transcriptional heterogeneity, then D is probably sufficient for that purpose; if it is some other message, then revise for clarity. 
+
+::: { .callout-warning title="Issue" }
+The overall message of the figure is unclear.
+:::
+
+::: { .callout-tip title="Solution" }
+If the intent is just that the macrophages exhibit transcriptional heterogeneity, then (D) is probably sufficient. If other messages are intended, then revise for clarity. 
+:::
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure2-9.png" />
-</center>
+![](images/figure2-9.png)
 :::
 
 ::::
 
 ## Example 3 
 
-:::: {.columns}
-
-::: {.column width="40%"}
-A *C. difficile* mutant lacking all three YkuD-type Ldts (Δ*ldt1-3*) exhibits wild-type growth, morphology, and 3-3 cross-linking.  
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure3-0.png" />
-</center>
-:::
-
-::::
+![A *C. difficile* mutant lacking all three YkuD-type Ldts ($\Delta$*ldt1-3*) exhibits wild-type growth, morphology, and 3-3 cross-linking.](images/figure3-0.png){#fig-3}
 
 ## Your Critical Analysis of Example 3
 
@@ -379,13 +474,19 @@ A *C. difficile* mutant lacking all three YkuD-type Ldts (Δ*ldt1-3*) exhibits w
 :::: {.columns}
 
 ::: {.column width="40%"}
-The lower extent of error bars is not visible in (D) or (E). These are "dynamite plots," which should be avoided
+
+::: { .callout-warning title="Issue" }
+Dynamite plot: the lower extent of these error bars is not visible.
+:::
+
+::: { .callout-tip title="Solution" }
+Use boxplots or 1D scatterplots
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-1.png" />
-</center>
+![](images/figure3-1.png)
 :::
 
 ::::
@@ -395,13 +496,19 @@ The lower extent of error bars is not visible in (D) or (E). These are "dynamite
 :::: {.columns}
 
 ::: {.column width="40%"}
-Bar charts should be avoided in general; a 1D scatterplot of each dataset in (D) and (E) would be clearer
+
+::: { .callout-warning title="Issue" }
+No complement of the triple mutant strain - missing data for an essential control?
+:::
+
+::: { .callout-tip title="Solution" }
+Ensure that all controls are presented so that the experimental result can be interpreted properly.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-2.png" />
-</center>
+![](images/figure3-3.png)
 :::
 
 ::::
@@ -411,13 +518,19 @@ Bar charts should be avoided in general; a 1D scatterplot of each dataset in (D)
 :::: {.columns}
 
 ::: {.column width="40%"}
-Failure to complement the triple mutant strain - missing data??? This is a control I would expect to see for these experiments.
+
+::: { .callout-warning title="Issue" }
+Label obscures part of the image.
+:::
+
+::: { .callout-tip title="Solution" }
+Relocate the label so data is not obscured.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-3.png" />
-</center>
+![](images/figure3-4.png)
 :::
 
 ::::
@@ -427,13 +540,19 @@ Failure to complement the triple mutant strain - missing data??? This is a contr
 :::: {.columns}
 
 ::: {.column width="40%"}
-Labels should not be placed where they obscure part of an image.
+
+::: { .callout-warning title="Issue" }
+Fluorescence wavelength not specified.
+:::
+
+::: { .callout-tip title="Solution" }
+Include sufficient information that the reader does not need to refer to the main text. Overall a figure legend should provide enough detail for the figure to stand alone, but should not describe results/significance.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-4.png" />
-</center>
+![](images/figure3-5.png)
 :::
 
 ::::
@@ -443,13 +562,19 @@ Labels should not be placed where they obscure part of an image.
 :::: {.columns}
 
 ::: {.column width="40%"}
-Fluorescence wavelength not specified 
+
+::: { .callout-warning title="Issue" }
+Colour schemes/palettes are inconsistent within panel A, and between panels B, D, and E.
+:::
+
+::: { .callout-tip title="Solution" }
+Be consistent with the visual messaging of colour (hue, saturation, and luminance).
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-5.png" />
-</center>
+![](images/figure3-6.png)
 :::
 
 ::::
@@ -459,66 +584,26 @@ Fluorescence wavelength not specified
 :::: {.columns}
 
 ::: {.column width="40%"}
-Colour scheme in (A), and between B and D/E, is inconsistent - more rational, and helpful, colour choices could be made here.
+
+::: { .callout-warning title="Issue" }
+Excessive length of figure legend for panel A.
 :::
 
-::: {.column width="60%"}
-<center>
-<img src="images/figure3-6.png" />
-</center>
+::: { .callout-tip title="Solution" }
+Break out panel A into its own figure.
 :::
-
-::::
-
-## Critique 3.7
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Axis label in (B) could be improved - OD<sub>600</sub> is not very informative.
 
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure3-7.png" />
-</center>
-:::
-
-::::
-
-## Critique 3.8
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Figure legend for (A) could be more succinct/some of this info should be in the paper text instead. Overall a figure legend should provide enough detail for the figure to stand alone, but should not describe results/significance.
-
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure3-0.png" />
-</center>
+![](images/figure3-0.png)
 :::
 
 ::::
 
 ## Example 4 
 
-:::: {.columns}
-
-::: {.column width="40%"}
-Functional characterization and overall structure of Rv1217c–1218c.  
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure4-0.png" />
-</center>
-:::
-
-::::
+![Functional characterization and overall structure of Rv1217c–1218c.](images/figure4-0.png){#fig-4}
 
 ## Your Critical Analysis of Example 4
 
@@ -529,13 +614,19 @@ Functional characterization and overall structure of Rv1217c–1218c.
 :::: {.columns}
 
 ::: {.column width="40%"}
-The rifampicin structure is purely decorative and could be removed - avoid needless distractions in figures.
+
+::: { .callout-warning title="Issue" }
+The rifampicin structure is purely decorative.
+:::
+
+::: { .callout-tip title="Solution" }
+Remove unnecessary elements and avoid needless distractions in figures.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-1.png" />
-</center>
+![](images/figure4-1.png)
 :::
 
 ::::
@@ -545,13 +636,19 @@ The rifampicin structure is purely decorative and could be removed - avoid needl
 :::: {.columns}
 
 ::: {.column width="40%"}
-The lower extent of error bars is not visible in (B). This is a "dynamite plot," which should be avoided
+
+::: { .callout-warning title="Issue" }
+Dynamite plot: the lower extent of these error bars is not visible.
+:::
+
+::: { .callout-tip title="Solution" }
+Use boxplots or 1D scatterplots
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-2.png" />
-</center>
+![](images/figure4-2.png)
 :::
 
 ::::
@@ -561,13 +658,19 @@ The lower extent of error bars is not visible in (B). This is a "dynamite plot,"
 :::: {.columns}
 
 ::: {.column width="40%"}
-Bar charts should be avoided in general; a 1D scatterplot of each dataset in (B) would be clearer. 
+
+::: { .callout-warning title="Issue" }
+Colour scheme in (B) doesn't seem purposeful and doesn't add anything to the figure.
+:::
+
+::: { .callout-tip title="Solution" }
+Use colour consistently to link or distinguish elements/groups/data, rather than for decoration.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-3.png" />
-</center>
+![](images/figure4-4.png)
 :::
 
 ::::
@@ -577,13 +680,19 @@ Bar charts should be avoided in general; a 1D scatterplot of each dataset in (B)
 :::: {.columns}
 
 ::: {.column width="40%"}
-Colour scheme in (B) doesn't seem purposeful and doesn't add anything to the figure 
+
+::: { .callout-warning title="Issue" }
+The meaning of the grey regions in (C) and (D) is unclear.
+:::
+
+::: { .callout-tip title="Solution" }
+The implied membrane in (C) and (D) could be labelled as such in the figure. By convention in microbiology, we would assume that the periplasm/extracellular space is "up" and the cytoplasm is "down" in (C) and (D) - but this should really be labelled to avoid any potential confusion.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-4.png" />
-</center>
+![](images/figure4-5.png)
 :::
 
 ::::
@@ -593,13 +702,19 @@ Colour scheme in (B) doesn't seem purposeful and doesn't add anything to the fig
 :::: {.columns}
 
 ::: {.column width="40%"}
-The implied membrane in (C) and (D) could be stated as such in the figure.
+
+::: { .callout-warning title="Issue" }
+Colours in (A) difficult to distinguish, especially with the red boxes which seem to skew blue closer to purple.
+:::
+
+::: { .callout-tip title="Solution" }
+Instead of well images, a heatmap with clearer colour distinction could be presented.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-5.png" />
-</center>
+![](images/figure4-7.png)
 :::
 
 ::::
@@ -609,13 +724,19 @@ The implied membrane in (C) and (D) could be stated as such in the figure.
 :::: {.columns}
 
 ::: {.column width="40%"}
-By convention in microbiology, we would assume that the periplasm/extracellular space is "up" and the cytoplasm is "down" in (C) and (D) - but this should really be labelled to avoid any potential confusion.
+
+::: { .callout-warning title="Issue" }
+Showing two cut-out bands is not an appropriate way to show Western blot data.
+:::
+
+::: { .callout-tip title="Solution" }
+Present the complete blot.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-6.png" />
-</center>
+![](images/figure4-8.png)
 :::
 
 ::::
@@ -625,45 +746,19 @@ By convention in microbiology, we would assume that the periplasm/extracellular 
 :::: {.columns}
 
 ::: {.column width="40%"}
-Colours in (A) difficult to distinguish, especially with the red boxes which seem to skew blue closer to purple - this could be presented more clearly.
+
+::: { .callout-warning title="Issue" }
+Text in (D) is too small to read easily.
+:::
+
+::: { .callout-tip title="Solution" }
+Break out panel into a separate figure or increase font size.
+:::
+
 :::
 
 ::: {.column width="60%"}
-<center>
-<img src="images/figure4-7.png" />
-</center>
-:::
-
-::::
-
-## Critique 4.8
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Showing two cut-out bands is not an appropriate way to show Western blot data - show the whole blot
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure4-8.png" />
-</center>
-:::
-
-::::
-
-## Critique 4.9
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Text in (D) is too small to read easily
-:::
-
-::: {.column width="60%"}
-<center>
-<img src="images/figure4-9.png" />
-</center>
+![](images/figure4-9.png)
 :::
 
 ::::
@@ -680,3 +775,12 @@ Text in (D) is too small to read easily
   - Remove unnecessary data (how do we define this?)
 - “The data is presented in a manner that would likely be inaccessible for people without prior experience. A move toward a more palatable/digestible format will facilitate better science communication in the future.”
 
+## Further Reading
+
+- Introduction to Data Visualisation
+  - [https://sipbs-compbiol.github.io/bm432-datavis_workshop](https://sipbs-compbiol.github.io/bm432-datavis_workshop)
+  
+- Additional information:
+  - ["Fundamentals of Data Visualisation" _by Claus O. Wilke_](https://clauswilke.com/dataviz/)
+  - ["Data Visualisation: A Practical Introduction" _by Kieran Healy_](https://socviz.co/index.html#preface)
+  - ["Points of View: graphic design for data visualisation"](https://communities.springernature.com/posts/data-visualization-a-view-of-every-points-of-view-column)
