@@ -156,191 +156,317 @@
   {
     "objectID": "slides/index.html#learning-objectives",
     "href": "slides/index.html#learning-objectives",
-    "title": "BM432 Data Visualisation",
+    "title": "BM432 Data Visualisation Workshop",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nYou should be able to critically analyse how data is visualised\nYou should be able to judge a figure’s clarity and potential for misunderstanding\nYou should be able to identify potential sources of bias resulting from the visualisation\nYou should understand how to create effective figures for your own work"
+    "text": "Learning Objectives"
   },
   {
-    "objectID": "slides/index.html#background-reading",
-    "href": "slides/index.html#background-reading",
-    "title": "BM432 Data Visualisation",
-    "section": "Background Reading",
-    "text": "Background Reading\n\nIntroduction to Data Visualisation\n\nhttps://sipbs-compbiol.github.io/bm432-datavis_workshop\n\nAdditional information:\n\n“Fundamentals of Data Visualisation” by Claus O. Wilke\n“Data Visualisation: A Practical Introduction” by Kieran Healy\n“Points of View: graphic design for data visualisation”"
+    "objectID": "slides/index.html#example-1",
+    "href": "slides/index.html#example-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Example 1",
+    "text": "Example 1\n\n\nSmall molecules identified in previous HTS increase GCase activity."
   },
   {
-    "objectID": "slides/index.html#assessing-four-figures",
-    "href": "slides/index.html#assessing-four-figures",
-    "title": "BM432 Data Visualisation",
-    "section": "Assessing four figures",
-    "text": "Assessing four figures\n\nUse the DOIs provided to find the papers the figures are from, if you need more information than is in the figure legend\nFor each figure, consider the following:\n\nWhat type of data is being presented?\nAre the data presented effectively? (why/why not?)\nHow might the data presentation be improved?\nHow would you grade this figure according to University Marking Guide B?\n\nFill in the pro forma with your scoring and free-text answers to the questions above (one sentence each)\n\nGoogle Form"
+    "objectID": "slides/index.html#your-critical-analysis-of-example-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 1",
+    "text": "Your Critical Analysis of Example 1\n[Leighton to add fancy Google form code here]"
   },
   {
-    "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121",
-    "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 1 (doi:10.1073/pnas.2320257121)",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121)"
+    "objectID": "slides/index.html#critique-1.1",
+    "href": "slides/index.html#critique-1.1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.1",
+    "text": "Critique 1.1\n\n\nThe lower extent of these error bars is not visible. Avoid “dynamite plots”"
   },
   {
-    "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121",
-    "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 2 (doi:10.1073/pnas.2405474121)",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121)"
+    "objectID": "slides/index.html#critique-1.2",
+    "href": "slides/index.html#critique-1.2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.2",
+    "text": "Critique 1.2\n\n\nWe can’t see difference between effects of two concentrations of A16 in (D), or A16 vs A18 in (B); use a table of contrasts. [Leighton to maybe edit this; figure needs editing]"
   },
   {
-    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121",
-    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121)",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121)"
+    "objectID": "slides/index.html#critique-1.3",
+    "href": "slides/index.html#critique-1.3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.3",
+    "text": "Critique 1.3\n\n\nPlace things to be compared by the reader next to each other where possible."
   },
   {
-    "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112",
-    "href": "slides/index.html#figure-4-doi10.1073pnas.240342112",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 4 (doi:10.1073/pnas.240342112)",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112)"
+    "objectID": "slides/index.html#critique-1.4",
+    "href": "slides/index.html#critique-1.4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.4",
+    "text": "Critique 1.4\n\n\nThe scale on the micrographs (especially in panel C) is too small to read easily."
   },
   {
-    "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121-1",
-    "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 1 (doi:10.1073/pnas.2320257121)",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121)"
+    "objectID": "slides/index.html#critique-1.5",
+    "href": "slides/index.html#critique-1.5",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.5",
+    "text": "Critique 1.5\n\n\nIn addition to showing DAPI and immunofluorescence images of the cells, we should really be seeing a bright-field micrograph of the cells (no fluorescence)."
   },
   {
-    "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121-2",
-    "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121-2",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 1 (doi:10.1073/pnas.2320257121) ",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121) \n\n\n\n\n\n\n\nSuggested improvements (LP):\n\nThe lower extent of error bars is not visible in (B), (D), (G), or (E). Avoid “dynamite plots.”\nBar charts should be avoided; 1D scatterplot for (D), (G), and (E) would be clearer. Line plot with concentration on \\(x\\)-axis would improve (B).\nWe can’t see difference between effects of two concentrations of A16 in (D), or A16 vs A18 in (B); use a table of contrasts.\nPlace things to be compared by the reader next to each other where possible (E)."
+    "objectID": "slides/index.html#critique-1.6",
+    "href": "slides/index.html#critique-1.6",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.6",
+    "text": "Critique 1.6\n\n\nThe colour scheme is misleading (compare 1 \\(\\mu\\)M A18 in B vs 5 \\(\\mu\\)M in D)"
   },
   {
-    "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121-3",
-    "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121-3",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 1 (doi:10.1073/pnas.2320257121) ",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121) \n\n\n\n\n\n\n\nSuggested improvements (MF):\n\nThe scale on the micrographs (C) is too small to read easily.\nIn addition to showing DAPI and immunofluorescence images of the cells, we should really be seeing a bright-field micrograph of the cells (no fluorescence).\nThe colour scheme is misleading (compare 1 \\(\\mu\\)M A18 in B vs 5 \\(\\mu\\)M in D)\nToo many comparisons in B - chartjunk\ny-axes scales should be the same to make intra-panel comparisons easier"
+    "objectID": "slides/index.html#critique-1.7",
+    "href": "slides/index.html#critique-1.7",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.7",
+    "text": "Critique 1.7\n\n\nToo many comparisons in B - avoid cluttering figures with “chartjunk”"
   },
   {
-    "objectID": "slides/index.html#figure-1-doi10.1073pnas.2320257121-4",
-    "href": "slides/index.html#figure-1-doi10.1073pnas.2320257121-4",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 1 (doi:10.1073/pnas.2320257121) ",
-    "text": "Figure 1 (doi:10.1073/pnas.2320257121) \n\n\n\n\n\nSuggestions for improvement\n\n\n\n\n1D scatterplots. Line graph for B."
+    "objectID": "slides/index.html#critique-1.8",
+    "href": "slides/index.html#critique-1.8",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.8",
+    "text": "Critique 1.8\n\n\ny-axes should really have the same scale in all plots, to make intra-panel comparisons easier"
   },
   {
-    "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121-1",
-    "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 2 (doi:10.1073/pnas.2405474121)",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121)"
+    "objectID": "slides/index.html#our-critical-analysis",
+    "href": "slides/index.html#our-critical-analysis",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Our Critical Analysis",
+    "text": "Our Critical Analysis\n[I think it would be a nice way to wrap each figure up if we also gave each figure a mark? Or, we could put in a Slido poll here to ask them to revise their mark?]"
   },
   {
-    "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121-2",
-    "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121-2",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 2 (doi:10.1073/pnas.2405474121) ",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121) \n\n\n\n\n\n\n\nSuggested improvements (LP):\n\nUMAP plots (B, E) are highly manipulable and clustering/placement does not necessarily reflect objective measures.\nUnpleasant colour choices in (C); there is room for aesthetic improvement.\nThe proportion plot in (C) does not give information on absolute number, only proportion; a proportional areas plot spanning all clusters would more honestly represent the data.\nHeatmap text is too small to read comfortably; is there too much data here?"
+    "objectID": "slides/index.html#example-2",
+    "href": "slides/index.html#example-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Example 2",
+    "text": "Example 2\n\n\nEndometriosis-associated macrophages exhibit significant transcriptomic heterogeneity."
   },
   {
-    "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121-3",
-    "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121-3",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 2 (doi:10.1073/pnas.2405474121) ",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121) \n\n\n\n\n\n\n\nSuggested improvements (MF):\n\nThe flow diagram (A) could make better use of arrows to illustrate order of steps\nText overall is too hard to read comfortably\nHeatmap in (D) is missing a scale (is purple high and yellow low, or vice versa?)\nConsider what is needed to convey the figure’s intended message: if it’s just that these macrophages exhibit transcriptional heterogeneity, then D is probably sufficient for that purpose - the other panels don’t add much for me\nWhitespace usage could be improved - cramming (C) under the inset from (B) makes the figure feel very crowded"
+    "objectID": "slides/index.html#your-critical-analysis-of-example-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 2",
+    "text": "Your Critical Analysis of Example 2\n[Leighton to add fancy Google form code here]"
   },
   {
-    "objectID": "slides/index.html#figure-2-doi10.1073pnas.2405474121-4",
-    "href": "slides/index.html#figure-2-doi10.1073pnas.2405474121-4",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 2 (doi:10.1073/pnas.2405474121) ",
-    "text": "Figure 2 (doi:10.1073/pnas.2405474121) \n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nImprove colour scheme in stacked bar chart. Don’t use UMAP."
+    "objectID": "slides/index.html#critique-2.1",
+    "href": "slides/index.html#critique-2.1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.1",
+    "text": "Critique 2.1\n\n\nUMAP plots (B, E) are highly manipulable and clustering/placement does not necessarily reflect objective measures."
   },
   {
-    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121-1",
-    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121)",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121)"
+    "objectID": "slides/index.html#critique-2.2",
+    "href": "slides/index.html#critique-2.2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.2",
+    "text": "Critique 2.2\n\n\nUnpleasant colour choices in (C); there is room for aesthetic improvement"
   },
   {
-    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121-2",
-    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121-2",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\nSuggested improvements (LP):\n\nThe lower extent of error bars is not visible in (D) or (E). These are “dynamite plots,” which should be avoided.\nBar charts should be avoided in general; a 1D scatterplot of each dataset in (D) and (E) would be clearer."
+    "objectID": "slides/index.html#critique-2.3",
+    "href": "slides/index.html#critique-2.3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.3",
+    "text": "Critique 2.3\n\n\nThe proportion plot in (C) does not give information on absolute number, only proportion; a proportional areas plot spanning all clusters would more honestly represent the data"
   },
   {
-    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121-3",
-    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121-3",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\nSuggested improvements (MF):\n\nFailure to complement the triple mutant strain???\nFluorescence wavelength not specified (C)\nColour scheme in (A) is inconsistent\nAxis label in (B) could be improved\nFigure legend for (A) could be more succinct/some of this info should be in the paper text instead"
+    "objectID": "slides/index.html#critique-2.4",
+    "href": "slides/index.html#critique-2.4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.4",
+    "text": "Critique 2.4\n\n\nHeatmap text is too small to read comfortably; is there too much data here?"
   },
   {
-    "objectID": "slides/index.html#figure-3-doi10.1073pnas.2408540121-4",
-    "href": "slides/index.html#figure-3-doi10.1073pnas.2408540121-4",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 3 (doi:10.1073/pnas.2408540121) ",
-    "text": "Figure 3 (doi:10.1073/pnas.2408540121) \n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nUse 1D scatters for D and E"
+    "objectID": "slides/index.html#critique-2.5",
+    "href": "slides/index.html#critique-2.5",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.5",
+    "text": "Critique 2.5\n\n\nHeatmap is missing a scale (is purple high and yellow low, or vice versa?)"
   },
   {
-    "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112-1",
-    "href": "slides/index.html#figure-4-doi10.1073pnas.240342112-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 4 (doi:10.1073/pnas.240342112)",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112)"
+    "objectID": "slides/index.html#critique-2.6",
+    "href": "slides/index.html#critique-2.6",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.6",
+    "text": "Critique 2.6\n\n\nThe flow diagram (A) could make better use of arrows to illustrate order of steps"
   },
   {
-    "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112-2",
-    "href": "slides/index.html#figure-4-doi10.1073pnas.240342112-2",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 4 (doi:10.1073/pnas.240342112) ",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112) \n\n\n\n\n\n\n\nSuggested improvements (LP):\n\nThe rifampicin structure is purely decorative and could be removed.\nThe lower extent of error bars is not visible in (B). This is a “dynamite plot,” which should be avoided.\nBar charts should be avoided in general; a 1D scatterplot of each dataset in (B) would be clearer.\nThe implied membrane in (C) and (D) could be stated as such in the figure."
+    "objectID": "slides/index.html#critique-2.7",
+    "href": "slides/index.html#critique-2.7",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.7",
+    "text": "Critique 2.7\n\n\nText overall is too small, and hard to read comfortably"
   },
   {
-    "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112-3",
-    "href": "slides/index.html#figure-4-doi10.1073pnas.240342112-3",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 4 (doi:10.1073/pnas.240342112) ",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112) \n\n\n\n\n\n\n\nSuggested improvements (MF):\n\nColours in (A) difficult to distinguish, especially with the red boxes which seem to skew blue closer to purple\nThe Western blot in (A) showing 2 cut-out bands is absolutely not an appropriate way to present this type of data - show the whole thing\nColour scheme in (B) doesn’t seem purposeful and doesn’t add anything to the figure\nText in (D) is too small to read easily\nBy convention in microbiology, would assume that the periplasm/extracellular space is “up” and the cytoplasm is “down” in (C) and (D) - but this should really be labelled to avoid any potential confusion"
+    "objectID": "slides/index.html#critique-2.8",
+    "href": "slides/index.html#critique-2.8",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.8",
+    "text": "Critique 2.8\n\n\nWhitespace usage could be improved, and the overall flow of the figure - in particular, cramming (C) under the inset from (B) makes the figure feel very crowded"
   },
   {
-    "objectID": "slides/index.html#figure-4-doi10.1073pnas.240342112-4",
-    "href": "slides/index.html#figure-4-doi10.1073pnas.240342112-4",
-    "title": "BM432 Data Visualisation",
-    "section": "Figure 4 (doi:10.1073/pnas.240342112) ",
-    "text": "Figure 4 (doi:10.1073/pnas.240342112) \n\n\n\n\n\nSuggestions for improvement\n\n\n\n\n1D scatterplots for B"
+    "objectID": "slides/index.html#critique-2.9",
+    "href": "slides/index.html#critique-2.9",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.9",
+    "text": "Critique 2.9\n\n\nConsider what is needed to convey the figure’s intended message: if it’s just that these macrophages exhibit transcriptional heterogeneity, then D is probably sufficient for that purpose; if it is some other message, then revise for clarity."
+  },
+  {
+    "objectID": "slides/index.html#example-3",
+    "href": "slides/index.html#example-3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Example 3",
+    "text": "Example 3\n\n\nA C. difficile mutant lacking all three YkuD-type Ldts (Δldt1-3) exhibits wild-type growth, morphology, and 3-3 cross-linking."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-3",
+    "href": "slides/index.html#your-critical-analysis-of-example-3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 3",
+    "text": "Your Critical Analysis of Example 3\n[Leighton to add fancy Google form code here]"
+  },
+  {
+    "objectID": "slides/index.html#critique-3.1",
+    "href": "slides/index.html#critique-3.1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.1",
+    "text": "Critique 3.1\n\n\nThe lower extent of error bars is not visible in (D) or (E). These are “dynamite plots,” which should be avoided"
+  },
+  {
+    "objectID": "slides/index.html#critique-3.2",
+    "href": "slides/index.html#critique-3.2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.2",
+    "text": "Critique 3.2\n\n\nBar charts should be avoided in general; a 1D scatterplot of each dataset in (D) and (E) would be clearer"
+  },
+  {
+    "objectID": "slides/index.html#critique-3.3",
+    "href": "slides/index.html#critique-3.3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.3",
+    "text": "Critique 3.3\n\n\nFailure to complement the triple mutant strain - missing data??? This is a control I would expect to see for these experiments."
+  },
+  {
+    "objectID": "slides/index.html#critique-3.4",
+    "href": "slides/index.html#critique-3.4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.4",
+    "text": "Critique 3.4\n\n\nLabels should not be placed where they obscure part of an image."
+  },
+  {
+    "objectID": "slides/index.html#critique-3.5",
+    "href": "slides/index.html#critique-3.5",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.5",
+    "text": "Critique 3.5\n\n\nFluorescence wavelength not specified"
+  },
+  {
+    "objectID": "slides/index.html#critique-3.6",
+    "href": "slides/index.html#critique-3.6",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.6",
+    "text": "Critique 3.6\n\n\nColour scheme in (A), and between B and D/E, is inconsistent - more rational, and helpful, colour choices could be made here."
+  },
+  {
+    "objectID": "slides/index.html#critique-3.7",
+    "href": "slides/index.html#critique-3.7",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.7",
+    "text": "Critique 3.7\n\n\nAxis label in (B) could be improved - OD600 is not very informative."
+  },
+  {
+    "objectID": "slides/index.html#critique-3.8",
+    "href": "slides/index.html#critique-3.8",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.8",
+    "text": "Critique 3.8\n\n\nFigure legend for (A) could be more succinct/some of this info should be in the paper text instead. Overall a figure legend should provide enough detail for the figure to stand alone, but should not describe results/significance."
+  },
+  {
+    "objectID": "slides/index.html#example-4",
+    "href": "slides/index.html#example-4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Example 4",
+    "text": "Example 4\n\n\nFunctional characterization and overall structure of Rv1217c–1218c."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-4",
+    "href": "slides/index.html#your-critical-analysis-of-example-4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 4",
+    "text": "Your Critical Analysis of Example 4\n[Leighton to add fancy Google form code here]"
+  },
+  {
+    "objectID": "slides/index.html#critique-4.1",
+    "href": "slides/index.html#critique-4.1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.1",
+    "text": "Critique 4.1\n\n\nThe rifampicin structure is purely decorative and could be removed - avoid needless distractions in figures."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.2",
+    "href": "slides/index.html#critique-4.2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.2",
+    "text": "Critique 4.2\n\n\nThe lower extent of error bars is not visible in (B). This is a “dynamite plot,” which should be avoided"
+  },
+  {
+    "objectID": "slides/index.html#critique-4.3",
+    "href": "slides/index.html#critique-4.3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.3",
+    "text": "Critique 4.3\n\n\nBar charts should be avoided in general; a 1D scatterplot of each dataset in (B) would be clearer."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.4",
+    "href": "slides/index.html#critique-4.4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.4",
+    "text": "Critique 4.4\n\n\nColour scheme in (B) doesn’t seem purposeful and doesn’t add anything to the figure"
+  },
+  {
+    "objectID": "slides/index.html#critique-4.5",
+    "href": "slides/index.html#critique-4.5",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.5",
+    "text": "Critique 4.5\n\n\nThe implied membrane in (C) and (D) could be stated as such in the figure."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.6",
+    "href": "slides/index.html#critique-4.6",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.6",
+    "text": "Critique 4.6\n\n\nBy convention in microbiology, we would assume that the periplasm/extracellular space is “up” and the cytoplasm is “down” in (C) and (D) - but this should really be labelled to avoid any potential confusion."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.7",
+    "href": "slides/index.html#critique-4.7",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.7",
+    "text": "Critique 4.7\n\n\nColours in (A) difficult to distinguish, especially with the red boxes which seem to skew blue closer to purple - this could be presented more clearly."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.8",
+    "href": "slides/index.html#critique-4.8",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.8",
+    "text": "Critique 4.8\n\n\nShowing two cut-out bands is not an appropriate way to show Western blot data - show the whole blot"
+  },
+  {
+    "objectID": "slides/index.html#critique-4.9",
+    "href": "slides/index.html#critique-4.9",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.9",
+    "text": "Critique 4.9\n\n\nText in (D) is too small to read easily"
   },
   {
     "objectID": "slides/index.html#general-comments",
     "href": "slides/index.html#general-comments",
-    "title": "BM432 Data Visualisation",
+    "title": "BM432 Data Visualisation Workshop",
     "section": "General Comments",
-    "text": "General Comments\n\nColour choices\nLarger figures/graphs, more space between figures/graphs\nToo much data per figure\nSplit into multiple figures\nRemove unnecessary data (how do we define this?)\n“The data is presented in a manner that would likely be inaccessible for people without prior experience. A move toward a more palatable/digestible format will facilitate better science communication in the future.”"
-  },
-  {
-    "objectID": "slides/index.html#visualising-data-about-data-visualisation",
-    "href": "slides/index.html#visualising-data-about-data-visualisation",
-    "title": "BM432 Data Visualisation",
-    "section": "Visualising Data About Data Visualisation",
-    "text": "Visualising Data About Data Visualisation\n\nHow did you explain your marks?"
-  },
-  {
-    "objectID": "slides/index.html#visualising-data-about-data-visualisation-1",
-    "href": "slides/index.html#visualising-data-about-data-visualisation-1",
-    "title": "BM432 Data Visualisation",
-    "section": "Visualising Data About Data Visualisation",
-    "text": "Visualising Data About Data Visualisation\n\nWhat words did you use to describe ways the figure could be improved?"
-  },
-  {
-    "objectID": "slides/index.html#data-visualisation-is-not-neutral",
-    "href": "slides/index.html#data-visualisation-is-not-neutral",
-    "title": "BM432 Data Visualisation",
-    "section": "Data Visualisation is Not Neutral",
-    "text": "Data Visualisation is Not Neutral"
+    "text": "General Comments\n\nData presentation choices\nColour choices\nLarger figures/graphs, more space between figures/graphs\nToo much data per figure\n\nSplit into multiple figures\nRemove unnecessary data (how do we define this?)\n\n“The data is presented in a manner that would likely be inaccessible for people without prior experience. A move toward a more palatable/digestible format will facilitate better science communication in the future.”"
   },
   {
     "objectID": "better_interactive.html",
