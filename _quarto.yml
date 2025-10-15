@@ -110,6 +110,15 @@ custom-callout:
     title: "Hints"
     icon-symbol: "🔍️"
     color: "thistle"
+  callout-issue:
+    title: "Issue"
+    icon-symbol: "📊️"
+    color: "darkorchid"
+  callout-solution:
+    title: "Solution"
+    icon-symbol: "📊️"
+    color: "goldenrod"
+
 
 filters:
   - custom-callout
