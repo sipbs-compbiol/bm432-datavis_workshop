@@ -58,6 +58,11 @@ dfm = dfm %>% filter(timestamp > "2025-10-10")
 
 ## Learning Objectives
 
+- You should be able to critically analyse how data is visualised 
+- You should be able to judge a figure's clarity and potential for misunderstanding
+- You should be able to identify potential sources of bias resulting from the visualisation
+- You should understand how to create effective figures for your own work
+
 # 2. Bad and Good Data Visualisations
 
 # 3. Critique of Published Scientific Figures
