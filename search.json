@@ -172,7 +172,21 @@
     "href": "slides/index.html#your-critical-analysis-of-example-1",
     "title": "BM432 Data Visualisation Workshop",
     "section": "Your Critical Analysis of Example 1",
-    "text": "Your Critical Analysis of Example 1\n[Leighton to add fancy Google form code here]"
+    "text": "Your Critical Analysis of Example 1"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-1-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-1-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 1",
+    "text": "Your Critical Analysis of Example 1\n\n\n\n\n\n\n\n\nReasons for the grade\n\n\n\n\nno reason\n\n\nDynamite plots and unclear comparisons.\n\n\ntest\n\n\nNo\n\n\nStrengths: Combines schematic pathway diagrams, bar charts of lysosomal function, and microscopy images, which together convey the mechanistic link between PIKfyve modulation and lysosomal stress. Axes and statistical annotations are clean, and the use of consistent colour-coding across bar charts strengthens coherence."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-1-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-1-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 1",
+    "text": "Your Critical Analysis of Example 1\n\n\n\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nnuke from orbit\n\n\n1D scatterplots. Line graph for B.\n\n\ndon’t know don’t care can’t be arsed\n\n\n.\n\n\nWeaknesses: The microscopy panels use pseudocolour overlays that are visually striking but may over-saturate the fluorescent signal, potentially exaggerating differences. Error bars are shown but sample sizes (n) are not always indicated on the plots."
   },
   {
     "objectID": "slides/index.html#critique-1.1",
@@ -249,7 +263,21 @@
     "href": "slides/index.html#your-critical-analysis-of-example-2",
     "title": "BM432 Data Visualisation Workshop",
     "section": "Your Critical Analysis of Example 2",
-    "text": "Your Critical Analysis of Example 2\n[Leighton to add fancy Google form code here]"
+    "text": "Your Critical Analysis of Example 2"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-2-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-2-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 2",
+    "text": "Your Critical Analysis of Example 2\n\n\n\n\n\n\n\n\nReasons for the grade\n\n\n\n\nshan’t\n\n\nUMAP is uninformative. Too complex. Horrible colour scheme.\n\n\nshall I compare thee to a summer’s day, this figure is more lovely and more temperate\n\n\nAmazing grace, how sweet a sound\n\n\nStrengths: The figure integrates single-cell UMAP plots, cluster heatmaps, and gene-expression violin plots, giving a multidimensional view of macrophage heterogeneity. Each cell type is clearly colour-coded, and the legends are detailed. The use of gradient scales for expression intensity supports nuanced interpretation."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-2-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-2-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 2",
+    "text": "Your Critical Analysis of Example 2\n\n\n\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nImprove colour scheme in stacked bar chart. Don’t use UMAP.\n\n\ntest, how well does the form work if we add a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very veryvery very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very loooooooooooooong answer\n\n\nthat saved a wretch like me\n\n\nWeaknesses: The colour palette, though consistent, risks perceptual overlap between similar clusters—problematic for readers with colour-vision deficiencies. Violin plots are compact but occasionally under-labelled, making it hard to match specific genes to clusters. Some panels are densely packed, prioritising comprehensiveness over readability."
   },
   {
     "objectID": "slides/index.html#critique-2.1",
@@ -326,7 +354,21 @@
     "href": "slides/index.html#your-critical-analysis-of-example-3",
     "title": "BM432 Data Visualisation Workshop",
     "section": "Your Critical Analysis of Example 3",
-    "text": "Your Critical Analysis of Example 3\n[Leighton to add fancy Google form code here]"
+    "text": "Your Critical Analysis of Example 3"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-3-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-3-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 3",
+    "text": "Your Critical Analysis of Example 3\n\n\n\n\n\n\n\n\nReasons for the grade\n\n\n\n\nminging\n\n\nWhat’s the point of A? Dynamite plots.\n\n\n^\\((*)(*)_^*^&\\)%(&)()_&^%%&(\n\n\n….explanations are for losers\n\n\nStrengths: The authors use simple bar and line graphs to depict growth curves, cell length quantification, and cross-link percentages. The visual minimalism effectively conveys the “no significant difference” message. Microscopy images are clean, and the inclusion of scale bars and replicates adds credibility."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-3-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-3-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 3",
+    "text": "Your Critical Analysis of Example 3\n\n\n\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nUse 1D scatters for D and E\n\n\nof mice and men\n\n\nconsistency is the hobgoblin of small minds\n\n\nWeaknesses: Because the main conclusion is the absence of a difference, the data could be better supported by visualising effect sizes or confidence intervals instead of relying on “ns” labels. The axis labels could include raw units (e.g., OD600, µm) on all subplots for accessibility."
   },
   {
     "objectID": "slides/index.html#critique-3.1",
@@ -382,7 +424,21 @@
     "href": "slides/index.html#your-critical-analysis-of-example-4",
     "title": "BM432 Data Visualisation Workshop",
     "section": "Your Critical Analysis of Example 4",
-    "text": "Your Critical Analysis of Example 4\n[Leighton to add fancy Google form code here]"
+    "text": "Your Critical Analysis of Example 4"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-4-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-4-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 4",
+    "text": "Your Critical Analysis of Example 4\n\n\n\n\n\n\n\n\nReasons for the grade\n\n\n\n\nburble\n\n\nVery clear. Great structures - but dynamite plots!\n\n\nI AM NOT SHOUTING YOU’RE SHOUTING\n\n\nfour score and seven years ago\n\n\nStrengths: The figure integrates quantitative bar plots, Western blots, and cryo-EM structural renderings into a cohesive narrative. The ATPase assay bar chart uses distinct, interpretable colours, and the structural renderings make excellent use of domain-based colouring and orientation cues."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-4-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-4-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 4",
+    "text": "Your Critical Analysis of Example 4\n\n\n\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\n1D scatterplots for B\n\n\ntwas brillig and the slithy toves did gyre and gimble in the wave\n\n\ncould also be expressed as 87\n\n\nWeaknesses: The cryo-EM density map could benefit from a scale bar and annotation of local resolution variation, which are standard in structural biology visualisation. The bar charts might be improved by showing individual data points rather than only mean ± SD, to convey variability."
   },
   {
     "objectID": "slides/index.html#critique-4.1",
