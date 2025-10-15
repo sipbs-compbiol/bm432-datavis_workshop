@@ -27,6 +27,7 @@ library(ggthemes)
 library(googlesheets4)
 library(htmltools)
 library(knitr)
+library(kableExtra)
 library(stringr)
 library(tidyr)
 library(tm)
@@ -71,9 +72,13 @@ dfm = dfm %>% filter(timestamp > "2025-10-10")
 
 ![Small molecules identified in previous HTS increase GCase activity. ](images/figure1-0.png){#fig-1}
 
-## Your Critical Analysis of Example 1
+## Your Critical Analysis of Example 1 { .scrollable .smaller }
 
-[Leighton to add fancy Google form code here]
+```{r fig1_improvements}
+dfm %>% select(improvements_fig1) %>%
+  filter(!is.na(improvements_fig1)) %>%
+  kable(col.names=c("Suggestions for improvement"))
+```
 
 ## Critique 1.1
 
@@ -259,9 +264,13 @@ Use the same $y$-axis scale in all panels to facilitate direct comparison.
 
 ![Endometriosis-associated macrophages exhibit significant transcriptomic heterogeneity.](images/figure2-0.png){#fig-2}
 
-## Your Critical Analysis of Example 2
+## Your Critical Analysis of Example 2 { .scrollable .smaller }
 
-[Leighton to add fancy Google form code here]
+```{r fig2_improvements}
+dfm %>% select(improvements_fig2) %>%
+  filter(!is.na(improvements_fig2)) %>%
+  kable(col.names=c("Suggestions for improvement"))
+```
 
 ## Critique 2.1
 
@@ -465,9 +474,13 @@ If the intent is just that the macrophages exhibit transcriptional heterogeneity
 
 ![A *C. difficile* mutant lacking all three YkuD-type Ldts ($\Delta$*ldt1-3*) exhibits wild-type growth, morphology, and 3-3 cross-linking.](images/figure3-0.png){#fig-3}
 
-## Your Critical Analysis of Example 3
+## Your Critical Analysis of Example 3 { .scrollable .smaller }
 
-[Leighton to add fancy Google form code here]
+```{r fig3_improvements}
+dfm %>% select(improvements_fig3) %>%
+  filter(!is.na(improvements_fig3)) %>%
+  kable(col.names=c("Suggestions for improvement"))
+```
 
 ## Critique 3.1
 
@@ -605,9 +618,13 @@ Break out panel A into its own figure.
 
 ![Functional characterization and overall structure of Rv1217c–1218c.](images/figure4-0.png){#fig-4}
 
-## Your Critical Analysis of Example 4
+## Your Critical Analysis of Example 4 { .scrollable .smaller }
 
-[Leighton to add fancy Google form code here]
+```{r fig4_improvements}
+dfm %>% select(improvements_fig4) %>%
+  filter(!is.na(improvements_fig4)) %>%
+  kable(col.names=c("Suggestions for improvement"))
+```
 
 ## Critique 4.1
 
