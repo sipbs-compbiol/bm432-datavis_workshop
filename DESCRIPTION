@@ -12,6 +12,7 @@ Imports:
     tidyverse (>= 2.0.0),
     GGally,
     ggplot2,
+    ggpubr,
     ggthemes,
     ggridges,
     flextable,

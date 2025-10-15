@@ -23,11 +23,12 @@ format:
 # Package imports
 library(dplyr)
 library(ggplot2)
+library(ggpubr)
 library(ggthemes)
+library(GGally)
 library(googlesheets4)
 library(htmltools)
 library(knitr)
-library(kableExtra)
 library(stringr)
 library(tidyr)
 library(tm)
@@ -38,12 +39,11 @@ library(wordcloud2)
 gs4_deauth()
 
 # Grab data and clean it
-# dfm = read_sheet("https://docs.google.com/spreadsheets/d/1Qs3Hdeycu9Q8KBqpQ6qlv6NaUW62Al_PPWF96x1lACI/edit?resourcekey=&gid=1498908795#gid=1498908795")
-dfm <- read_sheet("https://docs.google.com/spreadsheets/d/1e4i7g-zfEiDmMFZMXMzm4gqddGc7HVBFEDfGeLTeFnM/edit?resourcekey=&gid=12171434#gid=12171434")
 # 2025-26 Google Form location
 # https://docs.google.com/forms/d/e/1FAIpQLSf2HbFQUkw2Ookp65Q_aLnsEGh3wRS0ZOta6Q7f2s-EFs4V6A/viewform?usp=header
 # 2025-26 Google Form response spreadsheet
 # https://docs.google.com/spreadsheets/d/1e4i7g-zfEiDmMFZMXMzm4gqddGc7HVBFEDfGeLTeFnM/edit?resourcekey=&gid=12171434#gid=12171434
+dfm <- read_sheet("https://docs.google.com/spreadsheets/d/1e4i7g-zfEiDmMFZMXMzm4gqddGc7HVBFEDfGeLTeFnM/edit?resourcekey=&gid=12171434#gid=12171434")
 colnames(dfm) = c("timestamp",
                   "grade_fig1", "explain_fig1", "improvements_fig1", "questions_fig1",
                   "grade_fig2", "explain_fig2", "improvements_fig2", "questions_fig2",
@@ -51,8 +51,29 @@ colnames(dfm) = c("timestamp",
                   "grade_fig4", "explain_fig4", "improvements_fig4", "questions_fig4",
                   "other_comments")
 
-# Ignore responses prior to a given date
-dfm = dfm %>% filter(timestamp > "2025-10-10")
+# Ignore responses prior to a given date and split grade categories
+grade_levels <- c(
+  "Exceptional",
+  "Outstanding",
+  "Excellent",
+  "Comprehensive",
+  "Satisfactory",
+  "Limited",
+  "Inadequate",
+  "Weak",
+  "Minimal",
+  "No relevant work"
+)
+dfm = dfm %>%
+  filter(timestamp > "2025-10-2") %>%
+  separate(grade_fig1, c("grade1", "category1"), sep=" - ", convert=TRUE) %>%
+  separate(grade_fig2, c("grade2", "category2"), sep=" - ", convert=TRUE) %>%
+  separate(grade_fig3, c("grade3", "category3"), sep=" - ", convert=TRUE) %>%
+  separate(grade_fig4, c("grade4", "category4"), sep=" - ", convert=TRUE)
+dfm$category1 <- factor(dfm$category1, levels=grade_levels)
+dfm$category2 <- factor(dfm$category2, levels=grade_levels)
+dfm$category3 <- factor(dfm$category3, levels=grade_levels)
+dfm$category4 <- factor(dfm$category4, levels=grade_levels)
 ```
 
 # 1. Introduction
@@ -71,6 +92,57 @@ dfm = dfm %>% filter(timestamp > "2025-10-10")
 ## Example 1 
 
 ![Small molecules identified in previous HTS increase GCase activity. ](images/figure1-0.png){#fig-1}
+
+## Your Critical Analysis of Example 1
+
+```{r fig1_grades}
+dfm1 <- dfm %>% mutate(figure = as.factor("1"))
+
+stp <- ggplot(dfm1, aes(x = figure, y = grade1)) +
+  geom_jitter(width=0.1)
+
+bxp <- ggplot(dfm1, aes(x = figure, y = grade1)) +
+  geom_boxplot() +
+  geom_jitter(width=0.1)
+
+vlp <- ggplot(dfm1, aes(x = figure, y = grade1)) +
+  geom_violin() +
+  geom_jitter(width=0.1)
+
+brp <- ggplot(dfm1 %>% group_by(category1) %>% summarise(n = n()),
+              aes(x = category1, y = n,
+                  color=category1, fill=category1)) +
+  geom_bar(stat="identity") +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  ylim(0, 40) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=0.5),
+        legend.position="none",
+        axis.title.x=element_blank())
+
+dtp <- ggplot(dfm1 %>% group_by(category1) %>% summarise(n = n()),
+              aes(y = category1, x = n,
+                  color=category1, fill=category1)) +
+  geom_point(size=4) +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  xlim(0, 40) +
+  theme(legend.position="none",
+        axis.title.y=element_blank()) +
+  scale_y_discrete(limits = rev)
+
+ggarrange(ggarrange(stp, bxp, vlp, labels = c("A", "B", "C"), ncol=3),
+          ggarrange(brp, dtp, ncol=2, labels = c("D", "E")),
+          nrow=2)
+```
+
+## Your Critical Analysis of Example 1 { .scrollable .smaller }
+
+```{r fig1_explain}
+dfm %>% select(explain_fig1) %>%
+  filter(!is.na(explain_fig1)) %>%
+  kable(col.names=c("Reasons for the grade"))
+```
 
 ## Your Critical Analysis of Example 1 { .scrollable .smaller }
 
@@ -263,6 +335,57 @@ Use the same $y$-axis scale in all panels to facilitate direct comparison.
 ## Example 2 
 
 ![Endometriosis-associated macrophages exhibit significant transcriptomic heterogeneity.](images/figure2-0.png){#fig-2}
+
+## Your Critical Analysis of Example 2
+
+```{r fig2_grades}
+dfm1 <- dfm %>% mutate(figure = as.factor("2"))
+
+stp <- ggplot(dfm1, aes(x = figure, y = grade2)) +
+  geom_jitter(width=0.1)
+
+bxp <- ggplot(dfm1, aes(x = figure, y = grade2)) +
+  geom_boxplot() +
+  geom_jitter(width=0.1)
+
+vlp <- ggplot(dfm1, aes(x = figure, y = grade2)) +
+  geom_violin() +
+  geom_jitter(width=0.1)
+
+brp <- ggplot(dfm1 %>% group_by(category2) %>% summarise(n = n()),
+              aes(x = category2, y = n,
+                  color=category2, fill=category2)) +
+  geom_bar(stat="identity") +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  ylim(0, 40) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=0.5),
+        legend.position="none",
+        axis.title.x=element_blank())
+
+dtp <- ggplot(dfm1 %>% group_by(category2) %>% summarise(n = n()),
+              aes(y = category2, x = n,
+                  color=category2, fill=category2)) +
+  geom_point(size=4) +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  xlim(0, 40) +
+  theme(legend.position="none",
+        axis.title.y=element_blank()) +
+  scale_y_discrete(limits = rev)
+
+ggarrange(ggarrange(stp, bxp, vlp, labels = c("A", "B", "C"), ncol=3),
+          ggarrange(brp, dtp, ncol=2, labels = c("D", "E")),
+          nrow=2)
+```
+
+## Your Critical Analysis of Example 2 { .scrollable .smaller }
+
+```{r fig2_explain}
+dfm %>% select(explain_fig2) %>%
+  filter(!is.na(explain_fig2)) %>%
+  kable(col.names=c("Reasons for the grade"))
+```
 
 ## Your Critical Analysis of Example 2 { .scrollable .smaller }
 
@@ -474,6 +597,57 @@ If the intent is just that the macrophages exhibit transcriptional heterogeneity
 
 ![A *C. difficile* mutant lacking all three YkuD-type Ldts ($\Delta$*ldt1-3*) exhibits wild-type growth, morphology, and 3-3 cross-linking.](images/figure3-0.png){#fig-3}
 
+## Your Critical Analysis of Example 3
+
+```{r fig3_grades}
+dfm1 <- dfm %>% mutate(figure = as.factor("3"))
+
+stp <- ggplot(dfm1, aes(x = figure, y = grade3)) +
+  geom_jitter(width=0.1)
+
+bxp <- ggplot(dfm1, aes(x = figure, y = grade3)) +
+  geom_boxplot() +
+  geom_jitter(width=0.1)
+
+vlp <- ggplot(dfm1, aes(x = figure, y = grade3)) +
+  geom_violin() +
+  geom_jitter(width=0.1)
+
+brp <- ggplot(dfm1 %>% group_by(category3) %>% summarise(n = n()),
+              aes(x = category3, y = n,
+                  color=category3, fill=category3)) +
+  geom_bar(stat="identity") +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  ylim(0, 40) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=0.5),
+        legend.position="none",
+        axis.title.x=element_blank())
+
+dtp <- ggplot(dfm1 %>% group_by(category3) %>% summarise(n = n()),
+              aes(y = category3, x = n,
+                  color=category3, fill=category3)) +
+  geom_point(size=4) +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  xlim(0, 40) +
+  theme(legend.position="none",
+        axis.title.y=element_blank()) +
+  scale_y_discrete(limits = rev)
+
+ggarrange(ggarrange(stp, bxp, vlp, labels = c("A", "B", "C"), ncol=3),
+          ggarrange(brp, dtp, ncol=2, labels = c("D", "E")),
+          nrow=2)
+```
+
+## Your Critical Analysis of Example 3 { .scrollable .smaller }
+
+```{r fig3_explain}
+dfm %>% select(explain_fig3) %>%
+  filter(!is.na(explain_fig3)) %>%
+  kable(col.names=c("Reasons for the grade"))
+```
+
 ## Your Critical Analysis of Example 3 { .scrollable .smaller }
 
 ```{r fig3_improvements}
@@ -617,6 +791,57 @@ Break out panel A into its own figure.
 ## Example 4 
 
 ![Functional characterization and overall structure of Rv1217c–1218c.](images/figure4-0.png){#fig-4}
+
+## Your Critical Analysis of Example 4
+
+```{r fig4_grades}
+dfm1 <- dfm %>% mutate(figure = as.factor("4"))
+
+stp <- ggplot(dfm1, aes(x = figure, y = grade4)) +
+  geom_jitter(width=0.1)
+
+bxp <- ggplot(dfm1, aes(x = figure, y = grade4)) +
+  geom_boxplot() +
+  geom_jitter(width=0.1)
+
+vlp <- ggplot(dfm1, aes(x = figure, y = grade4)) +
+  geom_violin() +
+  geom_jitter(width=0.1)
+
+brp <- ggplot(dfm1 %>% group_by(category4) %>% summarise(n = n()),
+              aes(x = category4, y = n,
+                  color=category4, fill=category4)) +
+  geom_bar(stat="identity") +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  ylim(0, 40) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=0.5),
+        legend.position="none",
+        axis.title.x=element_blank())
+
+dtp <- ggplot(dfm1 %>% group_by(category4) %>% summarise(n = n()),
+              aes(y = category4, x = n,
+                  color=category4, fill=category4)) +
+  geom_point(size=4) +
+  scale_fill_brewer(palette="Set2") +
+  scale_color_brewer(palette="Set2") +
+  xlim(0, 40) +
+  theme(legend.position="none",
+        axis.title.y=element_blank()) +
+  scale_y_discrete(limits = rev)
+
+ggarrange(ggarrange(stp, bxp, vlp, labels = c("A", "B", "C"), ncol=3),
+          ggarrange(brp, dtp, ncol=2, labels = c("D", "E")),
+          nrow=2)
+```
+
+## Your Critical Analysis of Example 4 { .scrollable .smaller }
+
+```{r fig4_explain}
+dfm %>% select(explain_fig4) %>%
+  filter(!is.na(explain_fig4)) %>%
+  kable(col.names=c("Reasons for the grade"))
+```
 
 ## Your Critical Analysis of Example 4 { .scrollable .smaller }
 
