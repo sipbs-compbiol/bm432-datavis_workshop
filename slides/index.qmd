@@ -1018,15 +1018,65 @@ Break out panel into a separate figure or increase font size.
 
 # 3. Summing Up
 
-## General Comments
+## General Comments - Data Presentation Choices
 
-- Data presentation choices
-- Colour choices
-- Larger figures/graphs, more space between figures/graphs
-- Too much data per figure 
-  - Split into multiple figures 
-  - Remove unnecessary data (how do we define this?)
+::: { .callout-warning title="Issue" }
+Authors do not always choose the best or most appropriate way to present their data (e.g., dynamite plots)
+:::
+
+::: { .callout-tip title="Solution" }
+When making data visualisation choices, consider how you can best present your data transparently to the reader so that they can evaluate your work (e.g., show the raw data).
+
+Be aware of conventions in the field and discuss with colleagues to come to a consensus of the best and most transparent way to present your data. 
+:::
+
+## General Comments - Colour Choices
+
+::: { .callout-warning title="Issue" }
+Authors do not always choose the best or most appropriate colours when designing data visualisations.
+:::
+
+::: { .callout-tip title="Solution" }
+When choosing colours, try to: 
+
+1. Be consistent (always use the same colour to represent the same group or feature)
+
+2. Be accessible (be aware of the different types of colourblindness and design appropriately)
+
+3. Be aesthetically pleasing (choose colours that work well together, or choose well-designed colour palettes)
+:::
+
+## General Comments - Readability
+
+::: { .callout-warning title="Issue" }
+Authors do not always make figures large enough or easy to read.
+:::
+
+::: { .callout-tip title="Solution" }
+When designing figures, make sure that they are appropriately sized and accessible (font large enough to read easily at 100% size). 
+
+Include enough space between panels of a figure that allows the figures to "breathe" - the eye should flow smoothly from one element of the figure to the next in a natural way. 
+
+Try printing out a copy of the figure and look at it from arm's length to see how it feels in terms of whitespace and use of "real estate" - then make appropriate edits to improve the figure. 
+:::
+
+## General Comments - Message
+
+::: { .callout-warning title="Issue" }
+Authors sometimes include too much data in a figure, or make a figure overwhelming in other ways.
+:::
+
+::: { .callout-tip title="Solution" }
+When sitting down to make a figure, be sure to define a clear message in the first instance. Present the data that are necessary to convey that message. Remove anything extraneous. (Split into multiple figures if necessary.) 
+:::
+
+
+
+## Some Very Insightful Comments From You
+
 - “The data is presented in a manner that would likely be inaccessible for people without prior experience. A move toward a more palatable/digestible format will facilitate better science communication in the future.”
+
+- "I think that it is also crucially important to learn how to present data well and responsibly..."
 
 ## Further Reading
 
