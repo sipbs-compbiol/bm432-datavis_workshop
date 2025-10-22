@@ -342,7 +342,17 @@ Use the same $y$-axis scale in all panels to facilitate direct comparison.
 
 ## Our Critical Analysis
 
+:::: {.columns}
+
+::: {.column width="70%"}
 ![](images/slido.png)
+:::
+
+::: {.column width="30%"}
+![](images/rerank_1.png)
+:::
+
+::::
 
 ## Example 2 
 
@@ -618,8 +628,17 @@ If the intent is just that the macrophages exhibit transcriptional heterogeneity
 
 ## Our Critical Analysis
 
-![](images/slido.png)
+:::: {.columns}
 
+::: {.column width="70%"}
+![](images/slido.png)
+:::
+
+::: {.column width="30%"}
+![](images/rerank_2.png)
+:::
+
+::::
 
 ## Example 3 
 
@@ -828,7 +847,17 @@ Break out panel A into its own figure.
 
 ## Our Critical Analysis
 
+:::: {.columns}
+
+::: {.column width="70%"}
 ![](images/slido.png)
+:::
+
+::: {.column width="30%"}
+![](images/rerank_3.png)
+:::
+
+::::
 
 ## Example 4 
 
@@ -1060,7 +1089,17 @@ Break out panel into a separate figure or increase font size.
 
 ## Our Critical Analysis
 
+:::: {.columns}
+
+::: {.column width="70%"}
 ![](images/slido.png)
+:::
+
+::: {.column width="30%"}
+![](images/rerank_4.png)
+:::
+
+::::
 
 # 3. Summing Up
 
