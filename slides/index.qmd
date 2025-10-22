@@ -142,6 +142,12 @@ dfm %>% select(explain_fig1) %>%
   kable(col.names=c("Reasons for the grade"))
 ```
 
+::: {.notes}
+- many found the figure clear and easy to understand
+- lack of explanation of acronyms in figure legend
+- some issues with the statistical analysis (we'll come back to this)
+:::
+
 ## Your Critical Analysis of Example 1 { .scrollable .smaller }
 
 ```{r fig1_improvements}
@@ -149,6 +155,14 @@ dfm %>% select(improvements_fig1) %>%
   filter(!is.na(improvements_fig1)) %>%
   kable(col.names=c("Suggestions for improvement"))
 ```
+
+::: {.notes}
+- More detailed legend; improvements needed WRT clarity & use of abbreviations/acronyms
+- Improvements for presentation of microscopy figures
+- Clarity on N numbers
+- Many of the same points we raised!
+:::
+
 
 ## Critique 1.1
 
@@ -385,6 +399,11 @@ dfm %>% select(explain_fig2) %>%
   kable(col.names=c("Reasons for the grade"))
 ```
 
+::: {.notes}
+- Organisation (layout) and colour themes
+- Too much information/overwhelming/confusing
+:::
+
 ## Your Critical Analysis of Example 2 { .scrollable .smaller }
 
 ```{r fig2_improvements}
@@ -392,6 +411,12 @@ dfm %>% select(improvements_fig2) %>%
   filter(!is.na(improvements_fig2)) %>%
   kable(col.names=c("Suggestions for improvement"))
 ```
+
+::: {.notes}
+- improve organisation, use of whitespace, and size of figures
+- improve use of colour
+:::
+
 
 ## Critique 2.1
 
@@ -651,6 +676,11 @@ dfm %>% select(explain_fig3) %>%
   kable(col.names=c("Reasons for the grade"))
 ```
 
+::: {.notes}
+- Most thought that this figure was very clear, well-organised, well-presented
+- easy to understand and readable
+:::
+
 ## Your Critical Analysis of Example 3 { .scrollable .smaller }
 
 ```{r fig3_improvements}
@@ -658,6 +688,11 @@ dfm %>% select(improvements_fig3) %>%
   filter(!is.na(improvements_fig3)) %>%
   kable(col.names=c("Suggestions for improvement"))
 ```
+
+::: {.notes}
+- improve clarity of panels B and D
+- improve presentation (bar chart & microscopy)
+:::
 
 ## Critique 3.1
 
@@ -850,6 +885,11 @@ dfm %>% select(explain_fig4) %>%
   kable(col.names=c("Reasons for the grade"))
 ```
 
+::: {.notes}
+- Most found this figure very clear, well-organised, well-explained
+- Lack of labelling, statistical analysis (again, we'll come back to this later)
+:::
+
 ## Your Critical Analysis of Example 4 { .scrollable .smaller }
 
 ```{r fig4_improvements}
@@ -857,6 +897,12 @@ dfm %>% select(improvements_fig4) %>%
   filter(!is.na(improvements_fig4)) %>%
   kable(col.names=c("Suggestions for improvement"))
 ```
+
+::: {.notes}
+- Clearer/better organisation
+- Better labelling (panels C, D)
+- Clearer figure legend
+:::
 
 ## Critique 4.1
 
@@ -1017,6 +1063,14 @@ Break out panel into a separate figure or increase font size.
 ![](images/slido.png)
 
 # 3. Summing Up
+
+::: {.notes}
+- a recurring theme of "no indications of statistical significance" --> the best experiments don't require statistics because the differences are evident; statistics are there to support your decision making, not as an oracle; if you find you need statistics, you're doing the wrong experiment
+
+- For every figure, even for the ones that were highly praised - there was someone who didn't understand it. We deliberately picked figures from 4 different disciplines (pharmacology, biochemistry, immunology, microbiology) - you were all probably out of your "comfort zone" for at least one of the figures. Remember, when you're making your own figures - your reader may be coming from a very different background and have very different knowledge to you! Design  your figures to be as widely accessible as possible
+
+- You picked up on many of the same things we did in our critical analysis (and sometimes caught things that we missed!) Being able to critically analyse a figure is hard - you will get even better with practice, no one is perfect, but this is a journey, and you've shown that you are already doing very well <3
+:::
 
 ## General Comments - Data Presentation Choices
 
