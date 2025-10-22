@@ -45,9 +45,6 @@ To prepare for this workshop, we ask you to:
 
 - Will be posted here
 
-<!---
-
 You can view the slides used in the workshop below, or [fullscreen in your browser](slides/){target="_blank"}.
 
 {{< revealjs "slides/" full-screen-link="false" >}}
---->
