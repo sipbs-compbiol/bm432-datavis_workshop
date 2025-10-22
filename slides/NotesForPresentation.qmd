@@ -1,0 +1,56 @@
+---
+title: "NotesForPresentation"
+format: html
+---
+
+## Student Critical Analysis of Example 1
+
+- many found the figure clear and easy to understand
+- lack of explanation of acronyms in figure legend
+- some issues with the statistical analysis (we'll come back to this)
+
+## Suggestions for Example 1 Improvement
+
+- More detailed legend; improvements needed WRT clarity & use of abbreviations/acronyms
+- Improvements for presentation of microscopy figures
+- Clarity on N numbers
+- Many of the same points we raised!
+
+## Student Critical Analysis of Example 2
+
+- Organisation (layout) and colour themes
+- Too much information/overwhelming/confusing
+
+## Suggestions for Example 2 Improvement
+
+- improve organisation, use of whitespace, and size of figures
+- improve use of colour
+
+## Student Critical Analysis of Example 3
+
+- Most thought that this figure was very clear, well-organised, well-presented
+- easy to understand and readable
+
+## Suggestions for Example 3 Improvement
+
+- improve clarity of panels B and D
+- improve presentation (bar chart & microscopy)
+
+## Student Critical Analysis of Example 4
+
+- Most found this figure very clear, well-organised, well-explained
+- Lack of labelling, statistical analysis (again, we'll come back to this later)
+
+## Suggestions for Example 4 Improvement
+
+- Clearer/better organisation
+- Better labelling (panels C, D)
+- Clearer figure legend
+
+## Overall Comments about Student Comments
+
+- a recurring theme of "no indications of statistical significance" --> the best experiments don't require statistics because the differences are evident; statistics are there to support your decision making, not as an oracle; if you find you need statistics, you're doing the wrong experiment
+
+- For every figure, even for the ones that were highly praised - there was someone who didn't understand it. We deliberately picked figures from 4 different disciplines (pharmacology, biochemistry, immunology, microbiology) - you were all probably out of your "comfort zone" for at least one of the figures. Remember, when you're making your own figures - your reader may be coming from a very different background and have very different knowledge to you! Design  your figures to be as widely accessible as possible
+
+- You picked up on many of the same things we did in our critical analysis (and sometimes caught things that we missed!) Being able to critically analyse a figure is hard - you will get even better with practice, no one is perfect, but this is a journey, and you've shown that you are already doing very well <3
