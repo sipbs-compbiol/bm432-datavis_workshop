@@ -80,15 +80,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
 <script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
 <style>
-div.callout-callout-microbe.callout {
-  border-left-color: #1E90FF;
+div.callout-callout-challenge.callout {
+  border-left-color: aquamarine;
 }
-div.callout-callout-microbe.callout-style-default > .callout-header {
-  background-color: rgba(30, 144, 255, 0.13);
+div.callout-callout-challenge.callout-style-default > .callout-header {
+  background-color: rgb(from aquamarine r g b / 13%);
 }
-div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
-  content: '🧫';
+div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
+  content: '🧑‍🏫';
   background-image: none;
 }
 div.callout-callout-question.callout {
@@ -102,37 +102,15 @@ div.callout-callout-question.callout-style-default .callout-icon::before, div.ca
   content: '🙋';
   background-image: none;
 }
-div.callout-callout-case-study.callout {
-  border-left-color: #FFA500;
+div.callout-callout-solution.callout {
+  border-left-color: goldenrod;
 }
-div.callout-callout-case-study.callout-style-default > .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-callout-solution.callout-style-default > .callout-header {
+  background-color: rgb(from goldenrod r g b / 13%);
 }
-div.callout-callout-case-study .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-case-study.callout-style-default .callout-icon::before, div.callout-callout-case-study.callout-titled .callout-icon::before {
-  content: '🔍';
-  background-image: none;
-}
-div.callout-callout-data.callout {
-  border-left-color: #32CD32;
-}
-div.callout-callout-data.callout-style-default > .callout-header {
-  background-color: rgba(50, 205, 50, 0.13);
-}
-div.callout-callout-data .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-data.callout-style-default .callout-icon::before, div.callout-callout-data.callout-titled .callout-icon::before {
-  content: '📊';
-  background-image: none;
-}
-div.callout-callout-thumbs-up.callout {
-  border-left-color: #008000;
-}
-div.callout-callout-thumbs-up.callout-style-default > .callout-header {
-  background-color: rgba(0, 128, 0, 0.13);
-}
-div.callout-callout-thumbs-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-thumbs-up.callout-style-default .callout-icon::before, div.callout-callout-thumbs-up.callout-titled .callout-icon::before {
-  content: '👍';
+div.callout-callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-solution.callout-style-default .callout-icon::before, div.callout-callout-solution.callout-titled .callout-icon::before {
+  content: '📊️';
   background-image: none;
 }
 div.callout-callout-questions.callout {
@@ -146,6 +124,17 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
   content: '🙋️';
   background-image: none;
 }
+div.callout-callout-microbe.callout {
+  border-left-color: #1E90FF;
+}
+div.callout-callout-microbe.callout-style-default > .callout-header {
+  background-color: rgba(30, 144, 255, 0.13);
+}
+div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
+  content: '🧫';
+  background-image: none;
+}
 div.callout-callout-hints.callout {
   border-left-color: thistle;
 }
@@ -157,37 +146,48 @@ div.callout-callout-hints.callout-style-default .callout-icon::before, div.callo
   content: '🔍️';
   background-image: none;
 }
-div.callout-callout-solution.callout {
-  border-left-color: goldenrod;
+div.callout-callout-data.callout {
+  border-left-color: #32CD32;
 }
-div.callout-callout-solution.callout-style-default > .callout-header {
-  background-color: rgb(from goldenrod r g b / 13%);
+div.callout-callout-data.callout-style-default > .callout-header {
+  background-color: rgba(50, 205, 50, 0.13);
 }
-div.callout-callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-solution.callout-style-default .callout-icon::before, div.callout-callout-solution.callout-titled .callout-icon::before {
+div.callout-callout-data .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-data.callout-style-default .callout-icon::before, div.callout-callout-data.callout-titled .callout-icon::before {
+  content: '📊';
+  background-image: none;
+}
+div.callout-callout-case-study.callout {
+  border-left-color: #FFA500;
+}
+div.callout-callout-case-study.callout-style-default > .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-callout-case-study .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-case-study.callout-style-default .callout-icon::before, div.callout-callout-case-study.callout-titled .callout-icon::before {
+  content: '🔍';
+  background-image: none;
+}
+div.callout-callout-thumbs-up.callout {
+  border-left-color: #008000;
+}
+div.callout-callout-thumbs-up.callout-style-default > .callout-header {
+  background-color: rgba(0, 128, 0, 0.13);
+}
+div.callout-callout-thumbs-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-thumbs-up.callout-style-default .callout-icon::before, div.callout-callout-thumbs-up.callout-titled .callout-icon::before {
+  content: '👍';
+  background-image: none;
+}
+div.callout-callout-issue.callout {
+  border-left-color: darkorchid;
+}
+div.callout-callout-issue.callout-style-default > .callout-header {
+  background-color: rgb(from darkorchid r g b / 13%);
+}
+div.callout-callout-issue .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-issue.callout-style-default .callout-icon::before, div.callout-callout-issue.callout-titled .callout-icon::before {
   content: '📊️';
-  background-image: none;
-}
-div.callout-callout-discussion.callout {
-  border-left-color: #BA55D3;
-}
-div.callout-callout-discussion.callout-style-default > .callout-header {
-  background-color: rgba(186, 85, 211, 0.13);
-}
-div.callout-callout-discussion .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-discussion.callout-style-default .callout-icon::before, div.callout-callout-discussion.callout-titled .callout-icon::before {
-  content: '✨';
-  background-image: none;
-}
-div.callout-callout-challenge.callout {
-  border-left-color: aquamarine;
-}
-div.callout-callout-challenge.callout-style-default > .callout-header {
-  background-color: rgb(from aquamarine r g b / 13%);
-}
-div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
-  content: '🧑‍🏫';
   background-image: none;
 }
 div.callout-callout-todo.callout {
@@ -201,15 +201,15 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
   content: '📝';
   background-image: none;
 }
-div.callout-callout-issue.callout {
-  border-left-color: darkorchid;
+div.callout-callout-discussion.callout {
+  border-left-color: #BA55D3;
 }
-div.callout-callout-issue.callout-style-default > .callout-header {
-  background-color: rgb(from darkorchid r g b / 13%);
+div.callout-callout-discussion.callout-style-default > .callout-header {
+  background-color: rgba(186, 85, 211, 0.13);
 }
-div.callout-callout-issue .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-issue.callout-style-default .callout-icon::before, div.callout-callout-issue.callout-titled .callout-icon::before {
-  content: '📊️';
+div.callout-callout-discussion .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-discussion.callout-style-default .callout-icon::before, div.callout-callout-discussion.callout-titled .callout-icon::before {
+  content: '✨';
   background-image: none;
 }
 </style>
@@ -418,8 +418,8 @@ Note
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-d2dbb1c8cdd8a56ca712" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d2dbb1c8cdd8a56ca712">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44"],["1","1","1","1","1","1","1","1","1","1","1","2","2","2","2","2","2","2","2","2","2","2","3","3","3","3","3","3","3","3","3","3","3","4","4","4","4","4","4","4","4","4","4","4"],[10,8,13,9,11,14,6,4,12,7,5,10,8,13,9,11,14,6,4,12,7,5,10,8,13,9,11,14,6,4,12,7,5,8,8,8,8,8,8,8,19,8,8,8],[8.039999999999999,6.95,7.58,8.81,8.33,9.960000000000001,7.24,4.26,10.84,4.82,5.68,9.140000000000001,8.140000000000001,8.74,8.77,9.26,8.1,6.13,3.1,9.130000000000001,7.26,4.74,7.46,6.77,12.74,7.11,7.81,8.84,6.08,5.39,8.15,6.42,5.73,6.58,5.76,7.71,8.84,8.470000000000001,7.04,5.25,12.5,5.56,7.91,6.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>cohort<\/th>\n      <th>dosage<\/th>\n      <th>effect<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"cohort","targets":1},{"name":"dosage","targets":2},{"name":"effect","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-879ab7bcea86aeaf5923" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-879ab7bcea86aeaf5923">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44"],["1","1","1","1","1","1","1","1","1","1","1","2","2","2","2","2","2","2","2","2","2","2","3","3","3","3","3","3","3","3","3","3","3","4","4","4","4","4","4","4","4","4","4","4"],[10,8,13,9,11,14,6,4,12,7,5,10,8,13,9,11,14,6,4,12,7,5,10,8,13,9,11,14,6,4,12,7,5,8,8,8,8,8,8,8,19,8,8,8],[8.039999999999999,6.95,7.58,8.81,8.33,9.960000000000001,7.24,4.26,10.84,4.82,5.68,9.140000000000001,8.140000000000001,8.74,8.77,9.26,8.1,6.13,3.1,9.130000000000001,7.26,4.74,7.46,6.77,12.74,7.11,7.81,8.84,6.08,5.39,8.15,6.42,5.73,6.58,5.76,7.71,8.84,8.470000000000001,7.04,5.25,12.5,5.56,7.91,6.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>cohort<\/th>\n      <th>dosage<\/th>\n      <th>effect<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"cohort","targets":1},{"name":"dosage","targets":2},{"name":"effect","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
