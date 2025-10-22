@@ -154,6 +154,76 @@
     "text": "3 Proportional Stacked Bar Chart\nIn Figure 3 the y-axis is the total count of passengers. Sometimes it is easier to make appropriate comparisons if we instead plot proportions in each category.\n\n\n\n\n\n\n\n\nFigure 4: Stacked bar chart of number of passengers on the Titanic, by class"
   },
   {
+    "objectID": "slides/NotesForPresentation.html",
+    "href": "slides/NotesForPresentation.html",
+    "title": "NotesForPresentation",
+    "section": "",
+    "text": "many found the figure clear and easy to understand\nlack of explanation of acronyms in figure legend\nsome issues with the statistical analysis (we’ll come back to this)"
+  },
+  {
+    "objectID": "slides/NotesForPresentation.html#student-critical-analysis-of-example-1",
+    "href": "slides/NotesForPresentation.html#student-critical-analysis-of-example-1",
+    "title": "NotesForPresentation",
+    "section": "",
+    "text": "many found the figure clear and easy to understand\nlack of explanation of acronyms in figure legend\nsome issues with the statistical analysis (we’ll come back to this)"
+  },
+  {
+    "objectID": "slides/NotesForPresentation.html#suggestions-for-example-1-improvement",
+    "href": "slides/NotesForPresentation.html#suggestions-for-example-1-improvement",
+    "title": "NotesForPresentation",
+    "section": "Suggestions for Example 1 Improvement",
+    "text": "Suggestions for Example 1 Improvement\n\nMore detailed legend; improvements needed WRT clarity & use of abbreviations/acronyms\nImprovements for presentation of microscopy figures\nClarity on N numbers\nMany of the same points we raised!"
+  },
+  {
+    "objectID": "slides/NotesForPresentation.html#student-critical-analysis-of-example-2",
+    "href": "slides/NotesForPresentation.html#student-critical-analysis-of-example-2",
+    "title": "NotesForPresentation",
+    "section": "Student Critical Analysis of Example 2",
+    "text": "Student Critical Analysis of Example 2\n\nOrganisation (layout) and colour themes\nToo much information/overwhelming/confusing"
+  },
+  {
+    "objectID": "slides/NotesForPresentation.html#suggestions-for-example-2-improvement",
+    "href": "slides/NotesForPresentation.html#suggestions-for-example-2-improvement",
+    "title": "NotesForPresentation",
+    "section": "Suggestions for Example 2 Improvement",
+    "text": "Suggestions for Example 2 Improvement\n\nimprove organisation, use of whitespace, and size of figures\nimprove use of colour"
+  },
+  {
+    "objectID": "slides/NotesForPresentation.html#student-critical-analysis-of-example-3",
+    "href": "slides/NotesForPresentation.html#student-critical-analysis-of-example-3",
+    "title": "NotesForPresentation",
+    "section": "Student Critical Analysis of Example 3",
+    "text": "Student Critical Analysis of Example 3\n\nMost thought that this figure was very clear, well-organised, well-presented\neasy to understand and readable"
+  },
+  {
+    "objectID": "slides/NotesForPresentation.html#suggestions-for-example-3-improvement",
+    "href": "slides/NotesForPresentation.html#suggestions-for-example-3-improvement",
+    "title": "NotesForPresentation",
+    "section": "Suggestions for Example 3 Improvement",
+    "text": "Suggestions for Example 3 Improvement\n\nimprove clarity of panels B and D\nimprove presentation (bar chart & microscopy)"
+  },
+  {
+    "objectID": "slides/NotesForPresentation.html#student-critical-analysis-of-example-4",
+    "href": "slides/NotesForPresentation.html#student-critical-analysis-of-example-4",
+    "title": "NotesForPresentation",
+    "section": "Student Critical Analysis of Example 4",
+    "text": "Student Critical Analysis of Example 4\n\nMost found this figure very clear, well-organised, well-explained\nLack of labelling, statistical analysis (again, we’ll come back to this later)"
+  },
+  {
+    "objectID": "slides/NotesForPresentation.html#suggestions-for-example-4-improvement",
+    "href": "slides/NotesForPresentation.html#suggestions-for-example-4-improvement",
+    "title": "NotesForPresentation",
+    "section": "Suggestions for Example 4 Improvement",
+    "text": "Suggestions for Example 4 Improvement\n\nClearer/better organisation\nBetter labelling (panels C, D)\nClearer figure legend"
+  },
+  {
+    "objectID": "slides/NotesForPresentation.html#overall-comments-about-student-comments",
+    "href": "slides/NotesForPresentation.html#overall-comments-about-student-comments",
+    "title": "NotesForPresentation",
+    "section": "Overall Comments about Student Comments",
+    "text": "Overall Comments about Student Comments\n\na recurring theme of “no indications of statistical significance” –&gt; the best experiments don’t require statistics because the differences are evident; statistics are there to support your decision making, not as an oracle; if you find you need statistics, you’re doing the wrong experiment\nFor every figure, even for the ones that were highly praised - there was someone who didn’t understand it. We deliberately picked figures from 4 different disciplines (pharmacology, biochemistry, immunology, microbiology) - you were all probably out of your “comfort zone” for at least one of the figures. Remember, when you’re making your own figures - your reader may be coming from a very different background and have very different knowledge to you! Design your figures to be as widely accessible as possible\nYou picked up on many of the same things we did in our critical analysis (and sometimes caught things that we missed!) Being able to critically analyse a figure is hard - you will get even better with practice, no one is perfect, but this is a journey, and you’ve shown that you are already doing very well &lt;3"
+  },
+  {
     "objectID": "slides/index.html#learning-objectives",
     "href": "slides/index.html#learning-objectives",
     "title": "BM432 Data Visualisation Workshop",
