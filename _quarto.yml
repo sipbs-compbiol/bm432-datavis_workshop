@@ -3,6 +3,8 @@ project:
   render: 
     - "slides/"
     - "*.qmd"
+  preview:
+    port: 43243
 
 website:
   title: "BM432 Data Visualisation Workshop"
