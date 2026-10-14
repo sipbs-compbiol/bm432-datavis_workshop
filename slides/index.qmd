@@ -5,7 +5,7 @@ author:
     affiliation: "University of Strathclyde"
   - name: "Leighton Pritchard"
     affiliation: "University of Strathclyde"
-date: "2024-10-22"
+date: "2026-10-21"
 format: 
   revealjs:
     slide-number: true
@@ -65,7 +65,7 @@ grade_levels <- c(
   "No relevant work"
 )
 dfm = dfm %>%
-  filter(timestamp > "2025-10-16") %>%
+  filter(timestamp > "2026-10-14") %>%
   separate(grade_fig1, c("grade1", "category1"), sep=" - ", convert=TRUE) %>%
   separate(grade_fig2, c("grade2", "category2"), sep=" - ", convert=TRUE) %>%
   separate(grade_fig3, c("grade3", "category3"), sep=" - ", convert=TRUE) %>%
@@ -349,7 +349,7 @@ Use the same $y$-axis scale in all panels to facilitate direct comparison.
 :::
 
 ::: {.column width="30%"}
-![](images/rerank_1.png)
+Space for your results
 :::
 
 ::::
@@ -635,7 +635,7 @@ If the intent is just that the macrophages exhibit transcriptional heterogeneity
 :::
 
 ::: {.column width="30%"}
-![](images/rerank_2.png)
+Space for your results
 :::
 
 ::::
@@ -854,7 +854,7 @@ Break out panel A into its own figure.
 :::
 
 ::: {.column width="30%"}
-![](images/rerank_3.png)
+Space for your results
 :::
 
 ::::
@@ -1096,7 +1096,7 @@ Break out panel into a separate figure or increase font size.
 :::
 
 ::: {.column width="30%"}
-![](images/rerank_4.png)
+Space for your results
 :::
 
 ::::
