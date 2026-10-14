@@ -4,7 +4,7 @@ project:
     - "slides/"
     - "*.qmd"
   preview:
-    port: 432432
+    port: 43243
 
 website:
   title: "BM432 Data Visualisation Workshop"
