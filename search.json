@@ -123,7 +123,7 @@
     "href": "better_tools.html",
     "title": "Better Tools Than Bar Charts",
     "section": "",
-    "text": "Figures are key components of scientific publications and presentations. They relate the data supporting conclusions to the reader in an immediate manner, conveying information about the work before the reader can inspect the paper in detail. They are central elements in the storytelling aspect of a paper and, just as poor visualisation choices can mask the important messages in the paper, cynical choices can exaggerate the quality of the story.\n\n\n\n\n\n\nCallout-dataData Analysis\n\n\n\nIn this interactive session, you will have the opportunity to generate multiple visualisations of the same dataset, and decide for yourself which tell the most appropriate story about the data.\n\n\n\n\n\n\n\n\nCallout-case-studyCase Study\n\n\n\nOver the course of a small study, you have attempted to evaluate the effect of a drug on four different matched cohorts of 11 individuals. You varied the dosages such that the average (mean) dosage per individual was the identical for each cohort. It also turned out that the observed average (mean) effect of the drug was identical for each cohort - and the same was true for their standard deviations!\n\n\n\n\nTable 1: Means and standard deviations of the dosage and effect values for each of the four cohorts\n\n\n\n\n\n\ncohort\nmeanDosage\nsdDosage\nmeanEffect\nsdEffect\n\n\n\n\n1\n9\n3.32\n7.5\n2.03\n\n\n2\n9\n3.32\n7.5\n2.03\n\n\n3\n9\n3.32\n7.5\n2.03\n\n\n4\n9\n3.32\n7.5\n2.03\n\n\n\n\n\n\n\n\nWhen you check to see if the data might be correlated, you also find that all the dosages and effects have essentially identical coefficients of correlation!\n\n\n\n\nTable 2: Correlation (\\(r^2\\)) coefficients for linear regression of effect against dosage, by group.\n\n\n\n\n\n\ncohort\nr2\n\n\n\n\n1\n0.82\n\n\n2\n0.82\n\n\n3\n0.82\n\n\n4\n0.82\n\n\n\n\n\n\n\n\nBut, when you look at the dataset, there appears to be more variation between cohort and individuals than these numbers suggest:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCallout-challengeChallenge\n\n\n\nIn the next section, you will have opportunity to change visualisation types to see which, if any, are appropriate to understand and present the data."
+    "text": "Figures are key components of scientific publications and presentations. They relate the data supporting conclusions to the reader in an immediate manner, conveying information about the work before the reader can inspect the paper in detail. They are central elements in the storytelling aspect of a paper and, just as poor visualisation choices can mask the important messages in the paper, cynical choices can exaggerate the quality of the story.\n\n\n\n\n\n\nCallout-dataData Analysis\n\n\n\nIn this interactive session, you will have the opportunity to generate multiple visualisations of the same dataset, and decide for yourself which communicate the most appropriate information (or “tell the most appropriate story”) about the data.\n\n\n\n\n\n\n\n\nCallout-case-studyCase Study\n\n\n\nOver the course of a small study, you have attempted to evaluate the effect of a drug on four different matched cohorts of 11 individuals. You varied the dosages such that the average (mean) dosage per individual was the identical for each cohort. It also turned out that the observed average (mean) effect of the drug was identical for each cohort - and the same was true for their standard deviations!\n\n\n\n\nTable 1: Means and standard deviations of the dosage and effect values for each of the four cohorts\n\n\n\n\n\n\ncohort\nmeanDosage\nsdDosage\nmeanEffect\nsdEffect\n\n\n\n\n1\n9\n3.32\n7.5\n2.03\n\n\n2\n9\n3.32\n7.5\n2.03\n\n\n3\n9\n3.32\n7.5\n2.03\n\n\n4\n9\n3.32\n7.5\n2.03\n\n\n\n\n\n\n\n\nWhen you check to see if the data might be correlated, you also find that all the dosages and effects have essentially identical coefficients of correlation!\n\n\n\n\nTable 2: Correlation (\\(r^2\\)) coefficients for linear regression of effect against dosage, by group.\n\n\n\n\n\n\ncohort\nr2\n\n\n\n\n1\n0.82\n\n\n2\n0.82\n\n\n3\n0.82\n\n\n4\n0.82\n\n\n\n\n\n\n\n\nBut, when you look at the dataset, there appears to be more variation between cohort and individuals than these numbers suggest:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCallout-challengeChallenge\n\n\n\nIn the next section, you will have opportunity to change visualisation types to see which, if any, are appropriate to understand and present the data."
   },
   {
     "objectID": "bar_chart.html",
@@ -152,6 +152,405 @@
     "title": "Bar Charts and Dot Charts",
     "section": "3 Proportional Stacked Bar Chart",
     "text": "3 Proportional Stacked Bar Chart\nIn Figure 3 the y-axis is the total count of passengers. Sometimes it is easier to make appropriate comparisons if we instead plot proportions in each category.\n\n\n\n\n\n\n\n\nFigure 4: Stacked bar chart of number of passengers on the Titanic, by class"
+  },
+  {
+    "objectID": "slides/index.html#learning-objectives",
+    "href": "slides/index.html#learning-objectives",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nYou should be able to critically analyse how data is visualised\nYou should be able to judge a figure’s clarity and potential for misunderstanding\nYou should be able to identify potential sources of bias resulting from the visualisation\nYou should understand how to create effective figures for your own work"
+  },
+  {
+    "objectID": "slides/index.html#example-1",
+    "href": "slides/index.html#example-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Example 1",
+    "text": "Example 1\n\n\nFigure 1: Small molecules identified in previous HTS increase GCase activity."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 1",
+    "text": "Your Critical Analysis of Example 1"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-1-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-1-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 1",
+    "text": "Your Critical Analysis of Example 1\n\n\n\n\n\nReasons for the grade\n\n\n\n\n\n\n\n\n\nmany found the figure clear and easy to understand\nlack of explanation of acronyms in figure legend\nsome issues with the statistical analysis (we’ll come back to this)"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-1-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-1-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 1",
+    "text": "Your Critical Analysis of Example 1\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\n\n\n\n\n\nMore detailed legend; improvements needed WRT clarity & use of abbreviations/acronyms\nImprovements for presentation of microscopy figures\nClarity on N numbers\nMany of the same points we raised!"
+  },
+  {
+    "objectID": "slides/index.html#critique-1.1",
+    "href": "slides/index.html#critique-1.1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.1",
+    "text": "Critique 1.1\n\n\n\n\n\n\n\n\n\nIssue\n\n\nDynamite plot: the lower extent of these error bars is not visible.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse boxplots or 1D scatterplots"
+  },
+  {
+    "objectID": "slides/index.html#critique-1.2",
+    "href": "slides/index.html#critique-1.2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.2",
+    "text": "Critique 1.2\n\n\n\n\n\n\n\n\n\nIssue\n\n\nIncomplete presentation of statistical comparisons, e.g is there a difference between A16 and A18 in (B)?\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPresent a table of statistical differences instead, or alongside the figure."
+  },
+  {
+    "objectID": "slides/index.html#critique-1.3",
+    "href": "slides/index.html#critique-1.3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.3",
+    "text": "Critique 1.3\n\n\n\n\n\n\n\n\n\nIssue\n\n\nDistance between bars makes comparison awkward.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPlace things to be compared by the reader next to each other where possible, to facilitate visual comparison."
+  },
+  {
+    "objectID": "slides/index.html#critique-1.4",
+    "href": "slides/index.html#critique-1.4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.4",
+    "text": "Critique 1.4\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe scale on the micrographs (especially in panel C) is too small to read easily.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nIncrease the size of the scale relative to the figure so it can be read."
+  },
+  {
+    "objectID": "slides/index.html#critique-1.5",
+    "href": "slides/index.html#critique-1.5",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.5",
+    "text": "Critique 1.5\n\n\n\n\n\n\n\n\n\nIssue\n\n\nA visual control (bright-field image) is absent.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nIn addition to showing DAPI and immunofluorescence images of the cells, include a bright-field micrograph of the cells (no fluorescence)."
+  },
+  {
+    "objectID": "slides/index.html#critique-1.6",
+    "href": "slides/index.html#critique-1.6",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.6",
+    "text": "Critique 1.6\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe colour scheme is misleading because saturation represents different data across figure panels (compare 1 \\(\\mu\\)M A18 in B vs 5 \\(\\mu\\)M in D, and 1 \\(\\mu\\)M A18 in E).\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBe consistent with the visual messaging of colour (hue, saturation, and luminance)."
+  },
+  {
+    "objectID": "slides/index.html#critique-1.7",
+    "href": "slides/index.html#critique-1.7",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.7",
+    "text": "Critique 1.7\n\n\n\n\n\n\n\n\n\nIssue\n\n\nToo many comparisons in B clutter the figure and compress the space available for showing data.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPresent a table of statistical differences instead, or alongside the figure, to reduce clutter."
+  },
+  {
+    "objectID": "slides/index.html#critique-1.8",
+    "href": "slides/index.html#critique-1.8",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 1.8",
+    "text": "Critique 1.8\n\n\n\n\n\n\n\n\n\nIssue\n\n\n\\(y\\)-axis scales vary between panels, so quantitative comparison between panels is difficult.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse the same \\(y\\)-axis scale in all panels to facilitate direct comparison."
+  },
+  {
+    "objectID": "slides/index.html#our-critical-analysis",
+    "href": "slides/index.html#our-critical-analysis",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Our Critical Analysis",
+    "text": "Our Critical Analysis\n\n\n\n\nSpace for your results"
+  },
+  {
+    "objectID": "slides/index.html#example-2",
+    "href": "slides/index.html#example-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Example 2",
+    "text": "Example 2\n\n\nFigure 2: Endometriosis-associated macrophages exhibit significant transcriptomic heterogeneity."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 2",
+    "text": "Your Critical Analysis of Example 2"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-2-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-2-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 2",
+    "text": "Your Critical Analysis of Example 2\n\n\n\n\n\nReasons for the grade\n\n\n\n\n\n\n\n\n\nOrganisation (layout) and colour themes\nToo much information/overwhelming/confusing"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-2-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-2-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 2",
+    "text": "Your Critical Analysis of Example 2\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\n\n\n\n\n\nimprove organisation, use of whitespace, and size of figures\nimprove use of colour"
+  },
+  {
+    "objectID": "slides/index.html#critique-2.1",
+    "href": "slides/index.html#critique-2.1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.1",
+    "text": "Critique 2.1\n\n\n\n\n\n\n\n\n\nIssue\n\n\nUMAP plots (B, E) are highly manipulable and clustering/placement does not necessarily reflect objective measures.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBe cautious of over-interpretation of UMAP and other nonlinear dimensionality reduction plots."
+  },
+  {
+    "objectID": "slides/index.html#critique-2.2",
+    "href": "slides/index.html#critique-2.2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.2",
+    "text": "Critique 2.2\n\n\n\n\n\n\n\n\n\nIssue\n\n\nUnpleasant clashing (R default) colour choices in (C).\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse an appropriate colour palette."
+  },
+  {
+    "objectID": "slides/index.html#critique-2.3",
+    "href": "slides/index.html#critique-2.3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.3",
+    "text": "Critique 2.3\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe proportion plot in (C) does not give information on absolute number, only proportion/composition.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nA proportional areas plot spanning all clusters would represent both absolute count per group and compositional information."
+  },
+  {
+    "objectID": "slides/index.html#critique-2.4",
+    "href": "slides/index.html#critique-2.4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.4",
+    "text": "Critique 2.4\n\n\n\n\n\n\n\n\n\nIssue\n\n\nHeatmap text is too small to read comfortably.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPresent heatmap as a separate figure, or reduce the amount of information in the image."
+  },
+  {
+    "objectID": "slides/index.html#critique-2.5",
+    "href": "slides/index.html#critique-2.5",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.5",
+    "text": "Critique 2.5\n\n\n\n\n\n\n\n\n\nIssue\n\n\nHeatmap is missing a scale (is purple high and yellow low, or vice versa?)\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nAdd a scale bar."
+  },
+  {
+    "objectID": "slides/index.html#critique-2.6",
+    "href": "slides/index.html#critique-2.6",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.6",
+    "text": "Critique 2.6\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe experimental summary in (A) does not indicate order of operations.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse arrows to indicate order of steps and/or dataflow."
+  },
+  {
+    "objectID": "slides/index.html#critique-2.7",
+    "href": "slides/index.html#critique-2.7",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.7",
+    "text": "Critique 2.7\n\n\n\n\n\n\n\n\n\nIssue\n\n\nText is too small in general to read comfortably.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nIncrease font size and/or break up the panels into individual figures."
+  },
+  {
+    "objectID": "slides/index.html#critique-2.8",
+    "href": "slides/index.html#critique-2.8",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.8",
+    "text": "Critique 2.8\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe figure is crowded and the separation of panels is unclear.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse whitespace to guide reader “flow” through the figure and reduce crowding -in particular, cramming (C) under the inset from (B) makes the figure feel very crowded. Alternatively break the panels into multiple figures."
+  },
+  {
+    "objectID": "slides/index.html#critique-2.9",
+    "href": "slides/index.html#critique-2.9",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 2.9",
+    "text": "Critique 2.9\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe overall message of the figure is unclear.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nIf the intent is just that the macrophages exhibit transcriptional heterogeneity, then (D) is probably sufficient. If other messages are intended, then revise for clarity."
+  },
+  {
+    "objectID": "slides/index.html#our-critical-analysis-1",
+    "href": "slides/index.html#our-critical-analysis-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Our Critical Analysis",
+    "text": "Our Critical Analysis\n\n\n\n\nSpace for your results"
+  },
+  {
+    "objectID": "slides/index.html#example-3",
+    "href": "slides/index.html#example-3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Example 3",
+    "text": "Example 3\n\n\nFigure 3: A C. difficile mutant lacking all three YkuD-type Ldts (\\(\\Delta\\)ldt1-3) exhibits wild-type growth, morphology, and 3-3 cross-linking."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-3",
+    "href": "slides/index.html#your-critical-analysis-of-example-3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 3",
+    "text": "Your Critical Analysis of Example 3"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-3-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-3-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 3",
+    "text": "Your Critical Analysis of Example 3\n\n\n\n\n\nReasons for the grade\n\n\n\n\n\n\n\n\n\nMost thought that this figure was very clear, well-organised, well-presented\neasy to understand and readable"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-3-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-3-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 3",
+    "text": "Your Critical Analysis of Example 3\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\n\n\n\n\n\nimprove clarity of panels B and D\nimprove presentation (bar chart & microscopy)"
+  },
+  {
+    "objectID": "slides/index.html#critique-3.1",
+    "href": "slides/index.html#critique-3.1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.1",
+    "text": "Critique 3.1\n\n\n\n\n\n\n\n\n\nIssue\n\n\nDynamite plot: the lower extent of these error bars is not visible.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse boxplots or 1D scatterplots"
+  },
+  {
+    "objectID": "slides/index.html#critique-3.2",
+    "href": "slides/index.html#critique-3.2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.2",
+    "text": "Critique 3.2\n\n\n\n\n\n\n\n\n\nIssue\n\n\nNo complement of the triple mutant strain - missing data for an essential control?\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nEnsure that all controls are presented so that the experimental result can be interpreted properly."
+  },
+  {
+    "objectID": "slides/index.html#critique-3.3",
+    "href": "slides/index.html#critique-3.3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.3",
+    "text": "Critique 3.3\n\n\n\n\n\n\n\n\n\nIssue\n\n\nLabel obscures part of the image.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nRelocate the label so data is not obscured."
+  },
+  {
+    "objectID": "slides/index.html#critique-3.4",
+    "href": "slides/index.html#critique-3.4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.4",
+    "text": "Critique 3.4\n\n\n\n\n\n\n\n\n\nIssue\n\n\nFluorescence wavelength not specified.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nInclude sufficient information that the reader does not need to refer to the main text. Overall a figure legend should provide enough detail for the figure to stand alone, but should not describe results/significance."
+  },
+  {
+    "objectID": "slides/index.html#critique-3.5",
+    "href": "slides/index.html#critique-3.5",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.5",
+    "text": "Critique 3.5\n\n\n\n\n\n\n\n\n\nIssue\n\n\nColour schemes/palettes are inconsistent within panel A, and between panels B, D, and E.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBe consistent with the visual messaging of colour (hue, saturation, and luminance)."
+  },
+  {
+    "objectID": "slides/index.html#critique-3.6",
+    "href": "slides/index.html#critique-3.6",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 3.6",
+    "text": "Critique 3.6\n\n\n\n\n\n\n\n\n\nIssue\n\n\nExcessive length of figure legend for panel A.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBreak out panel A into its own figure."
+  },
+  {
+    "objectID": "slides/index.html#our-critical-analysis-2",
+    "href": "slides/index.html#our-critical-analysis-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Our Critical Analysis",
+    "text": "Our Critical Analysis\n\n\n\n\nSpace for your results"
+  },
+  {
+    "objectID": "slides/index.html#example-4",
+    "href": "slides/index.html#example-4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Example 4",
+    "text": "Example 4\n\n\nFigure 4: Functional characterization and overall structure of Rv1217c–1218c."
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-4",
+    "href": "slides/index.html#your-critical-analysis-of-example-4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 4",
+    "text": "Your Critical Analysis of Example 4"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-4-1",
+    "href": "slides/index.html#your-critical-analysis-of-example-4-1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 4",
+    "text": "Your Critical Analysis of Example 4\n\n\n\n\n\nReasons for the grade\n\n\n\n\n\n\n\n\n\nMost found this figure very clear, well-organised, well-explained\nLack of labelling, statistical analysis (again, we’ll come back to this later)"
+  },
+  {
+    "objectID": "slides/index.html#your-critical-analysis-of-example-4-2",
+    "href": "slides/index.html#your-critical-analysis-of-example-4-2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Your Critical Analysis of Example 4",
+    "text": "Your Critical Analysis of Example 4\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\n\n\n\n\n\nClearer/better organisation\nBetter labelling (panels C, D)\nClearer figure legend"
+  },
+  {
+    "objectID": "slides/index.html#critique-4.1",
+    "href": "slides/index.html#critique-4.1",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.1",
+    "text": "Critique 4.1\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe rifampicin structure is purely decorative.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nRemove unnecessary elements and avoid needless distractions in figures."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.2",
+    "href": "slides/index.html#critique-4.2",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.2",
+    "text": "Critique 4.2\n\n\n\n\n\n\n\n\n\nIssue\n\n\nDynamite plot: the lower extent of these error bars is not visible.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse boxplots or 1D scatterplots"
+  },
+  {
+    "objectID": "slides/index.html#critique-4.3",
+    "href": "slides/index.html#critique-4.3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.3",
+    "text": "Critique 4.3\n\n\n\n\n\n\n\n\n\nIssue\n\n\nColour scheme in (B) doesn’t seem purposeful and doesn’t add anything to the figure.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse colour consistently to link or distinguish elements/groups/data, rather than for decoration."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.4",
+    "href": "slides/index.html#critique-4.4",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.4",
+    "text": "Critique 4.4\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe meaning of the grey regions in (C) and (D) is unclear.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nThe implied membrane in (C) and (D) could be labelled as such in the figure. By convention in microbiology, we would assume that the periplasm/extracellular space is “up” and the cytoplasm is “down” in (C) and (D) - but this should really be labelled to avoid any potential confusion."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.5",
+    "href": "slides/index.html#critique-4.5",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.5",
+    "text": "Critique 4.5\n\n\n\n\n\n\n\n\n\nIssue\n\n\nColours in (A) difficult to distinguish, especially with the red boxes which seem to skew blue closer to purple.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nInstead of well images, a heatmap with clearer colour distinction could be presented."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.6",
+    "href": "slides/index.html#critique-4.6",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.6",
+    "text": "Critique 4.6\n\n\n\n\n\n\n\n\n\nIssue\n\n\nShowing two cut-out bands is not an appropriate way to show Western blot data.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPresent the complete blot."
+  },
+  {
+    "objectID": "slides/index.html#critique-4.7",
+    "href": "slides/index.html#critique-4.7",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Critique 4.7",
+    "text": "Critique 4.7\n\n\n\n\n\n\n\n\n\nIssue\n\n\nText in (D) is too small to read easily.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBreak out panel into a separate figure or increase font size."
+  },
+  {
+    "objectID": "slides/index.html#our-critical-analysis-3",
+    "href": "slides/index.html#our-critical-analysis-3",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Our Critical Analysis",
+    "text": "Our Critical Analysis\n\n\n\n\nSpace for your results"
+  },
+  {
+    "objectID": "slides/index.html#general-comments---data-presentation-choices",
+    "href": "slides/index.html#general-comments---data-presentation-choices",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "General Comments - Data Presentation Choices",
+    "text": "General Comments - Data Presentation Choices\n\n\n\n\n\n\n\nIssue\n\n\nAuthors do not always choose the best or most appropriate way to present their data (e.g., dynamite plots)\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nWhen making data visualisation choices, consider how you can best present your data transparently to the reader so that they can evaluate your work (e.g., show the raw data).\nBe aware of conventions in the field and discuss with colleagues to come to a consensus of the best and most transparent way to present your data."
+  },
+  {
+    "objectID": "slides/index.html#general-comments---colour-choices",
+    "href": "slides/index.html#general-comments---colour-choices",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "General Comments - Colour Choices",
+    "text": "General Comments - Colour Choices\n\n\n\n\n\n\n\nIssue\n\n\nAuthors do not always choose the best or most appropriate colours when designing data visualisations.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nWhen choosing colours, try to:\n\nBe consistent (always use the same colour to represent the same group or feature)\nBe accessible (be aware of the different types of colourblindness and design appropriately)\nBe aesthetically pleasing (choose colours that work well together, or choose well-designed colour palettes)"
+  },
+  {
+    "objectID": "slides/index.html#general-comments---readability",
+    "href": "slides/index.html#general-comments---readability",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "General Comments - Readability",
+    "text": "General Comments - Readability\n\n\n\n\n\n\n\nIssue\n\n\nAuthors do not always make figures large enough or easy to read.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nWhen designing figures, make sure that they are appropriately sized and accessible (font large enough to read easily at 100% size).\nInclude enough space between panels of a figure that allows the figures to “breathe” - the eye should flow smoothly from one element of the figure to the next in a natural way.\nTry printing out a copy of the figure and look at it from arm’s length to see how it feels in terms of whitespace and use of “real estate” - then make appropriate edits to improve the figure."
+  },
+  {
+    "objectID": "slides/index.html#general-comments---message",
+    "href": "slides/index.html#general-comments---message",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "General Comments - Message",
+    "text": "General Comments - Message\n\n\n\n\n\n\n\nIssue\n\n\nAuthors sometimes include too much data in a figure, or make a figure overwhelming in other ways.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nWhen sitting down to make a figure, be sure to define a clear message in the first instance. Present the data that are necessary to convey that message. Remove anything extraneous. (Split into multiple figures if necessary.)"
+  },
+  {
+    "objectID": "slides/index.html#some-very-insightful-comments-from-you",
+    "href": "slides/index.html#some-very-insightful-comments-from-you",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Some Very Insightful Comments From You",
+    "text": "Some Very Insightful Comments From You\n\n“The data is presented in a manner that would likely be inaccessible for people without prior experience. A move toward a more palatable/digestible format will facilitate better science communication in the future.”\n“I think that it is also crucially important to learn how to present data well and responsibly…”"
+  },
+  {
+    "objectID": "slides/index.html#further-reading",
+    "href": "slides/index.html#further-reading",
+    "title": "BM432 Data Visualisation Workshop",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nIntroduction to Data Visualisation\n\nhttps://sipbs-compbiol.github.io/bm432-datavis_workshop\n\nAdditional information:\n\n“Fundamentals of Data Visualisation” by Claus O. Wilke\n“Data Visualisation: A Practical Introduction” by Kieran Healy\n“Points of View: graphic design for data visualisation”"
   },
   {
     "objectID": "slides/NotesForPresentation.html",
@@ -222,405 +621,6 @@
     "title": "NotesForPresentation",
     "section": "Overall Comments about Student Comments",
     "text": "Overall Comments about Student Comments\n\na recurring theme of “no indications of statistical significance” –&gt; the best experiments don’t require statistics because the differences are evident; statistics are there to support your decision making, not as an oracle; if you find you need statistics, you’re doing the wrong experiment\nFor every figure, even for the ones that were highly praised - there was someone who didn’t understand it. We deliberately picked figures from 4 different disciplines (pharmacology, biochemistry, immunology, microbiology) - you were all probably out of your “comfort zone” for at least one of the figures. Remember, when you’re making your own figures - your reader may be coming from a very different background and have very different knowledge to you! Design your figures to be as widely accessible as possible\nYou picked up on many of the same things we did in our critical analysis (and sometimes caught things that we missed!) Being able to critically analyse a figure is hard - you will get even better with practice, no one is perfect, but this is a journey, and you’ve shown that you are already doing very well &lt;3"
-  },
-  {
-    "objectID": "slides/index.html#learning-objectives",
-    "href": "slides/index.html#learning-objectives",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nYou should be able to critically analyse how data is visualised\nYou should be able to judge a figure’s clarity and potential for misunderstanding\nYou should be able to identify potential sources of bias resulting from the visualisation\nYou should understand how to create effective figures for your own work"
-  },
-  {
-    "objectID": "slides/index.html#example-1",
-    "href": "slides/index.html#example-1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Example 1",
-    "text": "Example 1\n\n\nFigure 1: Small molecules identified in previous HTS increase GCase activity."
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-1",
-    "href": "slides/index.html#your-critical-analysis-of-example-1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 1",
-    "text": "Your Critical Analysis of Example 1"
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-1-1",
-    "href": "slides/index.html#your-critical-analysis-of-example-1-1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 1",
-    "text": "Your Critical Analysis of Example 1\n\n\n\n\n\n\n\n\nReasons for the grade\n\n\n\n\nclear and comprehensive data\n\n\nthe figures and panels were clear, everything was labelled well and easy to follow, good use of white space. the legend is comprehensive and easy to follow. A16 and A18 were labelled with distinct colors which made it easy to identify.\n\n\nClear to understand without reading the paper, nice diagrams, and figure legend.\n\n\nA good colour scheme has been used and the white space has been used effectively. However, there is missing statistical analysis on some of the bars ((A18 - 107).\n\n\nOverall graph is structured well. However there is a missed statistical analysis comparing A18 (107) in graph B. Graph G does not clarify what it’s trying to quantify. But the graph overall is appropriate. In terms of aesthetics, they used good colour schemes and it is easily recognisable.\n\n\nThe figure is well organised and structured and there is consistency with colour labelling for all the images. Good labelling of images across the figure and a good description of most things going on in every section of the figure helps the reader follow through and not get lost.\n\n\nDistinct colours, good use of white space. Inclusion of both microscopy images and data quantification makes their data look more convincing.\n\n\nclear bar chart; good color with gradient depths, making it more intuitive\n\n\nI can understood most of the figure and the meaning of this\n\n\nBecause the figure and legend are scientifically accurate, clearly structured, and well explained, demonstrating a strong understanding of the experimental design and results interpretation. Minor improvements in abbreviation clarity are the only issue.\n\n\neasy to understand, clear\n\n\nIt wasn’t very easy to understand, and I would need to read the paper in order to know what was the topic. The title wasn’t great as it told us the result and not just what the test was.\n\n\nNo explanation of acronyms in figure legend make the legend impossible to fully understand without outside reading. Scale bars for microscopy are mentioned in the wrong panel descriptors. In panel B, the 0.1 microMolar treatment for A18 treated cells is missing statistical analysis, no way to tell if this was significant\n\n\neasy to understand statisticala analysis. figure legend is clear and easy to understand.\n\n\nIt is a well organised figure that is clear to understand. The legend is descriptive and provides enough information for the figured to be interpreted.\n\n\nBecause it is clear and accurate.\n\n\nfigure had all key elements for a good one and the legend is descriptive of the figure\n\n\nbecause it’s fully descripe what have been used in each figure , the legend quide the the reader in the simple and proffesional way , covering the main points mention the statical test and the p-valuses.\n\n\nOutstanding in most respects, Complexity of creativity, mentioned all significand’s, and demonstrated well what each figure is for.\n\n\ngood diagrams, more info in legend, D and G just say quantification?\n\n\nOverall a good illustration but not adequate information provided in title; not clear description in figure (G).\n\n\nwell organised for use of space. clear -&gt; explains each aspect well and good details\n\n\nClear figures and decent legend.\n\n\nFigures are clear and easily readable. Effective at showing the data and significance. Also give an account of background and in tissue examples. Legend good too.\n\n\nCleared labelled, significant figures referenced in figure legend and shown on figures. Good use of colours to different concentrations.\n\n\nclearly labelled, good use of colours to differentiate groups/concentrations, labelled with significance\n\n\nI think the data presented followed a logical order. The graphs are labelled well and the colours are clear\n\n\nI thought the each of the figures were well explained by the figure legend, and I thought the corresponding colours made graphs easier to understand and compare.\n\n\nfigures are clear and easy to read, can easily see which group is which bar and can easily see which group is being compared to which for the statistical analysis\n\n\neasy to look at, understand and interpret. not too complicated\n\n\n\n\n\n\n\nmany found the figure clear and easy to understand\nlack of explanation of acronyms in figure legend\nsome issues with the statistical analysis (we’ll come back to this)"
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-1-2",
-    "href": "slides/index.html#your-critical-analysis-of-example-1-2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 1",
-    "text": "Your Critical Analysis of Example 1\n\n\n\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nfigure size for each is different\n\n\nlabelling for the concentrations could have been better. The 95% CI range was not included. did not explain the meaning of ns. too many panels and describes different cells. panels D and G were only explained by “quantification” and could be clearer\n\n\nMaybe the presence of A18 in F and G.\n\n\nIf the bar graphs are going to be high, use a higher scale for the y-axis. 1B- No statistical stars between the vehicle control and the fibroblast treated with 0.1uM of A18. 1C- No mention of DAP1 and Merge in terms of nuclear localization. 1D- Not much detail about this legend, hence not easily understood. 1F- No mention of DAP1 and Merge in terms of nuclear localization. 1G- Not much detail in legend, hence not easily understood. For the sake of those who have colour blindness, it will be good to use a brighter background colour for Merge nuclear localization in Figures 1C and 1F. The figure legend title could’ve included nuclear localization and established the connection it has with GCase activity.\n\n\nUse of bar charts does not show individual data points or give a good idea of data distribution - though including the total number within the bar is helpful. - This also makes it challenging to decide if some of their statistical tests were good choices.\n\n\nThere is an inconsistency in their N numbers that they do not specify (and are quite vague about) - I think this is an important thing to include in the figure legend, and raises questions regarding if additional replicates were made after initially looking at the data. I think they should be transparent in their figure legend about how many replicates were used for each experiment they visualise.\n\n\nSpell out terms like CI (confidence interval) or shRNA on first use if this figure appears in a standalone report.\n\n\nIncluding what colour represented what in the legend would of helped, aswell as just making it clearer on what is being looked at. instead of just putting 72 h I would put 72hrs or the word hours to make it very clear what is being spoke about, unless previously discussed the abbreviation.\n\n\nScale bars either on microscopy images or in the correct part of the figure legend. Have a part at the end with key for acronyms e.g. HTS = High Throughput Screens, TFEB =… Ensure all statistical analysis is present or if absent give a clear and rational reason why\n\n\ncould be better if A separate, C+F separate, B+E+G separate, D separate to make data comparison more clear.\n\n\ntitle could be more specific, what small moleules?\n\n\nSome of the greens used in the bar graphs are a bit too similar. Panels D and G could be expanded upon in figures.\n\n\nColours of bars could be a little bit higher contrast, especially between the multiple dose groups for A16 and A18\n\n\n\n\n\n\n\nMore detailed legend; improvements needed WRT clarity & use of abbreviations/acronyms\nImprovements for presentation of microscopy figures\nClarity on N numbers\nMany of the same points we raised!"
-  },
-  {
-    "objectID": "slides/index.html#critique-1.1",
-    "href": "slides/index.html#critique-1.1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 1.1",
-    "text": "Critique 1.1\n\n\n\n\n\n\n\n\n\nIssue\n\n\nDynamite plot: the lower extent of these error bars is not visible.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse boxplots or 1D scatterplots"
-  },
-  {
-    "objectID": "slides/index.html#critique-1.2",
-    "href": "slides/index.html#critique-1.2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 1.2",
-    "text": "Critique 1.2\n\n\n\n\n\n\n\n\n\nIssue\n\n\nIncomplete presentation of statistical comparisons, e.g is there a difference between A16 and A18 in (B)?\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPresent a table of statistical differences instead, or alongside the figure."
-  },
-  {
-    "objectID": "slides/index.html#critique-1.3",
-    "href": "slides/index.html#critique-1.3",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 1.3",
-    "text": "Critique 1.3\n\n\n\n\n\n\n\n\n\nIssue\n\n\nDistance between bars makes comparison awkward.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPlace things to be compared by the reader next to each other where possible, to facilitate visual comparison."
-  },
-  {
-    "objectID": "slides/index.html#critique-1.4",
-    "href": "slides/index.html#critique-1.4",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 1.4",
-    "text": "Critique 1.4\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe scale on the micrographs (especially in panel C) is too small to read easily.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nIncrease the size of the scale relative to the figure so it can be read."
-  },
-  {
-    "objectID": "slides/index.html#critique-1.5",
-    "href": "slides/index.html#critique-1.5",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 1.5",
-    "text": "Critique 1.5\n\n\n\n\n\n\n\n\n\nIssue\n\n\nA visual control (bright-field image) is absent.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nIn addition to showing DAPI and immunofluorescence images of the cells, include a bright-field micrograph of the cells (no fluorescence)."
-  },
-  {
-    "objectID": "slides/index.html#critique-1.6",
-    "href": "slides/index.html#critique-1.6",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 1.6",
-    "text": "Critique 1.6\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe colour scheme is misleading because saturation represents different data across figure panels (compare 1 \\(\\mu\\)M A18 in B vs 5 \\(\\mu\\)M in D, and 1 \\(\\mu\\)M A18 in E).\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBe consistent with the visual messaging of colour (hue, saturation, and luminance)."
-  },
-  {
-    "objectID": "slides/index.html#critique-1.7",
-    "href": "slides/index.html#critique-1.7",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 1.7",
-    "text": "Critique 1.7\n\n\n\n\n\n\n\n\n\nIssue\n\n\nToo many comparisons in B clutter the figure and compress the space available for showing data.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPresent a table of statistical differences instead, or alongside the figure, to reduce clutter."
-  },
-  {
-    "objectID": "slides/index.html#critique-1.8",
-    "href": "slides/index.html#critique-1.8",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 1.8",
-    "text": "Critique 1.8\n\n\n\n\n\n\n\n\n\nIssue\n\n\n\\(y\\)-axis scales vary between panels, so quantitative comparison between panels is difficult.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse the same \\(y\\)-axis scale in all panels to facilitate direct comparison."
-  },
-  {
-    "objectID": "slides/index.html#our-critical-analysis",
-    "href": "slides/index.html#our-critical-analysis",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Our Critical Analysis",
-    "text": "Our Critical Analysis"
-  },
-  {
-    "objectID": "slides/index.html#example-2",
-    "href": "slides/index.html#example-2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Example 2",
-    "text": "Example 2\n\n\nFigure 2: Endometriosis-associated macrophages exhibit significant transcriptomic heterogeneity."
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-2",
-    "href": "slides/index.html#your-critical-analysis-of-example-2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 2",
-    "text": "Your Critical Analysis of Example 2"
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-2-1",
-    "href": "slides/index.html#your-critical-analysis-of-example-2-1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 2",
-    "text": "Your Critical Analysis of Example 2\n\n\n\n\n\n\n\n\nReasons for the grade\n\n\n\n\ngood colours and presentation\n\n\nThe panels are not organised and the figure is overwhelming and kind of hard to interpret.\n\n\nIt was a bit unclear and Figure B was a bit hard to read\n\n\nThe figures are not presented well and are difficult to understand. In Figure C, the colour scheme has not been explained. Can’t understand the figures without the figure legend.\n\n\nFigure is not easily understandable without the help of legends. Horrible sizes in graphs and the use of white spaces. Graph C does not describe the colour coding scheme (what each colour mean)\n\n\nOverall, each image in the figure is labelled very well and this helps the reader connect what is being said in the legend to a particular part of the figure. Various techniques have been used for different experiments and seeing all of this in a figure makes it look very artistic.\n\n\nImmediately clear visualisation of methods and data. Little use of blank space, panels are unclear and some graphs don’t label axes.\n\n\ncontains too many elements; color combination is chaotic; some words are too small to read\n\n\nI know what the figure want to tell me for 80%\n\n\nThis figure and legend are exceptionally clear and detailed, demonstrating an excellent understanding of single-cell transcriptomic analysis and data interpretation. The structure, labeling, and explanations are of publication quality, with no major issues identified.\n\n\nlittle difficult to understand, clear\n\n\nIt was good having a description of what each of the abbreviations were. I think the layout wasn’t very good, as it didn’t flow very well and was hard to tell which part of figure was with each letter. Just think its quite hard to understand what is happening.\n\n\nTitle explains figure well, acronyms explained where needed. Panel A is slightly messy leaking into other panels and although there is a defined boundary to stop readers from being confused I can’t help but feel this could have been done better. Panel A could also use arrows to show step-by-step direction due to the twisting of the figure, could also have been a bit better explained in the figure legend to avoid confusion Colours on Panel B are far too similar in some cases leading to confusion over what cells we are looking at\n\n\nvery busy and no clear divide between A and B.\n\n\nSome of the individual sub-sections within the figure are good, but as a figure overall it is slightly cluttered, making it difficult to determine which of the diagrams belongs to each section.\n\n\nBecause it is clear and accurate.\n\n\ngood use of different diagrams to deliver the experiment and each is explained well\n\n\nThe legend does not exaplained well , a litle bit confusing , mentionthe statical result in an appropriate way which most be in a result section.\n\n\nusing appropriate visualizations, effectively supports the conclusion of macrophage heterogeneity in endometriosis. The layout is scientifically accurate, well labelled\n\n\nlots of data\n\n\ngood in clarity and visualization but too much information included\n\n\nvery good and like the use of pictures\n\n\nunclear figures, bit all over the place (unsure what is B and what is C at a glance). No keys to make figures C and D clearer.\n\n\nToo much going on also poorly laid out i.e. which diagram belongs to which panel… A,B and C all kind of merge. No idea what D is. Is certainly colourful and the pictures themselves are detailed. Legend is good.\n\n\nColours are a little bit confusing, and not much space between figures. Explains the methods nicely using pictures\n\n\nGood schematic overview but doesn’t explain how any of data obtained. Figure 2C and D confusing but this might be due to lack of understanding of techniques rather than issue with graph\n\n\nvery confusing, lots going on. Lots of colours tho\n\n\nOffered comprehensive understanding of the experiment and the process that gave them the results, but found the figures themselves hard to follow. The colours made it easy to understand the links between figures B and C.\n\n\nfigures are detailed and well labelled\n\n\nhas alot of stuff but is difficult to understand\n\n\n\n\n\n\n\nOrganisation (layout) and colour themes\nToo much information/overwhelming/confusing"
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-2-2",
-    "href": "slides/index.html#your-critical-analysis-of-example-2-2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 2",
-    "text": "Your Critical Analysis of Example 2\n\n\n\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nlooks abit overwhelming\n\n\norganise the panels. add more explanations for each panel in the legend. make imaging clearer in terms of colors\n\n\nclear separation of figures\n\n\nThe size of certain images (e.g. the ones on the right hand side of figure 2E) should be increased so that it can be more visible to the reader. Graph 2B is scattered all over the place, so no coherent order. Although Graph C has every bit of the image labelled correctly, there should only be the colour of each sample type showing the percentage of their cluster membership. In figure 2D it’s very challenging to spot five differentially expressed genes for each cluster and the image is quite fussy, making it confusing to find out what’s going on.\n\n\nno suggestion\n\n\nI would spread it out a bit more, add what the colours link to in the legend, and try create a clearer picture. Also D you couldn’t read the the data at the size so therefore couldn’t understand fully what was going on.\n\n\nSlightly more detail on Panel A and a tidy up. Improve differentiation of colours on Panel B. Panel C could use a legend to avoid confusion\n\n\nThe figure is visually dense. Panel D (heatmap) is difficult to read due to small text and high compression of gene names. Color palettes in some panels could be more distinct for accessibility and easier sample comparison.\n\n\nfigures B and C could be organised better\n\n\ncould make the layout better like having each section similar sizes and not all different sizes\n\n\nSpace things out a bit or use separate figures.\n\n\nseparate data out\n\n\nLabelling of 2C is very confusing\n\n\nfigures could be arranged on the page a bit better, a little confusing to look at at first\n\n\n\n\n\n\n\nimprove organisation, use of whitespace, and size of figures\nimprove use of colour"
-  },
-  {
-    "objectID": "slides/index.html#critique-2.1",
-    "href": "slides/index.html#critique-2.1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 2.1",
-    "text": "Critique 2.1\n\n\n\n\n\n\n\n\n\nIssue\n\n\nUMAP plots (B, E) are highly manipulable and clustering/placement does not necessarily reflect objective measures.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBe cautious of over-interpretation of UMAP and other nonlinear dimensionality reduction plots."
-  },
-  {
-    "objectID": "slides/index.html#critique-2.2",
-    "href": "slides/index.html#critique-2.2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 2.2",
-    "text": "Critique 2.2\n\n\n\n\n\n\n\n\n\nIssue\n\n\nUnpleasant clashing (R default) colour choices in (C).\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse an appropriate colour palette."
-  },
-  {
-    "objectID": "slides/index.html#critique-2.3",
-    "href": "slides/index.html#critique-2.3",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 2.3",
-    "text": "Critique 2.3\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe proportion plot in (C) does not give information on absolute number, only proportion/composition.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nA proportional areas plot spanning all clusters would represent both absolute count per group and compositional information."
-  },
-  {
-    "objectID": "slides/index.html#critique-2.4",
-    "href": "slides/index.html#critique-2.4",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 2.4",
-    "text": "Critique 2.4\n\n\n\n\n\n\n\n\n\nIssue\n\n\nHeatmap text is too small to read comfortably.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPresent heatmap as a separate figure, or reduce the amount of information in the image."
-  },
-  {
-    "objectID": "slides/index.html#critique-2.5",
-    "href": "slides/index.html#critique-2.5",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 2.5",
-    "text": "Critique 2.5\n\n\n\n\n\n\n\n\n\nIssue\n\n\nHeatmap is missing a scale (is purple high and yellow low, or vice versa?)\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nAdd a scale bar."
-  },
-  {
-    "objectID": "slides/index.html#critique-2.6",
-    "href": "slides/index.html#critique-2.6",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 2.6",
-    "text": "Critique 2.6\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe experimental summary in (A) does not indicate order of operations.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse arrows to indicate order of steps and/or dataflow."
-  },
-  {
-    "objectID": "slides/index.html#critique-2.7",
-    "href": "slides/index.html#critique-2.7",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 2.7",
-    "text": "Critique 2.7\n\n\n\n\n\n\n\n\n\nIssue\n\n\nText is too small in general to read comfortably.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nIncrease font size and/or break up the panels into individual figures."
-  },
-  {
-    "objectID": "slides/index.html#critique-2.8",
-    "href": "slides/index.html#critique-2.8",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 2.8",
-    "text": "Critique 2.8\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe figure is crowded and the separation of panels is unclear.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse whitespace to guide reader “flow” through the figure and reduce crowding -in particular, cramming (C) under the inset from (B) makes the figure feel very crowded. Alternatively break the panels into multiple figures."
-  },
-  {
-    "objectID": "slides/index.html#critique-2.9",
-    "href": "slides/index.html#critique-2.9",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 2.9",
-    "text": "Critique 2.9\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe overall message of the figure is unclear.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nIf the intent is just that the macrophages exhibit transcriptional heterogeneity, then (D) is probably sufficient. If other messages are intended, then revise for clarity."
-  },
-  {
-    "objectID": "slides/index.html#our-critical-analysis-1",
-    "href": "slides/index.html#our-critical-analysis-1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Our Critical Analysis",
-    "text": "Our Critical Analysis"
-  },
-  {
-    "objectID": "slides/index.html#example-3",
-    "href": "slides/index.html#example-3",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Example 3",
-    "text": "Example 3\n\n\nFigure 3: A C. difficile mutant lacking all three YkuD-type Ldts (\\(\\Delta\\)ldt1-3) exhibits wild-type growth, morphology, and 3-3 cross-linking."
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-3",
-    "href": "slides/index.html#your-critical-analysis-of-example-3",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 3",
-    "text": "Your Critical Analysis of Example 3"
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-3-1",
-    "href": "slides/index.html#your-critical-analysis-of-example-3-1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 3",
-    "text": "Your Critical Analysis of Example 3\n\n\n\n\n\n\n\n\nReasons for the grade\n\n\n\n\nclear and simple to understand. not overwhelming\n\n\nthe legend is clear and the figure is well organised\n\n\nGreat representation of results simple to read\n\n\nThere is good colour use and good scientific communication. The figure legend is a bit long but has good detail/\n\n\nFigure looks more structured. Figure legends describe results as well. Proper use of scientific communication.\n\n\nThis figure, indeed, tells a story; you can tell from the legend, starting with the title, correct labelling of each diagram and ideal selection of colours. Everything is magnificently organised, structured and nothing is difficult to read.\n\n\nExcellent presentation of Data, easy to comprehend. The illustrated diagram contributes massively to telling a story with the data.\n\n\nvery clear legend\n\n\nJust understood half the meaning of the figure\n\n\nThe figure is well-designed, with precise visual representation and a clear, detailed legend demonstrating strong understanding of experimental rationale. Minor improvements in conciseness could elevate it to outstanding level.\n\n\nClear, well-organized\n\n\nThought it was good and could understand it to an extent. I think the title is a bit long and could be more to the point. Data is presented very well.\n\n\nExcellent and well-thought out description of Panel A, makes it easier for reader to fully understand from the figure alone. Scale bars referenced in legend for microscopy images. Statistical test explained well and with good detail to allow the reader to understand how samples were chosen. Acronyms explained in legend for the most part making it more legible. Not perfect as Panel B could use more explanation in the legend\n\n\npanel A is easy to understand and gets the point across. Panel D could be clearer to show mean values and error bars.\n\n\nA clear and organised figure, with a good and informative figure legend.\n\n\nBecause it is clear and accurate.\n\n\nclearly labeled and statistically analyzed but could be more cleared\n\n\nIt’s cover the main information , but required more improvments\n\n\nThe figure clearly presents multiple complementary datasets. Data is clearly labelled, statistically analysed, and logically structured across panels A–E.\n\n\ndiagram in A made it easier to visualize\n\n\nvery convincing diagram to prove the hypothesis\n\n\nvery good really like this its very concise and good description in legend\n\n\ndecent legend and clear figures. Did miss D and E for a second\n\n\nDiagram A is really cool and provides a really easy understanding. Micrographs are very clear. Other diagrams displayed nicely and easy to read. Legend is quite a lot but also very good.\n\n\nGood diagram of the cell envelope, very easy to understand. Colours could be brighter to help differentiate\n\n\ngood diagram of cell envelope. Well laid out with significance values, clear. Could make better use of colour, difficult to differentiate between bars of fig D and E\n\n\nLooks nice but legend is messy\n\n\nFound the figures to be very understandable, and easily readable.\n\n\nfigures are clear and easy to read\n\n\neasy to look at and interpret using the figure legend\n\n\n\n\n\n\n\nMost thought that this figure was very clear, well-organised, well-presented\neasy to understand and readable"
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-3-2",
-    "href": "slides/index.html#your-critical-analysis-of-example-3-2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 3",
-    "text": "Your Critical Analysis of Example 3\n\n\n\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nfigure could be bigger. panel D is not quite clear. P values and annotations would make it clearer\n\n\nno distinctive colors in figures\n\n\nFor figure 3C, it would be better to have the words ‘WT’ and ‘Idt1-3’ at the top of the images in the white space, just as the words ‘Fluorescence’ and ‘Phase Contrast’ are positioned on the left hand side of the images. For the bottom images of figure 3C it would be ideal to make sure that when doing fluorescent microscopy, all of the cells are captured and that there are none that are partly seen.\n\n\nFigure B could have been placed next to figure A and then figure C underneath figure 3A and figure 3D & 3E could’ve been put next to figure 3C.\n\n\nAlternative to a bar chart that shows data points would be preferable\n\n\nno suggestion\n\n\nNeeds a better title.\n\n\nPanel B needs more explanation as it is slightly unclear what this figure means. Part of the reason Panel B is unclear is not fully explaining every acronym (what is TY?) This could also be said for not explaining that PBP is penicillin binding protein. Even if this is not important to the readers understanding of the data, it can get stuck in their head as to if this is important or not if it is not explained.\n\n\nshow p values to see the statistical significance\n\n\nPanel A is visually informative but quite busy. In Panel C, fluorescence images could benefit from quantification. Panel B would be stronger if statistical analysis were shown to confirm there is no significant difference. Font size for axis labels in Panels D and E is quite small and could be enlarged for clarity.\n\n\nmore colour maybe\n\n\nnot sure.\n\n\nmake nicer looking\n\n\nfigure D could be clearer, why are there black dots on the top of the bars?\n\n\n\n\n\n\n\nimprove clarity of panels B and D\nimprove presentation (bar chart & microscopy)"
-  },
-  {
-    "objectID": "slides/index.html#critique-3.1",
-    "href": "slides/index.html#critique-3.1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 3.1",
-    "text": "Critique 3.1\n\n\n\n\n\n\n\n\n\nIssue\n\n\nDynamite plot: the lower extent of these error bars is not visible.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse boxplots or 1D scatterplots"
-  },
-  {
-    "objectID": "slides/index.html#critique-3.2",
-    "href": "slides/index.html#critique-3.2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 3.2",
-    "text": "Critique 3.2\n\n\n\n\n\n\n\n\n\nIssue\n\n\nNo complement of the triple mutant strain - missing data for an essential control?\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nEnsure that all controls are presented so that the experimental result can be interpreted properly."
-  },
-  {
-    "objectID": "slides/index.html#critique-3.3",
-    "href": "slides/index.html#critique-3.3",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 3.3",
-    "text": "Critique 3.3\n\n\n\n\n\n\n\n\n\nIssue\n\n\nLabel obscures part of the image.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nRelocate the label so data is not obscured."
-  },
-  {
-    "objectID": "slides/index.html#critique-3.4",
-    "href": "slides/index.html#critique-3.4",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 3.4",
-    "text": "Critique 3.4\n\n\n\n\n\n\n\n\n\nIssue\n\n\nFluorescence wavelength not specified.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nInclude sufficient information that the reader does not need to refer to the main text. Overall a figure legend should provide enough detail for the figure to stand alone, but should not describe results/significance."
-  },
-  {
-    "objectID": "slides/index.html#critique-3.5",
-    "href": "slides/index.html#critique-3.5",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 3.5",
-    "text": "Critique 3.5\n\n\n\n\n\n\n\n\n\nIssue\n\n\nColour schemes/palettes are inconsistent within panel A, and between panels B, D, and E.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBe consistent with the visual messaging of colour (hue, saturation, and luminance)."
-  },
-  {
-    "objectID": "slides/index.html#critique-3.6",
-    "href": "slides/index.html#critique-3.6",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 3.6",
-    "text": "Critique 3.6\n\n\n\n\n\n\n\n\n\nIssue\n\n\nExcessive length of figure legend for panel A.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBreak out panel A into its own figure."
-  },
-  {
-    "objectID": "slides/index.html#our-critical-analysis-2",
-    "href": "slides/index.html#our-critical-analysis-2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Our Critical Analysis",
-    "text": "Our Critical Analysis"
-  },
-  {
-    "objectID": "slides/index.html#example-4",
-    "href": "slides/index.html#example-4",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Example 4",
-    "text": "Example 4\n\n\nFigure 4: Functional characterization and overall structure of Rv1217c–1218c."
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-4",
-    "href": "slides/index.html#your-critical-analysis-of-example-4",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 4",
-    "text": "Your Critical Analysis of Example 4"
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-4-1",
-    "href": "slides/index.html#your-critical-analysis-of-example-4-1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 4",
-    "text": "Your Critical Analysis of Example 4\n\n\n\n\n\n\n\n\nReasons for the grade\n\n\n\n\ngood colours and design. data is clear and easy to see and comprehend\n\n\nfigure is clearly organised and easy to follow. Data is clear and well visiualised, range of methods included, clear link to structure and function\n\n\nExcellent figure\n\n\nFigures are represented well and the figure legend is detailed. However, there is no statistical analysis.\n\n\nProper use of spaces. Figure legends are concise, not too long. However, there were no statistical analysis conducted in graph B\n\n\nThis figure tells a story and excellent practical techniques with appropriate colour choices were used to make this figure eye-catching. Again, just like the previous figure everything is magnificently structured, correctly labelled, readable font size and the legend provides everything I need to know about the figure, making it easily understood.\n\n\nGood way to show the data clearly, protein structure contributes to storytelling.\n\n\nlooks good in both terms of clarity and aesthetics\n\n\nnot really sure am I understood the figure right\n\n\nThe figure achieves a near-perfect balance of experimental clarity, structural visualization, and explanatory precision. It demonstrates a publication-level mastery of both data interpretation and visual communication.\n\n\nClear, well-organized\n\n\nFlowed well and the legend was very easy to follow, knew exactly what was being spoke about. The title is great, and the description of the colours is excellent.\n\n\nVery well explained figure, only criticism is that some acronyms are not explained. From this figure we can clearly understand what the results mean and how and why the researchers did as they did.\n\n\nClear structure and states method used to obtain structure. Easy to understand graph in panel B, clear in figure legend.\n\n\nA very good figure that provides good descriptions and clear information within the figure.\n\n\nBecause it is clear and accurate.\n\n\nthe legend is good and data well labeled\n\n\nWell description of the figure in the legend covering the main information , but miss the staticall test which required to strenght the the ovarall result.\n\n\nThis figure combines functional data. The layout is coherent, data is well labelled and statistically supported, and the figure successfully integrates molecular biology, biochemistry, and structural biology.\n\n\ngood seeing 3D model\n\n\nclearly showed the evidence to support the hypothesis but why the structure and experiment results are organized in one figure?\n\n\nit looks very good but i don’t understand it\n\n\nnice figures and legend\n\n\nWould be nice to see the chemical structure with a panel itself. too much going on with the well plate diagrams, not very easy to follow. Bar graph is good. C and D could be serrate other panels completely but are nice models.\n\n\nThe figure legend explains the figures in a strange order. Good use of colours to differentiate different sections of the structure.\n\n\nlack of labelling, no idea what’s going on, unclear why in 4A things are circled, haven’t stated if stats tests carried out, unclear which fig labelled as which letter\n\n\nVery clear\n\n\nVery comprehensive understanding of what was being shown and why\n\n\nData is presented clearly but statistical analysis is completely missing from B. If statistical analysis is performed and there is found to be no significance, this should still be clearly stated\n\n\ngood graphs\n\n\n\n\n\n\n\nMost found this figure very clear, well-organised, well-explained\nLack of labelling, statistical analysis (again, we’ll come back to this later)"
-  },
-  {
-    "objectID": "slides/index.html#your-critical-analysis-of-example-4-2",
-    "href": "slides/index.html#your-critical-analysis-of-example-4-2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Your Critical Analysis of Example 4",
-    "text": "Your Critical Analysis of Example 4\n\n\n\n\n\n\n\n\nSuggestions for improvement\n\n\n\n\nidk it looks amazing to me\n\n\nlacks statistics in panel B. western blot panel is too small (easy to miss)\n\n\nEthambutol structure could have been included in figure 4A. Figure 4D could have been labelled as the secondary structure of Rv1217c.There could have been a figure 4E showing a secondary structure of Rv1218c. Full words for the abbreviations used in the figure legend could have been used to inform the reader of what these abbreviations mean.\n\n\nno suggestion\n\n\nAdding more labels at the top of C could improve it. Explain when talking about B that it is the %. There was no statistical analysis done for B, this could’ve been utilised because without this how will we know whether these results are reliable, no analysis can be done claiming any significance.\n\n\nA bit picky but I would prefer if they went from top to middle to bottom when explaining panel A but this didn’t affect the mark given. Acronyms must be explained for accessibility purposes for those who are less scientifically literate\n\n\nagain it need to show the p values for significance\n\n\npanels (A, top/bottom) could benefit from clearer legends or quantification (Panel C) are visually impressive but dense (Panel B) lacks statistical significance marking (Panel D) is clear, but colour-matching its domains with Panel C would improve consistency and help readers connect structure with function.\n\n\nas above.\n\n\ncould be organised better, ring structure feels like it’s been squeezed in\n\n\ndoesn’t explain anywhere what the red boxes in A are indicating\n\n\n\n\n\n\n\nClearer/better organisation\nBetter labelling (panels C, D)\nClearer figure legend"
-  },
-  {
-    "objectID": "slides/index.html#critique-4.1",
-    "href": "slides/index.html#critique-4.1",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 4.1",
-    "text": "Critique 4.1\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe rifampicin structure is purely decorative.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nRemove unnecessary elements and avoid needless distractions in figures."
-  },
-  {
-    "objectID": "slides/index.html#critique-4.2",
-    "href": "slides/index.html#critique-4.2",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 4.2",
-    "text": "Critique 4.2\n\n\n\n\n\n\n\n\n\nIssue\n\n\nDynamite plot: the lower extent of these error bars is not visible.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse boxplots or 1D scatterplots"
-  },
-  {
-    "objectID": "slides/index.html#critique-4.3",
-    "href": "slides/index.html#critique-4.3",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 4.3",
-    "text": "Critique 4.3\n\n\n\n\n\n\n\n\n\nIssue\n\n\nColour scheme in (B) doesn’t seem purposeful and doesn’t add anything to the figure.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nUse colour consistently to link or distinguish elements/groups/data, rather than for decoration."
-  },
-  {
-    "objectID": "slides/index.html#critique-4.4",
-    "href": "slides/index.html#critique-4.4",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 4.4",
-    "text": "Critique 4.4\n\n\n\n\n\n\n\n\n\nIssue\n\n\nThe meaning of the grey regions in (C) and (D) is unclear.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nThe implied membrane in (C) and (D) could be labelled as such in the figure. By convention in microbiology, we would assume that the periplasm/extracellular space is “up” and the cytoplasm is “down” in (C) and (D) - but this should really be labelled to avoid any potential confusion."
-  },
-  {
-    "objectID": "slides/index.html#critique-4.5",
-    "href": "slides/index.html#critique-4.5",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 4.5",
-    "text": "Critique 4.5\n\n\n\n\n\n\n\n\n\nIssue\n\n\nColours in (A) difficult to distinguish, especially with the red boxes which seem to skew blue closer to purple.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nInstead of well images, a heatmap with clearer colour distinction could be presented."
-  },
-  {
-    "objectID": "slides/index.html#critique-4.6",
-    "href": "slides/index.html#critique-4.6",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 4.6",
-    "text": "Critique 4.6\n\n\n\n\n\n\n\n\n\nIssue\n\n\nShowing two cut-out bands is not an appropriate way to show Western blot data.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nPresent the complete blot."
-  },
-  {
-    "objectID": "slides/index.html#critique-4.7",
-    "href": "slides/index.html#critique-4.7",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Critique 4.7",
-    "text": "Critique 4.7\n\n\n\n\n\n\n\n\n\nIssue\n\n\nText in (D) is too small to read easily.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nBreak out panel into a separate figure or increase font size."
-  },
-  {
-    "objectID": "slides/index.html#our-critical-analysis-3",
-    "href": "slides/index.html#our-critical-analysis-3",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Our Critical Analysis",
-    "text": "Our Critical Analysis"
-  },
-  {
-    "objectID": "slides/index.html#general-comments---data-presentation-choices",
-    "href": "slides/index.html#general-comments---data-presentation-choices",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "General Comments - Data Presentation Choices",
-    "text": "General Comments - Data Presentation Choices\n\n\n\n\n\n\n\nIssue\n\n\nAuthors do not always choose the best or most appropriate way to present their data (e.g., dynamite plots)\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nWhen making data visualisation choices, consider how you can best present your data transparently to the reader so that they can evaluate your work (e.g., show the raw data).\nBe aware of conventions in the field and discuss with colleagues to come to a consensus of the best and most transparent way to present your data."
-  },
-  {
-    "objectID": "slides/index.html#general-comments---colour-choices",
-    "href": "slides/index.html#general-comments---colour-choices",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "General Comments - Colour Choices",
-    "text": "General Comments - Colour Choices\n\n\n\n\n\n\n\nIssue\n\n\nAuthors do not always choose the best or most appropriate colours when designing data visualisations.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nWhen choosing colours, try to:\n\nBe consistent (always use the same colour to represent the same group or feature)\nBe accessible (be aware of the different types of colourblindness and design appropriately)\nBe aesthetically pleasing (choose colours that work well together, or choose well-designed colour palettes)"
-  },
-  {
-    "objectID": "slides/index.html#general-comments---readability",
-    "href": "slides/index.html#general-comments---readability",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "General Comments - Readability",
-    "text": "General Comments - Readability\n\n\n\n\n\n\n\nIssue\n\n\nAuthors do not always make figures large enough or easy to read.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nWhen designing figures, make sure that they are appropriately sized and accessible (font large enough to read easily at 100% size).\nInclude enough space between panels of a figure that allows the figures to “breathe” - the eye should flow smoothly from one element of the figure to the next in a natural way.\nTry printing out a copy of the figure and look at it from arm’s length to see how it feels in terms of whitespace and use of “real estate” - then make appropriate edits to improve the figure."
-  },
-  {
-    "objectID": "slides/index.html#general-comments---message",
-    "href": "slides/index.html#general-comments---message",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "General Comments - Message",
-    "text": "General Comments - Message\n\n\n\n\n\n\n\nIssue\n\n\nAuthors sometimes include too much data in a figure, or make a figure overwhelming in other ways.\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\nWhen sitting down to make a figure, be sure to define a clear message in the first instance. Present the data that are necessary to convey that message. Remove anything extraneous. (Split into multiple figures if necessary.)"
-  },
-  {
-    "objectID": "slides/index.html#some-very-insightful-comments-from-you",
-    "href": "slides/index.html#some-very-insightful-comments-from-you",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Some Very Insightful Comments From You",
-    "text": "Some Very Insightful Comments From You\n\n“The data is presented in a manner that would likely be inaccessible for people without prior experience. A move toward a more palatable/digestible format will facilitate better science communication in the future.”\n“I think that it is also crucially important to learn how to present data well and responsibly…”"
-  },
-  {
-    "objectID": "slides/index.html#further-reading",
-    "href": "slides/index.html#further-reading",
-    "title": "BM432 Data Visualisation Workshop",
-    "section": "Further Reading",
-    "text": "Further Reading\n\nIntroduction to Data Visualisation\n\nhttps://sipbs-compbiol.github.io/bm432-datavis_workshop\n\nAdditional information:\n\n“Fundamentals of Data Visualisation” by Claus O. Wilke\n“Data Visualisation: A Practical Introduction” by Kieran Healy\n“Points of View: graphic design for data visualisation”"
   },
   {
     "objectID": "better_interactive.html",
