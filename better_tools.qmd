@@ -6,9 +6,6 @@ number-sections: true
 about:
   template: marquee
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/scompbiol
     - icon: github
       text: Github
       href: https://github.com/sipbs-compbiol
@@ -44,7 +41,7 @@ data = anscombe %>% pivot_longer(
 Figures are key components of scientific publications and presentations. They relate the data supporting conclusions to the reader in an immediate manner, conveying information about the work before the reader can inspect the paper in detail. They are central elements in the *storytelling* aspect of a paper and, just as poor visualisation choices can mask the important messages in the paper, cynical choices can exaggerate the quality of the story.
 
 ::: { .callout-data }
-In this interactive session, you will have the opportunity to generate multiple visualisations of the same dataset, and decide for yourself which tell the most appropriate story about the data.
+In this interactive session, you will have the opportunity to generate multiple visualisations of the same dataset, and decide for yourself which communicate the most appropriate information (or "tell the most appropriate story") about the data.
 :::
 
 ::: { .callout-case-study }

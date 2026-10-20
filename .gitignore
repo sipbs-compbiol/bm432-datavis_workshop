@@ -12,11 +12,10 @@
 /.quarto/
 README.html
 README_files/
+**/*.quarto_ipynb
 
 # Local Quarto output
 _book/
 _freeze/
 _site/
 bm432-datavis_files/
-
-**/*.quarto_ipynb
