@@ -349,7 +349,7 @@ Use the same $y$-axis scale in all panels to facilitate direct comparison.
 :::
 
 ::: {.column width="30%"}
-Space for your results
+![Post-survey results](images/fig1_slido.png)
 :::
 
 ::::
@@ -635,7 +635,7 @@ If the intent is just that the macrophages exhibit transcriptional heterogeneity
 :::
 
 ::: {.column width="30%"}
-Space for your results
+![Post-survey results](images/fig2_slido.png)
 :::
 
 ::::
@@ -854,7 +854,7 @@ Break out panel A into its own figure.
 :::
 
 ::: {.column width="30%"}
-Space for your results
+![Post-survey results](images/fig3_slido.png)
 :::
 
 ::::
@@ -1096,7 +1096,7 @@ Break out panel into a separate figure or increase font size.
 :::
 
 ::: {.column width="30%"}
-Space for your results
+![Post-survey results](images/fig4_slido.png)
 :::
 
 ::::
